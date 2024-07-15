@@ -116,9 +116,9 @@ export default function Header1() {
                   <div className="header-logo">
                     <Link scroll={false} href="/">
                       <Image
-                        width={86}
-                        height={24}
-                        src="/assets/img/logo.svg"
+                        width={200}
+                        height={64}
+                        src="/assets/img/tecvity-logo.png"
                         alt="logo"
                       />
                     </Link>

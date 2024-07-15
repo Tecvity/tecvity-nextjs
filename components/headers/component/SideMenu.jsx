@@ -29,27 +29,26 @@ export default function SideMenu({ isOpen, setIsOpen }) {
             <div className="footer-logo">
               <Link scroll={false} href="/">
                 <Image
-                  width={86}
-                  height={24}
-                  src="/assets/img/logo-white.svg"
-                  alt="Ovation"
+                  // width={86}
+                  // height={24}
+                  // src="/assets/img/logo-white.svg"
+                  // alt="Ovation"
                 />
               </Link>
             </div>
             <p className="about-text">
-              We are digital agency that helps businesses develop immersive and
-              engaging
+            Delivering Creative Technological Solutions
             </p>
             <div className="sidebar-wrap">
-              <h6>27 Division St, New York,</h6>
-              <h6>NY 10002, USA</h6>
+              <h6>Gujranwala, Pakistan</h6>
+              
             </div>
             <div className="sidebar-wrap">
               <h6>
-                <a href="tel:1800123654987">+1 800 123 654 987 </a>
+                <a href="tel:923088438733"> +92-308-8438733</a>
               </h6>
               <h6>
-                <a href="mailto:frisk.agency@mail.com">frisk.agency@mail.com</a>
+                <a href="mailto:frisk.agency@mail.com"> hello@tecvity.co</a>
               </h6>
             </div>
             <div className="social-btn style2">

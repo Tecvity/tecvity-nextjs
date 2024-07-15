@@ -53,12 +53,12 @@ export default function Footer1() {
               </div>
             </div>
             <div className="col-md-6 align-self-center text-lg-end">
-              <p className="copyright-text">
+              {/* <p className="copyright-text">
                 Copyright © {new Date().getFullYear()}{" "}
                 <a href="https://themeforest.net/user/ib-themes/portfolio">
                   ib-themes
                 </a>
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
