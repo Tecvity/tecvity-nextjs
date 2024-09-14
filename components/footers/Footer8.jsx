@@ -57,14 +57,12 @@ export default function Footer8() {
                 <h3 className="widget_title">Contact</h3>
                 <ul className="contact-info-list">
                   <li>
-                    27 Division St, New York, <br /> NY 10002, USA
+                    Jinnah Spaces, Gujranwala, <br /> Grw 52250, Pakistan
                   </li>
                   <li>
-                    <a href="tel:1800123654987">+1 800 123 654 987</a>
+                    <a href="tel:923088438733">+92 308 8438733</a>
                     <br />
-                    <a href="mailto:frisk.agency@mail.com">
-                      frisk.agency@mail.com
-                    </a>
+                    <a href="mailto:hello@tecvity.co">hello@tecvity.co</a>
                   </li>
                 </ul>
               </div>
