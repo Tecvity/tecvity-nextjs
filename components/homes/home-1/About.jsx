@@ -33,18 +33,16 @@ export default function About() {
               <div className="about-content-wrap ">
                 <div className="title-area mb-0">
                   <h2 className="sec-title">
-                    Unlock Revenue Growth for Your Business
+                    Unlock Premium Services for Your Business
                   </h2>
                   <p className="sec-text mt-35">
-                    If you ask our clients what it’s like working with 36,
+                    If you ask our clients what it’s like working with Tecvity,
                     they’ll talk about how much we care about their success. For
                     us, real relationships fuel real success. We love building
                     brands
                   </p>
                   <p className="sec-text mt-30">
-                    We are a creative agency working with brands building
-                    insightful strategy, creating unique designs and crafting
-                    value
+                    We are a software agency where you find software development, design and cybersecurity services under one roof
                   </p>
                   <div className="btn-wrap mt-50">
                     <Link scroll={false} href="/about" className="link-btn">
