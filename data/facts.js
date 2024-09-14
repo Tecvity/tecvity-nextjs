@@ -1,20 +1,20 @@
 export const counterData = [
   {
     id: 1,
-    number: 26,
+    number: 2,
     title: "Years of Experience",
-    text: "We are a creative agency brands building insightful strategy, creating unique designs helping",
+    text: "We are fresh in this business with fresh perspective and modern technologies at hand",
   },
   {
     id: 2,
-    number: 347,
+    number: 10,
     title: "Successful Projects",
-    text: "We are a creative agency brands building insightful strategy, creating unique designs helping",
+    text: "We make sure that every project we work on achieves the best possible result",
   },
   {
     id: 3,
-    number: 139,
+    number: 10,
     title: "Satisfied Customers",
-    text: "We are a creative agency brands building insightful strategy, creating unique designs helping",
+    text: "Feedback from our clients is proof of our top-notch services",
   },
 ];
