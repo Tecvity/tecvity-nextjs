@@ -14,13 +14,13 @@ export default function Hero() {
               </h1>
 
               <h1 className="hero-title text-lg-end wow img-custom-anim-right animated">
-                Digital Agency
+                Software Agency
               </h1>
             </div>
             <div className="col-lg-6 offset-lg-6">
               <p className="hero-text wow img-custom-anim-right animated">
-                We are digital agency that helps businesses develop immersive
-                and engaging user experiences that drive top level growth
+                We are a software agency that helps businesses design, develop
+                and secure their digital infrastructure.
               </p>
               <div className="btn-group fade_right">
                 <Link
@@ -43,7 +43,7 @@ export default function Hero() {
               src="/assets/img/icon/worldwide.svg"
               alt="img"
             />
-            <h6>Agency of this year worldwide</h6>
+            <h6>Rapidly Growing Software Company</h6>
           </div>
         </div>
       </div>

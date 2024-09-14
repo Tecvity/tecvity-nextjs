@@ -22,19 +22,18 @@ export default function Features() {
           <div className="col-lg-6">
             <div className="title-area mb-45">
               <h2 className="sec-title">
-                Passionate About Creating Quality Design
+                Passionate About Delivering Premium Quality Services
               </h2>
             </div>
             <h4>We Love What We Do</h4>
             <p>
-              We are a creative agency working with brands building insightful
-              strategy, creating unique designs and crafting value
+              We are a software agency working with brands helping them design, develop and secure their infrastructure
             </p>
             <h4 className="mt-35">Why Work With Us</h4>
             <p className="mb-n1">
               If you ask our clients what it’s like working with 36, they’ll
               talk about how much we care about their success. For us, real
-              relationships fuel real success. We love building brands
+              relationships fuel real success. We love building long-term relationships
             </p>
           </div>
         </div>
