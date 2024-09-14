@@ -1,19 +1,20 @@
 export const menuItems = [
-  {
-    id: 1,
-    title: "HOME",
-    isActive: true,
-    subMenuItems: [
-      { id: 11, label: "Digital Agency", link: "/" },
-      { id: 12, label: "Creative Agency", link: "/home-2" },
-      { id: 13, label: "Design Studio", link: "/home-3" },
-      { id: 14, label: "Digital Marketing", link: "/home-4" },
-      { id: 15, label: "Modern Agency", link: "/home-5" },
-      { id: 16, label: "Creative Studio", link: "/home-6" },
-      { id: 17, label: "Startup Agency", link: "/home-7" },
-      { id: 18, label: "Personal Portfolio", link: "/home-8" },
-    ],
-  },
+  { id: 1, title: "HOME", isActive: true, link: "/" },
+  // {
+  //   id: 1,
+  //   title: "HOME",
+  //   isActive: true,
+  //   subMenuItems: [
+  //     { id: 11, label: "Digital Agency", link: "/" },
+  //     { id: 12, label: "Creative Agency", link: "/home-2" },
+  //     { id: 13, label: "Design Studio", link: "/home-3" },
+  //     { id: 14, label: "Digital Marketing", link: "/home-4" },
+  //     { id: 15, label: "Modern Agency", link: "/home-5" },
+  //     { id: 16, label: "Creative Studio", link: "/home-6" },
+  //     { id: 17, label: "Startup Agency", link: "/home-7" },
+  //     { id: 18, label: "Personal Portfolio", link: "/home-8" },
+  //   ],
+  // },
   {
     id: 2,
     title: "PAGES",
@@ -46,7 +47,11 @@ export const menuItems = [
     id: 3,
     title: "Portfolio",
     subMenuItems: [
-      { id: 31, label: "Penetration Testing & Vulnerability Assessment", link: "/project-3" },
+      {
+        id: 31,
+        label: "Penetration Testing & Vulnerability Assessment",
+        link: "/project-3",
+      },
       { id: 32, label: "Cloud Security", link: "/project-3" },
     ],
   },
