@@ -44,17 +44,25 @@ export const menuItems = [
   },
   {
     id: 3,
-    title: "PORTFOLIO",
+    title: "Portfolio",
     subMenuItems: [
-      { id: 31, label: "Portfolio Masonary", link: "/project" },
-      { id: 32, label: "Portfolio Pinterest", link: "/project-2" },
-      { id: 33, label: "Portfolio Gallery", link: "/project-3" },
-      { id: 34, label: "Portfolio Full Width", link: "/project-4" },
-      { id: 35, label: "Portfolio Slider", link: "/project-5" },
-      { id: 36, label: "Portfolio Interactive", link: "/project-6" },
-      { id: 37, label: "Portfolio Details", link: "/project-details/2" },
+      { id: 31, label: "Penetration Testing & Vulnerability Assessment", link: "/project-3" },
+      { id: 32, label: "Cloud Security", link: "/project-3" },
     ],
   },
+  // {
+  //   id: 3,
+  //   title: "PORTFOLIO",
+  //   subMenuItems: [
+  //     { id: 31, label: "Portfolio Masonary", link: "/project" },
+  //     { id: 32, label: "Portfolio Pinterest", link: "/project-2" },
+  //     { id: 33, label: "Portfolio Gallery", link: "/project-3" },
+  //     { id: 34, label: "Portfolio Full Width", link: "/project-4" },
+  //     { id: 35, label: "Portfolio Slider", link: "/project-5" },
+  //     { id: 36, label: "Portfolio Interactive", link: "/project-6" },
+  //     { id: 37, label: "Portfolio Details", link: "/project-details/2" },
+  //   ],
+  // },
   {
     id: 4,
     title: "BLOG",

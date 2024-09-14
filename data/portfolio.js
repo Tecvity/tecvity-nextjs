@@ -270,6 +270,31 @@ export const portfolioData5 = [
   },
 ];
 
+// Tecvity Portfolio Starts Here
+export const VAPTPortfolio = [
+  {
+    id: 1,
+    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+    categoryLinks: ["Cybersecurity"],
+    projectTitle: "Penetration Test of Mach7t",
+    title: "Decentralized Platform",
+  },
+  {
+    id: 2,
+    imageSrc: "/assets/img/portfolio/portfolio1_2.jpg",
+    categoryLinks: ["Branding", "Development", "Marketing"],
+    projectTitle: "Decentralized Lending Platform for Students",
+    title: "App for Business",
+  },
+  {
+    id: 3,
+    imageSrc: "/assets/img/portfolio/portfolio1_3.jpg",
+    categoryLinks: ["Branding", "Development", "Marketing"],
+    projectTitle: "Anti Money Laundering Compliance Scanner",
+    title: "Website Development",
+  },
+
+];
 export const allPortfolio = [
   ...portfolioData,
   ...portfolioData2,
@@ -278,4 +303,5 @@ export const allPortfolio = [
   ...projects,
   ...projects2,
   ...portfolioData5,
+  ...VAPTPortfolio
 ];
