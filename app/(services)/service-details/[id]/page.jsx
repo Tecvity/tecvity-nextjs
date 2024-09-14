@@ -15,7 +15,7 @@ import { allFeatures } from "@/data/features";
 
 export const metadata = {
   title:
-    "Service Details || Frisk - Creative Agency & Portfolio Nextjs Template",
+    "Service Details || FTecvity - Delivering Creative Technological Solutions",
 };
 
 export default function ServicePageDetails({ params }) {

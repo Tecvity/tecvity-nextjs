@@ -10,7 +10,7 @@ import Portfolio from "@/components/homes/home-1/Portfolio";
 import Team from "@/components/homes/common/Team";
 import Testimonials from "@/components/homes/common/Testimonials";
 export const metadata = {
-  title: "Home 1 || Frisk - Creative Agency & Portfolio Nextjs Template",
+  title: "Home  || Tecvity - Delivering Creative Technological Solutions",
 };
 export default function HomePage1() {
   return (
