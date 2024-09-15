@@ -145,8 +145,8 @@ export default function Header3() {
                   <div className="header-button">
                     <Link scroll={false} href="/project" className="btn">
                       <span className="link-effect">
-                        <span className="effect-1">WORKS WITH US</span>
-                        <span className="effect-1">WORKS WITH US</span>
+                        <span className="effect-1">WORK WITH US</span>
+                        <span className="effect-1">WORK WITH US</span>
                       </span>
                     </Link>
                   </div>
