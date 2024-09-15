@@ -33,34 +33,21 @@ export const faqs = [
 export const faqs2 = [
   {
     id: 1,
-    question: `Will you be updating the program?
+    question: `What is our 100% money back guarantee?
 `,
-    answer: `We design high quality websites that make users come back
-            for more. A good website tells a story that will make
-            users fully immerse themselves operating`,
+    answer: `If we don't deliver the work that you like, we offer 100% refund with no questions asked. Just to let you know, this has never happened with us so far though`,
   },
   {
     id: 2,
-    question: `What happens to my data if I cancel?
+    question: `Does Tecvity do staff augmentation?
 `,
-    answer: `We design high quality websites that make users come back
-            for more. A good website tells a story that will make
-            users fully immerse themselves operating`,
+    answer: `We primarily works as a group but if you think you need a resource to work with you full-time, we're open on that as well`,
   },
   {
     id: 3,
-    question: `How I can optimize voice search?
+    question: `Why our prices are higher than market?
 `,
-    answer: `We design high quality websites that make users come back
-            for more. A good website tells a story that will make
-            users fully immerse themselves operating`,
-  },
-  {
-    id: 4,
-    question: `If I have questions, where can I find answers?`,
-    answer: `We design high quality websites that make users come back
-            for more. A good website tells a story that will make
-            users fully immerse themselves operating`,
+    answer: `Tecvity believes in delivering quality and output that is flaw-less. We take pride in our work, therefore we charge that we think is required to produce such results. `,
   },
 ];
 export const faqs3 = [
