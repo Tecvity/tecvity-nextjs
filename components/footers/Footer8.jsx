@@ -76,8 +76,8 @@ export default function Footer8() {
             <div className="col-md-6">
               <p className="copyright-text">
                 Copyright © {new Date().getFullYear()}{" "}
-                <a href="https://themeforest.net/user/ib-themes/portfolio">
-                  ib-themes
+                <a href="https://tecvity.co">
+                  Tecvity
                 </a>
               </p>
             </div>
