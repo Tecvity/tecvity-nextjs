@@ -85,39 +85,39 @@ export const featureData3 = [
 export const featureData4 = [
   {
     iconSrc: "/assets/img/icon/feature-icon1-1.svg",
-    title: "Branding Design",
+    title: "Web & Mobile App Penetration Testing",
     id: 14,
-    text: "We care success relationships fuel success we love building",
+    text: "We can look into the security of your applications and provide report",
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-2.svg",
-    title: "Web Development",
+    title: "Cloud Security Audits",
     id: 15,
-    text: "We care success relationships fuel success we love building",
+    text: "We can conduct security audits and provide recommendations on hardening your cloud security",
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-4.svg",
-    title: "Digital Marketing",
+    title: "Brand Identity Design",
     id: 16,
-    text: "We care success relationships fuel success we love building",
+    text: "We can give your brand an identification that can not be forgotten",
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-3.svg",
-    title: "Illustration Modelling",
+    title: "UI/UX Design",
     id: 17,
-    text: "We care success relationships fuel success we love building",
+    text: "We can design the user interface and experience for your applications",
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-5.svg",
-    title: "Content Marketing",
+    title: "Application Development",
     id: 18,
-    text: "We care success relationships fuel success we love building",
+    text: "We can develop state of the art web and mobile apps for you",
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-6.svg",
-    title: "Social Advertising",
+    title: "DevSecOps",
     id: 19,
-    text: "We care success relationships fuel success we love building",
+    text: "We can secure your code pipelines and integrate security in your SDLC",
   },
 ];
 export const allFeatures = [
