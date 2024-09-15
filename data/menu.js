@@ -68,15 +68,16 @@ export const menuItems = [
   //     { id: 37, label: "Portfolio Details", link: "/project-details/2" },
   //   ],
   // },
-  {
-    id: 4,
-    title: "BLOG",
-    subMenuItems: [
-      { id: 41, label: "Blog Standard", link: "/blog" },
-      { id: 42, label: "Blog 2 Column", link: "/blog-2" },
-      { id: 43, label: "Blog Details", link: "/blog-details/2" },
-    ],
-  },
+  { id: 4, title: "BLOG", link: "/blog-2" },
+  // {
+  //   id: 4,
+  //   title: "BLOG",
+  //   subMenuItems: [
+  //     { id: 41, label: "Blog Standard", link: "/blog" },
+  //     { id: 42, label: "Blog 2 Column", link: "/blog-2" },
+  //     { id: 43, label: "Blog Details", link: "/blog-details/2" },
+  //   ],
+  // },
   {
     id: 5,
     title: "CONTACT",

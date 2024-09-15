@@ -1,34 +1,32 @@
 export const faqs = [
   {
     id: 1,
-    question: `Branding Design
+    question: `UI/UX Design
 `,
-    answer: `We design high quality websites that make users come back
-            for more. A good website tells a story that will make
-            users fully immerse themselves operating`,
+    answer: `We craft intuitive and visually stunning interfaces that enhance user experience. Our designs ensure your audience enjoys seamless interaction with your product.`,
   },
   {
     id: 2,
-    question: `Illustration Modelling
+    question: `Brand Identity Design
 `,
-    answer: `We design high quality websites that make users come back
-            for more. A good website tells a story that will make
-            users fully immerse themselves operating`,
+    answer: `We create compelling brand identities that resonate with your audience. A strong, cohesive brand sets you apart and builds trust with your customers.`,
   },
   {
     id: 3,
-    question: `Website Development
+    question: `Security Testing
 `,
-    answer: `We design high quality websites that make users come back
-            for more. A good website tells a story that will make
-            users fully immerse themselves operating`,
+    answer: `Our thorough vulnerability assessment & penetration testing services identify security weaknesses and help you fortify your system against potential threats, ensuring robust cybersecurity`,
   },
   {
     id: 4,
-    question: `Digital Marketing`,
-    answer: `We design high quality websites that make users come back
-            for more. A good website tells a story that will make
-            users fully immerse themselves operating`,
+    question: `Cloud Security`,
+    answer: `We secure your cloud infrastructure with advanced solutions that protect your data and ensure compliance with industry standards.`,
+  },
+
+  {
+    id: 5,
+    question: `Web & Mobile App Development`,
+    answer: `We develop high-performing, scalable web and mobile apps that deliver a superior user experience, ensuring your business stays ahead in the digital age.`,
   },
 ];
 
