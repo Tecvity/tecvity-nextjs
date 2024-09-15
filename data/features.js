@@ -97,7 +97,7 @@ export const featureData4 = [
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-4.svg",
-    title: "Brand Identity Design",
+    title: "Visual Identity Design",
     id: 16,
     text: "We can give your brand an identification that can not be forgotten",
   },

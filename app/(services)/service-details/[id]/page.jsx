@@ -15,7 +15,7 @@ import { allFeatures } from "@/data/features";
 
 export const metadata = {
   title:
-    "Service Details || FTecvity - Delivering Creative Technological Solutions",
+    "Service Details || Tecvity - Delivering Creative Technological Solutions",
 };
 
 export default function ServicePageDetails({ params }) {
