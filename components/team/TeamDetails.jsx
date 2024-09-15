@@ -24,14 +24,10 @@ export default function TeamDetails({ teamId }) {
               <h2 className="sec-title mb-3">{teamItem.name}</h2>
               <h4 className="team-desig">{teamItem.designation}</h4>
               <p className="sec-text mt-30">
-                BaseCreate is pleased to announce that it has been commissioned
-                by Leighton Asia reposition its brand. We will help Leighton
-                Asia evolve its brand strategy, and will be responsible updating
-                Leighton Asia’s brand identity, website, and other collaterals.
+               {teamItem?.para1}
               </p>
               <p className="sec-text mt-15">
-                For almost 50 years Leighton Asia, one of the region’s largest
-                most respected construction companies been progressively
+                {teamItem?.para2}
               </p>
               <div className="about-contact-wrap mt-35">
                 <h6 className="about-contact-title">
