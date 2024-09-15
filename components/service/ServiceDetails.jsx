@@ -26,27 +26,19 @@ export default function ServiceDetails({ serviceId }) {
             <div className="title-area mb-35">
               <h2 className="sec-title">{serviceItem.title}</h2>
               <p className="sec-text mt-30">
-                BaseCreate is pleased to announce that it has been commissioned
-                by Leighton Asia reposition its brand. We will help Leighton
-                Asia evolve its brand strategy, and will be responsible updating
-                Leighton Asia’s brand identity, website, and other collaterals.
+               {serviceItem.para1}
               </p>
               <p className="sec-text mt-30">
-                For almost 50 years Leighton Asia, one of the region’s largest
-                and most respected construction companies, has been
-                progressively building for a better future by leveraging
-                international expertise with local intelligence. In that time
-                Leighton has delivered some of Asia’s prestigious buildings and
-                transformational infrastructure projects.
+               {serviceItem.para2}
               </p>
             </div>
-            <h3>Remarking Services</h3>
+            {/* <h3>Remarking Services</h3>
             <p className="sec-text mb-n1">
               Leighton Asia’s brand refreshment will help position the company
               to meet the challenges of future, as it seeks to lead the industry
               in technological innovation and sustainable building practices to
               deliver long-lasting value for its clients.
-            </p>
+            </p> */}
           </div>
           <div className="col-lg-12">
             <div className="video-area-1 mt-80 mb-80">
@@ -129,12 +121,12 @@ export default function ServiceDetails({ serviceId }) {
                 </div>
               </div>
             </div>
-            <p className="sec-text mb-n1 mt-40">
+            {/* <p className="sec-text mb-n1 mt-40">
               Leighton Asia’s brand refreshment will help position the company
               to meet the challenges of future, as it seeks to lead the industry
               in technological innovation and sustainable building practices to
               deliver long-lasting value for its clients.
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

@@ -100,6 +100,8 @@ export const featureData4 = [
     title: "Visual Identity Design",
     id: 16,
     text: "We can give your brand an identification that can not be forgotten",
+    para1: "Our expert team creates powerful visual identities that leave lasting impressions. We collaborate with brands to craft logos, typography, color schemes, and overall design systems that represent their unique personality and vision.",
+    para2: "We've partnered with forward-thinking brands, helping them stand out in competitive markets with visually striking and cohesive identities. From startups to established businesses, our goal is to create identities that resonate with audiences and communicate a brand's core values and look hella awesome at the same time."
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-3.svg",
