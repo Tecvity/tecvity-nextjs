@@ -19,8 +19,8 @@ export const menuItems = [
     id: 2,
     title: "Pages",
     subMenuItems: [
-      { id: 21, label: "About Page", link: "/about" },
-      { id: 22, label: "Services", link: "/service" },
+      { id: 21, label: "About Us", link: "/about" },
+      { id: 22, label: "Blog", link: "/blog-2" },
       // {
       //   id: 22,
       //   title: "Service Page",
@@ -37,22 +37,10 @@ export const menuItems = [
       //   ],
       // },
       { id: 23, label: "Team Page", link: "/team" },
-      { id: 24, label: "Team Details Page", link: "/team-details/2" },
-      { id: 25, label: "Pricing Page", link: "/pricing" },
-      { id: 26, label: "FAQ Page", link: "/faq" },
-      { id: 27, label: "Error Page", link: "/error" },
-    ],
-  },
-  {
-    id: 3,
-    title: "Portfolio",
-    subMenuItems: [
-      {
-        id: 31,
-        label: "Penetration Testing & Vulnerability Assessment",
-        link: "/project-3",
-      },
-      { id: 32, label: "Cloud Security", link: "/project-3" },
+      { id: 24, label: "Team Details", link: "/team-details/2" },
+      { id: 25, label: "Pricing", link: "/pricing" },
+      { id: 26, label: "FAQ", link: "/faq" },
+      // { id: 27, label: "Error Page", link: "/error" },
     ],
   },
   // {
@@ -68,7 +56,19 @@ export const menuItems = [
   //     { id: 37, label: "Portfolio Details", link: "/project-details/2" },
   //   ],
   // },
-  { id: 4, title: "Blog", link: "/blog-2" },
+  { id: 4, title: "Our Services", link: "/service" },
+  {
+    id: 3,
+    title: "Portfolio",
+    subMenuItems: [
+      {
+        id: 31,
+        label: "Penetration Testing & Vulnerability Assessment",
+        link: "/project-3",
+      },
+      { id: 32, label: "Cloud Security", link: "/project-3" },
+    ],
+  },
   // {
   //   id: 4,
   //   title: "BLOG",
