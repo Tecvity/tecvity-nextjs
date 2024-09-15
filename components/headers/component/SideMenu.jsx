@@ -48,7 +48,7 @@ export default function SideMenu({ isOpen, setIsOpen }) {
                 <a href="tel:923088438733"> +92-308-8438733</a>
               </h6>
               <h6>
-                <a href="mailto:frisk.agency@mail.com"> hello@tecvity.co</a>
+                <a href="mailto:hello@tecvity.co"> hello@tecvity.co</a>
               </h6>
             </div>
             <div className="social-btn style2">
