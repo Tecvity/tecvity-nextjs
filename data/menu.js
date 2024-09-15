@@ -36,7 +36,7 @@ export const menuItems = [
       //     },
       //   ],
       // },
-      { id: 23, label: "Team Page", link: "/team" },
+      { id: 23, label: "Our Team", link: "/team" },
       { id: 24, label: "Team Details", link: "/team-details/2" },
       { id: 25, label: "Pricing", link: "/pricing" },
       { id: 26, label: "FAQ", link: "/faq" },

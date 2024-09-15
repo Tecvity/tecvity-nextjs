@@ -35,10 +35,10 @@ export default function TeamDetails({ teamId }) {
               </p>
               <div className="about-contact-wrap mt-35">
                 <h6 className="about-contact-title">
-                  <a href="mailto:daniyel@Karlos.com">Daniyel@Karlos.com</a>
+                  <a href={`mailto:${teamItem.email}`}>{teamItem.email}</a>
                 </h6>
                 <h6 className="about-contact-title">
-                  <a href="tel:18408412569">+1 840 841 25 69</a>
+                  <a href={`tel::${teamItem.phone}`}>{teamItem.phone}</a>
                 </h6>
                 <div className="social-btn mt-4">
                   {socialMediaLinks.map((elm, i) => (
