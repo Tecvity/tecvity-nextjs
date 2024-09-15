@@ -1,5 +1,5 @@
 export const menuItems = [
-  { id: 1, title: "HOME", isActive: true, link: "/" },
+  { id: 1, title: "Home", isActive: true, link: "/" },
   // {
   //   id: 1,
   //   title: "HOME",
@@ -17,7 +17,7 @@ export const menuItems = [
   // },
   {
     id: 2,
-    title: "PAGES",
+    title: "Pages",
     subMenuItems: [
       { id: 21, label: "About Page", link: "/about" },
       { id: 22, label: "Services", link: "/service" },
@@ -68,7 +68,7 @@ export const menuItems = [
   //     { id: 37, label: "Portfolio Details", link: "/project-details/2" },
   //   ],
   // },
-  { id: 4, title: "BLOG", link: "/blog-2" },
+  { id: 4, title: "Blog", link: "/blog-2" },
   // {
   //   id: 4,
   //   title: "BLOG",
@@ -80,7 +80,7 @@ export const menuItems = [
   // },
   {
     id: 5,
-    title: "CONTACT",
+    title: "Contact",
     link: "/contact",
   },
 ];
