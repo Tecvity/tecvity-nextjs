@@ -25,12 +25,8 @@ export default function ServiceDetails({ serviceId }) {
           <div className="col-xl-8">
             <div className="title-area mb-35">
               <h2 className="sec-title">{serviceItem.title}</h2>
-              <p className="sec-text mt-30">
-               {serviceItem.para1}
-              </p>
-              <p className="sec-text mt-30">
-               {serviceItem.para2}
-              </p>
+              <p className="sec-text mt-30">{serviceItem.para1}</p>
+              <p className="sec-text mt-30">{serviceItem.para2}</p>
             </div>
             {/* <h3>Remarking Services</h3>
             <p className="sec-text mb-n1">
@@ -93,6 +89,26 @@ export default function ServiceDetails({ serviceId }) {
                   <h4 className="feature-card-title">
                     <Link scroll={false} href="/project">
                       Custom Solution
+                    </Link>
+                  </h4>
+                  <p className="feature-card-text mb-n2">
+                    We care success relationships fuel success we love building
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className="feature-card">
+                  <div className="feature-card-icon">
+                    <Image
+                      width={40}
+                      height={40}
+                      src="/assets/img/icon/feature-icon1-6.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <h4 className="feature-card-title">
+                    <Link scroll={false} href="/project">
+                      In-time Result
                     </Link>
                   </h4>
                   <p className="feature-card-text mb-n2">
