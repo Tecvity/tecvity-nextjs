@@ -42,7 +42,7 @@ export default function Video() {
         channel="youtube"
         youtube={{ mute: 0, autoplay: 1 }}
         isOpen={isOpen}
-        videoId="JpboLPTdHuA"
+        videoId="9_vZoq7Idus"
         onClose={() => setIsOpen(false)}
       />
     </>
