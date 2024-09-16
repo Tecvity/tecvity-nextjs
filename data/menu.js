@@ -64,7 +64,7 @@ export const menuItems = [
       {
         id: 31,
         label: "Penetration Testing & Vulnerability Assessment",
-        link: "/project-3",
+        link: "/portfolio-vapt",
       },
       { id: 32, label: "Cloud Security", link: "/project-3" },
     ],

@@ -50,20 +50,20 @@ export default function ProjectDetails({ portfolioId }) {
             <div className="project-details-info mb-lg-0 mb-40">
               <ul className="list-wrap">
                 <li>
-                  <span>Category:</span>Development
+                  <span>Category:</span>{portfolioItem.category}
                 </li>
-                <li>
-                  <span>Software:</span>WordPress, Figma
-                </li>
-                <li>
-                  <span>Service:</span>Development
-                </li>
-                <li>
-                  <span>Client:</span>Eunice Mills
-                </li>
-                <li>
-                  <span>Date:</span>October 6, 2023
-                </li>
+               {portfolioItem.tech && <li>
+                  <span>Technology:</span>{portfolioItem.tech}
+                </li>}
+              { portfolioItem.service &&  <li>
+                  <span>Service:</span>{portfolioItem.service}
+                </li>}
+               { portfolioItem.client && <li>
+                  <span>Client:</span>{portfolioItem.client}
+                </li>}
+                {portfolioItem.date && <li>
+                  <span>Date:</span>{portfolioItem.date}
+                </li>}
               </ul>
             </div>
           </div>
@@ -71,34 +71,19 @@ export default function ProjectDetails({ portfolioId }) {
             <div className="title-area mb-35">
               <h2 className="sec-title">{portfolioItem.title}</h2>
               <p className="sec-text mt-30">
-                BaseCreate is pleased to announce that it has been commissioned
-                by Leighton Asia reposition its brand. We will help Leighton
-                Asia evolve its brand strategy, and will be responsible updating
-                Leighton Asia’s brand identity, website, and other collaterals.
+                {portfolioItem?.para1}
               </p>
               <p className="sec-text mt-30">
-                For almost 50 years Leighton Asia, one of the region’s largest
-                and most respected construction companies, has been
-                progressively building for a better future by leveraging
-                international expertise with local intelligence. In that time
-                Leighton has delivered some of Asia’s prestigious buildings and
-                transformational infrastructure projects.
+                {portfolioItem?.para2}
               </p>
             </div>
-            <h3>Challenge & Solution</h3>
+            <h3>Challenge</h3>
             <p className="sec-text mb-n1">
-              Future, as it seeks to lead the industry in technological
-              innovation and sustainable building practices to deliver
-              long-lasting value for its clients.
+              {portfolioItem?.challenge}
             </p>
             <h3 className="mt-35">Final Result</h3>
             <p className="sec-text mb-n1">
-              For almost 50 years Leighton Asia, one of the region’s largest and
-              most respected construction companies, has been progressively
-              building for a better future by leveraging international expertise
-              with local intelligence. In that time Leighton has delivered some
-              of Asia’s prestigious buildings and transformational
-              infrastructure projects.
+             {portfolioItem?.finalResult}
             </p>
           </div>
           <div className="col-lg-12">

@@ -7,7 +7,7 @@ import ProjectDetails from "@/components/portfolio/ProjectDetails";
 import { allPortfolio } from "@/data/portfolio";
 export const metadata = {
   title:
-    "Project Details || Frisk - Creative Agency & Portfolio Nextjs Template",
+    "Project Details | Tecvity",
 };
 
 //For Static Side Genaration(SSG)
