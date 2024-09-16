@@ -7,6 +7,21 @@ import Link from "next/link";
 export default function ServiceDetails({ serviceId }) {
   const serviceItem =
     allFeatures.filter((elm) => elm.id == serviceId)[0] || allFeatures[1];
+
+    const getRandomIcon = () => {
+      const icons = [
+        "feature-icon1-1",
+        "feature-icon1-2",
+        "feature-icon1-3",
+        "feature-icon1-4",
+        "feature-icon1-5",
+        "feature-icon1-6"
+      ];
+      const randomIndex = Math.floor(Math.random() * icons.length);
+      return `/assets/img/icon/${icons[randomIndex]}.svg`;
+    };
+    
+
   return (
     <div className="service-details-page-area space">
       <div className="container">
@@ -61,7 +76,7 @@ export default function ServiceDetails({ serviceId }) {
             <p className="sec-text mb-40 mt-30">
             {serviceItem?.para6}
             </p>
-            <div className="row gy-4">
+            {/* <div className="row gy-4">
               <div className="col-md-6">
                 <div className="feature-card">
                   <div className="feature-card-icon">
@@ -102,6 +117,28 @@ export default function ServiceDetails({ serviceId }) {
                   </p>
                 </div>
               </div>
+            </div> */}
+            <div className="row gy-4">
+              {serviceItem?.cards?.map((card, index) => (
+                <div key={index} className="col-md-6">
+                  <div className="feature-card">
+                    <div className="feature-card-icon">
+                      <Image
+                        width={40}
+                        height={40}
+                        src={getRandomIcon()}
+                        alt="icon"
+                      />
+                    </div>
+                    <h4 className="feature-card-title">
+                      <Link scroll={false} href={card.link || "/project"}>
+                        {card.title}
+                      </Link>
+                    </h4>
+                    <p className="feature-card-text mb-n2">{card.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
             <p className="sec-text mb-n1 mt-40">
             {serviceItem?.para7}
