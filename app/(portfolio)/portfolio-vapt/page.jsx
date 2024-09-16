@@ -6,7 +6,7 @@ import Breadcumb from "@/components/portfolio/Breadcumb";
 import ProjectsVAPT from "@/components/portfolio/VAPTPortfolio";
 import React from "react";
 export const metadata = {
-  title: "Project 3 || Frisk - Creative Agency & Portfolio Nextjs Template",
+  title: "VA/PT Portfolio",
 };
 export default function ProjectsVAPTPage() {
   return (
