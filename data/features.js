@@ -82,7 +82,7 @@ export const featureData3 = [
     text: "We care success relationships fuel success we love building",
   },
 ];
-export const featureData4 = [
+export const ourServices = [
   {
     iconSrc: "/assets/img/icon/feature-icon1-1.svg",
     title: "Web & Mobile App Penetration Testing",
@@ -127,5 +127,5 @@ export const allFeatures = [
   ...featureData2,
   ...featureData3,
 
-  ...featureData4,
+  ...ourServices,
 ];

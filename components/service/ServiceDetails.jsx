@@ -24,17 +24,14 @@ export default function ServiceDetails({ serviceId }) {
           </div>
           <div className="col-xl-8">
             <div className="title-area mb-35">
-              <h2 className="sec-title">{serviceItem.title}</h2>
-              <p className="sec-text mt-30">{serviceItem.para1}</p>
-              <p className="sec-text mt-30">{serviceItem.para2}</p>
+              <h2 className="sec-title">{serviceItem?.title}</h2>
+              <p className="sec-text mt-30">{serviceItem?.para1}</p>
+              <p className="sec-text mt-30">{serviceItem?.para2}</p>
             </div>
-            {/* <h3>Remarking Services</h3>
+            <h3>{serviceItem?.heading1}</h3>
             <p className="sec-text mb-n1">
-              Leighton Asia’s brand refreshment will help position the company
-              to meet the challenges of future, as it seeks to lead the industry
-              in technological innovation and sustainable building practices to
-              deliver long-lasting value for its clients.
-            </p> */}
+            {serviceItem?.para3}
+            </p>
           </div>
           <div className="col-lg-12">
             <div className="video-area-1 mt-80 mb-80">
@@ -55,25 +52,14 @@ export default function ServiceDetails({ serviceId }) {
           </div>
           <div className="col-xl-8">
             <p className="sec-text mt-n1 mb-40">
-              Leighton Asia’s brand refreshment will help position the company
-              to meet the challenges of future, as it seeks to lead the industry
-              in technological innovation and sustainable building practices to
-              deliver long-lasting value for its clients.
+            {serviceItem?.para4}
             </p>
-            <h3>Making for Users Friendly</h3>
+            <h3>{serviceItem?.heading2}</h3>
             <p className="sec-text mt-30">
-              Leighton Asia’s brand refreshment will help position the company
-              to meet the challenges of future, as it seeks to lead the industry
-              in technological innovation and sustainable building practices to
-              deliver long-lasting value for its clients.
+            {serviceItem?.para5}
             </p>
             <p className="sec-text mb-40 mt-30">
-              For almost 50 years Leighton Asia, one of the region’s largest and
-              most respected construction companies, has been progressively
-              building for a better future by leveraging international expertise
-              with local intelligence. In that time Leighton has delivered some
-              of Asia’s prestigious buildings and transformational
-              infrastructure projects.
+            {serviceItem?.para6}
             </p>
             <div className="row gy-4">
               <div className="col-md-6">
@@ -116,33 +102,10 @@ export default function ServiceDetails({ serviceId }) {
                   </p>
                 </div>
               </div>
-              <div className="col-md-6">
-                <div className="feature-card">
-                  <div className="feature-card-icon">
-                    <Image
-                      width={40}
-                      height={40}
-                      src="/assets/img/icon/feature-icon1-6.svg"
-                      alt="icon"
-                    />
-                  </div>
-                  <h4 className="feature-card-title">
-                    <Link scroll={false} href="/project">
-                      In-time Result
-                    </Link>
-                  </h4>
-                  <p className="feature-card-text mb-n2">
-                    We care success relationships fuel success we love building
-                  </p>
-                </div>
-              </div>
             </div>
-            {/* <p className="sec-text mb-n1 mt-40">
-              Leighton Asia’s brand refreshment will help position the company
-              to meet the challenges of future, as it seeks to lead the industry
-              in technological innovation and sustainable building practices to
-              deliver long-lasting value for its clients.
-            </p> */}
+            <p className="sec-text mb-n1 mt-40">
+            {serviceItem?.para7}
+            </p>
           </div>
         </div>
       </div>
