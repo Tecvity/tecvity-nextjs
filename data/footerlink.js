@@ -1,19 +1,21 @@
 export const links = [
   { id: 1, href: "/about", text: "ABOUT COMPANY" },
-  { id: 2, href: "/project", text: "OUR CAREERS" },
+  {ide:2, href:"/team", text: "OUR TEAM"},
   { id: 3, href: "/service", text: "SERVICES" },
   { id: 4, href: "/contact", text: "CONTACT" },
 ];
 export const links2 = [
-  { id: 5, href: "/privacy-policy", text: "PRIVACY POLICY" },
-  { id: 6, href: "/terms-conditions", text: "TERMS & CONDITIONS" },
+  {
+    id: 5,
+    href: "https://www.upwork.com/agencies/tecvity/",
+    text: "HIRE US ON UPWORK",
+  },
 ];
 export const links3 = [
   { id: 7, href: "/about", text: "About" },
   { id: 8, href: "/project", text: "Portfolios" },
   { id: 9, href: "/service", text: "Services" },
-  { id: 10, href: "/contact", text: "Testimonials" },
-  { id: 11, href: "/project-2", text: "Careers" },
+  { id: 10, href: "/faq", text: "FAQs" },
 ];
 export const links4 = [
   { id: 12, href: "/about", text: "Featured Project" },

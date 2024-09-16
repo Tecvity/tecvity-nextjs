@@ -6,7 +6,7 @@ import Features1 from "@/components/service/Features1";
 
 import Video from "@/components/service/Video";
 export const metadata = {
-  title: "Service 1 || Frisk - Creative Agency & Portfolio Nextjs Template",
+  title: "Our Services | Tecvity",
 };
 
 export default function ServicePage1() {

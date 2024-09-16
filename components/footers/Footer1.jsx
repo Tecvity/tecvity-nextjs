@@ -16,8 +16,7 @@ export default function Footer1() {
             <div className="col-lg-5">
               <div className="footer-top-wrap">
                 <p className="mb-30">
-                  We are digital agency that helps businesses develop immersive
-                  and engaging user experiences
+                  We are software agency that helps businesses design, develop and secure their infrastructure.
                 </p>
                 <Link scroll={false} href="/contact" className="btn">
                   <span className="link-effect">

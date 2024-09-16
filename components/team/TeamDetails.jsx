@@ -24,21 +24,17 @@ export default function TeamDetails({ teamId }) {
               <h2 className="sec-title mb-3">{teamItem.name}</h2>
               <h4 className="team-desig">{teamItem.designation}</h4>
               <p className="sec-text mt-30">
-                BaseCreate is pleased to announce that it has been commissioned
-                by Leighton Asia reposition its brand. We will help Leighton
-                Asia evolve its brand strategy, and will be responsible updating
-                Leighton Asia’s brand identity, website, and other collaterals.
+               {teamItem?.para1}
               </p>
               <p className="sec-text mt-15">
-                For almost 50 years Leighton Asia, one of the region’s largest
-                most respected construction companies been progressively
+                {teamItem?.para2}
               </p>
               <div className="about-contact-wrap mt-35">
                 <h6 className="about-contact-title">
-                  <a href="mailto:daniyel@Karlos.com">Daniyel@Karlos.com</a>
+                  <a href={`mailto:${teamItem.email}`}>{teamItem.email}</a>
                 </h6>
                 <h6 className="about-contact-title">
-                  <a href="tel:18408412569">+1 840 841 25 69</a>
+                  <a href={`tel::${teamItem.phone}`}>{teamItem.phone}</a>
                 </h6>
                 <div className="social-btn mt-4">
                   {socialMediaLinks.map((elm, i) => (

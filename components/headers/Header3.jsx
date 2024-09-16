@@ -114,9 +114,9 @@ export default function Header3() {
                   <div className="header-logo">
                     <Link scroll={false} href="/">
                       <Image
-                        width={86}
-                        height={24}
-                        src="/assets/img/logo.svg"
+                        width={200}
+                        height={64}
+                        src="/assets/img/tecvity-logo.png"
                         alt="logo"
                       />
                     </Link>
@@ -145,8 +145,8 @@ export default function Header3() {
                   <div className="header-button">
                     <Link scroll={false} href="/project" className="btn">
                       <span className="link-effect">
-                        <span className="effect-1">WORKS WITH US</span>
-                        <span className="effect-1">WORKS WITH US</span>
+                        <span className="effect-1">WORK WITH US</span>
+                        <span className="effect-1">WORK WITH US</span>
                       </span>
                     </Link>
                   </div>

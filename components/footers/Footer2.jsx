@@ -62,7 +62,7 @@ export default function Footer2() {
                   <li>
                     <a href="tel:1800123654987">+1 800 123 654 987</a>
                     <br />
-                    <a href="mailto:frisk.agency@mail.com">
+                    <a href="mailto:mobmncy@mail.com">
                       frisk.agency@mail.com
                     </a>
                   </li>
