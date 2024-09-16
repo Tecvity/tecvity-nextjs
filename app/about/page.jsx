@@ -12,7 +12,7 @@ import Header3 from "@/components/headers/Header3";
 import React from "react";
 
 export const metadata = {
-  title: "About || Frisk - Creative Agency & Portfolio Nextjs Template",
+  title: "About Us | Tecvity",
 };
 
 export default function AboutPage() {
