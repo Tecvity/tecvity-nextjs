@@ -92,16 +92,16 @@ export default function ProjectDetails({ portfolioId }) {
                 <i className="fa fa-arrow-left"></i>
                 <span>
                   <span className="link-effect">
-                    <span className="effect-1">Previous Post</span>
-                    <span className="effect-1">Previous Post</span>
+                    <span className="effect-1">Previous Project</span>
+                    <span className="effect-1">Previous Project</span>
                   </span>
                 </span>
               </a>
               <a href="#" className="nav-btn">
                 <span>
                   <span className="link-effect">
-                    <span className="effect-1">Next Post</span>
-                    <span className="effect-1">Next Post</span>
+                    <span className="effect-1">Next Project</span>
+                    <span className="effect-1">Next Project</span>
                   </span>
                 </span>
                 <i className="fa fa-arrow-right"></i>
