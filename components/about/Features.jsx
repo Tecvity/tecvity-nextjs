@@ -13,7 +13,7 @@ export default function Features() {
         <Image
           width={838}
           height={778}
-          src="/assets/img/normal/why_3-1.jpg"
+          src="/assets/img/normal/about_tecvity.png"
           alt="img"
         />
       </div>

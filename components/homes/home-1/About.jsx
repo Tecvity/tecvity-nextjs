@@ -22,7 +22,7 @@ export default function About() {
         <Image
           width={838}
           height={730}
-          src="/assets/img/normal/about_1-1.jpg"
+          src="/assets/img/normal/homepage.png"
           alt="img"
         />
       </div>
