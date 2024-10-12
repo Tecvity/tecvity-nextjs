@@ -64,9 +64,9 @@ export const menuItems = [
       {
         id: 31,
         label: "Penetration Testing & Vulnerability Assessment",
-        link: "/portfolio-vapt",
+        link: "/project-details/Penetration Test of Mach7t",
       },
-      { id: 32, label: "Cloud Security", link: "/project-3" },
+      { id: 32, label: "Network Security Audit for NexGenTech", link: "/project-details/Network Security Audit for NexGenTech" },
     ],
   },
   // {
