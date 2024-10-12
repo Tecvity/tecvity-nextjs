@@ -1,313 +1,523 @@
-export const portfolioData = [
-  {
-    id: 1,
-    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
-    categoryLinks: ["Branding", "Development", "Marketing"],
-    projectTitle: "Money Laundering Compliance Scanner",
-    title: "Decentralized Platform",
-  },
-  {
-    id: 2,
-    imageSrc: "/assets/img/portfolio/portfolio1_2.jpg",
-    categoryLinks: ["Branding", "Development", "Marketing"],
-    projectTitle: "Decentralized Lending Platform for Students",
-    title: "App for Business",
-  },
-  {
-    id: 3,
-    imageSrc: "/assets/img/portfolio/portfolio1_3.jpg",
-    categoryLinks: ["Branding", "Development", "Marketing"],
-    projectTitle: "Anti Money Laundering Compliance Scanner",
-    title: "Website Development",
-  },
-  {
-    id: 4,
-    imageSrc: "/assets/img/portfolio/portfolio1_4.jpg",
-    categoryLinks: ["Branding", "Development", "Marketing"],
-    projectTitle: "Shopify Redesign for a Nova Scotia Winery",
-    title: "Nova Scotia Winery",
-  },
-  {
-    id: 5,
-    imageSrc: "/assets/img/portfolio/portfolio1_5.png",
-    categoryLinks: ["Branding", "Development", "Marketing"],
-    projectTitle: "Trading Website Design & Development",
-    title: "Educational Platform",
-  },
-  {
-    id: 6,
-    imageSrc: "/assets/img/portfolio/portfolio1_6.png",
-    categoryLinks: ["Branding", "Development", "Marketing"],
-    projectTitle:
-      "Shopify Redesign for a Nova Scotia WineryProduct Lineup Industrial Design for Caramba",
-    title: "Educational Platform",
-  },
-];
+// export const portfolioData = [
+//   {
+//     id: 1,
+//     imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+//     categoryLinks: ["Branding", "Development", "Marketing"],
+//     projectTitle: "Money Laundering Compliance Scanner",
+//     title: "Decentralized Platform",
+//   },
+//   {
+//     id: 2,
+//     imageSrc: "/assets/img/portfolio/portfolio1_2.jpg",
+//     categoryLinks: ["Branding", "Development", "Marketing"],
+//     projectTitle: "Decentralized Lending Platform for Students",
+//     title: "App for Business",
+//   },
+//   {
+//     id: 3,
+//     imageSrc: "/assets/img/portfolio/portfolio1_3.jpg",
+//     categoryLinks: ["Branding", "Development", "Marketing"],
+//     projectTitle: "Anti Money Laundering Compliance Scanner",
+//     title: "Website Development",
+//   },
+//   {
+//     id: 4,
+//     imageSrc: "/assets/img/portfolio/portfolio1_4.jpg",
+//     categoryLinks: ["Branding", "Development", "Marketing"],
+//     projectTitle: "Shopify Redesign for a Nova Scotia Winery",
+//     title: "Nova Scotia Winery",
+//   },
+//   {
+//     id: 5,
+//     imageSrc: "/assets/img/portfolio/portfolio1_5.png",
+//     categoryLinks: ["Branding", "Development", "Marketing"],
+//     projectTitle: "Trading Website Design & Development",
+//     title: "Educational Platform",
+//   },
+//   {
+//     id: 6,
+//     imageSrc: "/assets/img/portfolio/portfolio1_6.png",
+//     categoryLinks: ["Branding", "Development", "Marketing"],
+//     projectTitle:
+//       "Shopify Redesign for a Nova Scotia WineryProduct Lineup Industrial Design for Caramba",
+//     title: "Educational Platform",
+//   },
+// ];
 
-export const portfolioData2 = [
-  {
-    id: 7,
-    imageSrc: "/assets/img/portfolio/portfolio2_1.jpg",
-    category: "Branding",
-    title: "Decentralized Platform",
-  },
-  {
-    id: 8,
-    imageSrc: "/assets/img/portfolio/portfolio2_2.jpg",
-    category: "Branding",
-    title: "Decentralized Platform",
-  },
-  {
-    id: 9,
-    imageSrc: "/assets/img/portfolio/portfolio2_3.jpg",
-    category: "Branding",
-    title: "Decentralized Platform",
-  },
-  {
-    id: 10,
-    imageSrc: "/assets/img/portfolio/portfolio2_1.jpg",
-    category: "Branding",
-    title: "Decentralized Platform",
-  },
-  {
-    id: 11,
-    imageSrc: "/assets/img/portfolio/portfolio2_2.jpg",
-    category: "Branding",
-    title: "Decentralized Platform",
-  },
-  {
-    id: 12,
-    imageSrc: "/assets/img/portfolio/portfolio2_3.jpg",
-    category: "Branding",
-    title: "Decentralized Platform",
-  },
-];
+// export const portfolioData2 = [
+//   {
+//     id: 7,
+//     imageSrc: "/assets/img/portfolio/portfolio2_1.jpg",
+//     category: "Branding",
+//     title: "Decentralized Platform",
+//   },
+//   {
+//     id: 8,
+//     imageSrc: "/assets/img/portfolio/portfolio2_2.jpg",
+//     category: "Branding",
+//     title: "Decentralized Platform",
+//   },
+//   {
+//     id: 9,
+//     imageSrc: "/assets/img/portfolio/portfolio2_3.jpg",
+//     category: "Branding",
+//     title: "Decentralized Platform",
+//   },
+//   {
+//     id: 10,
+//     imageSrc: "/assets/img/portfolio/portfolio2_1.jpg",
+//     category: "Branding",
+//     title: "Decentralized Platform",
+//   },
+//   {
+//     id: 11,
+//     imageSrc: "/assets/img/portfolio/portfolio2_2.jpg",
+//     category: "Branding",
+//     title: "Decentralized Platform",
+//   },
+//   {
+//     id: 12,
+//     imageSrc: "/assets/img/portfolio/portfolio2_3.jpg",
+//     category: "Branding",
+//     title: "Decentralized Platform",
+//   },
+// ];
 
-export const portfolioData3 = [
-  {
-    id: 13,
-    year: "2017",
-    img: "/assets/img/award/award-1-1.png",
-    title: "Decentralized Platform",
-    categories: ["Branding", "Development", "Marketing"],
-    tag: "Webflow",
-  },
-  {
-    id: 14,
-    year: "2019",
-    img: "/assets/img/award/award-1-2.png",
-    title: "App for Business",
-    categories: ["Development", "Marketing"],
-    tag: "Themeforest",
-  },
-  {
-    id: 15,
-    year: "2019",
-    img: "/assets/img/award/award-1-3.png",
-    title: "Website Development",
-    categories: ["Branding", "Development"],
-    tag: "Framer",
-  },
-  {
-    id: 16,
-    year: "2022",
-    img: "/assets/img/award/award-1-4.png",
-    title: "Nova Scotia Winery",
-    categories: ["Branding", "Development", "Marketing"],
-    tag: "Template monster",
-  },
-  {
-    id: 17,
-    year: "2023",
-    img: "/assets/img/award/award-1-5.png",
-    title: "Educational Platform",
-    categories: ["Marketing", "Branding"],
-    tag: "Themeforest",
-  },
-];
+// export const portfolioData3 = [
+//   {
+//     id: 13,
+//     year: "2017",
+//     img: "/assets/img/award/award-1-1.png",
+//     title: "Decentralized Platform",
+//     categories: ["Branding", "Development", "Marketing"],
+//     tag: "Webflow",
+//   },
+//   {
+//     id: 14,
+//     year: "2019",
+//     img: "/assets/img/award/award-1-2.png",
+//     title: "App for Business",
+//     categories: ["Development", "Marketing"],
+//     tag: "Themeforest",
+//   },
+//   {
+//     id: 15,
+//     year: "2019",
+//     img: "/assets/img/award/award-1-3.png",
+//     title: "Website Development",
+//     categories: ["Branding", "Development"],
+//     tag: "Framer",
+//   },
+//   {
+//     id: 16,
+//     year: "2022",
+//     img: "/assets/img/award/award-1-4.png",
+//     title: "Nova Scotia Winery",
+//     categories: ["Branding", "Development", "Marketing"],
+//     tag: "Template monster",
+//   },
+//   {
+//     id: 17,
+//     year: "2023",
+//     img: "/assets/img/award/award-1-5.png",
+//     title: "Educational Platform",
+//     categories: ["Marketing", "Branding"],
+//     tag: "Themeforest",
+//   },
+// ];
 
-export const portfolioData4 = [
-  {
-    id: 18,
-    imageUrl: "/assets/img/portfolio/portfolio3_1.jpg",
-    category: "Branding",
-    title: "Decentralized Platform",
-    parentClass: "col-lg-7",
-  },
-  {
-    id: 19,
-    imageUrl: "/assets/img/portfolio/portfolio3_2.jpg",
-    category: "Branding",
-    title: "Laundering Compliance",
-    parentClass: "col-lg-5",
-  },
-  {
-    id: 20,
-    imageUrl: "/assets/img/portfolio/portfolio3_3.jpg",
-    category: "Branding",
-    title: "Anti Money Laundering",
-    parentClass: "col-lg-12",
-  },
-  {
-    id: 21,
-    imageUrl: "/assets/img/portfolio/portfolio3_4.png",
-    category: "Branding",
-    title: "Anti Money Laundering",
-    parentClass: "col-lg-5",
-  },
-  {
-    id: 22,
-    imageUrl: "/assets/img/portfolio/portfolio3_5.png",
-    category: "Branding",
-    title: "Anti Money Laundering",
-    parentClass: "col-lg-7",
-  },
-  {
-    id: 23,
-    imageUrl: "/assets/img/portfolio/portfolio3_6.png",
-    category: "Branding",
-    title: "Anti Money Laundering",
-    parentClass: "col-lg-12",
-  },
-];
+// export const portfolioData4 = [
+//   {
+//     id: 18,
+//     imageUrl: "/assets/img/portfolio/portfolio3_1.jpg",
+//     category: "Branding",
+//     title: "Decentralized Platform",
+//     parentClass: "col-lg-7",
+//   },
+//   {
+//     id: 19,
+//     imageUrl: "/assets/img/portfolio/portfolio3_2.jpg",
+//     category: "Branding",
+//     title: "Laundering Compliance",
+//     parentClass: "col-lg-5",
+//   },
+//   {
+//     id: 20,
+//     imageUrl: "/assets/img/portfolio/portfolio3_3.jpg",
+//     category: "Branding",
+//     title: "Anti Money Laundering",
+//     parentClass: "col-lg-12",
+//   },
+//   {
+//     id: 21,
+//     imageUrl: "/assets/img/portfolio/portfolio3_4.png",
+//     category: "Branding",
+//     title: "Anti Money Laundering",
+//     parentClass: "col-lg-5",
+//   },
+//   {
+//     id: 22,
+//     imageUrl: "/assets/img/portfolio/portfolio3_5.png",
+//     category: "Branding",
+//     title: "Anti Money Laundering",
+//     parentClass: "col-lg-7",
+//   },
+//   {
+//     id: 23,
+//     imageUrl: "/assets/img/portfolio/portfolio3_6.png",
+//     category: "Branding",
+//     title: "Anti Money Laundering",
+//     parentClass: "col-lg-12",
+//   },
+// ];
 
-export const projects = [
-  {
-    id: 24,
-    title: "Decentralized Platform",
-    imageSrc: "/assets/img/portfolio/portfolio4_1.png",
-    categories: ["Branding", "Development", "Marketing"],
-  },
-  {
-    id: 25,
-    title: "App for Business",
-    imageSrc: "/assets/img/portfolio/portfolio4_2.png",
-    categories: ["Development", "Marketing"],
-  },
-  {
-    id: 26,
-    title: "Educational Platform",
-    imageSrc: "/assets/img/portfolio/portfolio4_3.png",
-    categories: ["Marketing", "Branding"],
-  },
-  {
-    id: 27,
-    title: "Nova Scotia Winery",
-    imageSrc: "/assets/img/portfolio/portfolio4_4.png",
-    categories: ["Branding", "Development", "Marketing"],
-  },
-];
-export const projects2 = [
-  {
-    id: 28,
-    title: "Decentralized Platform",
-    imageSrc: "/assets/img/portfolio/portfolio5_1.jpg",
+// export const projects = [
+//   {
+//     id: 24,
+//     title: "Decentralized Platform",
+//     imageSrc: "/assets/img/portfolio/portfolio4_1.png",
+//     categories: ["Branding", "Development", "Marketing"],
+//   },
+//   {
+//     id: 25,
+//     title: "App for Business",
+//     imageSrc: "/assets/img/portfolio/portfolio4_2.png",
+//     categories: ["Development", "Marketing"],
+//   },
+//   {
+//     id: 26,
+//     title: "Educational Platform",
+//     imageSrc: "/assets/img/portfolio/portfolio4_3.png",
+//     categories: ["Marketing", "Branding"],
+//   },
+//   {
+//     id: 27,
+//     title: "Nova Scotia Winery",
+//     imageSrc: "/assets/img/portfolio/portfolio4_4.png",
+//     categories: ["Branding", "Development", "Marketing"],
+//   },
+// ];
+// export const projects2 = [
+//   {
+//     id: 28,
+//     title: "Decentralized Platform",
+//     imageSrc: "/assets/img/portfolio/portfolio5_1.jpg",
 
-    categories: ["Branding", "Development", "Marketing"],
-  },
-  {
-    id: 29,
-    title: "App for Business",
-    imageSrc: "/assets/img/portfolio/portfolio5_2.jpg",
-    categories: ["Development", "Marketing"],
-  },
-  {
-    id: 30,
-    title: "Educational Platform",
-    imageSrc: "/assets/img/portfolio/portfolio5_3.jpg",
-    categories: ["Marketing", "Branding"],
-  },
-  {
-    id: 31,
-    title: "Nova Scotia Winery",
-    imageSrc: "/assets/img/portfolio/portfolio5_4.jpg",
-    categories: ["Branding", "Development", "Marketing"],
-  },
-];
-export const portfolioData5 = [
-  {
-    id: 32,
-    imageSrc: "/assets/img/portfolio/portfolio4_1.png",
-    categoryLinks: ["Branding", "Development", "Marketing"],
-    projectTitle: "Money Laundering Compliance Scanner",
-    title: "Decentralized Platform",
-  },
-  {
-    id: 33,
-    imageSrc: "/assets/img/portfolio/portfolio4_2.png",
-    categoryLinks: ["Branding", "Development", "Marketing"],
-    projectTitle: "Decentralized Lending Platform for Students",
-    title: "App for Business",
-  },
-  {
-    id: 34,
-    imageSrc: "/assets/img/portfolio/portfolio4_3.png",
-    categoryLinks: ["Branding", "Development", "Marketing"],
-    projectTitle: "Anti Money Laundering Compliance Scanner",
-    title: "Website Development",
-  },
-  {
-    id: 35,
-    imageSrc: "/assets/img/portfolio/portfolio4_4.png",
-    categoryLinks: ["Branding", "Development", "Marketing"],
-    projectTitle: "Shopify Redesign for a Nova Scotia Winery",
-    title: "Nova Scotia Winery",
-  },
-  {
-    id: 36,
-    imageSrc: "/assets/img/portfolio/portfolio4_5.png",
-    categoryLinks: ["Branding", "Development", "Marketing"],
-    projectTitle: "Trading Website Design & Development",
-    title: "Educational Platform",
-  },
-  {
-    id: 37,
-    imageSrc: "/assets/img/portfolio/portfolio4_6.png",
-    categoryLinks: ["Branding", "Development", "Marketing"],
-    projectTitle:
-      "Shopify Redesign for a Nova Scotia WineryProduct Lineup Industrial Design for Caramba",
-    title: "Educational Platform",
-  },
-];
+//     categories: ["Branding", "Development", "Marketing"],
+//   },
+//   {
+//     id: 29,
+//     title: "App for Business",
+//     imageSrc: "/assets/img/portfolio/portfolio5_2.jpg",
+//     categories: ["Development", "Marketing"],
+//   },
+//   {
+//     id: 30,
+//     title: "Educational Platform",
+//     imageSrc: "/assets/img/portfolio/portfolio5_3.jpg",
+//     categories: ["Marketing", "Branding"],
+//   },
+//   {
+//     id: 31,
+//     title: "Nova Scotia Winery",
+//     imageSrc: "/assets/img/portfolio/portfolio5_4.jpg",
+//     categories: ["Branding", "Development", "Marketing"],
+//   },
+// ];
+// export const portfolioData5 = [
+//   {
+//     id: 32,
+//     imageSrc: "/assets/img/portfolio/portfolio4_1.png",
+//     categoryLinks: ["Branding", "Development", "Marketing"],
+//     projectTitle: "Money Laundering Compliance Scanner",
+//     title: "Decentralized Platform",
+//   },
+//   {
+//     id: 33,
+//     imageSrc: "/assets/img/portfolio/portfolio4_2.png",
+//     categoryLinks: ["Branding", "Development", "Marketing"],
+//     projectTitle: "Decentralized Lending Platform for Students",
+//     title: "App for Business",
+//   },
+//   {
+//     id: 34,
+//     imageSrc: "/assets/img/portfolio/portfolio4_3.png",
+//     categoryLinks: ["Branding", "Development", "Marketing"],
+//     projectTitle: "Anti Money Laundering Compliance Scanner",
+//     title: "Website Development",
+//   },
+//   {
+//     id: 35,
+//     imageSrc: "/assets/img/portfolio/portfolio4_4.png",
+//     categoryLinks: ["Branding", "Development", "Marketing"],
+//     projectTitle: "Shopify Redesign for a Nova Scotia Winery",
+//     title: "Nova Scotia Winery",
+//   },
+//   {
+//     id: 36,
+//     imageSrc: "/assets/img/portfolio/portfolio4_5.png",
+//     categoryLinks: ["Branding", "Development", "Marketing"],
+//     projectTitle: "Trading Website Design & Development",
+//     title: "Educational Platform",
+//   },
+//   {
+//     id: 37,
+//     imageSrc: "/assets/img/portfolio/portfolio4_6.png",
+//     categoryLinks: ["Branding", "Development", "Marketing"],
+//     projectTitle:
+//       "Shopify Redesign for a Nova Scotia WineryProduct Lineup Industrial Design for Caramba",
+//     title: "Educational Platform",
+//   },
+// ];
 
 // Tecvity Portfolio Starts Here
-export const VAPTPortfolio = [
+// export const VAPTPortfolio = [
+//   {
+//     id: 38,
+//     imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+//     categoryLinks: ["Cybersecurity","Web Application Security"],
+//     projectTitle: "Penetration Test of Mach7t",
+//     title: "Penetration Test of Mach7t",
+//     category: "Grey Box Penetration Test",
+//     client: "Brent Glover",
+//     date: "Feb, 2024 (Ongoing)",
+//     para1: "Mach7t is a leading healthcare company in the United States that develops multiple products specializing in Vendor Neutral Archives. They approached Tecvity to get their product suite tested for security vulnerabilities",
+//     challenge: "For testing the security of a product you should know all the in's and out's of it to be able to properly test it. The challenge was that Mach7t's products was not like just another application but it had a lot of healthcare specific features and functionalities that are not known to normal users",
+//     finalResult: "Our team worked with Mach7t to understand their suite properly and then performed comprehensive security testing resulting in multiple critical and high severity issues detected and reported. Mach7t works with Tecvity for their continuous security engagements on regular basis and we're proud to have them as our permanent client."
+//   },
+//   {
+//     id: 2,
+//     imageSrc: "/assets/img/portfolio/portfolio1_2.jpg",
+//     categoryLinks: ["Branding", "Development", "Marketing"],
+//     projectTitle: "Decentralized Lending Platform for Students",
+//     title: "App for Business",
+//   },
+//   {
+//     id: 3,
+//     imageSrc: "/assets/img/portfolio/portfolio1_3.jpg",
+//     categoryLinks: ["Branding", "Development", "Marketing"],
+//     projectTitle: "Anti Money Laundering Compliance Scanner",
+//     title: "Website Development",
+//   },
+
+// ];
+// export const allPortfolio = [
+//   // ...portfolioData,
+//   // ...portfolioData2,
+//   // ...portfolioData3,
+//   // ...portfolioData4,
+//   // ...projects,
+//   // ...projects2,
+//   // ...portfolioData5,
+//   ...VAPTPortfolio
+// ];
+
+
+
+// ORG DATA ^
+// DATA FOR TESTING
+
+
+export const temp = [
   {
     id: 38,
     imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
-    categoryLinks: ["Cybersecurity","Web Application Security"],
+    categoryLinks: ["Cybersecurity", "Web Application Security"],
     projectTitle: "Penetration Test of Mach7t",
     title: "Penetration Test of Mach7t",
     category: "Grey Box Penetration Test",
     client: "Brent Glover",
     date: "Feb, 2024 (Ongoing)",
-    para1: "Mach7t is a leading healthcare company in the United States that develops multiple products specializing in Vendor Neutral Archives. They approached Tecvity to get their product suite tested for security vulnerabilities",
-    challenge: "For testing the security of a product you should know all the in's and out's of it to be able to properly test it. The challenge was that Mach7t's products was not like just another application but it had a lot of healthcare specific features and functionalities that are not known to normal users",
-    finalResult: "Our team worked with Mach7t to understand their suite properly and then performed comprehensive security testing resulting in multiple critical and high severity issues detected and reported. Mach7t works with Tecvity for their continuous security engagements on regular basis and we're proud to have them as our permanent client."
+    para1: "Mach7t is a leading healthcare company in the United States that develops multiple products specializing in Vendor Neutral Archives. They approached Tecvity to get their product suite tested for security vulnerabilities.",
+    challenge: "Testing the security of a complex product like Mach7t's suite was challenging due to its healthcare-specific functionalities, which are not familiar to most users.",
+    finalResult: "Our team worked with Mach7t to perform comprehensive security testing, resulting in the detection of multiple critical vulnerabilities. Mach7t now relies on Tecvity for ongoing security engagements."
   },
   {
-    id: 2,
-    imageSrc: "/assets/img/portfolio/portfolio1_2.jpg",
-    categoryLinks: ["Branding", "Development", "Marketing"],
-    projectTitle: "Decentralized Lending Platform for Students",
-    title: "App for Business",
+    id: 39,
+    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+    categoryLinks: ["Cybersecurity", "Network Security"],
+    projectTitle: "Network Security Audit for NexGenTech",
+    title: "Network Security Audit for NexGenTech",
+    category: "Internal Network Penetration Test",
+    client: "Jessica Simmons",
+    date: "Jan, 2024",
+    para1: "NexGenTech, a global leader in IoT solutions, engaged Tecvity to perform an internal network penetration test to identify vulnerabilities and secure their infrastructure.",
+    challenge: "The challenge was securing a highly dynamic IoT network where devices frequently connect and disconnect, requiring advanced threat modeling and specialized testing techniques.",
+    finalResult: "Our audit identified key vulnerabilities and provided NexGenTech with recommendations that strengthened their network defenses, enhancing their IoT security framework."
   },
   {
-    id: 3,
-    imageSrc: "/assets/img/portfolio/portfolio1_3.jpg",
-    categoryLinks: ["Branding", "Development", "Marketing"],
-    projectTitle: "Anti Money Laundering Compliance Scanner",
-    title: "Website Development",
+    id: 40,
+    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+    categoryLinks: ["Cybersecurity", "Cloud Security"],
+    projectTitle: "Cloud Infrastructure Security Review for CloudSecure",
+    title: "Cloud Infrastructure Security Review for CloudSecure",
+    category: "Cloud Security Assessment",
+    client: "Samuel Lee",
+    date: "Mar, 2024",
+    para1: "CloudSecure provides cloud-based services to clients across various industries. They approached Tecvity to perform a thorough security review of their cloud infrastructure.",
+    challenge: "Securing cloud environments requires a detailed understanding of configurations across different platforms. The challenge was to ensure CloudSecure's setup met industry standards for all components.",
+    finalResult: "Tecvity helped CloudSecure identify and mitigate misconfigurations in their cloud environment, ensuring compliance with industry best practices and enhancing their overall security posture."
   },
-
-];
+  {
+    id: 41,
+    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+    categoryLinks: ["Cybersecurity", "Mobile App Security"],
+    projectTitle: "Mobile Application Security Test for HealthFirst",
+    title: "Mobile Application Security Test for HealthFirst",
+    category: "Mobile Penetration Test",
+    client: "Emily Watson",
+    date: "Apr, 2024",
+    para1: "HealthFirst, a mobile health startup, requested Tecvity to test their mobile app for security vulnerabilities to ensure the safety of patient data.",
+    challenge: "The mobile app contained sensitive health data, making it essential to focus on data privacy and encryption. The challenge was ensuring security across different mobile platforms and devices.",
+    finalResult: "Our team identified key vulnerabilities, particularly related to data storage and transmission. We provided detailed recommendations to enhance data security, protecting HealthFirst’s app and its users."
+  },
+  {
+    id: 42,
+    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+    categoryLinks: ["Cybersecurity", "API Security"],
+    projectTitle: "API Security Audit for FinBank",
+    title: "API Security Audit for FinBank",
+    category: "API Penetration Test",
+    client: "Michael Ford",
+    date: "May, 2024",
+    para1: "FinBank, a leading financial institution, asked Tecvity to conduct an API security audit to protect their critical banking systems from potential attacks.",
+    challenge: "The challenge was to ensure that all API endpoints were properly secured, especially given the sensitive nature of financial data flowing through the system.",
+    finalResult: "Tecvity’s audit identified several API vulnerabilities and provided recommendations to improve security, significantly reducing the risk of unauthorized access to FinBank’s systems."
+  },
+  {
+    id: 43,
+    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+    categoryLinks: ["Cybersecurity", "Application Security"],
+    projectTitle: "Web Application Security for ShopPro",
+    title: "Web Application Security for ShopPro",
+    category: "Full Application Penetration Test",
+    client: "Alexandra Green",
+    date: "Jun, 2024",
+    para1: "ShopPro is an e-commerce platform that needed to ensure their application was free from vulnerabilities. Tecvity was called in to assess and secure their web application.",
+    challenge: "Securing a large-scale e-commerce platform required attention to user authentication, payment gateways, and customer data privacy.",
+    finalResult: "Our team identified and mitigated several critical vulnerabilities, improving ShopPro's security and protecting both the company and its customers."
+  },
+  {
+    id: 44,
+    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+    categoryLinks: ["Cybersecurity", "Data Privacy"],
+    projectTitle: "GDPR Compliance Audit for HealthTech",
+    title: "GDPR Compliance Audit for HealthTech",
+    category: "Privacy Audit",
+    client: "Sophie Daniels",
+    date: "Jul, 2024",
+    para1: "HealthTech, a medical device company, needed to ensure their compliance with the EU GDPR regulations. Tecvity conducted a comprehensive GDPR audit.",
+    challenge: "The audit required deep analysis of data collection and storage practices to ensure GDPR compliance, particularly around sensitive patient data.",
+    finalResult: "Tecvity identified several compliance issues and provided detailed recommendations, enabling HealthTech to meet GDPR standards and protect their users' privacy."
+  },
+  {
+    id: 45,
+    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+    categoryLinks: ["Cybersecurity", "Infrastructure Security"],
+    projectTitle: "Infrastructure Security for MetaCorp",
+    title: "Infrastructure Security for MetaCorp",
+    category: "Internal Penetration Test",
+    client: "James Wright",
+    date: "Aug, 2024",
+    para1: "MetaCorp, a global tech company, sought Tecvity’s expertise in testing the security of their internal network infrastructure.",
+    challenge: "The complexity of MetaCorp’s infrastructure, including multiple office locations and remote work setups, required a thorough assessment of various access points.",
+    finalResult: "Tecvity provided a detailed analysis of vulnerabilities and implemented security controls to protect MetaCorp’s internal systems from unauthorized access."
+  },
+  {
+    id: 46,
+    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+    categoryLinks: ["Cybersecurity", "Mobile App Security"],
+    projectTitle: "Mobile Security Testing for FitLife",
+    title: "Mobile Security Testing for FitLife",
+    category: "Mobile Application Penetration Test",
+    client: "Daniel Carter",
+    date: "Sep, 2024",
+    para1: "FitLife, a fitness tracking app, needed security testing to protect users' personal and health data. Tecvity was tasked with ensuring the safety of their mobile app.",
+    challenge: "With the app handling sensitive health data, the primary challenge was securing the data both at rest and in transit, across different mobile platforms.",
+    finalResult: "Tecvity helped FitLife secure their app by identifying critical vulnerabilities in data handling and transmission, resulting in a more secure user experience."
+  },
+  {
+    id: 47,
+    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+    categoryLinks: ["Cybersecurity", "Cloud Security"],
+    projectTitle: "Cloud Security for CloudNet",
+    title: "Cloud Security for CloudNet",
+    category: "Cloud Penetration Test",
+    client: "Olivia Benson",
+    date: "Oct, 2024",
+    para1: "CloudNet, a cloud services provider, required a comprehensive security review of their cloud infrastructure to ensure their client data was well-protected.",
+    challenge: "The challenge was assessing a large cloud infrastructure with multiple services and ensuring each one met the required security standards.",
+    finalResult: "Tecvity's cloud security review helped CloudNet secure their platform by addressing vulnerabilities in their infrastructure, safeguarding client data."
+  },
+  {
+    id: 48,
+    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+    categoryLinks: ["Cybersecurity", "IoT Security"],
+    projectTitle: "IoT Device Security Assessment for SmartHome",
+    title: "IoT Device Security Assessment for SmartHome",
+    category: "IoT Security Audit",
+    client: "Lucas Grey",
+    date: "Nov, 2024",
+    para1: "SmartHome, a startup in smart device manufacturing, sought Tecvity's help to assess the security of their IoT devices.",
+    challenge: "The primary challenge was ensuring device firmware and communications were secure against unauthorized access.",
+    finalResult: "Our assessment revealed critical vulnerabilities, leading to improved security measures across SmartHome's product line."
+  },
+  {
+    id: 49,
+    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+    categoryLinks: ["Cybersecurity", "Data Breach Prevention"],
+    projectTitle: "Data Breach Prevention for InfoSecure",
+    title: "Data Breach Prevention for InfoSecure",
+    category: "Security Strategy Consultation",
+    client: "Rachel Adams",
+    date: "Dec, 2024",
+    para1: "InfoSecure, a data management firm, engaged Tecvity to strengthen their data breach prevention strategies.",
+    challenge: "The challenge was to evaluate their existing protocols and identify potential weaknesses in their data protection mechanisms.",
+    finalResult: "Tecvity provided a comprehensive review and implemented enhanced protocols that significantly reduced InfoSecure's risk of data breaches."
+  },
+  {
+    id: 50,
+    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+    categoryLinks: ["Cybersecurity", "Social Engineering"],
+    projectTitle: "Social Engineering Test for RetailCorp",
+    title: "Social Engineering Test for RetailCorp",
+    category: "Social Engineering Assessment",
+    client: "Henry Ford",
+    date: "Jan, 2025",
+    para1: "RetailCorp, a major retail chain, requested Tecvity to conduct a social engineering assessment to identify vulnerabilities in their human factor.",
+    challenge: "The challenge was to simulate real-world attacks without compromising employee trust or security policies.",
+    finalResult: "The assessment revealed areas for improvement in employee awareness and training, leading to enhanced security protocols."
+  },
+  {
+    id: 51,
+    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+    categoryLinks: ["Cybersecurity", "Incident Response"],
+    projectTitle: "Incident Response Planning for HealthServ",
+    title: "Incident Response Planning for HealthServ",
+    category: "Incident Response Strategy",
+    client: "Nina Smith",
+    date: "Feb, 2025",
+    para1: "HealthServ, a healthcare provider, needed a robust incident response plan to handle potential security breaches effectively.",
+    challenge: "Creating a comprehensive plan required deep insights into healthcare-specific regulations and data sensitivity.",
+    finalResult: "Tecvity developed a tailored incident response plan that prepares HealthServ to swiftly respond to any potential threats."
+  },
+  {
+    id: 52,
+    imageSrc: "/assets/img/portfolio/portfolio1_1.jpg",
+    categoryLinks: ["Cybersecurity", "Compliance"],
+    projectTitle: "Compliance Audit for E-Commerce Solutions",
+    title: "Compliance Audit for E-Commerce Solutions",
+    category: "Compliance Review",
+    client: "Kevin Turner",
+    date: "Mar, 2025",
+    para1: "E-Commerce Solutions, an online retailer, sought Tecvity's expertise in conducting a compliance audit to align with new data protection regulations.",
+    challenge: "Navigating complex regulations while ensuring all aspects of their operations met compliance standards was a significant challenge.",
+    finalResult: "Tecvity identified compliance gaps and provided actionable recommendations, allowing E-Commerce Solutions to fully align with new regulations."
+  }
+]
 export const allPortfolio = [
-  ...portfolioData,
-  ...portfolioData2,
-  ...portfolioData3,
-  ...portfolioData4,
-  ...projects,
-  ...projects2,
-  ...portfolioData5,
-  ...VAPTPortfolio
+  ...temp
+];
+export const portfolioData = [
+  ...temp
 ];

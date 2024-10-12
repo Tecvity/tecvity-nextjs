@@ -9,8 +9,9 @@ import Tags from "./Tags";
 import Image from "next/image";
 import { allBlogs } from "@/data/blogs";
 
-export default function BlogDetails({ blogId }) {
-  const blogItem = allBlogs.filter((elm) => elm.id == blogId)[0] || allBlogs[0];
+export default function BlogDetails({ blogTitle }) {
+  const decodedBlogTitle = decodeURIComponent(blogTitle);
+  const blogItem = allBlogs.filter((elm) => elm.title == decodedBlogTitle)[0] || allBlogs[0];
   return (
     <section className="blog__details-area space">
       <div className="container">

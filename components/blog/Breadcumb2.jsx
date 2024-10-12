@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
-export default function Breadcumb2() {
+export default function Breadcumb2({blogTitle}) {
+  const decodedBlogTitle = decodeURIComponent(blogTitle);
   return (
     <div className="breadcumb-wrapper style2 bg-smoke">
       <div className="container-fluid">
@@ -17,7 +18,7 @@ export default function Breadcumb2() {
                 Blog
               </Link>
             </li>
-            <li>Everything You Should Know About Return</li>
+            <li>{decodedBlogTitle}</li>
           </ul>
         </div>
       </div>
