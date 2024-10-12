@@ -1,5 +1,5 @@
 "use client";
-import { allPortfolio } from "@/data/portfolio";
+import { portfolioProjects } from "@/data/portfolio";
 import Image from "next/image";
 import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";
@@ -7,7 +7,7 @@ import Slider from "react-slick";
 export default function ProjectDetails({ portfolioTitle }) {
   const decodedProjectTitle = decodeURIComponent(portfolioTitle);
   const portfolioItem =
-    allPortfolio.filter((elm) => elm.title == decodedProjectTitle)[0] || allPortfolio[1];
+  portfolioProjects.filter((elm) => elm.title == decodedProjectTitle)[0] || allPortfolio[1];
   const itemsImages = [
     "/assets/img/portfolio/portfolio_inner_1.png",
     "/assets/img/portfolio/portfolio_inner_2.png",
