@@ -1,5 +1,5 @@
 "use client";
-import { portfolioProjects } from "@/data/portfolio";
+import { portfolioData  } from "@/data/portfolio";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
@@ -30,7 +30,7 @@ export default function Projects() {
       }
     );
   };
-  const hasMoreProjects = visibleProjects < portfolioProjects.length;
+  const hasMoreProjects = visibleProjects < portfolioData.length;
 
   useEffect(() => {
     /////////////////////////////////////////////////////
@@ -45,7 +45,7 @@ export default function Projects() {
           className="row gy-60 justify-content-between masonary-active"
           ref={isotopContainer}
         >
-          {portfolioProjects.slice(0, visibleProjects).map((elm, i) => (
+          {portfolioData.slice(0, visibleProjects).map((elm, i) => (
             <div key={i} className="col-lg-6 filter-item">
               <div className={`portfolio-wrap ${i == 0 ? "mt-lg-140" : ""} `}>
                 <div className="portfolio-thumb">
