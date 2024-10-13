@@ -190,7 +190,7 @@ export const ourServices = [
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-3.svg",
-    title: "UI/UX Design",
+    title: "UI UX Design",
     id: 17,
     text: "We design user interfaces and experiences that enhance usability and engagement.",
     para1: "Great design is more than just aesthetics. We focus on creating intuitive, user-centered interfaces that provide seamless experiences.",

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function ServiceDetails({ serviceTitle }) {
-  const decodedServiceTitle = decodeURIComponent(serviceTitle);
+  const decodedServiceTitle = serviceTitle.replace(/-/g, ' ');
   const serviceItem =
     allFeatures.filter((elm) => elm.title == decodedServiceTitle)[0] || allFeatures[1];
 

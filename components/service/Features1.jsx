@@ -15,12 +15,12 @@ export default function Features1() {
                   <Image width={40} height={40} src={elm.iconSrc} alt="icon" />
                 </div>
                 <h4 className="feature-card-title">
-                  <a href={`/service-details/${elm.title}`}>{elm.title}</a>
+                  <a href={`/service-details/${elm.title.replace(/\s+/g, '-')}`}>{elm.title}</a>
                 </h4>
                 <p className="feature-card-text">{elm.text}</p>
                 <Link
                   scroll={false}
-                  href={`/service-details/${elm.title}`}
+                  href={`/service-details/${elm.title.replace(/\s+/g, '-')}`}
                   className="link-btn"
                 >
                   <span className="link-effect">

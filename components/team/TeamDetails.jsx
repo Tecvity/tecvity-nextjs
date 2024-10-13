@@ -3,7 +3,7 @@ import { teamData } from "@/data/team";
 import Image from "next/image";
 
 export default function TeamDetails({ teamName }) {
-  const decodedTeamName = decodeURIComponent(teamName);
+  const decodedTeamName = teamName.replace(/-/g, ' ');
   const teamItem = teamData.filter((elm) => elm.name == decodedTeamName)[0] || teamData[1];
   return (
     <div className="team-details-page-area space">
