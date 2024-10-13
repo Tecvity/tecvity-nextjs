@@ -16,18 +16,6 @@ export default function Socials() {
           </span>
         </a>
       ))}
-      {socialMediaSvgLinks.map((link) => (
-        <a key={link.id} href={link.href}>
-          <span className="link-effect">
-            <span className="effect-1">
-              <i dangerouslySetInnerHTML={{ __html: link.svg }}></i>
-            </span>
-            <span className="effect-1">
-              <i dangerouslySetInnerHTML={{ __html: link.svg }}></i>
-            </span>
-          </span>
-        </a>
-      ))}
     </>
   );
 }
