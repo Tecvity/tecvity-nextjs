@@ -1,4 +1,4 @@
-import { socialMediaLinks } from "@/data/socials";
+import { socialMediaLinks, socialMediaSvgLinks } from "@/data/socials";
 import React from "react";
 
 export default function Socials() {
@@ -12,6 +12,18 @@ export default function Socials() {
             </span>
             <span className="effect-1">
               <i className={link.iconClass}></i>
+            </span>
+          </span>
+        </a>
+      ))}
+      {socialMediaSvgLinks.map((link) => (
+        <a key={link.id} href={link.href}>
+          <span className="link-effect">
+            <span className="effect-1">
+              <i dangerouslySetInnerHTML={{ __html: link.svg }}></i>
+            </span>
+            <span className="effect-1">
+              <i dangerouslySetInnerHTML={{ __html: link.svg }}></i>
             </span>
           </span>
         </a>
