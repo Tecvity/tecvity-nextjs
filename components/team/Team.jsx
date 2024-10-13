@@ -21,7 +21,7 @@ export default function Team() {
                 </div>
                 <div className="team-card_content">
                   <h3 className="team-card_title">
-                    <Link scroll={false} href={`/team-details/${elm.id}`}>
+                    <Link scroll={false} href={`/team-details/${elm.name}`}>
                       {elm.name}
                     </Link>
                   </h3>

@@ -2,8 +2,9 @@ import { socialMediaLinks } from "@/data/socials";
 import { teamData } from "@/data/team";
 import Image from "next/image";
 
-export default function TeamDetails({ teamId }) {
-  const teamItem = teamData.filter((elm) => elm.id == teamId)[0] || teamData[1];
+export default function TeamDetails({ teamName }) {
+  const decodedTeamName = decodeURIComponent(teamName);
+  const teamItem = teamData.filter((elm) => elm.name == decodedTeamName)[0] || teamData[1];
   return (
     <div className="team-details-page-area space">
       <div className="container">

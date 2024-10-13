@@ -1,29 +1,28 @@
 import MarqueeComponent from "@/components/common/Marquee";
 import Footer8 from "@/components/footers/Footer8";
 import Header3 from "@/components/headers/Header3";
-import Contact2 from "@/components/team/Contact2";
 
-import TeamDetails from "@/components/team/TeamDetails";
-import { teamData } from "@/data/team";
+import ServiceDetails from "@/components/service/ServiceDetails";
+import { allFeatures } from "@/data/features";
 
 //For Static Side Genaration(SSG)
 
 // export async function generateStaticParams() {
-//   return teamData.map((elm) => ({
+//   return allFeatures.map((elm) => ({
 //     id: `${elm.id}`,
 //   }));
 // }
 
 export const metadata = {
-  title: "Team Details || Frisk - Creative Agency & Portfolio Nextjs Template",
+  title:
+    "Service Details || Tecvity - Delivering Creative Technological Solutions",
 };
 
-export default function TeamPageDetails({ params }) {
+export default function ServicePageDetails({ params }) {
   return (
     <>
       <Header3 />
-      <TeamDetails teamId={params.id} />
-      <Contact2 />
+      <ServiceDetails serviceTitle={params.title} />
       <MarqueeComponent />
       <Footer8 />
     </>
