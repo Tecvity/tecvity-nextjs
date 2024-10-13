@@ -11,6 +11,11 @@ export const socialMediaLinks = [
   },
   {
     id: 4,
+    href: "https://www.upwork.com/agencies/tecvity",
+    iconClass: "fa-brands fa-square-upwork",
+  },
+  {
+    id: 5,
     href: "https://www.behance.net/tecvity",
     iconClass: "fab fa-behance",
   },
