@@ -17,12 +17,12 @@ export const metadata = {
   title:
     "Service Details || Tecvity - Delivering Creative Technological Solutions",
 };
-
+//
 export default function ServicePageDetails({ params }) {
   return (
     <>
       <Header3 />
-      <ServiceDetails serviceId={params.id} />
+      <ServiceDetails serviceTitle={params.title} />
       <MarqueeComponent />
       <Footer8 />
     </>

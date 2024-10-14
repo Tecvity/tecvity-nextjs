@@ -10,7 +10,7 @@ export default function RecentPosts() {
         {recentPosts.map((post) => (
           <div key={post.id} className="sidebar__post-item">
             <div className="sidebar__post-thumb">
-              <Link scroll={false} href={`/blog-details/${post.id}`}>
+              <Link scroll={false} href={`/blog-details/${post.title.replace(/\s+/g, '-')}`}>
                 <Image
                   width={80}
                   height={76}
@@ -21,7 +21,7 @@ export default function RecentPosts() {
             </div>
             <div className="sidebar__post-content">
               <h5 className="title">
-                <Link scroll={false} href={`/blog-details/${post.id}`}>
+                <Link scroll={false} href={`/blog-details/${post.title.replace(/\s+/g, '-')}`}>
                   {post.title}
                 </Link>
               </h5>

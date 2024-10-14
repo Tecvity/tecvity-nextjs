@@ -22,7 +22,7 @@ export default function TeamPageDetails({ params }) {
   return (
     <>
       <Header3 />
-      <TeamDetails teamId={params.id} />
+      <TeamDetails teamName={params.name} />
       <Contact2 />
       <MarqueeComponent />
       <Footer8 />

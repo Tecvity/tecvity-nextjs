@@ -22,8 +22,8 @@ export default function BlogPageDetails({ params }) {
   return (
     <>
       <Header3 />
-      <Breadcumb2 />
-      <BlogDetails blogId={params.id} />
+      <Breadcumb2 blogTitle={params.title} />
+      <BlogDetails blogTitle={params.title} />
       <MarqueeComponent />
       <Footer8 />
     </>
