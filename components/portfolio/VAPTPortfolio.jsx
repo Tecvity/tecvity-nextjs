@@ -1,14 +1,24 @@
+"use client"
 import { VAPTPortfolio } from "@/data/portfolio";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
+const projectVisibilityFactor = 4;
 export default function ProjectsVAPT() {
+  const [visibleProjects, setVisibleProjects] = useState(projectVisibilityFactor*2);
+
+  const loadMoreProjects = () => {
+    setVisibleProjects((prev) => prev + projectVisibilityFactor);
+  };
+
+  const hasMoreProjects = visibleProjects < VAPTPortfolio.length;
+
   return (
     <div className="portfolio-area-1 space overflow-hidden">
       <div className="container">
         <div className="row gy-40 gx-60 justify-content-center">
-          {VAPTPortfolio.map((elm, i) => (
+          {VAPTPortfolio.slice(0, visibleProjects).map((elm, i) => (
             <div key={i} className="col-xl-6 col-lg-6">
               <div className="portfolio-wrap">
                 <div className="portfolio-thumb">
@@ -39,14 +49,20 @@ export default function ProjectsVAPT() {
             </div>
           ))}
         </div>
-        <div className="btn-wrap justify-content-center mt-60">
-          <Link scroll={false} className="btn" href="/project-2">
-            <span className="link-effect">
-              <span className="effect-1">LOAD MORE</span>
-              <span className="effect-1">LOAD MORE</span>
-            </span>
-          </Link>
-        </div>
+          <div className="btn-wrap justify-content-center mt-60">
+            <button
+              scroll={false}
+              className="btn"
+              type="button"
+              onClick={loadMoreProjects}
+              disabled={!hasMoreProjects}
+            >
+              <span className="link-effect">
+                <span className="effect-1">LOAD MORE</span>
+                <span className="effect-1">LOAD MORE</span>
+              </span>
+            </button>
+          </div>
       </div>
     </div>
   );
