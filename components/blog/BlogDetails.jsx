@@ -12,6 +12,11 @@ import { allBlogs } from "@/data/blogs";
 export default function BlogDetails({ blogTitle }) {
   const decodedBlogTitle = blogTitle.replace(/-/g, ' ');
   const blogItem = allBlogs.filter((elm) => elm.title == decodedBlogTitle)[0] || allBlogs[0];
+
+  const currentIndex = allBlogs.findIndex((blog) => blog.title === decodedBlogTitle);
+  const nextBlog = currentIndex >= 0 && currentIndex < allBlogs.length - 1 ? allBlogs[currentIndex + 1] : null;
+  const prevBlog = currentIndex > 0 ? allBlogs[currentIndex - 1] : null;
+
   return (
     <section className="blog__details-area space">
       <div className="container">
@@ -152,7 +157,7 @@ export default function BlogDetails({ blogTitle }) {
                     </div>
                   </div>
                   <div className="inner__page-nav mt-20 mb-n1">
-                    <a href="#" className="nav-btn">
+                  <a href={ prevBlog ? `/blog-details/${prevBlog.title.replace(/\s+/g, "-")}` : ""} className={`nav-btn ${!prevBlog ? "disabled" : ""}`}>
                       <i className="fa fa-arrow-left"></i>
                       <span>
                         <span className="link-effect">
@@ -161,7 +166,7 @@ export default function BlogDetails({ blogTitle }) {
                         </span>
                       </span>
                     </a>
-                    <a href="#" className="nav-btn">
+                    <a href={nextBlog ? `/blog-details/${nextBlog.title.replace(/\s+/g, "-")}` : ""} className={`nav-btn ${!nextBlog ? "disabled" : ""}`}>
                       <span>
                         <span className="link-effect">
                           <span className="effect-1">Next Post</span>
