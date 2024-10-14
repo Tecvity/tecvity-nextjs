@@ -22,8 +22,8 @@ export default function ProjectPageDetails({ params }) {
   return (
     <>
       <Header3 />
-      <Breadcumb2 />
-      <ProjectDetails portfolioId={params.id} />
+      <Breadcumb2 portfolioTitle={params.title} />
+      <ProjectDetails portfolioTitle={params.title} />
       <MarqueeComponent />
       <Footer8 />
     </>

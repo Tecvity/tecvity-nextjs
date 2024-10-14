@@ -19,7 +19,7 @@ export default function Blogs() {
             <div key={i} className="col-lg-4 col-md-6">
               <div className="blog-card">
                 <div className="blog-img">
-                  <Link scroll={false} href={`/blog-details/${elm.id}`}>
+                  <Link scroll={false} href={`/blog-details/${elm.title.replace(/\s+/g, '-')}`}>
                     <Image
                       width={416}
                       height={314}
@@ -34,13 +34,13 @@ export default function Blogs() {
                     <a href="#">{elm.category}</a>
                   </div>
                   <h4 className="blog-title">
-                    <Link scroll={false} href={`/blog-details/${elm.id}`}>
+                    <Link scroll={false} href={`/blog-details/${elm.title.replace(/\s+/g, '-')}`}>
                       {elm.title}
                     </Link>
                   </h4>
                   <Link
                     scroll={false}
-                    href={`/blog-details/${elm.id}`}
+                    href={`/blog-details/${elm.title.replace(/\s+/g, '-')}`}
                     className="link-btn"
                   >
                     <span className="link-effect">

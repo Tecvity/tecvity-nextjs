@@ -42,7 +42,7 @@ export default function Projects() {
             <div key={i} className="col-lg-6 filter-item">
               <div className={`portfolio-wrap ${i == 0 ? "mt-lg-140" : ""} `}>
                 <div className="portfolio-thumb">
-                  <Link scroll={false} href={`/project-details/${elm.id}`}>
+                  <Link scroll={false} href={`/project-details/${elm.title.replace(/\s+/g, '-')}`}>
                     <Image
                       width={526}
                       height={740}
@@ -60,11 +60,11 @@ export default function Projects() {
                     ))}
                   </ul>
                   <h3 className="portfolio-title">
-                    <a href="#">{elm.projectTitle}</a>
+                    <a href={`/project-details/${elm.title.replace(/\s+/g, '-')}`}>{elm.projectTitle}</a>
                   </h3>
                   <Link
                     scroll={false}
-                    href={`/project-details/${elm.id}`}
+                    href={`/project-details/${elm.title.replace(/\s+/g, '-')}`}
                     className="link-btn"
                   >
                     <span className="link-effect">
@@ -84,7 +84,7 @@ export default function Projects() {
           ))}
         </div>
         <div className="btn-wrap justify-content-center mt-60">
-          <Link scroll={false} className="btn" href="/project-2">
+          <Link scroll={false} className="btn" href="/project">
             <span className="link-effect">
               <span className="effect-1">LOAD MORE</span>
               <span className="effect-1">LOAD MORE</span>

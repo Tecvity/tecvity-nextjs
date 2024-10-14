@@ -12,7 +12,7 @@ export default function ProjectsVAPT() {
             <div key={i} className="col-xl-6 col-lg-6">
               <div className="portfolio-wrap">
                 <div className="portfolio-thumb">
-                  <Link scroll={false} href={`/project-details/${elm.id}`}>
+                  <Link scroll={false} href={`/project-details/${elm.title.replace(/\s+/g, '-')}`}>
                     <Image
                       width={618}
                       height={470}
@@ -23,7 +23,7 @@ export default function ProjectsVAPT() {
                 </div>
                 <div className="portfolio-details">
                   <h3 className="portfolio-title mb-3">
-                    <Link scroll={false} href={`/project-details/${elm.id}`}>
+                    <Link scroll={false} href={`/project-details/${elm.title.replace(/\s+/g, '-')}`}>
                       {elm.title}
                     </Link>
                   </h3>
