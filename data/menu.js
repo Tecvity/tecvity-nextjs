@@ -64,7 +64,7 @@ export const menuItems = [
       {
         id: 31,
         label: "Penetration Testing & Vulnerability Assessment",
-        link: "/project-details/Penetration-Test-of-Mach7t",
+        link: "/portfolio-vapt",
       },
     ],
   },

@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 export default function Breadcumb2({blogTitle}) {
-  const decodedBlogTitle = decodeURIComponent(blogTitle);
+  const decodedBlogTitle = blogTitle.replace(/-/g, ' ');
   return (
     <div className="breadcumb-wrapper style2 bg-smoke">
       <div className="container-fluid">

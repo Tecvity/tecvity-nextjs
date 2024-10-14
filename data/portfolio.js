@@ -462,6 +462,7 @@ export const allPortfolio = [
   ...projects,
   ...projects2,
   ...portfolioData5,
+  ...portfolioData,
   ...VAPTPortfolio
 ];
 
