@@ -17,7 +17,7 @@ export const metadata = {
   title:
     "Service Details || Tecvity - Delivering Creative Technological Solutions",
 };
-
+//
 export default function ServicePageDetails({ params }) {
   return (
     <>
