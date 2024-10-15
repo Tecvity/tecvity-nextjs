@@ -1,40 +1,37 @@
-"use client";
-import { useState } from "react";
+import React from "react";
 
-export default function Pagination() {
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const handlePageChange = (newPage) => {
-    setCurrentPage(newPage);
-  };
+export default function Pagination({ currentPage, totalPages, onPageChange }) {
+ 
+  let pages = [];
 
   const handlePrevPage = () => {
-    if (currentPage > 1) {
-      handlePageChange(currentPage - 1);
-    }
+    if (currentPage > 1) onPageChange(currentPage - 1);
   };
-
   const handleNextPage = () => {
-    // Assuming you have a total number of pages (e.g., totalPages) in your data
-
-    handlePageChange(currentPage + 1);
+    if (currentPage < totalPages) onPageChange(currentPage + 1);
   };
+  if(totalPages < 5){
+    for (let i = 1; i <= totalPages; i++) {
+      pages.push(i);
+    }
+  }else{
+    pages = [1, 2, 3, 4];
+  }
 
   return (
     <div className="pagination-wrap mt-50">
       <nav aria-label="Page navigation example">
         <ul className="pagination list-wrap">
-          <li className="page-item next-page" onClick={handlePrevPage}>
-            <div style={{ cursor: "pointer" }} className="page-link">
+        <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`} onClick={handlePrevPage}>
+            <div style={{ cursor: currentPage === 1 ? "not-allowed" : "pointer" }} className="page-link">
               <i className="fas fa-arrow-left"></i>
             </div>
           </li>
-          {/* Assuming you have a fixed number of pages, you can adjust this dynamically based on your data */}
-          {[1, 2, 3, 4].map((page) => (
+          {pages.map((page) => (
             <li
               key={page}
               className={`page-item ${currentPage === page ? "active" : ""}`}
-              onClick={() => handlePageChange(page)}
+              onClick={() => onPageChange(page)}
             >
               <div style={{ cursor: "pointer" }} className="page-link">
                 {page}
@@ -48,8 +45,8 @@ export default function Pagination() {
               </div>
             </li>
           )}
-          <li className="page-item next-page" onClick={handleNextPage}>
-            <div style={{ cursor: "pointer" }} className="page-link">
+          <li className={`page-item ${currentPage === totalPages ? "disabled" : ""}`} onClick={handleNextPage}>
+            <div style={{ cursor: currentPage === totalPages ? "not-allowed" : "pointer" }} className="page-link">
               <i className="fas fa-arrow-right"></i>
             </div>
           </li>

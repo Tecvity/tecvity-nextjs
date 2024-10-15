@@ -31,7 +31,7 @@ export const blogs = [
     image: "/assets/img/blog/blog_post1_4.png",
     date: "March 26, 2024",
     category: "Branding",
-    title: "Four Steps to Conduct a Successful Usability",
+    title: "Steps to Ensure Usability Success",
 
     icon: "/assets/img/icon/arrow-left-top.svg",
   },
@@ -43,7 +43,7 @@ export const blogs3 = [
     image: "/assets/img/blog/blog_post1_1.png",
     date: "March 26, 2024",
     category: "Branding",
-    title: "Everything You Should Know About Return",
+    title: "Everything You Should Know About Product Returns",
 
     icon: "/assets/img/icon/arrow-left-top.svg",
   },
@@ -61,7 +61,7 @@ export const blogs3 = [
     image: "/assets/img/blog/blog_post1_3.png",
     date: "March 26, 2024",
     category: "Branding",
-    title: "Four Steps to Conduct a Successful Usability",
+    title: "How to Run a Successful Usability Test",
 
     icon: "/assets/img/icon/arrow-left-top.svg",
   },
@@ -79,7 +79,7 @@ export const blogs3 = [
     image: "/assets/img/blog/blog_post1_5.png",
     date: "March 26, 2024",
     category: "Branding",
-    title: "Best 15 App For Digital Transformation",
+    title: "Best 15 Apps For Digital Transformation",
 
     icon: "/assets/img/icon/arrow-left-top.svg",
   },
@@ -100,7 +100,7 @@ export const blogs2 = [
     image: "/assets/img/blog/blog_2_1.png",
     date: "March 26, 2024",
     category: "Branding",
-    title: "Everything You Should Know About Return",
+    title: "Product Return Essentials You Should Know",
 
     icon: "/assets/img/icon/arrow-left-top.svg",
   },
@@ -118,7 +118,7 @@ export const blogs2 = [
     image: "/assets/img/blog/blog_2_3.png",
     date: "March 26, 2024",
     category: "Branding",
-    title: "Four Steps to Conduct a Successful Usability",
+    title: "Conducting Usability in Four Steps",
 
     icon: "/assets/img/icon/arrow-left-top.svg",
   },
@@ -151,4 +151,134 @@ export const recentPosts = [
   },
 ];
 
-export const allBlogs = [...blogs, ...blogs3, ...blogs2, ...recentPosts];
+export const blogPosts = [
+  {
+    id: 22,
+    image: "/assets/img/blog/blog_1_1.png",
+    date: "April 10, 2024",
+    category: "Marketing",
+    title: "How to Build a Strong Brand Presence",
+    icon: "/assets/img/icon/arrow-left-top.svg",
+  },
+  {
+    id: 23,
+    image: "/assets/img/blog/blog_1_1.png",
+    date: "April 12, 2024",
+    category: "Strategy",
+    title: "Top Strategies for Digital Transformation",
+    icon: "/assets/img/icon/arrow-left-top.svg",
+  },
+  {
+    id: 24,
+    image: "/assets/img/blog/blog_1_1.png",
+    date: "April 15, 2024",
+    category: "Design",
+    title: "Improving UX Design for ECommerce Websites",
+    icon: "/assets/img/icon/arrow-left-top.svg",
+  },
+  {
+    id: 25,
+    image: "/assets/img/blog/blog_1_1.png",
+    date: "April 18, 2024",
+    category: "SEO",
+    title: "SEO Tips for Boosting Organic Traffic",
+    icon: "/assets/img/icon/arrow-left-top.svg",
+  },
+  {
+    id: 26,
+    image: "/assets/img/blog/blog_1_1.png",
+    date: "April 20, 2024",
+    category: "Marketing",
+    title: "How Social Media Impacts Customer Behavior",
+    icon: "/assets/img/icon/arrow-left-top.svg",
+  },
+  {
+    id: 27,
+    image: "/assets/img/blog/blog_1_1.png",
+    date: "April 22, 2024",
+    category: "Branding",
+    title: "The Power of Visual Content in Branding",
+    icon: "/assets/img/icon/arrow-left-top.svg",
+  },
+  {
+    id: 28,
+    image: "/assets/img/blog/blog_1_1.png",
+    date: "April 24, 2024",
+    category: "Content",
+    title: "How to Create Engaging Blog Posts",
+    icon: "/assets/img/icon/arrow-left-top.svg",
+  },
+  {
+    id: 29,
+    image: "/assets/img/blog/blog_1_1.png",
+    date: "April 26, 2024",
+    category: "Design",
+    title: "Designing a Website That Converts",
+    icon: "/assets/img/icon/arrow-left-top.svg",
+  },
+  {
+    id: 30,
+    image: "/assets/img/blog/blog_1_1.png",
+    date: "April 28, 2024",
+    category: "Development",
+    title: "Best Practices for Website Development",
+    icon: "/assets/img/icon/arrow-left-top.svg",
+  },
+  {
+    id: 31,
+    image: "/assets/img/blog/blog_1_1.png",
+    date: "May 1, 2024",
+    category: "Marketing",
+    title: "The Importance of Email Marketing Campaigns",
+    icon: "/assets/img/icon/arrow-left-top.svg",
+  },
+  {
+    id: 32,
+    image: "/assets/img/blog/blog_1_1.png",
+    date: "May 3, 2024",
+    category: "SEO",
+    title: "Local SEO Techniques for Small Businesses",
+    icon: "/assets/img/icon/arrow-left-top.svg",
+  },
+  {
+    id: 33,
+    image: "/assets/img/blog/blog_1_1.png",
+    date: "May 5, 2024",
+    category: "Strategy",
+    title: "Developing an Effective Digital Strategy",
+    icon: "/assets/img/icon/arrow-left-top.svg",
+  },
+  {
+    id: 34,
+    image: "/assets/img/blog/blog_1_1.png",
+    date: "May 7, 2024",
+    category: "Branding",
+    title: "How to Improve Brand Loyalty",
+    icon: "/assets/img/icon/arrow-left-top.svg",
+  },
+  {
+    id: 35,
+    image: "/assets/img/blog/blog_1_1.png",
+    date: "May 9, 2024",
+    category: "Content",
+    title: "Creating High Quality Visual Content",
+    icon: "/assets/img/icon/arrow-left-top.svg",
+  },
+  {
+    id: 36,
+    image: "/assets/img/blog/blog_1_1.png",
+    date: "May 11, 2024",
+    category: "Design",
+    title: "How to Make Your Website Mobile Friendly",
+    icon: "/assets/img/icon/arrow-left-top.svg",
+  },
+];
+
+
+export const allBlogs = [
+  ...blogs, 
+  ...blogs3, 
+  ...blogs2, 
+  ...recentPosts,
+  ...blogPosts
+];
