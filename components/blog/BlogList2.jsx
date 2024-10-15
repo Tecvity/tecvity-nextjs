@@ -1,6 +1,7 @@
-import { blogs3 } from "@/data/blogs";
+"use client";
+import { allBlogs } from "@/data/blogs";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Pagination from "./Pagination";
 import BlogSerchbar from "./BlogSerchbar";
 import Categories from "./Categories";
@@ -8,7 +9,18 @@ import RecentPosts from "./RecentPosts";
 import Tags from "./Tags";
 import Image from "next/image";
 
+const blogsPerPage = 6;
 export default function BlogList2() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(allBlogs.length / blogsPerPage);
+  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const currentBlogs = allBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber); 
+  };
+
   return (
     <section className="blog__area space">
       <div className="container">
@@ -17,11 +29,15 @@ export default function BlogList2() {
             <div className="col-70">
               <div className="blog-post-wrap">
                 <div className="row gy-30 gutter-24">
-                  {blogs3.map((elm, i) => (
+                  {/* Use currentBlogs instead of allBlogs here */}
+                  {currentBlogs.map((elm, i) => (
                     <div key={i} className="col-md-6">
                       <div className="blog-post-item-two">
                         <div className="blog-post-thumb">
-                          <Link scroll={false} href={`/blog-details/${elm.title.replace(/\s+/g, '-')}`}>
+                          <Link
+                            scroll={false}
+                            href={`/blog-details/${elm.title.replace(/\s+/g, "-")}`}
+                          >
                             <Image
                               width={856}
                               height={600}
@@ -42,14 +58,14 @@ export default function BlogList2() {
                           <h4 className="title">
                             <Link
                               scroll={false}
-                              href={`/blog-details/${elm.title.replace(/\s+/g, '-')}`}
+                              href={`/blog-details/${elm.title.replace(/\s+/g, "-")}`}
                             >
                               {elm.title}
                             </Link>
                           </h4>
                           <Link
                             scroll={false}
-                            href={`/blog-details/${elm.title.replace(/\s+/g, '-')}`}
+                            href={`/blog-details/${elm.title.replace(/\s+/g, "-")}`}
                             className="link-btn"
                           >
                             <span className="link-effect">
@@ -68,7 +84,11 @@ export default function BlogList2() {
                     </div>
                   ))}
                 </div>
-                <Pagination />
+                <Pagination
+                  currentPage={currentPage}
+                  totalPages={totalPages}
+                  onPageChange={handlePageChange}
+                />
               </div>
             </div>
             <div className="col-30">
