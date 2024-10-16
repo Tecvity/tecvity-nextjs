@@ -31,7 +31,7 @@ export default function Blogs() {
                 <div className="blog-content">
                   <div className="post-meta-item blog-meta">
                     <a href="#">{elm.date}</a>
-                    <a href="#">{elm.category}</a>
+                    <a href={`/blog/category/${elm.category}`}>{elm.category}</a>
                   </div>
                   <h4 className="blog-title">
                     <Link scroll={false} href={`/blog-details/${elm.title.replace(/\s+/g, '-')}`}>
