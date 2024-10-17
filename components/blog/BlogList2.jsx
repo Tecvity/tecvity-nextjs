@@ -10,12 +10,12 @@ import Tags from "./Tags";
 import Image from "next/image";
 
 const blogsPerPage = 6;
-export default function BlogList2() {
+export default function BlogList2({ blogs = allBlogs }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(allBlogs.length / blogsPerPage);
+  const totalPages = Math.ceil(blogs.length / blogsPerPage);
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
-  const currentBlogs = allBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
+  const currentBlogs = blogs.slice(indexOfFirstBlog, indexOfLastBlog);
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber); 
@@ -29,7 +29,7 @@ export default function BlogList2() {
             <div className="col-70">
               <div className="blog-post-wrap">
                 <div className="row gy-30 gutter-24">
-                  {/* Use currentBlogs instead of allBlogs here */}
+                  {/* Use currentBlogs instead of blogs here */}
                   {currentBlogs.map((elm, i) => (
                     <div key={i} className="col-md-6">
                       <div className="blog-post-item-two">
@@ -51,7 +51,7 @@ export default function BlogList2() {
                             <ul className="list-wrap">
                               <li>{elm.date}</li>
                               <li>
-                                <a href="#">{elm.category}</a>
+                                <a href={`/blog/category/${elm.category.replace(/\s+/g, "-")}`}>{elm.category}</a>
                               </li>
                             </ul>
                           </div>

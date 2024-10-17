@@ -1,20 +1,24 @@
-const categories = [
-  { id: 1, text: "Archive (3)" },
-  { id: 2, text: "Branding (6)" },
-  { id: 3, text: "Company (2)" },
-  { id: 4, text: "Design (1)" },
-  { id: 5, text: "Business (4)" },
-  { id: 6, text: "Modern (1)" },
-];
+import { categories } from '@/data/categories-tags'; // Adjust the path as needed
+import { allBlogs } from '@/data/blogs'; // Adjust the path based on your project structure
+
 export default function Categories() {
+  
+  const categoryCounts = categories.reduce((acc, category) => {
+    const count = allBlogs.filter(blog => blog.category === category.text).length;
+    acc[category.id] = count; 
+    return acc;
+  }, {});
+
   return (
     <div className="sidebar__widget">
       <h4 className="sidebar__widget-title">Categories</h4>
       <div className="sidebar__cat-list">
         <ul className="list-wrap">
-          {categories.map((link) => (
-            <li key={link.id}>
-              <a href="#">{link.text}</a>
+          {categories.map((category) => (
+            <li key={category.id}>
+              <a href={`/blog/category/${category.text.replace(/\s+/g, "-")}`} className={categoryCounts[category.id]>0? "" : 'disabled'}>
+                {category.text} ({categoryCounts[category.id]})
+              </a>
             </li>
           ))}
         </ul>

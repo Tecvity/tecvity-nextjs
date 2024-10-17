@@ -50,3 +50,8 @@
   font-weight: 600 !important;
   font-size: larger !important;
 }
+
+.disabled{
+  pointer-events: none;
+  opacity: 0.5;
+}

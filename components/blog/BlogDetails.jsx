@@ -37,7 +37,7 @@ export default function BlogDetails({ blogTitle }) {
                     <ul className="list-wrap">
                       <li>{blogItem.date}</li>
                       <li>
-                        <a href="#">{blogItem.category}</a>
+                        <a href={`/blog/category/${blogItem.category.replace(/\s+/g, "-")}`}>{blogItem.category}</a>
                       </li>
                       <li>
                         <a href="#">by Ashton Porter</a>
@@ -124,13 +124,13 @@ export default function BlogDetails({ blogTitle }) {
                         <div className="post-tags">
                           <ul className="list-wrap">
                             <li>
-                              <a href="#">Marketing</a>
+                              <a href={`/blog/tag/Marketing`}>Marketing</a>
                             </li>
                             <li>
-                              <a href="#">Brand</a>
+                              <a href={`/blog/tag/Brand`}>Brand</a>
                             </li>
                             <li>
-                              <a href="#">Contemporary</a>
+                              <a href={`/blog/tag/Contemporary`}>Contemporary</a>
                             </li>
                           </ul>
                         </div>
