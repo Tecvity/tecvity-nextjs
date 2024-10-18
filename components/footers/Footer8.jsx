@@ -1,9 +1,35 @@
 "use client";
+import { useState, useEffect } from "react";
 import Socials from "./component/Socials";
 import Image from "next/image";
 import FooterLinks3 from "./component/FooterLinks3";
+import { usePostData } from "@/utils/hooks";
+import { isValidEmail } from "@/utils/validators";
 
 export default function Footer8() {
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState(null);
+  const { response, isLoading, error, postData } = usePostData();
+
+  useEffect(() => {
+    if (emailError || response) {
+      const timer = setTimeout(() => {
+        setEmailError(null);
+      }, 3000);
+      return () => clearTimeout(timer); 
+    }
+  }, [emailError, response]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setEmailError(null);
+    if (!isValidEmail(email)) {
+      setEmailError("Please enter a valid email address.");
+      return;
+    }
+    await postData('/api/Email/Subscribe', { email });
+  };
+
   return (
     <footer className="footer-wrapper footer-layout2 overflow-hidden">
       <div className="container">
@@ -12,22 +38,21 @@ export default function Footer8() {
             <div className="col-md-6 col-xl-5 col-lg-6">
               <div className="widget widget-newsletter footer-widget">
                 <h3 className="widget_title">
-                  Get valuable strategy, culture and brand insights straight to
-                  your inbox
+                  Get valuable strategy, culture and brand insights straight to your inbox
                 </h3>
-                <form
-                  onSubmit={(e) => e.preventDefault()}
-                  className="newsletter-form"
-                >
+                <form onSubmit={handleSubmit} className="newsletter-form">
                   <div className="form-group">
                     <input
                       className="form-control"
                       type="email"
                       placeholder="Your email here"
-                      required=""
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
                     />
+                    {emailError && <p style={{ color: "red" }}>{emailError}</p>}
                   </div>
-                  <button type="submit" className="btn">
+                  <button type="submit" className="btn" disabled={isLoading}>
                     <Image
                       width={13}
                       height={13}
@@ -36,6 +61,8 @@ export default function Footer8() {
                     />
                   </button>
                 </form>
+                {error && !response ? <p style={{ color: "red" }}>{error.message}</p> : null}
+                {response && <p>Successfully subscribed!</p>}
                 <p>
                   By signing up to receive emails from Motto, you agree to our
                   Privacy Policy. We treat your info responsibly.
