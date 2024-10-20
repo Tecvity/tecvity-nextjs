@@ -1,4 +1,5 @@
-import createSubscriptionObject from "./subscription.model";
+import createSubscriptionObject from "./emailSubscription.model";
+import createContactFormObject from "./contactForm.model";
 
 
-export { createSubscriptionObject };
+export { createSubscriptionObject, createContactFormObject };

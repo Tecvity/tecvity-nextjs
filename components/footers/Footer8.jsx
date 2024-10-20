@@ -8,24 +8,16 @@ import { isValidEmail } from "@/utils/validators";
 
 export default function Footer8() {
   const [email, setEmail] = useState("");
-  const [emailError, setEmailError] = useState(null);
   const { response, isLoading, error, postData, reset } = usePostData();
 
   useEffect(() => {
-    setEmailError(error?.response?.data.message);
-    if(email == "") {
-      reset();
+    if(response) {
+      setEmail("");
     }
-  }, [error, email]);
+  }, [isLoading]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setEmailError(null);
-    if (!isValidEmail(email)) {
-      setEmailError("Please enter a valid email address.");
-      return;
-    }
-  
     const result = await postData('/api/Email/Subscribe', { email });
   
     if (result && result.message) {
@@ -64,8 +56,9 @@ export default function Footer8() {
                     />
                   </button>
                 </form>
-                {emailError && <p style={{ color: "red" }}>{emailError}</p>}
-                {response && !emailError ? <p>Successfully subscribed!</p>: null}
+                {isLoading && <p>Loading...</p>}
+                {error && <p style={{ color: "red" }}>{error?.response?.data.message}</p>}
+                {response && !error && !isLoading ? <p>Successfully subscribed!</p>: null}
                 <p>
                   By signing up to receive emails from Motto, you agree to our
                   Privacy Policy. We treat your info responsibly.
