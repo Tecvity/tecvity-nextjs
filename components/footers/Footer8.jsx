@@ -9,16 +9,14 @@ import { isValidEmail } from "@/utils/validators";
 export default function Footer8() {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState(null);
-  const { response, isLoading, error, postData } = usePostData();
+  const { response, isLoading, error, postData, reset } = usePostData();
 
   useEffect(() => {
-    if (emailError || response) {
-      const timer = setTimeout(() => {
-        setEmailError(null);
-      }, 3000);
-      return () => clearTimeout(timer); 
+    setEmailError(error?.response?.data.message);
+    if(email == "") {
+      reset();
     }
-  }, [emailError, response]);
+  }, [error, email]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,8 +25,14 @@ export default function Footer8() {
       setEmailError("Please enter a valid email address.");
       return;
     }
-    await postData('/api/Email/Subscribe', { email });
+  
+    const result = await postData('/api/Email/Subscribe', { email });
+  
+    if (result && result.message) {
+        setEmail(""); 
+    }
   };
+  
 
   return (
     <footer className="footer-wrapper footer-layout2 overflow-hidden">
@@ -50,7 +54,6 @@ export default function Footer8() {
                       onChange={(e) => setEmail(e.target.value)}
                       required
                     />
-                    {emailError && <p style={{ color: "red" }}>{emailError}</p>}
                   </div>
                   <button type="submit" className="btn" disabled={isLoading}>
                     <Image
@@ -61,8 +64,8 @@ export default function Footer8() {
                     />
                   </button>
                 </form>
-                {error && !response ? <p style={{ color: "red" }}>{error.message}</p> : null}
-                {response && <p>Successfully subscribed!</p>}
+                {emailError && <p style={{ color: "red" }}>{emailError}</p>}
+                {response && !emailError ? <p>Successfully subscribed!</p>: null}
                 <p>
                   By signing up to receive emails from Motto, you agree to our
                   Privacy Policy. We treat your info responsibly.

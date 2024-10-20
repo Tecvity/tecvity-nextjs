@@ -1,42 +1,46 @@
+import logger from "@/app/api/logger";
 import { NextResponse } from "next/server";
 import { isValidEmail } from "@/app/api/utils";
-import logger from "@/app/api/log";
+import { createSubscriptionObject } from "@/app/api/models";
+import { sendEmail, saveEmailToDB } from "@/app/api/controllers";
+import { sourceEmail, ownerEmails } from "@/data/teamEmails";
 
-const saveEmailToDB = async (email) => {
-  // Replace this with actual database logic (e.g., MongoDB, AWS DynamoDB, etc.)
-  // Example with MongoDB: await db.collection('subscribers').insertOne({ email });
-  logger.info(`Email Recieved to subscribe: ${email}`);
-  return { success: true };
-};
+const EMAIL_SUBSCRIBERS_TABLE = "EmailSubscribers";
+const OWNER_EMAIL = ownerEmails;
+const SOURCE_EMAIL = sourceEmail;
 
-export const POST = async (req) => {
+
+export const POST = async (req) => { 
   try {
-    const requestBody = await req.text();
-    const { email } = JSON.parse(requestBody);
+    const { email } = await req.json();
 
-    if (!email) 
-      return NextResponse.json({ message: "Email is required" }, { status: 400 });
-    if (!isValidEmail(email)) 
-      return NextResponse.json({ message: "Invalid email format" }, { status: 400 });
+    if (!email || !isValidEmail(email)) 
+      throw new Error("Invalid email format");
 
-    // Optional: Check if the email already exists in the database
-    // const existingEmail = await db.collection('subscribers').findOne({ email });
-    // if (existingEmail) {
-    //   return NextResponse.json({ message: "Email is already subscribed" }, { status: 400 });
-    // }
+    const subscription = createSubscriptionObject(email);
+    const saveResult = await saveEmailToDB(EMAIL_SUBSCRIBERS_TABLE, subscription);
 
-    const result = await saveEmailToDB(email);
+    if (!saveResult.success)
+      throw new Error(saveResult.message);
 
-    if (result.success) {
-      return NextResponse.json({
-        message: "Successfully subscribed",
-        status: 200,
-      });
-    }
+    await sendEmail(SOURCE_EMAIL, email, "Subscribed to Tecvity", "Congratulations! You have successfully subscribed to Tecvity newsletter.");
+    await Promise.all(
+      OWNER_EMAIL.map((ownerEmail) => 
+        sendEmail(SOURCE_EMAIL, ownerEmail, "New subscriber", `New subscriber: ${email}`)
+      )
+    );
 
-    return NextResponse.json({ message: "Failed to subscribe" }, { status: 500 });
+    logger.info("Email subscribed successfully");
+    return NextResponse.json({ message: "Email subscribed successfully" }, { status: 200 });
+
   } catch (error) {
-    console.error("Error processing the request:", error);
-    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+    let status = 500;
+    if (error.message === "Invalid email format") {
+      status = 400;
+    } else if (error.message === "Email is already subscribed.") {
+      status = 409;
+    }
+    logger.error(error.message);
+    return NextResponse.json({ message: error.message }, { status });
   }
 };

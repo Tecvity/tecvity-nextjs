@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const usePostData = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [response, setResponse] = useState(null);
+
+  const reset = () => {
+    setError(null);
+    setResponse(null);
+  };
 
   const postData = async (url, data) => {
     setIsLoading(true);
@@ -22,7 +27,7 @@ const usePostData = () => {
     }
   };
 
-  return { response, isLoading, error, postData };
+  return { response, isLoading, error, postData, reset };
 };
 
 export { usePostData };
