@@ -2,8 +2,7 @@ const teamEmails =
 [
     "najam@tecvity.co", 
     "moeez@tecvity.co", 
-    "tayyub@tecvity.co",
-    "saadamir318@gmail.com"
+    "tayyub@tecvity.co"
 ];//can only be used after verification
 
 const ownerEmails = 
