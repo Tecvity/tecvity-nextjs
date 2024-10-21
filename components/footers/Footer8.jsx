@@ -1,9 +1,30 @@
 "use client";
+import { useState, useEffect } from "react";
 import Socials from "./component/Socials";
 import Image from "next/image";
 import FooterLinks3 from "./component/FooterLinks3";
+import { usePostData } from "@/utils/hooks";
 
 export default function Footer8() {
+  const [email, setEmail] = useState("");
+  const { response, isLoading, error, postData, reset } = usePostData();
+
+  useEffect(() => {
+    if(response) {
+      setEmail("");
+    }
+  }, [isLoading]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const result = await postData('/api/Email/Subscribe', { email });
+  
+    if (result && result.message) {
+        setEmail(""); 
+    }
+  };
+  
+
   return (
     <footer className="footer-wrapper footer-layout2 overflow-hidden">
       <div className="container">
@@ -12,22 +33,20 @@ export default function Footer8() {
             <div className="col-md-6 col-xl-5 col-lg-6">
               <div className="widget widget-newsletter footer-widget">
                 <h3 className="widget_title">
-                  Get valuable strategy, culture and brand insights straight to
-                  your inbox
+                  Get valuable strategy, culture and brand insights straight to your inbox
                 </h3>
-                <form
-                  onSubmit={(e) => e.preventDefault()}
-                  className="newsletter-form"
-                >
+                <form onSubmit={handleSubmit} className="newsletter-form">
                   <div className="form-group">
                     <input
                       className="form-control"
                       type="email"
                       placeholder="Your email here"
-                      required=""
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
                     />
                   </div>
-                  <button type="submit" className="btn">
+                  <button type="submit" className="btn" disabled={isLoading}>
                     <Image
                       width={13}
                       height={13}
@@ -36,6 +55,9 @@ export default function Footer8() {
                     />
                   </button>
                 </form>
+                {isLoading && <p>Loading...</p>}
+                {error && <p style={{ color: "red" }}>{error?.response?.data.message}</p>}
+                {response && !error && !isLoading ? <p>Successfully subscribed!</p>: null}
                 <p>
                   By signing up to receive emails from Motto, you agree to our
                   Privacy Policy. We treat your info responsibly.
