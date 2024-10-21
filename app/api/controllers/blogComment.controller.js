@@ -29,4 +29,26 @@ const saveCommentToDB = async (tableName, commentData) => {
   }
 };
 
-export { saveCommentToDB };
+const getCommentsFromDB = async (tableName, blogId) => {
+  const params = {
+    TableName: tableName,
+    KeyConditionExpression: "blog_id = :blog_id",
+    ExpressionAttributeValues: {
+      ":blog_id": blogId,
+    },
+  };
+
+  try {
+    const
+      { Items } = await db.query(params).promise();
+    return { success: true, comments: Items };
+  } catch (error) {
+    logger.error(error);
+    return {
+      success: false,
+      message: "An error occurred while fetching the comments.",
+    };
+  }
+}
+
+export { saveCommentToDB, getCommentsFromDB };

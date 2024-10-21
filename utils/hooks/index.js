@@ -30,4 +30,28 @@ const usePostData = () => {
   return { response, isLoading, error, postData, reset };
 };
 
-export { usePostData };
+const useGetData = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [data, setData] = useState(null);
+
+  const getData = async (url) => {
+    setIsLoading(true);
+    setError(null);
+    try {
+      const response = await axios.get(url);
+      if (response.status !== 200) {
+        throw new Error("Something went wrong.");
+      }
+      setData(response.data);
+    } catch (error) {
+      setError(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return { data, isLoading, error, getData };
+};
+
+export { usePostData, useGetData };

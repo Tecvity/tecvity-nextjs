@@ -4,7 +4,7 @@ import {
   saveEmailToDB,
 } from "./email.controller";
 import { saveContactToDB } from "./contactForm.controller";
-import { saveCommentToDB } from "./blogComment.controller";
+import { saveCommentToDB, getCommentsFromDB } from "./blogComment.controller";
 
 export {
   sendEmail,
@@ -12,4 +12,5 @@ export {
   saveEmailToDB,
   saveContactToDB,
   saveCommentToDB,
+  getCommentsFromDB,
 };
