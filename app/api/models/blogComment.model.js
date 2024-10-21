@@ -7,7 +7,7 @@ const createCommentObject = ({ blog_id, name, email, comment, parent_comment_id 
   email,
   comment,
   submission_timestamp: new Date().toISOString(),
-  parent_comment_id: String(parent_comment_id),
+  parent_comment_id: parent_comment_id,
 });
 
 export default createCommentObject;

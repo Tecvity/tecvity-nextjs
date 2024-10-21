@@ -11,17 +11,17 @@ const SOURCE_EMAIL = sourceEmail;
 
 export const POST = async (req) => {
   try {
-    const { name, email, website, message } = await req.json();
+    const { firstname, lastname, email, message } = await req.json();
 
-    if (!name || !email || !website || !message)
+    if (!firstname || !lastname || !email || !message)
       throw new Error("All fields are required.");
 
     if (!isValidEmail(email)) throw new Error("Invalid email format.");
 
     const contactData = createContactFormObject({
-      name,
+      firstname,
+      lastname,
       email,
-      website,
       message,
     });
     const saveResult = await saveContactToDB(CONTACT_FORM_TABLE, contactData);
@@ -29,10 +29,9 @@ export const POST = async (req) => {
     if (!saveResult.success) throw new Error(saveResult.message);
 
     const USER_SUBJECT = "Thanks for reaching out!";
-    const USER_MESSAGE =
-      "Thank you for contacting us. We will get back to you soon.";
+    const USER_MESSAGE = "Thank you for contacting us. We will get back to you soon.";
     const OWNER_SUBJECT = "New Contact Form Submission";
-    const OWNER_MESSAGE = `New contact submission from ${name} (${email}) with message: ${message} and site: ${website}`;
+    const OWNER_MESSAGE = `New contact submission from ${firstname} ${lastname} (${email}) with message: ${message}`;
 
     await sendEmail(SOURCE_EMAIL, email, USER_SUBJECT, USER_MESSAGE);
     await Promise.all(

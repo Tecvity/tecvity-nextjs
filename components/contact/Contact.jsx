@@ -7,18 +7,18 @@ export default function Contact() {
   const { response, isLoading, error, postData, reset } = usePostData();
 
   const [formData, setFormData] = useState({
-    name: "",
+    firstname: "",
+    lastname: "",
     email: "",
-    website: "",
     message: ""
   });
 
   useEffect(() => {
-    if(response) {
+    if (response) {
       setFormData({
-        name: "",
+        firstname: "",
+        lastname: "",
         email: "",
-        website: "",
         message: ""
       });
     }
@@ -36,13 +36,13 @@ export default function Contact() {
 
   const validate = () => {
     let tempErrors = {};
-    if (!formData.name) tempErrors.name = "Full name is required";
+    if (!formData.firstname) tempErrors.firstname = "First name is required";
+    if (!formData.lastname) tempErrors.lastname = "Last name is required";
     if (!formData.email) {
       tempErrors.email = "Email is required";
     } else if (!isValidEmail(formData.email)) {
       tempErrors.email = "Email address is invalid";
     }
-    if (!formData.website) tempErrors.website = "Website is required";
     if (!formData.message) tempErrors.message = "Message is required";
     
     setErrors(tempErrors);
@@ -86,18 +86,34 @@ export default function Contact() {
                       <input
                         required
                         type="text"
-                        className={`form-control style-border ${errors.name ? "is-invalid" : ""}`}
-                        name="name"
-                        value={formData.name}
+                        className={`form-control style-border ${errors.firstname ? "is-invalid" : ""}`}
+                        name="firstname"
+                        value={formData.firstname}
                         onChange={handleChange}
-                        placeholder="Full name*"
+                        placeholder="First name*"
                       />
-                      {errors.name && (
-                        <div className="invalid-feedback">{errors.name}</div>
+                      {errors.firstname && (
+                        <div className="invalid-feedback">{errors.firstname}</div>
                       )}
                     </div>
                   </div>
                   <div className="col-md-6">
+                    <div className="form-group">
+                      <input
+                        required
+                        type="text"
+                        className={`form-control style-border ${errors.lastname ? "is-invalid" : ""}`}
+                        name="lastname"
+                        value={formData.lastname}
+                        onChange={handleChange}
+                        placeholder="Last name*"
+                      />
+                      {errors.lastname && (
+                        <div className="invalid-feedback">{errors.lastname}</div>
+                      )}
+                    </div>
+                  </div>
+                  <div className="col-lg-12">
                     <div className="form-group">
                       <input
                         required
@@ -110,22 +126,6 @@ export default function Contact() {
                       />
                       {errors.email && (
                         <div className="invalid-feedback">{errors.email}</div>
-                      )}
-                    </div>
-                  </div>
-                  <div className="col-lg-12">
-                    <div className="form-group">
-                      <input
-                        required
-                        type="text"
-                        className={`form-control style-border ${errors.website ? "is-invalid" : ""}`}
-                        name="website"
-                        value={formData.website}
-                        onChange={handleChange}
-                        placeholder="Website link"
-                      />
-                      {errors.website && (
-                        <div className="invalid-feedback">{errors.website}</div>
                       )}
                     </div>
                   </div>

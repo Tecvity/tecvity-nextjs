@@ -1,9 +1,9 @@
 const DEFAULT_STATUS = "new";
 
-const createContactFormObject = ({ email, name, website, message }) => ({
+const createContactFormObject = ({ firstname, lastname, email, message }) => ({
   email,
-  name,
-  website,
+  firstname,
+  lastname,
   message,
   status: DEFAULT_STATUS,
   submission_timestamp: new Date().toISOString(),
