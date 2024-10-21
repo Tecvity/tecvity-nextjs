@@ -3,10 +3,10 @@ import { NextResponse } from "next/server";
 import { isValidEmail } from "@/app/api/utils";
 import { createSubscriptionObject } from "@/app/api/models";
 import { sendEmail, saveEmailToDB } from "@/app/api/controllers";
-import { sourceEmail, ownerEmails } from "@/data/teamEmails";
+import { sourceEmail, teamEmails } from "@/data/teamEmails";
 
 const EMAIL_SUBSCRIBERS_TABLE = "EmailSubscribers";
-const OWNER_EMAIL = ownerEmails;
+const OWNER_EMAIL = teamEmails;
 const SOURCE_EMAIL = sourceEmail;
 
 

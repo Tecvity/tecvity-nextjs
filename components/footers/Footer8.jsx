@@ -4,7 +4,6 @@ import Socials from "./component/Socials";
 import Image from "next/image";
 import FooterLinks3 from "./component/FooterLinks3";
 import { usePostData } from "@/utils/hooks";
-import { isValidEmail } from "@/utils/validators";
 
 export default function Footer8() {
   const [email, setEmail] = useState("");
