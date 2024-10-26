@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.0.1",
     "@popperjs/core": "^2.11.8",
     "aws-sdk": "^2.1691.0",
     "axios": "^1.7.7",
