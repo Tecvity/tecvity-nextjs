@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
         <ScrollTop />
         <ScrollTopBehaviour />
       </body>
-      <GoogleAnalytics gaId="G-ECVCHM1GNJ" />
+      <GoogleAnalytics gaId="G-ZNDRQHEH3Y" />
     </html>
   );
 }
