@@ -1,30 +1,22 @@
+import Header from "@/components/header/Header";
+import ServiceDetails from "@/components/service/components/ServiceDetails";
 import MarqueeComponent from "@/components/common/Marquee";
-import Footer8 from "@/components/footers/Footer8";
-import Header3 from "@/components/headers/Header3";
+import Footer from "@/components/footer/Footer";
 
-import ServiceDetails from "@/components/service/ServiceDetails";
-import { allFeatures } from "@/data/features";
-
-//For Static Side Genaration(SSG)
-
-// export async function generateStaticParams() {
-//   return allFeatures.map((elm) => ({
-//     id: `${elm.id}`,
-//   }));
-// }
+//USE Static Side Genaration(SSG) if necessary
 
 export const metadata = {
   title:
     "Service Details || Tecvity - Delivering Creative Technological Solutions",
 };
-//
+
 export default function ServicePageDetails({ params }) {
   return (
     <>
-      <Header3 />
+      <Header />
       <ServiceDetails serviceTitle={params.title} />
       <MarqueeComponent />
-      <Footer8 />
+      <Footer />
     </>
   );
 }

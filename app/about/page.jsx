@@ -1,15 +1,13 @@
-import Awards from "@/components/about/Awards";
-import Breadcumb from "@/components/about/Breadcumb";
-import Clients from "@/components/about/Clients";
-import Contact from "@/components/common/Contact";
-import Facts from "@/components/about/Facts";
-import Features from "@/components/about/Features";
-
-import Team from "@/components/about/Team";
+import Header from "@/components/header/Header";
+import Breadcumb from "@/components/about/components/Breadcrumb";
+import Facts from "@/components/about/components/Facts";
+import Features from "@/components/about/components/Features";
+import Awards from "@/components/about/components/Awards";
+import Team from "@/components/about/components/Team";
+import Contact from "@/components/about/components/Contact";
+import Clients from "@/components/about/components/Clients";
 import MarqueeComponent from "@/components/common/Marquee";
-import Footer8 from "@/components/footers/Footer8";
-import Header3 from "@/components/headers/Header3";
-import React from "react";
+import Footer from "@/components/footer/Footer";
 
 export const metadata = {
   title: "About Us | Tecvity",
@@ -18,7 +16,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <Header3 />
+      <Header />
       <Breadcumb />
       <Facts />
       <Features />
@@ -27,7 +25,7 @@ export default function AboutPage() {
       <Contact />
       <Clients />
       <MarqueeComponent />
-      <Footer8 />
+      <Footer />
     </>
   );
 }

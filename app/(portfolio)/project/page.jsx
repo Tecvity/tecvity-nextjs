@@ -1,9 +1,9 @@
 import MarqueeComponent from "@/components/common/Marquee";
-import Footer8 from "@/components/footers/Footer8";
-import Header3 from "@/components/headers/Header3";
-import Breadcumb from "@/components/portfolio/Breadcumb";
+import Footer from "@/components/footer/Footer";
+import Header from "@/components/header/Header";
+import Breadcumb from "@/components/portfolio/components/BaseBreadcrumb";
 
-import Projects from "@/components/portfolio/Projects";
+import Projects from "@/components/portfolio/components/Projects";
 import React from "react";
 export const metadata = {
   title: "Project 1 || Frisk - Creative Agency & Portfolio Nextjs Template",
@@ -11,11 +11,11 @@ export const metadata = {
 export default function ProjectPage1() {
   return (
     <>
-      <Header3 />
+      <Header />
       <Breadcumb />
       <Projects />
       <MarqueeComponent />
-      <Footer8 />
+      <Footer />
     </>
   );
 }
