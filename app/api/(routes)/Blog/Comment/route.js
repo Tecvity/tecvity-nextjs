@@ -44,7 +44,7 @@ export const POST = async (req) => {
 
     logger.info("Comment submitted successfully");
     return NextResponse.json(
-      { message: "Comment submitted successfully" },
+      { message: "Comment submitted successfully", data: commentData },
       { status: 200 }
     );
   } catch (error) {

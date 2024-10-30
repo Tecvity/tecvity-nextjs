@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { formatTimestamp } from "@/utils/helpers";
 import CommentReply from "./CommentReply";
 
@@ -104,7 +104,13 @@ export default function Comments({ comments = [], blogItem }) {
   const [activeReply, setActiveReply] = useState(null); // Track the comment for which "Reply" is clicked
 
   const safeComments = Array.isArray(comments) ? comments : [];
-  const commentTree = buildCommentTree(safeComments);
+
+  useEffect(() => {
+    const safeComments = Array.isArray(comments) ? comments : [];
+    setCommentTree(buildCommentTree(safeComments));
+  }, [comments]);
+  // const commentTree = buildCommentTree(safeComments);
+  const [commentTree, setCommentTree] = useState(buildCommentTree(safeComments));
 
   // Handle Reply button click
   const handleReplyClick = (commentId) => {
