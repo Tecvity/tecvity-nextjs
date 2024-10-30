@@ -18,7 +18,14 @@ const handle = app.getRequestHandler();
       handle(req, res, parsedUrl);
     });
 
-    const io = new Server(httpServer);
+    const io = new Server(httpServer, {
+      cors: {
+        origin: process.env.NEXT_PUBLIC_FRONTEND_URL || "https://deploy-preview-13--loquacious-pastelito-9eaca0.netlify.app/",
+        methods: ["GET", "POST"],
+        credentials: true,
+      },
+    });
+    
 
     io.on("connection", (socket) => {
       console.log("New client connected");
