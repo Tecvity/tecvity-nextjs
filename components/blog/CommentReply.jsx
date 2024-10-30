@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { usePostData } from "@/utils/hooks";
+import { socket } from "@/utils/socket";
 
 export default function CommentReplay({blogId, parentCommentId = null, parentName = null}) {
   const [formData, setFormData] = useState({
@@ -33,7 +34,8 @@ export default function CommentReplay({blogId, parentCommentId = null, parentNam
       parent_comment_id: parentCommentId,
       ...formData,
     };
-    await postData("/api/Blog/Comment", commentData);
+    const comment = await postData("/api/Blog/Comment", commentData);
+    socket.emit("newComment", { blogId, comment });
   };
 
   return (

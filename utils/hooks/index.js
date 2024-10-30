@@ -20,6 +20,7 @@ const usePostData = () => {
         throw new Error("Something went wrong.");
       }
       setResponse(result.data);
+      return result.data.data;
     } catch (error) {
       setError(error);
     } finally {
