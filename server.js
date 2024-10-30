@@ -20,7 +20,7 @@ const handle = app.getRequestHandler();
 
     const io = new Server(httpServer, {
       cors: {
-        origin: process.env.NEXT_PUBLIC_FRONTEND_URL || "https://deploy-preview-13--loquacious-pastelito-9eaca0.netlify.app/",
+        origin: process.env.NEXT_PUBLIC_FRONTEND_URL || "https://deploy-preview-12--loquacious-pastelito-9eaca0.netlify.app/",
         methods: ["GET", "POST"],
         credentials: true,
       },
