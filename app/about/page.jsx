@@ -1,7 +1,7 @@
 import Awards from "@/components/about/Awards";
 import Breadcumb from "@/components/about/Breadcumb";
 import Clients from "@/components/about/Clients";
-import Contact from "@/components/about/Contact";
+import Contact from "@/components/common/Contact";
 import Facts from "@/components/about/Facts";
 import Features from "@/components/about/Features";
 

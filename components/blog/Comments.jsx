@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { formatTimestamp } from "@/utils/helpers";
 import CommentReply from "./CommentReply";
 
@@ -104,13 +104,7 @@ export default function Comments({ comments = [], blogItem }) {
   const [activeReply, setActiveReply] = useState(null); // Track the comment for which "Reply" is clicked
 
   const safeComments = Array.isArray(comments) ? comments : [];
-
-  useEffect(() => {
-    const safeComments = Array.isArray(comments) ? comments : [];
-    setCommentTree(buildCommentTree(safeComments));
-  }, [comments]);
-  // const commentTree = buildCommentTree(safeComments);
-  const [commentTree, setCommentTree] = useState(buildCommentTree(safeComments));
+  const commentTree = buildCommentTree(safeComments);
 
   // Handle Reply button click
   const handleReplyClick = (commentId) => {
@@ -119,6 +113,8 @@ export default function Comments({ comments = [], blogItem }) {
 
   return (
     <div className="comments-wrap">
+      <h4>Comments:</h4>
+      <br/>
       <div className="latest-comments">
         {commentTree.length > 0 ? (
           <ul className="list-wrap">

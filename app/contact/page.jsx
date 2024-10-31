@@ -1,6 +1,6 @@
 import MarqueeComponent from "@/components/common/Marquee";
 import Breadcumb from "@/components/contact/Breadcumb";
-import Contact from "@/components/contact/Contact";
+import Contact from "@/components/common/Contact";
 import ContactInfo from "@/components/contact/ContactInfo";
 
 import Footer8 from "@/components/footers/Footer8";
