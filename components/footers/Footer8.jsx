@@ -55,7 +55,7 @@ export default function Footer8() {
                     />
                   </button>
                 </form>
-                {isLoading && <p>Loading...</p>}
+                {isLoading && <p>Sending...</p>}
                 {error && <p style={{ color: "red" }}>{error?.response?.data.message}</p>}
                 {response && !error && !isLoading ? <p>Successfully subscribed!</p>: null}
                 <p>

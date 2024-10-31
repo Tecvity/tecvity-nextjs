@@ -3,4 +3,9 @@ const isValidEmail = (email) => {
   return emailRegex.test(email);
 };
 
-export { isValidEmail };
+const isValidWebsite = (website) => {
+  const websitePattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+  return websitePattern.test(website);
+};
+
+export { isValidEmail, isValidWebsite };

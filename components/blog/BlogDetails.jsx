@@ -1,13 +1,15 @@
+"use client"
 import { socialMediaLinks } from "@/data/socials";
-import React from "react";
+import React, { useEffect } from "react";
 import Comments from "./Comments";
-import CommentReplay from "./CommentReplay";
+import CommentReply from "./CommentReply";
 import BlogSerchbar from "./BlogSerchbar";
 import Categories from "./Categories";
 import RecentPosts from "./RecentPosts";
 import Tags from "./Tags";
 import Image from "next/image";
 import { allBlogs } from "@/data/blogs";
+import { useGetData } from "@/utils/hooks";
 
 export default function BlogDetails({ blogTitle }) {
   const decodedBlogTitle = blogTitle.replace(/-/g, ' ');
@@ -16,6 +18,12 @@ export default function BlogDetails({ blogTitle }) {
   const currentIndex = allBlogs.findIndex((blog) => blog.title === decodedBlogTitle);
   const nextBlog = currentIndex >= 0 && currentIndex < allBlogs.length - 1 ? allBlogs[currentIndex + 1] : null;
   const prevBlog = currentIndex > 0 ? allBlogs[currentIndex - 1] : null;
+
+  const { data: comments = [], isLoading, error, getData } = useGetData();
+
+  useEffect(() => {
+    getData(`/api/Blog/${blogItem.id}/Comments`);
+  }, []);
 
   return (
     <section className="blog__details-area space">
@@ -200,8 +208,10 @@ export default function BlogDetails({ blogTitle }) {
                     </p>
                   </div>
                 </div>
-                <Comments />
-                <CommentReplay />
+                {!isLoading && <Comments comments={comments}/>}
+                {isLoading && <p>Loading Comments...</p>}
+                {error && <p>Something went wrong. Please try again later.</p>}
+                <CommentReply blogId={blogItem.id}/>
               </div>
             </div>
             <div className="col-30">
