@@ -113,10 +113,10 @@ export default function Comments({ comments = [], blogItem }) {
 
   return (
     <div className="comments-wrap">
-      <h4>Comments:</h4>
-      <br/>
       <div className="latest-comments">
-        {commentTree.length > 0 ? (
+        {commentTree.length > 0 ? (<>
+          <h4>Comments:</h4>
+          <br/>
           <ul className="list-wrap">
             {commentTree.map((comment) => (
               <CommentItem
@@ -127,6 +127,7 @@ export default function Comments({ comments = [], blogItem }) {
               />
             ))}
           </ul>
+          </>
         ) : (
           <h4>Be the First one to comment!</h4>
         )}

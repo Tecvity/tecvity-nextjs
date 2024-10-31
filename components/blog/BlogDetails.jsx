@@ -208,7 +208,7 @@ export default function BlogDetails({ blogTitle }) {
                     </p>
                   </div>
                 </div>
-                {!isLoading && <Comments comments={comments}/>}
+                {!isLoading && !error ? <Comments comments={comments}/>: null}
                 {isLoading && <p>Loading Comments...</p>}
                 {error && <p>Something went wrong. Please try again later.</p>}
                 <CommentReply blogId={blogItem.id}/>
