@@ -3,7 +3,7 @@ import logger from '@/app/api/logger';
 import { isValidEmail } from '@/app/api/utils';
 import { triggerSESVerification } from "@/app/api/controllers" 
 
-//to send verification email to the email address, accepts array of emails
+//to send verification email to the email address, accepts array of emails, route is not used anywhere in the app
 export const POST = async (req) => {
   try {
     const requestBody = await req.json();
@@ -32,7 +32,6 @@ export const POST = async (req) => {
     return NextResponse.json({ results }, { status: 200 });
 
   } catch (error) {
-    logger.error(`Error processing request: ${error}`);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 };

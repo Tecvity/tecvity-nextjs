@@ -1,6 +1,6 @@
 "use client"
 import { socialMediaLinks } from "@/data/socials";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Comments from "./Comments";
 import CommentReply from "./CommentReply";
 import BlogSerchbar from "./BlogSerchbar";
@@ -10,11 +10,8 @@ import Tags from "./Tags";
 import Image from "next/image";
 import { allBlogs } from "@/data/blogs";
 import { useGetData } from "@/utils/hooks";
-import { socket } from "@/utils/socket";
 
 export default function BlogDetails({ blogTitle }) {
-  const [socketComment, setSocketComment] = useState([]);
-
   const decodedBlogTitle = blogTitle.replace(/-/g, ' ');
   const blogItem = allBlogs.filter((elm) => elm.title == decodedBlogTitle)[0] || allBlogs[0];
 
@@ -24,21 +21,8 @@ export default function BlogDetails({ blogTitle }) {
 
   const { data: comments = [], isLoading, error, getData } = useGetData();
 
-  useEffect(() => {setSocketComment(comments)}, [comments]);
-
   useEffect(() => {
-    socket.on("newComment", (data) => {
-      const { blogId, comment } = data;
-      if((blogId == blogItem.id)){
-        setSocketComment((prevComments) => [...prevComments, comment]);
-      }
-
-  });
     getData(`/api/Blog/${blogItem.id}/Comments`);
-    return () => {
-      socket.off("newComment");
-    };
-
   }, []);
 
   return (
@@ -224,7 +208,7 @@ export default function BlogDetails({ blogTitle }) {
                     </p>
                   </div>
                 </div>
-                {!isLoading && <Comments comments={socketComment}/>}
+                {!isLoading && <Comments comments={comments}/>}
                 {isLoading && <p>Loading Comments...</p>}
                 {error && <p>Something went wrong. Please try again later.</p>}
                 <CommentReply blogId={blogItem.id}/>
