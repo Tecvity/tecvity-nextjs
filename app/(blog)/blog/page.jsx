@@ -1,22 +1,21 @@
-import BlogList2 from "@/components/blog/BlogList2";
-import Breadcumb from "@/components/blog/Breadcumb";
+import Header from "@/components/header/Header";
+import Breadcumb from "@/components/blog/components/BaseBreadcrumb";
+import BlogList from "@/components/blog/components/BlogList";
 import MarqueeComponent from "@/components/common/Marquee";
-
-import Footer8 from "@/components/footers/Footer8";
-import Header3 from "@/components/headers/Header3";
-import React from "react";
+import Footer from "@/components/footer/Footer";
 
 export const metadata = {
   title: "Blog | Tecvity",
 };
+
 export default function BlogPage2() {
   return (
     <>
-      <Header3 />
+      <Header />
       <Breadcumb />
-      <BlogList2 />
+      <BlogList />
       <MarqueeComponent />
-      <Footer8 />
+      <Footer />
     </>
   );
 }

@@ -1,11 +1,13 @@
-import Home1 from "./(homes)/home-1/page";
+import HomePage from "./home/page";
+
 export const metadata = {
   title: "Tecvity - Delivering Creative Technological Solutions",
 };
+
 export default function Home() {
   return (
     <>
-      <Home1 />
+      <HomePage />
     </>
   );
 }

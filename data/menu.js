@@ -1,3 +1,4 @@
+//pricing page is commented out and NotFoundPage is imported instead
 export const menuItems = [
   { id: 1, title: "Home", isActive: true, link: "/" },
   // {
@@ -38,7 +39,7 @@ export const menuItems = [
       // },
       { id: 23, label: "Our Team", link: "/team" },
       // { id: 24, label: "Team Details", link: "/team-details/2" },
-      { id: 25, label: "Pricing", link: "/pricing" },
+      // { id: 25, label: "Pricing", link: "/pricing" },
       // { id: 26, label: "FAQ", link: "/faq" },
       // { id: 27, label: "Error Page", link: "/error" },
     ],
@@ -65,6 +66,11 @@ export const menuItems = [
         id: 31,
         label: "Penetration Testing & Vulnerability Assessment",
         link: "/portfolio-vapt",
+      },
+      {
+        id: 32,
+        label: "Product Design",
+        link: "/portfolio-pd",
       },
     ],
   },

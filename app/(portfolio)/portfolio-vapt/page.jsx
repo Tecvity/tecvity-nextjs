@@ -1,21 +1,22 @@
+import Header from "@/components/header/Header";
+import Breadcumb from "@/components/portfolio/components/BaseBreadcrumb";
+import PortfolioSub from "@/components/portfolio/components/PortfolioSub";
 import MarqueeComponent from "@/components/common/Marquee";
-import Footer8 from "@/components/footers/Footer8";
-import Header3 from "@/components/headers/Header3";
-import Breadcumb from "@/components/portfolio/Breadcumb";
+import Footer from "@/components/footer/Footer";
+import { VAPTPortfolio } from "@/data/portfolio";
 
-import ProjectsVAPT from "@/components/portfolio/VAPTPortfolio";
-import React from "react";
 export const metadata = {
   title: "VA/PT Portfolio",
 };
+
 export default function ProjectsVAPTPage() {
   return (
     <>
-      <Header3 />
+      <Header />
       <Breadcumb />
-      <ProjectsVAPT />
+      <PortfolioSub projectsList={VAPTPortfolio} />
       <MarqueeComponent />
-      <Footer8 />
+      <Footer />
     </>
   );
 }

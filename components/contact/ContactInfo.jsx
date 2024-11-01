@@ -1,13 +1,12 @@
-import { contactInfo2 } from "@/data/contactInfo";
+import { contactPageInfo } from "@/data/contactInfo";
 import Image from "next/image";
-import React from "react";
 
 export default function ContactInfo() {
   return (
     <div className="feature-area-1 space">
       <div className="container">
         <div className="row gy-4 align-items-center justify-content-center">
-          {contactInfo2.map((info, index) => (
+          {contactPageInfo.map((info, index) => (
             <div key={index} className="col-xl-4 col-md-6">
               <div className="feature-card">
                 <div className="feature-card-icon">

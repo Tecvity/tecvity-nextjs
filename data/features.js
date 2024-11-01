@@ -125,6 +125,8 @@ export const featureData3 = [
 export const ourServices = [
   {
     iconSrc: "/assets/img/icon/feature-icon1-1.svg",
+    imageSrc1: "/assets/img/service/s1_2.jpg",
+    imageSrc2: "/assets/img/service/s1_1.jpg",
     title: "Web & Mobile App Penetration Testing",
     id: 14,
     text: "We can look into the security of your applications and provide a detailed report on vulnerabilities.",
@@ -152,6 +154,8 @@ export const ourServices = [
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-2.svg",
+    imageSrc1: "/assets/img/service/s2_1.jpg",
+    imageSrc2: "/assets/img/service/s2_2.jpg",
     title: "Cloud Security Audits",
     id: 15,
     text: "We conduct security audits and provide recommendations on hardening your cloud security.",
@@ -171,6 +175,8 @@ export const ourServices = [
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-4.svg",
+    imageSrc1: "/assets/img/service/s3_1.jpg",
+    imageSrc2: "/assets/img/service/s3_2.jpg",
     title: "Visual Identity Design",
     id: 16,
     text: "We give your brand a memorable visual identity.",
@@ -190,6 +196,8 @@ export const ourServices = [
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-3.svg",
+    imageSrc1: "/assets/img/service/s4_1.jpg",
+    imageSrc2: "/assets/img/service/s4_2.jpg",
     title: "UI/UX Design",
     id: 17,
     text: "We design user interfaces and experiences that enhance usability and engagement.",
@@ -209,6 +217,8 @@ export const ourServices = [
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-5.svg",
+    imageSrc1: "/assets/img/service/s5_1.jpg",
+    imageSrc2: "/assets/img/service/s5_2.jpg",
     title: "Application Development",
     id: 18,
     text: "We develop cutting-edge web and mobile apps tailored to your needs.",
@@ -228,6 +238,8 @@ export const ourServices = [
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-6.svg",
+    imageSrc1: "/assets/img/service/s6_1.jpg",
+    imageSrc2: "/assets/img/service/s1_2.jpg",
     title: "DevSecOps",
     id: 19,
     text: "We integrate security into your development pipelines, ensuring secure software delivery.",

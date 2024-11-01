@@ -13,7 +13,7 @@ export const teamData = [
   },
   {
     id: 2,
-    imageSrc: "/assets/img/team/team-1-2.png",
+    imageSrc: "/assets/img/team/team.png",
     name: "Moeez Ahmed",
     designation: "Web Developer",
     email: "moeez@tecvity.co",
@@ -24,7 +24,7 @@ export const teamData = [
   },
   {
     id: 3,
-    imageSrc: "/assets/img/team/team-1-3.png",
+    imageSrc: "/assets/img/team/team.png",
     name: "Tayyub Ahmed",
     designation: "Graphic Designer",
     email: "tayyub@tecvity.co",
@@ -35,13 +35,13 @@ export const teamData = [
   },
   {
     id: 4,
-    imageSrc: "/assets/img/team/team-1-4.png",
+    imageSrc: "/assets/img/team/team.png",
     name: "Hamza Khattak",
     designation: "Penetration Tester",
   },
   {
     id: 4,
-    imageSrc: "/assets/img/team/team-1-4.png",
+    imageSrc: "/assets/img/team/team.png",
     name: "Qamar Ahmed",
     designation: "Business Developer",
   },

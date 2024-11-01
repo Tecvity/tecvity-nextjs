@@ -1,4 +1,4 @@
-export const faqs = [
+export const faqsHome = [
   {
     id: 1,
     question: `UI/UX Design
@@ -30,7 +30,7 @@ export const faqs = [
   },
 ];
 
-export const faqs2 = [
+export const faqsPage = [
   {
     id: 1,
     question: `What is our 100% money back guarantee?
@@ -48,52 +48,5 @@ export const faqs2 = [
     question: `Why our prices are higher than market?
 `,
     answer: `Tecvity believes in delivering quality and output that is flaw-less. We take pride in our work, therefore we charge that we think is required to produce such results. `,
-  },
-];
-export const faqs3 = [
-  {
-    id: 1,
-    question: `Branding Design
-`,
-    answer: `We design high quality websites that make users come back
-            for more. A good website tells a story that will make
-            users fully immerse themselves operating`,
-  },
-  {
-    id: 2,
-    question: `Illustration Modelling
-`,
-    answer: `We design high quality websites that make users come back
-            for more. A good website tells a story that will make
-            users fully immerse themselves operating`,
-  },
-  {
-    id: 3,
-    question: `Website Development
-`,
-    answer: `We design high quality websites that make users come back
-            for more. A good website tells a story that will make
-            users fully immerse themselves operating`,
-  },
-  {
-    id: 4,
-    question: `Digital Marketing`,
-    answer: `We design high quality websites that make users come back
-            for more. A good website tells a story that will make
-            users fully immerse themselves operating`,
-  },
-  {
-    id: 5,
-    question: `Content Marketing`,
-    answer: `We design high quality websites that make users come back
-            for more. A good website tells a story that will make
-            users fully immerse themselves operating`,
-  },
-  {
-    id: 6,
-    question: `Social Advertising`,
-    answer: `We design high quality websites that make users come back
-            for more. A good website tells a story that will make
-            users fully immerse themselves operating`,
   },
 ];

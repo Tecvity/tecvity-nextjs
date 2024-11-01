@@ -1,11 +1,9 @@
-import MarqueeComponent from "@/components/common/Marquee";
-import Breadcumb from "@/components/contact/Breadcumb";
-import Contact from "@/components/common/Contact";
+import Header from "@/components/header/Header";
+import Breadcrumb from "@/components/contact/Breadcrumb";
 import ContactInfo from "@/components/contact/ContactInfo";
-
-import Footer8 from "@/components/footers/Footer8";
-import Header3 from "@/components/headers/Header3";
-import React from "react";
+import Contact from "@/components/common/Contact";
+import MarqueeComponent from "@/components/common/Marquee";
+import Footer from "@/components/footer/Footer";
 
 export const metadata = {
   title: "Contact || Frisk - Creative Agency & Portfolio Nextjs Template",
@@ -14,12 +12,12 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <>
-      <Header3 />
-      <Breadcumb />
+      <Header />
+      <Breadcrumb />
       <ContactInfo />
       <Contact />
       <MarqueeComponent />
-      <Footer8 />
+      <Footer />
     </>
   );
 }

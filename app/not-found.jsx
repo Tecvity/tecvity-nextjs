@@ -1,15 +1,15 @@
-import Header3 from "@/components/headers/Header3";
+import Header from "@/components/header/Header";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 export const metadata = {
   title: "Not Found || Tecvity - Delivering Creative Technological Solutions",
 };
+
 export default function NotFoundPage() {
   return (
     <>
-      <Header3 />
+      <Header />
       <div className="error-wrapper text-center">
         <div className="container">
           <Image

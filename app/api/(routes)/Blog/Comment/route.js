@@ -1,4 +1,3 @@
-import logger from "@/app/api/logger";
 import { NextResponse } from "next/server";
 import { isValidEmail } from "@/app/api/utils";
 import { sendEmail, saveCommentToDB } from "@/app/api/controllers";
@@ -25,8 +24,6 @@ export const POST = async (req) => {
         comment,
         parent_comment_id,
       });
-  
-      logger.info(commentData);
 
     const saveResult = await saveCommentToDB(COMMENT_TABLE, commentData);
 
@@ -42,7 +39,6 @@ export const POST = async (req) => {
       )
     );
 
-    logger.info("Comment submitted successfully");
     return NextResponse.json(
       { message: "Comment submitted successfully", data: commentData },
       { status: 200 }
@@ -52,7 +48,6 @@ export const POST = async (req) => {
     if (error.message.includes("required") || error.message === "Invalid email format") 
       status = 400;
 
-    logger.error(error.message);
     return NextResponse.json({ message: error.message }, { status });
   }
 };
