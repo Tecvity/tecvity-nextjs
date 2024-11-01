@@ -1,5 +1,4 @@
 import { db, ses } from "@/app/api/config";
-import logger from "@/app/api/logger";
 
 const sendEmail = async (sourceEmail, recipientEmails, subject, message) => {
   const params = {
@@ -17,10 +16,9 @@ const sendEmail = async (sourceEmail, recipientEmails, subject, message) => {
 //Request production access to send emails to not verified users
 //
   try {
-    logger.info(await ses.sendEmail(params).promise());
+    await ses.sendEmail(params).promise()
     return { success: true, message: "Email sent successfully" };
   } catch (error) {
-    logger.info(error);
     return {
       success: false,
       message: `Failed to send email: ${error.message}`,
@@ -34,7 +32,6 @@ const triggerSESVerification = async (email) => {
     await ses.verifyEmailAddress(params).promise();
     return { success: true };
   } catch (error) {
-    logger.error(`Failed to send verification email to ${email}: ${error.message}`);
     return { success: false, message: error.message };
   }
 };
@@ -54,7 +51,6 @@ const saveEmailToDB = async (tableName, item) => {
     if (error.code === "ConditionalCheckFailedException") {
       return { success: false, message: "Email is already subscribed." };
     }
-    logger.error(error);
     return { success: false, message: "An error occurred while saving the email." };
   }
 };

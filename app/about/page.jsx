@@ -4,7 +4,7 @@ import Facts from "@/components/about/components/Facts";
 import Features from "@/components/about/components/Features";
 import Awards from "@/components/about/components/Awards";
 import Team from "@/components/about/components/Team";
-import Contact from "@/components/about/components/Contact";
+import Contact from "@/components/common/Contact";
 import Clients from "@/components/about/components/Clients";
 import MarqueeComponent from "@/components/common/Marquee";
 import Footer from "@/components/footer/Footer";

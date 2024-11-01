@@ -1,5 +1,4 @@
 import { db } from "@/app/api/config";
-import logger from "@/app/api/logger";
 
 const saveCommentToDB = async (tableName, commentData) => {
   const { comment_id, submissionTimestamp, ...rest } = commentData;
@@ -21,7 +20,6 @@ const saveCommentToDB = async (tableName, commentData) => {
     if (error.code === "ConditionalCheckFailedException") {
       return { success: false, message: "Comment submission already exists." };
     }
-    logger.error(error);
     return {
       success: false,
       message: "An error occurred while saving the comment submission.",
@@ -43,7 +41,6 @@ const getCommentsFromDB = async (tableName, blogId) => {
       { Items } = await db.query(params).promise();
     return { success: true, comments: Items };
   } catch (error) {
-    logger.error(error);
     return {
       success: false,
       message: "An error occurred while fetching the comments.",

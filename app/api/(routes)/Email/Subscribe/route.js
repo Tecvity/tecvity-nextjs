@@ -1,4 +1,3 @@
-import logger from "@/app/api/logger";
 import { NextResponse } from "next/server";
 import { isValidEmail } from "@/app/api/utils";
 import { createSubscriptionObject } from "@/app/api/models";
@@ -30,7 +29,6 @@ export const POST = async (req) => {
       )
     );
 
-    logger.info("Email subscribed successfully");
     return NextResponse.json({ message: "Email subscribed successfully" }, { status: 200 });
 
   } catch (error) {
@@ -40,7 +38,6 @@ export const POST = async (req) => {
     } else if (error.message === "Email is already subscribed.") {
       status = 409;
     }
-    logger.error(error.message);
     return NextResponse.json({ message: error.message }, { status });
   }
 };

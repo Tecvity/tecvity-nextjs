@@ -1,4 +1,3 @@
-import logger from "@/app/api/logger";
 import { NextResponse } from "next/server";
 import { isValidEmail } from "@/app/api/utils";
 import { sendEmail, saveContactToDB } from "@/app/api/controllers";
@@ -44,7 +43,6 @@ export const POST = async (req) => {
     await sendEmail(SOURCE_EMAIL, email, USER_SUBJECT, USER_MESSAGE);
     await sendEmail(SOURCE_EMAIL, teamEmail, TEAM_SUBJECT, TEAM_MESSAGE);
 
-    logger.info("Contact form submitted successfully");
     return NextResponse.json(
       { message: "Contact form submitted successfully" },
       { status: 200 }
@@ -58,7 +56,6 @@ export const POST = async (req) => {
       status = 400;
     }
 
-    logger.error(error.message);
     return NextResponse.json({ message: error.message }, { status });
   }
 };

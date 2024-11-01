@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import logger from '@/app/api/logger';
 import { isValidEmail } from '@/app/api/utils';
 import { triggerSESVerification } from "@/app/api/controllers" 
 
@@ -18,7 +17,6 @@ export const POST = async (req) => {
         if (isValidEmail(email)) {
           const result = await triggerSESVerification(email);
           if (result.success) {
-            logger.info(`Verification email sent to: ${email}`);
             return { email, status: 'Verification email sent' };
           } else {
             return { email, status: `Failed: ${result.message}` };

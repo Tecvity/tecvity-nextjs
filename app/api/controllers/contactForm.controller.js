@@ -1,5 +1,4 @@
 import { db } from "@/app/api/config";
-import logger from "@/app/api/logger";
 
 const saveContactToDB = async (tableName, contactData) => {
   const { email, submissionTimestamp, ...rest } = contactData;
@@ -21,7 +20,6 @@ const saveContactToDB = async (tableName, contactData) => {
     if (error.code === "ConditionalCheckFailedException") {
       return { success: false, message: "Contact submission already exists." };
     }
-    logger.error(error);
     return { success: false, message: "An error occurred while saving the contact submission." };
   }
 };

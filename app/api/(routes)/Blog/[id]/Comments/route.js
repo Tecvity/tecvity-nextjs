@@ -1,12 +1,10 @@
 import { NextResponse } from "next/server";
 import { getCommentsFromDB } from "@/app/api/controllers";
-import logger from "@/app/api/logger";
 
 const COMMENT_TABLE = "BlogComments";
 
 export const GET = async (req, { params }) => {
   const { id: blogId } = params;
-    logger.info(`Fetching comments for blog ID: ${blogId}`);
   try {
     if (!blogId) 
       return NextResponse.json({ message: "Blog ID is required" }, { status: 400 });
@@ -21,7 +19,6 @@ export const GET = async (req, { params }) => {
     
     return NextResponse.json(result.comments, { status: 200 });
   } catch (error) {
-    logger.error(error.message);
     return NextResponse.json({ message: error.message }, { status: 500 });
   }
 };
