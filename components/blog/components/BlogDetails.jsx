@@ -1,6 +1,6 @@
 "use client"
 import { socialMediaLinks } from "@/data/socials";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Comments from "./Comments";
 import CommentReply from "./CommentReply";
 import BlogSearchbar from "./BlogSearchbar";
@@ -8,16 +8,16 @@ import Categories from "./Categories";
 import RecentPosts from "./RecentPosts";
 import Tags from "./Tags";
 import Image from "next/image";
-import { blogPosts } from "@/data/blogs";
+import { allBlogs } from "@/data/blogs";
 import { useGetData } from "@/utils/hooks";
 
 export default function BlogDetails({ blogTitle }) {
   const decodedBlogTitle = blogTitle.replace(/-/g, ' ');
-  const blogItem = blogPosts.find((post) => post.title === decodedBlogTitle) || blogPosts[0];
+  const blogItem = allBlogs.find((post) => post.title === decodedBlogTitle) || allBlogs[0];
 
-  const currentIndex = blogPosts.findIndex((blog) => blog.title === decodedBlogTitle);
-  const nextBlog = currentIndex >= 0 && currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null;
-  const prevBlog = currentIndex > 0 ? blogPosts[currentIndex - 1] : null;
+  const currentIndex = allBlogs.findIndex((blog) => blog.title === decodedBlogTitle);
+  const nextBlog = currentIndex >= 0 && currentIndex < allBlogs.length - 1 ? allBlogs[currentIndex + 1] : null;
+  const prevBlog = currentIndex > 0 ? allBlogs[currentIndex - 1] : null;
 
   const { data: comments = [], isLoading, error, getData } = useGetData();
   const [linkedinShareUrl, setLinkedinShareUrl] = useState('');
@@ -51,7 +51,7 @@ export default function BlogDetails({ blogTitle }) {
                         <a href={`/blog/category/${blogItem.category.replace(/\s+/g, "-")}`}>{blogItem.category}</a>
                       </li>
                       <li>
-                        <a href="#">{blogItem.author}</a>
+                        <a href={blogItem.authorProfile ?? "#"}>{blogItem.author}</a>
                       </li>
                     </ul>
                   </div>
@@ -150,7 +150,7 @@ export default function BlogDetails({ blogTitle }) {
                   </div>
                   <div className="blog__avatar-info">
                     <h4 className="name">
-                      <a href="#">{blogItem.author}</a>
+                      <a href={blogItem.authorProfile ?? "#"}>{blogItem.author}</a>
                     </h4>
                     <p>{blogItem.authorQuote}</p>
                   </div>

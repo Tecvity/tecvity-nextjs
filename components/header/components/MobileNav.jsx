@@ -2,7 +2,7 @@
 import { menuItems } from "@/data/menu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function MobileNav() {
   const [activeMenu, setActiveMenu] = useState([-1, false]);

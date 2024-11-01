@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 
 export default function Breadcumb2({blogTitle}) {
   const decodedBlogTitle = blogTitle.replace(/-/g, ' ');

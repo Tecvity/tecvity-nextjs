@@ -1,4 +1,4 @@
-import SearchPopup from "@/components/header/unused/SearchPopup";
+// import SearchPopup from "@/components/header/unused/SearchPopup";
 import Header from "@/components/header/Header";
 import Hero from "@/components/home/components/Hero";
 import About from "@/components/home/components/About";
@@ -13,10 +13,10 @@ export const metadata = {
   title: "Home  || Tecvity - Delivering Creative Technological Solutions",
 };
 
-export default function HomePage1() {
+export default function HomePage() {
   return (
     <>
-      <SearchPopup />
+      {/* <SearchPopup /> */}
       <Header />
       <Hero />
       <About />

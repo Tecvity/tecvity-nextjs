@@ -1,5 +1,4 @@
-import { faqs } from "@/data/faq";
-import React from "react";
+import { faqsHome } from "@/data/faq";
 
 export default function Faq() {
   return (
@@ -13,7 +12,7 @@ export default function Faq() {
           </div>
           <div className="col-xl-8">
             <div className="accordion-area accordion" id="faqAccordion">
-              {faqs.map((elm, i) => (
+              {faqsHome.map((elm, i) => (
                 <div key={i} className="accordion-card active">
                   <div
                     className="accordion-header"

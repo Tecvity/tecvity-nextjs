@@ -1,9 +1,14 @@
-import { recentPosts } from "@/data/blogs";
+import { allBlogs } from "@/data/blogs";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+
+function sortByDateDescending(posts) {
+  return posts.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+}
 
 export default function Blogs() {
+  const recentThreePosts = sortByDateDescending(allBlogs).slice(0, 3);
+
   return (
     <section className="blog-area space">
       <div className="container">
@@ -15,7 +20,7 @@ export default function Blogs() {
           </div>
         </div>
         <div className="row gy-40 justify-content-center">
-          {recentPosts.slice(0, 3).map((elm, i) => (
+          {recentThreePosts.map((elm, i) => (
             <div key={i} className="col-lg-4 col-md-6">
               <div className="blog-card">
                 <div className="blog-img">

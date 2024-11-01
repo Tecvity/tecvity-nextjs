@@ -1,5 +1,5 @@
 import Header from "@/components/header/Header";
-import Breadcumb from "@/components/contact/Breadcumb";
+import Breadcrumb from "@/components/contact/Breadcrumb";
 import ContactInfo from "@/components/contact/ContactInfo";
 import Contact from "@/components/common/Contact";
 import MarqueeComponent from "@/components/common/Marquee";
@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <Breadcumb />
+      <Breadcrumb />
       <ContactInfo />
       <Contact />
       <MarqueeComponent />

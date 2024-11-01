@@ -2,7 +2,7 @@
 import SideMenu from "./components/SideMenu";
 import MobileNav from "./components/MobileNav";
 import MobileMenuSocials from "./components/MobileMenuSocials";
-import Nav from "./unused/Nav";
+import Nav from "./components/Nav";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";

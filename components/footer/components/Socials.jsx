@@ -1,5 +1,4 @@
-import { socialMediaLinks, socialMediaSvgLinks } from "@/data/socials";
-import React from "react";
+import { socialMediaLinks } from "@/data/socials";
 
 export default function Socials() {
   return (

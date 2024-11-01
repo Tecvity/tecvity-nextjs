@@ -1,4 +1,3 @@
-import React from "react";
 import DarkNav from "./DarkNav";
 
 // not used

@@ -1,5 +1,5 @@
-import { categories } from '@/data/categories-tags'; // Adjust the path as needed
-import { allBlogs } from '@/data/blogs'; // Adjust the path based on your project structure
+import { categories } from '@/data/categories-tags';
+import { allBlogs } from '@/data/blogs';
 
 export default function Categories() {
   

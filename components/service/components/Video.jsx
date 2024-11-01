@@ -24,7 +24,7 @@ export default function Video() {
                   className="jarallax"
                   ref={parallax.ref}
                   style={{
-                    backgroundImage: "url(/assets/img/normal/video_2-1.jpg)",
+                    backgroundImage: "url(/assets/img/service/s_vbg.png)",
                   }}
                 ></div>
                 <div

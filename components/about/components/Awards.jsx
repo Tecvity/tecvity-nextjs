@@ -1,6 +1,5 @@
 import { awardsData } from "@/data/awards";
 import Link from "next/link";
-import React from "react";
 
 export default function Awards() {
   return (

@@ -1,5 +1,5 @@
 import Header from "@/components/header/Header";
-import Breadcumb from "@/components/about/components/Breadcrumb";
+import Breadcrumb from "@/components/about/components/Breadcrumb";
 import Facts from "@/components/about/components/Facts";
 import Features from "@/components/about/components/Features";
 import Awards from "@/components/about/components/Awards";
@@ -17,13 +17,13 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <Breadcumb />
+      <Breadcrumb />
       <Facts />
       <Features />
       <Awards />
       <Team />
       <Contact />
-      <Clients />
+      <Clients />{/*to add clients remove placeholders */}
       <MarqueeComponent />
       <Footer />
     </>

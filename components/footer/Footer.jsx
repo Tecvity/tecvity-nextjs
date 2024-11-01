@@ -88,8 +88,7 @@ export default function Footer() {
                     <p>Successfully subscribed!</p>
                   ) : null}
                   <p>
-                    By signing up to receive emails from Tecvity, you agree to our
-                    Privacy Policy. We treat your info responsibly.
+                    SignUp to receive emails from Tecvity. We treat your info responsibly.
                   </p>
                 </div>
               </div>
@@ -127,7 +126,7 @@ export default function Footer() {
               <div className="col-md-6">
                 <p className="copyright-text">
                   Copyright © {new Date().getFullYear()}{" "}
-                  <a href="https://tecvity.co">Tecvity</a>
+                  <a href="/">Tecvity</a>
                 </p>
               </div>
               <div className="col-md-6 align-self-center">

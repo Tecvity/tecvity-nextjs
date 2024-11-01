@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import { useState } from "react";
 import { formatTimestamp } from "@/utils/helpers";
 import CommentReply from "../components/CommentReply";
 

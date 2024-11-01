@@ -17,7 +17,7 @@ export const contactInfo = [
   },
   // Add more feature cards as needed
 ];
-export const contactInfo2 = [
+export const contactPageInfo = [
   {
     iconSrc: "/assets/img/icon/location-pin-alt.svg",
     title: "Headquarters",

@@ -1,5 +1,5 @@
 import Header from "@/components/header/Header";
-import Breadcumb from "@/components/team/components/Breadcrumb";
+import Breadcrumb from "@/components/team/components/Breadcrumb";
 import Team from "@/components/team/components/Team";
 import Contact from "@/components/team/components/Contact";
 import MarqueeComponent from "@/components/common/Marquee";
@@ -13,7 +13,7 @@ export default function TeamPage() {
   return (
     <>
       <Header />
-      <Breadcumb />
+      <Breadcrumb />
       <Team />
       <Contact />
       <MarqueeComponent />

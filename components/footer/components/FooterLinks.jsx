@@ -1,11 +1,10 @@
-import { links3 } from "@/data/footerlink";
+import { links } from "@/data/footerlink";
 import Link from "next/link";
-import React from "react";
 
 export default function FooterLinks() {
   return (
     <>
-      {links3.map((link) => (
+      {links.map((link) => (
         <li key={link.id}>
           <Link scroll={false} href={link.href}>
             {link.text}

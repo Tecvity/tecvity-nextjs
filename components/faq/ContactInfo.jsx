@@ -1,9 +1,8 @@
 import { contactInfo } from "@/data/contactInfo";
 import Image from "next/image";
-import React from "react";
 
 export default function ContactInfo() {
-  return (
+  return (  
     <div className="feature-area-1 space-bottom">
       <div className="container">
         <div className="row gy-4 align-items-center justify-content-center">

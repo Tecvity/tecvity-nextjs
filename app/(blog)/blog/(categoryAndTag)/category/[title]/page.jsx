@@ -1,5 +1,5 @@
 import { allBlogs } from "@/data/blogs";
-import BlogList2 from "@/components/blog/components/BlogList";
+import BlogList from "@/components/blog/components/BlogList";
 import Breadcumb from "@/components/blog/components/BaseBreadcrumb";
 import MarqueeComponent from "@/components/common/Marquee";
 import Footer from "@/components/footer/Footer";
@@ -20,7 +20,7 @@ export default function CategoryPage({ params }) {
     <>
       <Header />
       <Breadcumb breadcumbTitle={`Blog | ${params.title}`} />
-      <BlogList2 blogs={filteredBlogs} />
+      <BlogList blogs={filteredBlogs} />
       <MarqueeComponent />
       <Footer />
     </>

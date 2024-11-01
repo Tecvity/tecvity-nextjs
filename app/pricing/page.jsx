@@ -1,5 +1,5 @@
 // import Header from "@/components/header/Header";
-// import Breadcumb from "@/components/pricing/Breadcumb";
+// import Breadcrumb from "@/components/pricing/Breadcrumb";
 // import Pricing from "@/components/pricing/Pricing";
 // import Faq from "@/components/pricing/Faq";
 // import MarqueeComponent from "@/components/common/Marquee";
@@ -13,7 +13,7 @@ export default function PricingPage() {
   return (
     <>
       {/* <Header />
-      <Breadcumb />
+      <Breadcrumb />
       <Pricing />
       <Faq />
       <MarqueeComponent />

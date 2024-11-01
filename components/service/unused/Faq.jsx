@@ -1,5 +1,4 @@
-import { faqs3 } from "@/data/faq";
-import React from "react";
+import { faqsPage } from "@/data/faq";
 
 export default function Faq() {
   return (
@@ -8,7 +7,7 @@ export default function Faq() {
         <div className="row justify-content-center">
           <div className="col-xl-8">
             <div className="accordion-area accordion" id="faqAccordion">
-              {faqs3.map((elm, i) => (
+              {faqsPage.map((elm, i) => (
                 <div key={i} className="accordion-card active">
                   <div
                     className="accordion-header"

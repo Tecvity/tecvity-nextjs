@@ -1,5 +1,5 @@
 import Header from "@/components/header/Header";
-import Breadcumb from "@/components/faq/Breadcumb";
+import Breadcrumb from "@/components/faq/Breadcrumb";
 import Faq from "@/components/faq/Faq";
 import ContactInfo from "@/components/faq/ContactInfo";
 import MarqueeComponent from "@/components/common/Marquee";
@@ -13,7 +13,7 @@ export default function FaqPage() {
   return (
     <>
       <Header />
-      <Breadcumb />
+      <Breadcrumb />
       <Faq />
       <ContactInfo />
       <MarqueeComponent />

@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function Breadcumb() {
+export default function Breadcrumb() {
   return (
     <div
       className="breadcumb-wrapper"

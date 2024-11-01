@@ -3,7 +3,7 @@ import BlogSerchbar from "../components/BlogSearchbar";
 import Categories from "../Categories";
 import RecentPosts from "../RecentPosts";
 import Tags from "../Tags";
-import { blogs3 } from "@/data/blogs";
+import { allBlogs } from "@/data/blogs";
 import Link from "next/link";
 import Pagination from "../Pagination";
 import Image from "next/image";
@@ -17,7 +17,7 @@ export default function BlogList1() {
             <div className="col-70">
               <div className="blog-post-wrap">
                 <div className="row gy-50 gutter-24">
-                  {blogs3.slice(0, 4).map((elm, i) => (
+                  {allBlogs.slice(0, 4).map((elm, i) => (
                     <div key={i} className="col-md-12">
                       <div className="blog-post-item">
                         <div className="blog-post-thumb">

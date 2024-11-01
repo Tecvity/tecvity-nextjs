@@ -1,5 +1,5 @@
-import { allBlogs } from "@/data/blogs"; // Import all blogs data
-import BlogList2 from "@/components/blog/components/BlogList";
+import { allBlogs } from "@/data/blogs";
+import BlogList from "@/components/blog/components/BlogList";
 import Breadcumb from "@/components/blog/components/BaseBreadcrumb";
 import MarqueeComponent from "@/components/common/Marquee";
 import Footer from "@/components/footer/Footer";
@@ -19,7 +19,7 @@ export default function TagPage({ params }) {
     <>
       <Header />
       <Breadcumb breadcumbTitle={`Tag | ${params.title}`} />
-      <BlogList2 blogs={filteredBlogs} blogTag={title} />
+      <BlogList blogs={filteredBlogs} blogTag={title} />
       <MarqueeComponent />
       <Footer />
     </>
