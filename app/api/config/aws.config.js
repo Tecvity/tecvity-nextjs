@@ -1,9 +1,9 @@
 import AWS from "aws-sdk";
 
 AWS.config.update({
-    region: process.env.AWS_REGION,
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    region: process.env.TECVITY_AWS_REGION,
+    accessKeyId: process.env.TECVITY_AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.TECVITY_AWS_SECRET_ACCESS_KEY,
 });
 
 const ses = new AWS.SES();
