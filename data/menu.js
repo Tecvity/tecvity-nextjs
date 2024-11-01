@@ -67,6 +67,11 @@ export const menuItems = [
         label: "Penetration Testing & Vulnerability Assessment",
         link: "/portfolio-vapt",
       },
+      {
+        id: 32,
+        label: "Product Design",
+        link: "/portfolio-pd",
+      },
     ],
   },
   // {

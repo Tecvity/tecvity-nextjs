@@ -1,4 +1,4 @@
-import { blogs } from "@/data/blogs";
+import { recentPosts } from "@/data/blogs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -15,7 +15,7 @@ export default function Blogs() {
           </div>
         </div>
         <div className="row gy-40 justify-content-center">
-          {blogs.slice(0, 3).map((elm, i) => (
+          {recentPosts.slice(0, 3).map((elm, i) => (
             <div key={i} className="col-lg-4 col-md-6">
               <div className="blog-card">
                 <div className="blog-img">

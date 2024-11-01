@@ -67,7 +67,7 @@ export default function Projects() {
                     ))}
                   </ul>
                   <h3 className="portfolio-title">
-                    <a href={`/project-details/${elm.title.replace(/\s+/g, '-')}`}>{elm.projectTitle}</a>
+                    <a href={`/project-details/${elm.title.replace(/\s+/g, '-')}`}>{elm.title}</a>
                   </h3>
                   <Link
                     scroll={false}

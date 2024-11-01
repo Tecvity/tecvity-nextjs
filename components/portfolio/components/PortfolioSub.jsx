@@ -1,24 +1,23 @@
 "use client"
-import { VAPTPortfolio } from "@/data/portfolio";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
 const projectVisibilityFactor = 4;
-export default function ProjectsVAPT() {
+export default function Portfolio({projectsList}) {
   const [visibleProjects, setVisibleProjects] = useState(projectVisibilityFactor*2);
 
   const loadMoreProjects = () => {
     setVisibleProjects((prev) => prev + projectVisibilityFactor);
   };
 
-  const hasMoreProjects = visibleProjects < VAPTPortfolio.length;
+  const hasMoreProjects = visibleProjects < projectsList.length;
 
   return (
     <div className="portfolio-area-1 space overflow-hidden">
       <div className="container">
         <div className="row gy-40 gx-60 justify-content-center">
-          {VAPTPortfolio.slice(0, visibleProjects).map((elm, i) => (
+          {projectsList.slice(0, visibleProjects).map((elm, i) => (
             <div key={i} className="col-xl-6 col-lg-6">
               <div className="portfolio-wrap">
                 <div className="portfolio-thumb">

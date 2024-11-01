@@ -3,10 +3,10 @@ import Breadcumb from "@/components/portfolio/components/BaseBreadcrumb";
 import PortfolioSub from "@/components/portfolio/components/PortfolioSub";
 import MarqueeComponent from "@/components/common/Marquee";
 import Footer from "@/components/footer/Footer";
-import { VAPTPortfolio } from "@/data/portfolio";
+import { PDPortfolio } from "@/data/portfolio";
 
 export const metadata = {
-  title: "VA/PT Portfolio",
+  title: "ISC Portfolio",
 };
 
 export default function ProjectsVAPTPage() {
@@ -14,7 +14,7 @@ export default function ProjectsVAPTPage() {
     <>
       <Header />
       <Breadcumb />
-      <PortfolioSub projectsList={VAPTPortfolio} />
+      <PortfolioSub projectsList={PDPortfolio}/>
       <MarqueeComponent />
       <Footer />
     </>

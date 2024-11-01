@@ -43,7 +43,7 @@ const CommentItem = ({ comment, onReplyClick, activeReply }) => (
         <Image
           width={110}
           height={100}
-          src="/assets/img/blog/comment01.png"
+          src="/assets/img/blog/anonymousUser.png"
           alt="Avatar"
         />
       </div>

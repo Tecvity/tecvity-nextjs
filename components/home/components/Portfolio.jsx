@@ -69,7 +69,7 @@ export default function Portfolio() {
                   </ul>
                   <h3 className="portfolio-title">
                     <Link scroll={false} href={`/project-details/${elm.title.replace(/\s+/g, '-')}`}>
-                      {elm.projectTitle}
+                      {elm.title}
                     </Link>
                   </h3>
                   <Link

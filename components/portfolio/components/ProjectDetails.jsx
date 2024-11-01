@@ -1,7 +1,6 @@
 "use client";
 import { allPortfolio } from "@/data/portfolio";
-import Image from "next/image";
-import Slider from "react-slick";
+import ImageSlider from "./ImageSlider";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 export default function ProjectDetails({ portfolioTitle }) {
@@ -13,44 +12,12 @@ export default function ProjectDetails({ portfolioTitle }) {
   const nextProject = currentIndex >= 0 && currentIndex < allPortfolio.length - 1 ? allPortfolio[currentIndex + 1] : null;
   const prevProject = currentIndex > 0 ? allPortfolio[currentIndex - 1] : null;
   
-  const itemsImages = [
-    "/assets/img/portfolio/portfolio_inner_1.png",
-    "/assets/img/portfolio/portfolio_inner_2.png",
-  ];
-  const slideroptions = {
-    arrows: true,
-    autoplay: true,
-    prevArrow: (
-      <button type="button" className="slick-prev slick-arrow">
-        <i className="fas fa-arrow-left"></i>
-      </button>
-    ),
+  const itemsImages = portfolioItem.itemsImages;
 
-    nextArrow: (
-      <button type="button" className="slick-next slick-arrow">
-        <i className="fas fa-arrow-right"></i>
-      </button>
-    ),
-  };
   return (
     <div className="project-details-page-area space">
       <div className="container">
-        <Slider className="row global-carousel default" {...slideroptions}>
-          {itemsImages.map((elm, i) => (
-            <div key={i} className="col-xl-12">
-              <div className="project-inner-thumb mb-80 wow img-custom-anim-top animated">
-                <Image
-                  width={1296}
-                  height={700}
-                  className="w-100"
-                  src={elm}
-                  alt="img"
-                />
-              </div>
-            </div>
-          ))}
-        </Slider>
-
+      <ImageSlider itemImages={itemsImages} />
         <div className="row justify-content-between flex-row-reverse">
           <div className="col-xl-3 col-lg-4">
             <div className="project-details-info mb-lg-0 mb-40">
