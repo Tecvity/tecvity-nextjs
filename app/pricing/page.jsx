@@ -7,7 +7,7 @@
 import NotFoundPage from "@/app/error/page";
 
 export const metadata = {
-  title: "Pricing || Frisk - Creative Agency & Portfolio Nextjs Template",
+  title: "Pricing || Tecvity - Delivering Creative Technological Solutions",
 };
 export default function PricingPage() {
   return (

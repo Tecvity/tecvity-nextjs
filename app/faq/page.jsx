@@ -6,7 +6,7 @@ import MarqueeComponent from "@/components/common/Marquee";
 import Footer from "@/components/footer/Footer";
 
 export const metadata = {
-  title: "Faq || Frisk - Creative Agency & Portfolio Nextjs Template",
+  title: "Faq || Tecvity - Delivering Creative Technological Solutions",
 };
 
 export default function FaqPage() {
