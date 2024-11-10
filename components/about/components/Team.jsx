@@ -9,7 +9,7 @@ export default function Team() {
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="title-area text-center">
-              <h2 className="sec-title">Our Team Behind The Studio</h2>
+              <h2 className="sec-title">Our Founders</h2>
             </div>
           </div>
         </div>

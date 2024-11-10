@@ -7,7 +7,8 @@ import Footer from "@/components/footer/Footer";
 //USE Static Side Genaration(SSG) if necessary
 
 export const metadata = {
-  title: "Team Details || Frisk - Creative Agency & Portfolio Nextjs Template",
+  title:
+    "Team Details || Tecvity - Delivering Creative Technological Solutions",
 };
 
 export default function TeamPageDetails({ params }) {

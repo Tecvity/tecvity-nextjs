@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Not Found || Frisk - Creative Agency & Portfolio Nextjs Template",
+  title: "Not Found || Tecvity - Delivering Creative Technological Solutions",
 };
 
 export default function NotFoundPage() {

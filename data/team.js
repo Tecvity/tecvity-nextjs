@@ -32,17 +32,5 @@ export const teamData = [
     para1:
       "Tayyub's creative mindset is not something you see regularly. His designs speak well of his expertise in the world of graphics.",
     para2: "He holds expertise in Visual Identity Design and UI Design",
-  },
-  {
-    id: 4,
-    imageSrc: "/assets/img/team/team.png",
-    name: "Hamza Khattak",
-    designation: "Penetration Tester",
-  },
-  {
-    id: 4,
-    imageSrc: "/assets/img/team/team.png",
-    name: "Qamar Ahmed",
-    designation: "Business Developer",
-  },
+  }
 ];
