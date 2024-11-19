@@ -13,11 +13,11 @@ export const teamData = [
   },
   {
     id: 2,
-    imageSrc: "/assets/img/team/team.png",
+    imageSrc: "/assets/img/team/mz.png",
     name: "Moeez Ahmed",
     designation: "Web Developer",
     email: "moeez@tecvity.co",
-    phone: "+92-303-688-1861",
+    phone: "+92-335-189-5414",
     para1:
       "Moeez is known for his expertise in web application development. He has the knack for developing robust applications",
     para2: "He holds expertise in the Javascript stack."
