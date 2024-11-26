@@ -10,7 +10,7 @@ export default function Contact() {
         style={{ top: "-100px", left: 0, bottom: "140px" }}
       >
         <iframe
-          src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&t=m&z=10&output=embed&iwloc=near"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.571881971785!2d74.30818557521448!3d31.480961049088812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919034c42bfd7d1%3A0xbb6830adc0f3a757!2sVenture%20Drive%20Model%20Town!5e0!3m2!1sen!2s!4v1732650446326!5m2!1sen!2s"
           allowFullScreen=""
           loading="lazy"
         ></iframe>

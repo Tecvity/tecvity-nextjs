@@ -116,6 +116,7 @@ Following feautres/pages exist in the codebase but have been disabled for now (c
 
 - Pricing
 - Search (both global and blog-based)
+- Awards
 
 ## License
 

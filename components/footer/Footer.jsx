@@ -55,8 +55,7 @@ export default function Footer() {
               <div className="col-md-6 col-xl-5 col-lg-6">
                 <div className="widget widget-newsletter footer-widget">
                   <h3 className="widget_title">
-                    Get valuable strategy, culture and brand insights straight
-                    to your inbox
+                    Get news and information regarding Tecvity right into your mailbox!
                   </h3>
                   <form onSubmit={handleSubmit} className="newsletter-form">
                     <div className="form-group">
@@ -88,7 +87,7 @@ export default function Footer() {
                     <p>Successfully subscribed!</p>
                   ) : null}
                   <p>
-                    SignUp to receive emails from Tecvity. We treat your info responsibly.
+                    Register to receive emails from Tecvity.
                   </p>
                 </div>
               </div>

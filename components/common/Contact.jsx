@@ -66,7 +66,7 @@ export default function Contact() {
         style={{ top: "-100px", left: 0, bottom: "140px" }}
       >
         <iframe
-          src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&t=m&z=10&output=embed&iwloc=near"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.571881971785!2d74.30818557521448!3d31.480961049088812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919034c42bfd7d1%3A0xbb6830adc0f3a757!2sVenture%20Drive%20Model%20Town!5e0!3m2!1sen!2s!4v1732650446326!5m2!1sen!2s"
           allowFullScreen=""
           loading="lazy"
         ></iframe>
@@ -77,7 +77,10 @@ export default function Contact() {
             <div className="contact-form-wrap">
               <div className="title-area mb-30">
                 <h2 className="sec-title">Have Any Project on Your Mind?</h2>
-                <p>Great! We're excited to hear from you and let's start something</p>
+                <p>
+                  Great! We're excited to hear from you and let's start
+                  something
+                </p>
               </div>
               <form onSubmit={handleSubmit} className="contact-form">
                 <div className="row">
@@ -86,14 +89,18 @@ export default function Contact() {
                       <input
                         required
                         type="text"
-                        className={`form-control style-border ${errors.firstname ? "is-invalid" : ""}`}
+                        className={`form-control style-border ${
+                          errors.firstname ? "is-invalid" : ""
+                        }`}
                         name="firstname"
                         value={formData.firstname}
                         onChange={handleChange}
                         placeholder="First name*"
                       />
                       {errors.firstname && (
-                        <div className="invalid-feedback">{errors.firstname}</div>
+                        <div className="invalid-feedback">
+                          {errors.firstname}
+                        </div>
                       )}
                     </div>
                   </div>
@@ -102,14 +109,18 @@ export default function Contact() {
                       <input
                         required
                         type="text"
-                        className={`form-control style-border ${errors.lastname ? "is-invalid" : ""}`}
+                        className={`form-control style-border ${
+                          errors.lastname ? "is-invalid" : ""
+                        }`}
                         name="lastname"
                         value={formData.lastname}
                         onChange={handleChange}
                         placeholder="Last name*"
                       />
                       {errors.lastname && (
-                        <div className="invalid-feedback">{errors.lastname}</div>
+                        <div className="invalid-feedback">
+                          {errors.lastname}
+                        </div>
                       )}
                     </div>
                   </div>
@@ -118,7 +129,9 @@ export default function Contact() {
                       <input
                         required
                         type="email"
-                        className={`form-control style-border ${errors.email ? "is-invalid" : ""}`}
+                        className={`form-control style-border ${
+                          errors.email ? "is-invalid" : ""
+                        }`}
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
@@ -135,7 +148,9 @@ export default function Contact() {
                         required
                         name="message"
                         placeholder="How Can We Help You*"
-                        className={`form-control style-border ${errors.message ? "is-invalid" : ""}`}
+                        className={`form-control style-border ${
+                          errors.message ? "is-invalid" : ""
+                        }`}
                         value={formData.message}
                         onChange={handleChange}
                       ></textarea>
@@ -145,16 +160,26 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-                {error && <p style={{ color: "red" }}>{error?.response?.data.message}</p>}
-                {response && <p className="success-text">Form submitted successfully!</p>}
+                {error && (
+                  <p style={{ color: "red" }}>
+                    {error?.response?.data.message}
+                  </p>
+                )}
+                {response && (
+                  <p className="success-text">Form submitted successfully!</p>
+                )}
                 <div className="form-btn col-12">
-                  <button type="submit" className="btn mt-20" disabled={isLoading}>
+                  <button
+                    type="submit"
+                    className="btn mt-20"
+                    disabled={isLoading}
+                  >
                     <span className="link-effect">
                       <span className="effect-1">
-                      {isLoading ? "SENDING MESSAGE..." : "SEND MESSAGE"}
+                        {isLoading ? "SENDING MESSAGE..." : "SEND MESSAGE"}
                       </span>
                       <span className="effect-1">
-                      {isLoading ? "SENDING MESSAGE..." : "SEND MESSAGE"}
+                        {isLoading ? "SENDING MESSAGE..." : "SEND MESSAGE"}
                       </span>
                     </span>
                   </button>
