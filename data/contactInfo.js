@@ -21,9 +21,9 @@ export const contactPageInfo = [
   {
     iconSrc: "/assets/img/icon/location-pin-alt.svg",
     title: "Headquarters",
-    address: "Jinnah Spaces, Grw",
-    city: "Gujranwala, Pakistan",
-    linkUrl: "https://maps.app.goo.gl/kSFhMvozwuG7kjsLA",
+    address: "Venture Drive, Model Town",
+    city: "Lahore, Pakistan",
+    linkUrl: "https://maps.app.goo.gl/zQwmQhQR6AhxWjJaA",
     linkText: "Get direction",
   },
   {

@@ -9,7 +9,7 @@ export default function Team() {
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="title-area text-center">
-              <h2 className="sec-title">Our Team Behind The Studio</h2>
+              <h2 className="sec-title">Our Team Behind Tecvity</h2>
             </div>
           </div>
         </div>
@@ -29,7 +29,10 @@ export default function Team() {
                 </div>
                 <div className="team-card_content">
                   <h3 className="team-card_title">
-                    <Link scroll={false} href={`/team-details/${elm.name.replace(/\s+/g, '-')}`}>
+                    <Link
+                      scroll={false}
+                      href={`/team-details/${elm.name.replace(/\s+/g, "-")}`}
+                    >
                       {elm.name}
                     </Link>
                   </h3>

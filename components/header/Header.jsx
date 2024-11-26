@@ -87,8 +87,8 @@ export default function Header() {
             </ul>
           </div>
           <div className="sidebar-wrap">
-            <h6>Jinnah Spaces</h6>
-            <h6>Gujranwala, Pakistan</h6>
+            <h6>Venture Drive, Model Town</h6>
+            <h6>Lahore, Pakistan</h6>
           </div>
           <div className="sidebar-wrap">
             <h6>
