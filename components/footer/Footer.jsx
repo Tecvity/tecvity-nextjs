@@ -107,7 +107,7 @@ export default function Footer() {
                   <h3 className="widget_title">Contact</h3>
                   <ul className="contact-info-list">
                     <li>
-                      Jinnah Spaces, Gujranwala, <br /> Grw 52250, Pakistan
+                      Venture Drive, Model Town, Lahore <br /> Pakistan
                     </li>
                     <li>
                       <a href="tel:923088438733">+92 308 8438733</a>

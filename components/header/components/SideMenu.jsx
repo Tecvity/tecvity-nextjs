@@ -40,7 +40,7 @@ export default function SideMenu({ isOpen, setIsOpen }) {
             Delivering Creative Technological Solutions
             </p>
             <div className="sidebar-wrap">
-              <h6>Gujranwala, Pakistan</h6>
+              <h6>Lahore, Pakistan</h6>
               
             </div>
             <div className="sidebar-wrap">
