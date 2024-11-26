@@ -20,7 +20,7 @@ export default function AboutPage() {
       <Breadcrumb />
       <Facts />
       <Features />
-      <Awards />
+      {/* <Awards /> */}
       <Team />
       <Contact />
       <Clients />{/*to add clients remove placeholders */}
