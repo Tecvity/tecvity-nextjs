@@ -88,7 +88,7 @@ export default function Footer() {
                     <p>Successfully subscribed!</p>
                   ) : null}
                   <p>
-                    SignUp to receive emails from Tecvity. We treat your info responsibly.
+                    Register to receive emails from Tecvity.
                   </p>
                 </div>
               </div>
