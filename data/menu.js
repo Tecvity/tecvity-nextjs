@@ -57,7 +57,7 @@ export const menuItems = [
   //     { id: 37, label: "Portfolio Details", link: "/project-details/2" },
   //   ],
   // },
-  { id: 4, title: "Our Services", link: "/services" },
+  { id: 4, title: "Our Services", link: "/our-services" },
   {
     id: 3,
     title: "Portfolio",

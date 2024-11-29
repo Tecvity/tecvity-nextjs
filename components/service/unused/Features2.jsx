@@ -18,7 +18,7 @@ export default function Features2() {
                     <a href="#">{elm.title}</a>
                   </h4>
                   <p className="feature-card-text">{elm.text}</p>
-                  <a href={`/service-details/${elm.id}`} className="link-btn">
+                  <a href={`/our-services/${elm.id}`} className="link-btn">
                     <span className="link-effect">
                       <span className="effect-1">VIEW DETAILS</span>
                       <span className="effect-1">VIEW DETAILS</span>

@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function ServiceDetails({ serviceTitle }) {
   const decodedServiceTitle = decodeURIComponent(serviceTitle.replace(/-/g, ' ').replace(/_/g, '/'));
   const serviceItem =
-    allFeatures.filter((elm) => elm.title == decodedServiceTitle)[0] || allFeatures[1];
+    allFeatures.filter((elm) => elm.title.toLowerCase() == decodedServiceTitle.toLowerCase())[0] || allFeatures[1];
 
     const getRandomIcon = () => {
       const icons = [
