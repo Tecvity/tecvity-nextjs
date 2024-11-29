@@ -18,6 +18,13 @@
     &-text {
         margin-bottom: 24px;
     }
+    .faq-feature-card-details{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content:space-between;
+        height: 335px;
+    }
     @include md {
         padding: 30px 26px;
         &-title {
@@ -28,7 +35,10 @@
         }
     }
     @include sm {
-        min-height: 320px;
+        min-height: 320px;    
+        .faq-feature-card-details{
+            height: 320px;
+        }
     }
 }
 
