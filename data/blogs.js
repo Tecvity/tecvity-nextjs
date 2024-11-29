@@ -11,7 +11,7 @@ const blogPosts = [
     author: "Najam Ul Saqib",
     authorQuote: "Technology + Creativity = Tecvity!",
     authorImage: "/assets/img/team/njm.png",
-    authorProfile: "/team-details/Najam-Ul-Saqib",
+    authorProfile: "/founders/Najam-Ul-Saqib",
     content: {
       introduction:
         "We believe that the key to our success is our team. We are a team of passionate and dedicated professionals who are committed to delivering the highest quality software solutions to businesses of all sizes...",
