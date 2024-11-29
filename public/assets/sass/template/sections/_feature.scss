@@ -2,6 +2,11 @@
 .feature-card {
     background: $smoke-color;
     padding: 40px 36px;
+    min-height: 435px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content:space-between;
     &-icon {
         margin-bottom: 74px;
     }
@@ -21,6 +26,9 @@
         &-icon {
             margin-bottom: 34px;
         }
+    }
+    @include sm {
+        min-height: 320px;
     }
 }
 
