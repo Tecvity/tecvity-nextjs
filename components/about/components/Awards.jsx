@@ -13,7 +13,7 @@ export default function Awards() {
                   <span className="award-year">{elm.year}</span>
                   <div className="award-details">
                     <h4>
-                      <Link scroll={false} href="/about">
+                      <Link scroll={false} href="/about-us">
                         {elm.name}
                       </Link>
                     </h4>

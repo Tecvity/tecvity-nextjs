@@ -20,7 +20,7 @@ export const menuItems = [
     id: 2,
     title: "Pages",
     subMenuItems: [
-      { id: 21, label: "About Us", link: "/about" },
+      { id: 21, label: "About Us", link: "/about-us" },
       { id: 22, label: "Blog", link: "/blog" },
       // {
       //   id: 22,
