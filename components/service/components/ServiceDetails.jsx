@@ -24,7 +24,7 @@ export default function ServiceDetails({ serviceTitle }) {
     
 
   return (
-    <div className="service-details-page-area space">
+    <div className="service-details-page">
       <div className="container">
         <div className="row align-items-center justify-content-center">
           <div className="col-xl-12">

@@ -12,10 +12,11 @@ export default function ContactInfo() {
                 <div className="feature-card-icon">
                   <Image width={40} height={40} src={card.iconSrc} alt="icon" />
                 </div>
-                <div className="feature-card-details">
+                <div className="faq-feature-card-details">
                   <h4 className="feature-card-title">
                     <a href="#">{card.title}</a>
                   </h4>
+                  <span>
                   <p className="feature-card-text">{card.text}</p>
                   <a href={card.linkUrl} className="link-btn">
                     <span className="link-effect">
@@ -29,6 +30,7 @@ export default function ContactInfo() {
                       alt="icon"
                     />
                   </a>
+                  </span>
                 </div>
               </div>
             </div>
