@@ -31,7 +31,7 @@ export default function Team() {
                   <h3 className="team-card_title">
                     <Link
                       scroll={false}
-                      href={`/team-details/${elm.name.replace(/\s+/g, "-")}`}
+                      href={`/founders/${elm.name.replace(/\s+/g, "-")}`}
                     >
                       {elm.name}
                     </Link>

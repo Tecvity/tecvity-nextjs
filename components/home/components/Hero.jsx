@@ -24,7 +24,7 @@ export default function Hero() {
               <div className="btn-group fade_right">
                 <Link
                   scroll={false}
-                  href="/project"
+                  href="/our-portfolio"
                   className="btn wow img-custom-anim-right animated"
                 >
                   <span className="link-effect">

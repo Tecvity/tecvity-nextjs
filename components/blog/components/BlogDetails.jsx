@@ -12,10 +12,10 @@ import { allBlogs } from "@/data/blogs";
 import { useGetData } from "@/utils/hooks";
 
 export default function BlogDetails({ blogTitle }) {
-  const decodedBlogTitle = blogTitle.replace(/-/g, ' ');
-  const blogItem = allBlogs.find((post) => post.title === decodedBlogTitle) || allBlogs[0];
+  const decodedBlogTitle = blogTitle.replace(/-/g, ' ').toLowerCase();
+  const blogItem = allBlogs.find((post) => post.title.toLowerCase() === decodedBlogTitle.toLowerCase()) || allBlogs[0];
 
-  const currentIndex = allBlogs.findIndex((blog) => blog.title === decodedBlogTitle);
+  const currentIndex = allBlogs.findIndex((blog) => blog.title.toLowerCase() === decodedBlogTitle.toLowerCase());
   const nextBlog = currentIndex >= 0 && currentIndex < allBlogs.length - 1 ? allBlogs[currentIndex + 1] : null;
   const prevBlog = currentIndex > 0 ? allBlogs[currentIndex - 1] : null;
 
@@ -24,7 +24,7 @@ export default function BlogDetails({ blogTitle }) {
 
   useEffect(() => {
     getData(`/api/Blog/${blogItem.id}/Comments`);
-    const url = encodeURIComponent(`${window.location.origin}/blog-details/${blogTitle}`);
+    const url = encodeURIComponent(`${window.location.origin}/blogs/${blogTitle}`);
     setLinkedinShareUrl(`https://www.linkedin.com/shareArticle?mini=true&url=${url}&source=LinkedIn`);
   }, []);
 
@@ -48,7 +48,7 @@ export default function BlogDetails({ blogTitle }) {
                     <ul className="list-wrap">
                       <li>{blogItem.date}</li>
                       <li>
-                        <a href={`/blog/category/${blogItem.category.replace(/\s+/g, "-")}`}>{blogItem.category}</a>
+                        <a href={`/blogs/category/${blogItem.category.replace(/\s+/g, "-").toLowerCase()}`}>{blogItem.category}</a>
                       </li>
                       <li>
                         <a href={blogItem.authorProfile ?? "#"}>{blogItem.author}</a>
@@ -99,7 +99,7 @@ export default function BlogDetails({ blogTitle }) {
                     <ul className="list-wrap">
                       {blogItem.tags.map((tag, i) => (
                         <li key={i}>
-                          <a href={`/blog/tag/${tag.replace(/\s+/g, "-")}`}>{tag}</a>
+                          <a href={`/blogs/tag/${tag.replace(/\s+/g, "-").toLowerCase()}`}>{tag}</a>
                         </li>
                       ))}
                     </ul>
@@ -127,11 +127,11 @@ export default function BlogDetails({ blogTitle }) {
                   </div>
                     </div>
                   <div className="inner__page-nav mt-20 mb-n1">
-                    <a href={prevBlog ? `/blog-details/${prevBlog.title.replace(/\s+/g, "-")}` : ""} className={`nav-btn ${!prevBlog ? "disabled" : ""}`}>
+                    <a href={prevBlog ? `/blogs/${prevBlog.title.replace(/\s+/g, "-").toLowerCase()}` : ""} className={`nav-btn ${!prevBlog ? "disabled" : ""}`}>
                       <i className="fa fa-arrow-left"></i>
                       <span>Previous Post</span>
                     </a>
-                    <a href={nextBlog ? `/blog-details/${nextBlog.title.replace(/\s+/g, "-")}` : ""} className={`nav-btn ${!nextBlog ? "disabled" : ""}`}>
+                    <a href={nextBlog ? `/blogs/${nextBlog.title.replace(/\s+/g, "-").toLowerCase()}` : ""} className={`nav-btn ${!nextBlog ? "disabled" : ""}`}>
                       <span>Next Post</span>
                       <i className="fa fa-arrow-right"></i>
                     </a>

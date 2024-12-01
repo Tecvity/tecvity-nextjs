@@ -55,7 +55,7 @@ export default function Portfolio() {
                   data-wow-duration="1.5s"
                   data-wow-delay="0.2s"
                 >
-                  <Link scroll={false} href={`/project-details/${elm.title.replace(/\s+/g, '-')}`}>
+                  <Link scroll={false} href={`/our-portfolio/${elm.type}/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
                     <img src={elm.imageSrc} alt="portfolio" />
                   </Link>
                 </div>
@@ -68,13 +68,13 @@ export default function Portfolio() {
                     ))}
                   </ul>
                   <h3 className="portfolio-title">
-                    <Link scroll={false} href={`/project-details/${elm.title.replace(/\s+/g, '-')}`}>
+                    <Link scroll={false} href={`/our-portfolio/${elm.type}/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
                       {elm.title}
                     </Link>
                   </h3>
                   <Link
                     scroll={false}
-                    href={`/project-details/${elm.title.replace(/\s+/g, '-')}`}
+                    href={`/our-portfolio/${elm.type}/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}
                     className="link-btn"
                   >
                     <span className="link-effect">
@@ -97,7 +97,7 @@ export default function Portfolio() {
               <Link
                 scroll={false}
                 className="circle-btn btn gsap-magnetic mx-lg-5"
-                href="/project"
+                href="/our-portfolio"
               >
                 <span className="link-effect">
                   <span className="effect-1">VIEW ALL</span>

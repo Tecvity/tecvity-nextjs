@@ -3,14 +3,14 @@ import { allPortfolio } from "@/data/portfolio";
 import ImageSlider from "./ImageSlider";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
-export default function ProjectDetails({ portfolioTitle }) {
+export default function ProjectDetails({ portfolioTitle, blogList = allPortfolio }) {
   const decodedProjectTitle = portfolioTitle.replace(/-/g, ' ');
   const portfolioItem =
-  allPortfolio.filter((elm) => elm.title == decodedProjectTitle)[0] || allPortfolio[1];
+  blogList.filter((elm) => elm.title.toLowerCase() == decodedProjectTitle.toLowerCase())[0] || blogList[1];
 
-  const currentIndex = allPortfolio.findIndex((project) => project.title === decodedProjectTitle);
-  const nextProject = currentIndex >= 0 && currentIndex < allPortfolio.length - 1 ? allPortfolio[currentIndex + 1] : null;
-  const prevProject = currentIndex > 0 ? allPortfolio[currentIndex - 1] : null;
+  const currentIndex = blogList.findIndex((project) => project.title.toLowerCase() === decodedProjectTitle.toLowerCase());
+  const nextProject = currentIndex >= 0 && currentIndex < blogList.length - 1 ? blogList[currentIndex + 1] : null;
+  const prevProject = currentIndex > 0 ? blogList[currentIndex - 1] : null;
   
   const itemsImages = portfolioItem.itemsImages;
 
@@ -61,7 +61,7 @@ export default function ProjectDetails({ portfolioTitle }) {
           </div>
           <div className="col-lg-12">
             <div className="inner__page-nav space-top mt-n1 mb-n1">
-              <a href={prevProject ? `/project-details/${prevProject.title.replace(/\s+/g, '-')}` : ""} className={`nav-btn ${!prevProject ? "disabled" : ""}`}>
+              <a href={prevProject ? `/our-portfolio/${prevProject.type}/${prevProject.title.replace(/\s+/g, '-').toLowerCase()}` : ""} className={`nav-btn ${!prevProject ? "disabled" : ""}`}>
                 <i className="fa fa-arrow-left"></i>
                 <span>
                   <span className="link-effect">
@@ -70,7 +70,7 @@ export default function ProjectDetails({ portfolioTitle }) {
                   </span>
                 </span>
               </a>
-              <a href={nextProject ? `/project-details/${nextProject.title.replace(/\s+/g, '-')}` : ""} className={`nav-btn ${!nextProject ? "disabled" : ""}`}>
+              <a href={nextProject ? `/our-portfolio/${nextProject.type}/${nextProject.title.replace(/\s+/g, '-').toLowerCase()}` : ""} className={`nav-btn ${!nextProject ? "disabled" : ""}`}>
                 <span>
                   <span className="link-effect">
                     <span className="effect-1">Next</span>

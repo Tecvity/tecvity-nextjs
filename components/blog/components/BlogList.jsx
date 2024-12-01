@@ -36,7 +36,7 @@ export default function BlogList2({ blogs = allBlogs }) {
                         <div className="blog-post-thumb">
                           <Link
                             scroll={false}
-                            href={`/blog-details/${elm.title.replace(/\s+/g, "-")}`}
+                            href={`/blogs/${elm.title.replace(/\s+/g, "-").toLowerCase()}`}
                           >
                             <Image
                               width={856}
@@ -51,21 +51,21 @@ export default function BlogList2({ blogs = allBlogs }) {
                             <ul className="list-wrap">
                               <li>{elm.date}</li>
                               <li>
-                                <a href={`/blog/category/${elm.category.replace(/\s+/g, "-")}`}>{elm.category}</a>
+                                <a href={`/blogs/category/${elm.category.replace(/\s+/g, "-").toLowerCase()}`}>{elm.category}</a>
                               </li>
                             </ul>
                           </div>
                           <h4 className="title">
                             <Link
                               scroll={false}
-                              href={`/blog-details/${elm.title.replace(/\s+/g, "-")}`}
+                              href={`/blogs/${elm.title.replace(/\s+/g, "-").toLowerCase()}`}
                             >
                               {elm.title}
                             </Link>
                           </h4>
                           <Link
                             scroll={false}
-                            href={`/blog-details/${elm.title.replace(/\s+/g, "-")}`}
+                            href={`/blogs/${elm.title.replace(/\s+/g, "-").toLowerCase()}`}
                             className="link-btn"
                           >
                             <span className="link-effect">

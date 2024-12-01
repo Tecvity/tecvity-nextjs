@@ -20,8 +20,8 @@ export const menuItems = [
     id: 2,
     title: "Pages",
     subMenuItems: [
-      { id: 21, label: "About Us", link: "/about" },
-      { id: 22, label: "Blog", link: "/blog" },
+      { id: 21, label: "About Us", link: "/about-us" },
+      { id: 22, label: "Blog", link: "/blogs" },
       // {
       //   id: 22,
       //   title: "Service Page",
@@ -37,7 +37,7 @@ export const menuItems = [
       //     },
       //   ],
       // },
-      { id: 23, label: "Our Founders", link: "/team" },
+      { id: 23, label: "Our Founders", link: "/founders" },
       // { id: 24, label: "Team Details", link: "/team-details/2" },
       // { id: 25, label: "Pricing", link: "/pricing" },
       // { id: 26, label: "FAQ", link: "/faq" },
@@ -54,23 +54,24 @@ export const menuItems = [
   //     { id: 34, label: "Portfolio Full Width", link: "/project-4" },
   //     { id: 35, label: "Portfolio Slider", link: "/project-5" },
   //     { id: 36, label: "Portfolio Interactive", link: "/project-6" },
-  //     { id: 37, label: "Portfolio Details", link: "/project-details/2" },
+  //     { id: 37, label: "Portfolio Details", link: "/our-portfolio/2" },
   //   ],
   // },
-  { id: 4, title: "Our Services", link: "/services" },
+  { id: 4, title: "Our Services", link: "/our-services" },
   {
     id: 3,
     title: "Portfolio",
+    link: "/our-portfolio",
     subMenuItems: [
       {
         id: 31,
         label: "Penetration Testing & Vulnerability Assessment",
-        link: "/portfolio-vapt",
+        link: "/our-portfolio/vapt",
       },
       {
         id: 32,
         label: "Product Design",
-        link: "/portfolio-pd",
+        link: "/our-portfolio/pd",
       },
     ],
   },
@@ -78,9 +79,9 @@ export const menuItems = [
   //   id: 4,
   //   title: "BLOG",
   //   subMenuItems: [
-  //     { id: 41, label: "Blog Standard", link: "/blog" },
+  //     { id: 41, label: "Blog Standard", link: "/blogs" },
   //     { id: 42, label: "Blog 2 Column", link: "/blog-2" },
-  //     { id: 43, label: "Blog Details", link: "/blog-details/2" },
+  //     { id: 43, label: "Blog Details", link: "/blogs/2" },
   //   ],
   // },
   {

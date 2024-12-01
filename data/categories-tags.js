@@ -8,3 +8,7 @@ export const tags = [
   { id: 2, text: "Technology" },
   { id: 3, text: "Business" },
 ];
+export const portfolioType = [
+  { id: 1, text: "vapt" },
+  { id: 2, text: "p" },
+];

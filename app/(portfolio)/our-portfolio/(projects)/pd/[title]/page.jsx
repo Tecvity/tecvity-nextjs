@@ -3,6 +3,7 @@ import DetailBreadcrumb from "@/components/portfolio/components/DetailBreadcrumb
 import ProjectDetails from "@/components/portfolio/components/ProjectDetails";
 import MarqueeComponent from "@/components/common/Marquee";
 import Footer from "@/components/footer/Footer";
+import { PDPortfolio } from "@/data/portfolio";
 
 export const metadata = {
   title:
@@ -16,7 +17,7 @@ export default function ProjectPageDetails({ params }) {
     <>
       <Header />
       <DetailBreadcrumb portfolioTitle={params.title} />
-      <ProjectDetails portfolioTitle={params.title} />
+      <ProjectDetails portfolioTitle={params.title} blogList={PDPortfolio}/>
       <MarqueeComponent />
       <Footer />
     </>

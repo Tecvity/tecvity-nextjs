@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function ServiceDetails({ serviceTitle }) {
   const decodedServiceTitle = decodeURIComponent(serviceTitle.replace(/-/g, ' ').replace(/_/g, '/'));
   const serviceItem =
-    allFeatures.filter((elm) => elm.title == decodedServiceTitle)[0] || allFeatures[1];
+    allFeatures.filter((elm) => elm.title.toLowerCase() == decodedServiceTitle.toLowerCase())[0] || allFeatures[1];
 
     const getRandomIcon = () => {
       const icons = [
@@ -89,7 +89,7 @@ export default function ServiceDetails({ serviceTitle }) {
                     />
                   </div>
                   <h4 className="feature-card-title">
-                    <Link scroll={false} href="/project">
+                    <Link scroll={false} href="/our-portfolio">
                       Custom Solution
                     </Link>
                   </h4>
@@ -109,7 +109,7 @@ export default function ServiceDetails({ serviceTitle }) {
                     />
                   </div>
                   <h4 className="feature-card-title">
-                    <Link scroll={false} href="/project">
+                    <Link scroll={false} href="/our-portfolio">
                       In-time Result
                     </Link>
                   </h4>
@@ -132,7 +132,7 @@ export default function ServiceDetails({ serviceTitle }) {
                       />
                     </div>
                     <h4 className="feature-card-title">
-                      <Link scroll={false} href={card.link || "/project"}>
+                      <Link scroll={false} href={card.link || "/our-portfolio"}>
                         {card.title}
                       </Link>
                     </h4>
@@ -141,7 +141,7 @@ export default function ServiceDetails({ serviceTitle }) {
                 </div>
               ))}
             </div>
-            <p className="sec-text mb-n1 mt-40">
+            <p className="sec-text mb-n1 mt-40 space-bottom">
             {serviceItem?.para7}
             </p>
           </div>

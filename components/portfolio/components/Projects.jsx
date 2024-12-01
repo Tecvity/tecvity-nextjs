@@ -49,7 +49,7 @@ export default function Projects() {
             <div key={i} className="col-lg-6 filter-item">
               <div className={`portfolio-wrap ${i == 0 ? "mt-lg-140" : ""} `}>
                 <div className="portfolio-thumb">
-                  <Link scroll={false} href={`/project-details/${elm.title.replace(/\s+/g, '-')}`}>
+                  <Link scroll={false} href={`/our-portfolio/${elm.type}/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
                     <Image
                       width={526}
                       height={740}
@@ -67,11 +67,11 @@ export default function Projects() {
                     ))}
                   </ul>
                   <h3 className="portfolio-title">
-                    <a href={`/project-details/${elm.title.replace(/\s+/g, '-')}`}>{elm.title}</a>
+                    <a href={`/our-portfolio/${elm.type}/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>{elm.title}</a>
                   </h3>
                   <Link
                     scroll={false}
-                    href={`/project-details/${elm.title.replace(/\s+/g, '-')}`}
+                    href={`/our-portfolio/${elm.type}/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}
                     className="link-btn"
                   >
                     <span className="link-effect">

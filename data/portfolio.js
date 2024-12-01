@@ -8,6 +8,7 @@ export const VAPTPortfolio = [
     category: "Grey Box Penetration Test",
     client: "Brent Glover",
     date: "Feb, 2024 (Ongoing)",
+    type: "vapt",//will be used for specifing route
     para1: "Mach7t is a leading healthcare company in the United States that develops multiple products specializing in Vendor Neutral Archives. They approached Tecvity to get their product suite tested for security vulnerabilities",
     challenge: "For testing the security of a product you should know all the in's and out's of it to be able to properly test it. The challenge was that Mach7t's products was not like just another application but it had a lot of healthcare specific features and functionalities that are not known to normal users",
     finalResult: "Our team worked with Mach7t to understand their suite properly and then performed comprehensive security testing resulting in multiple critical and high severity issues detected and reported. Mach7t works with Tecvity for their continuous security engagements on regular basis and we're proud to have them as our permanent client."
@@ -21,6 +22,7 @@ export const PDPortfolio = [
     categoryLinks: ["Web Design","Landing Page Design"],
     title: "Landing Page Design of Security Consultants",
     category: "Product Design",
+    type: "pd",//will be used for specifing route
     client: "Security Consultants",
     date: "March, 2024",
     para1: "Security Consultants is a leading provider of professional security solutions, dedicated to safeguarding clients with innovative strategies and expert services.",

@@ -1,8 +1,13 @@
 import Link from "next/link";
 import React from "react";
+import { allPortfolio } from "@/data/portfolio";
 
 export default function Breadcumb2({portfolioTitle}) {
   const decodedProjectTitle = portfolioTitle.replace(/-/g, ' ');
+  const portfolioItem =
+  allPortfolio.filter((elm) => elm.title.toLowerCase() == decodedProjectTitle.toLowerCase())[0] || allPortfolio[1];
+
+
   return (
     <div className="breadcumb-wrapper style2 bg-smoke">
       <div className="container-fluid">
@@ -14,11 +19,11 @@ export default function Breadcumb2({portfolioTitle}) {
               </Link>
             </li>
             <li>
-              <Link scroll={false} href="/project">
+              <Link scroll={false} href="/our-portfolio">
                 Porfolio
               </Link>
             </li>
-            <li>{decodedProjectTitle}</li>
+            <li>{portfolioItem.title}</li>
           </ul>
         </div>
       </div>

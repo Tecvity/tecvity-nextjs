@@ -44,7 +44,7 @@ export default function About() {
                     We are a software agency where you find software development, design and cybersecurity services under one roof
                   </p>
                   <div className="btn-wrap mt-50">
-                    <Link scroll={false} href="/about" className="link-btn">
+                    <Link scroll={false} href="/about-us" className="link-btn">
                       <span className="link-effect">
                         <span className="effect-1">ABOUT US</span>
                         <span className="effect-1">ABOUT US</span>
