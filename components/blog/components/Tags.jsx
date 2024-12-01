@@ -15,7 +15,7 @@ export default function Tags() {
         <ul className="list-wrap">
           {tags.map((tag) => (
             <li key={tag.id}>
-              <a href={`/blog/tag/${tag.text}`} className={tagCounts[tag.id] > 0 ? "" : "disabled"}>
+              <a href={`/blogs/tag/${tag.text.toLowerCase()}`} className={tagCounts[tag.id] > 0 ? "" : "disabled"}>
                 {tag.text}
               </a>
             </li>

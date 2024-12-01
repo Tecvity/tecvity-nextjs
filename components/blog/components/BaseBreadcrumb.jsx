@@ -1,4 +1,4 @@
-export default function Breadcumb({ breadcumbTitle = "Blog" }) {
+export default function Breadcumb({ breadcumbTitle = "Blogs" }) {
   return (
     <div
       className="breadcumb-wrapper"

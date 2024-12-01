@@ -16,7 +16,7 @@ export default function Categories() {
         <ul className="list-wrap">
           {categories.map((category) => (
             <li key={category.id}>
-              <a href={`/blog/category/${category.text.replace(/\s+/g, "-")}`} className={categoryCounts[category.id]>0? "" : 'disabled'}>
+              <a href={`/blogs/category/${category.text.replace(/\s+/g, "-").toLowerCase()}`} className={categoryCounts[category.id]>0? "" : 'disabled'}>
                 {category.text} ({categoryCounts[category.id]})
               </a>
             </li>

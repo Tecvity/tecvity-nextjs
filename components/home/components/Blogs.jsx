@@ -24,7 +24,7 @@ export default function Blogs() {
             <div key={i} className="col-lg-4 col-md-6">
               <div className="blog-card">
                 <div className="blog-img">
-                  <Link scroll={false} href={`/blog-details/${elm.title.replace(/\s+/g, '-')}`}>
+                  <Link scroll={false} href={`/blogs/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
                     <Image
                       width={416}
                       height={314}
@@ -36,16 +36,16 @@ export default function Blogs() {
                 <div className="blog-content">
                   <div className="post-meta-item blog-meta">
                     <a href="#">{elm.date}</a>
-                    <a href={`/blog/category/${elm.category}`}>{elm.category}</a>
+                    <a href={`/blogs/category/${elm.category.toLowerCase()}`}>{elm.category}</a>
                   </div>
                   <h4 className="blog-title">
-                    <Link scroll={false} href={`/blog-details/${elm.title.replace(/\s+/g, '-')}`}>
+                    <Link scroll={false} href={`/blogs/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
                       {elm.title}
                     </Link>
                   </h4>
                   <Link
                     scroll={false}
-                    href={`/blog-details/${elm.title.replace(/\s+/g, '-')}`}
+                    href={`/blogs/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}
                     className="link-btn"
                   >
                     <span className="link-effect">

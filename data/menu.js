@@ -21,7 +21,7 @@ export const menuItems = [
     title: "Pages",
     subMenuItems: [
       { id: 21, label: "About Us", link: "/about-us" },
-      { id: 22, label: "Blog", link: "/blog" },
+      { id: 22, label: "Blog", link: "/blogs" },
       // {
       //   id: 22,
       //   title: "Service Page",
@@ -79,9 +79,9 @@ export const menuItems = [
   //   id: 4,
   //   title: "BLOG",
   //   subMenuItems: [
-  //     { id: 41, label: "Blog Standard", link: "/blog" },
+  //     { id: 41, label: "Blog Standard", link: "/blogs" },
   //     { id: 42, label: "Blog 2 Column", link: "/blog-2" },
-  //     { id: 43, label: "Blog Details", link: "/blog-details/2" },
+  //     { id: 43, label: "Blog Details", link: "/blogs/2" },
   //   ],
   // },
   {
