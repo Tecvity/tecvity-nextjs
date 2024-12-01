@@ -14,7 +14,7 @@ export default function ProjectsVAPTPage() {
     <>
       <Header />
       <Breadcumb />
-      <PortfolioSub projectsList={VAPTPortfolio} />
+      <PortfolioSub projectsList={VAPTPortfolio}/>
       <MarqueeComponent />
       <Footer />
     </>

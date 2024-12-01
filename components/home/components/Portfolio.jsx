@@ -55,7 +55,7 @@ export default function Portfolio() {
                   data-wow-duration="1.5s"
                   data-wow-delay="0.2s"
                 >
-                  <Link scroll={false} href={`/our-portfolio/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
+                  <Link scroll={false} href={`/our-portfolio/${elm.type}/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
                     <img src={elm.imageSrc} alt="portfolio" />
                   </Link>
                 </div>
@@ -68,13 +68,13 @@ export default function Portfolio() {
                     ))}
                   </ul>
                   <h3 className="portfolio-title">
-                    <Link scroll={false} href={`/our-portfolio/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
+                    <Link scroll={false} href={`/our-portfolio/${elm.type}/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
                       {elm.title}
                     </Link>
                   </h3>
                   <Link
                     scroll={false}
-                    href={`/our-portfolio/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}
+                    href={`/our-portfolio/${elm.type}/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}
                     className="link-btn"
                   >
                     <span className="link-effect">

@@ -21,7 +21,7 @@ export default function Portfolio({projectsList}) {
             <div key={i} className="col-xl-6 col-lg-6">
               <div className="portfolio-wrap">
                 <div className="portfolio-thumb">
-                  <Link scroll={false} href={`/our-portfolio/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
+                  <Link scroll={false} href={`/our-portfolio/${elm.type}/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
                     <Image
                       width={618}
                       height={470}
@@ -32,7 +32,7 @@ export default function Portfolio({projectsList}) {
                 </div>
                 <div className="portfolio-details">
                   <h3 className="portfolio-title mb-3">
-                    <Link scroll={false} href={`/our-portfolio/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
+                    <Link scroll={false} href={`/our-portfolio/${elm.type}/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
                       {elm.title}
                     </Link>
                   </h3>
