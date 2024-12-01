@@ -18,6 +18,7 @@ _Agency Website for TECVITY_
   - [Database](#database)
   - [Disabled Features](#disabled-features)
   - [Blog Post Contriution Guide](#blog-post-contribution-guide)
+  - [Service Addition Guide](#service-addition-guide)
   - [License](#license)
 
 ---
@@ -151,62 +152,89 @@ Welcome to the **Blog Post Contribution Guide**! This guide provides step-by-ste
 
 ### 1. Add an id for the Blog Post
 Assign an id that is one value greater than the previous blog post. If the previous Blog id is `1` use `2` Example:
-` { id: 2, } `
+```javascript 
+id: 2,
+```
 
 ### 2. Add a High-Quality Blog Image
 Upload an image (dimensions: **1080x600**) to the directory `public/assets/img/blog`. Add the image path:
-` image: '/assets/img/blog/newBlog2.jpg', `
+```javscript 
+image: '/assets/img/blog/newBlog2.jpg', 
+```
 
 ### 3. Add a Small Blog Image
 Upload a smaller version (dimensions: **180x140**) and add its path:
-` smallImageUrl: '/assets/img/blog/newMiniBlog2.jpg', `
+```javascript 
+smallImageUrl: '/assets/img/blog/newMiniBlog2.jpg', 
+```
 
 ### 4. Add the Post Date
 Use the format `Month DD, YYYY`. Example:
-` date: 'November 1, 2024', `
+```javascript 
+date: 'November 1, 2024', 
+```
 
 ### 5. Assign a Category
 Choose an existing category from `data/categories-tags.js`. If you want to add one of your own add it to the `categories` list and then use it. Example:
-` category: 'category', `
+```javascript
+ category: 'category', 
+```
 
 ### 6. Add a Title
 Add a descriptive title. Avoid symbols or random characters. Example:
-` title: 'Your New Blog Post', `
+```javascript
+ title: 'Your New Blog Post', 
+```
 
 ### 7. Add Tags
 Include at least one tag as an array, choose tags form the tags list in `data/categories-tags.js` or add your own tags to the list and then use it. Example:
-` tags: ['Tag1', 'Tag2', 'Tag3'], `
+```javascript
+tags: ['Tag1', 'Tag2', 'Tag3'],
+ ```
 
 ### 8. Add an Icon
 Use the standard icon path, you don't need a new one:
-` icon: '/assets/img/icon/arrow-left-top.svg', `
+```javascript
+icon: '/assets/img/icon/arrow-left-top.svg',
+ ```
 
 ### 9. Add the Author's Name
 Example:
-` author: 'Author 1', `
+```javascript
+author: 'Author 1', 
+```
 
 ### 10. Add the Author's Quote
 Example:
-` authorQuote: 'Technology + Creativity = Tecvity!', `
+```javascript
+authorQuote: 'Technology + Creativity = Tecvity!', 
+```
 
 ### 11. Add the Author's Image
 Upload an image to "public/assets/img/team" or use a URL. Example:
-` authorImage: '/assets/img/team/author1.png', `
+```javascript
+ authorImage: '/assets/img/team/author1.png', 
+ ```
 
 ### 12. Add the Author's Profile
 For TECVITY members, include your profile path. Otherwise, set it to null. Example:
-` authorProfile: '/founders/Najam-Ul-Saqib', ` or ` authorProfile: null, `
+```javascript
+ authorProfile: '/founders/Najam-Ul-Saqib', ` or ` authorProfile: null, 
+```
 
 ### 13. Add Blog Content
 Add the introduction and sections:
-` content: { 
+```javascript
+ content: { 
     introduction: 'We believe that the key to our success is our team. ...', 
     sections: [ { heading: 'Heading', content: 'Some content' } ] 
-  } `
+  } 
+  ```
 
 ### 14. Add Blog Sections
 Include one or more sections with `heading` and `content` or `list` or `services`:
-`content: {
+```javascript
+content: {
     introduction: "This is a brief introduction to our sample blog post.",
     sections: [
       {
@@ -228,12 +256,14 @@ Include one or more sections with `heading` and `content` or `list` or `services
         ]
       }
     ]
-  } `
+  } 
+  ```
 
 ---
 
 ## Final Example BlogPost Object
-` {
+```javascript
+ {
   id: 2,
   image: '/assets/img/blog/newBlog2.jpg',
   smallImageUrl: '/assets/img/blog/newMiniBlog2.jpg',
@@ -255,7 +285,8 @@ Include one or more sections with `heading` and `content` or `list` or `services
       }
     ]
   }
-} `
+} 
+```
 
 ---
 
