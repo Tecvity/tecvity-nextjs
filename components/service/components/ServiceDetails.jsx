@@ -89,7 +89,7 @@ export default function ServiceDetails({ serviceTitle }) {
                     />
                   </div>
                   <h4 className="feature-card-title">
-                    <Link scroll={false} href="/project">
+                    <Link scroll={false} href="/our-portfolio">
                       Custom Solution
                     </Link>
                   </h4>
@@ -109,7 +109,7 @@ export default function ServiceDetails({ serviceTitle }) {
                     />
                   </div>
                   <h4 className="feature-card-title">
-                    <Link scroll={false} href="/project">
+                    <Link scroll={false} href="/our-portfolio">
                       In-time Result
                     </Link>
                   </h4>
@@ -132,7 +132,7 @@ export default function ServiceDetails({ serviceTitle }) {
                       />
                     </div>
                     <h4 className="feature-card-title">
-                      <Link scroll={false} href={card.link || "/project"}>
+                      <Link scroll={false} href={card.link || "/our-portfolio"}>
                         {card.title}
                       </Link>
                     </h4>

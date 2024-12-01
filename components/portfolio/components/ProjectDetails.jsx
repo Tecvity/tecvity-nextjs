@@ -6,7 +6,7 @@ import ImageSlider from "./ImageSlider";
 export default function ProjectDetails({ portfolioTitle }) {
   const decodedProjectTitle = portfolioTitle.replace(/-/g, ' ');
   const portfolioItem =
-  allPortfolio.filter((elm) => elm.title == decodedProjectTitle)[0] || allPortfolio[1];
+  allPortfolio.filter((elm) => elm.title.toLowerCase() == decodedProjectTitle.toLowerCase())[0] || allPortfolio[1];
 
   const currentIndex = allPortfolio.findIndex((project) => project.title === decodedProjectTitle);
   const nextProject = currentIndex >= 0 && currentIndex < allPortfolio.length - 1 ? allPortfolio[currentIndex + 1] : null;
@@ -61,7 +61,7 @@ export default function ProjectDetails({ portfolioTitle }) {
           </div>
           <div className="col-lg-12">
             <div className="inner__page-nav space-top mt-n1 mb-n1">
-              <a href={prevProject ? `/project-details/${prevProject.title.replace(/\s+/g, '-')}` : ""} className={`nav-btn ${!prevProject ? "disabled" : ""}`}>
+              <a href={prevProject ? `/our-portfolio/${prevProject.title.replace(/\s+/g, '-').toLowerCase()}` : ""} className={`nav-btn ${!prevProject ? "disabled" : ""}`}>
                 <i className="fa fa-arrow-left"></i>
                 <span>
                   <span className="link-effect">
@@ -70,7 +70,7 @@ export default function ProjectDetails({ portfolioTitle }) {
                   </span>
                 </span>
               </a>
-              <a href={nextProject ? `/project-details/${nextProject.title.replace(/\s+/g, '-')}` : ""} className={`nav-btn ${!nextProject ? "disabled" : ""}`}>
+              <a href={nextProject ? `/our-portfolio/${nextProject.title.replace(/\s+/g, '-').toLowerCase()}` : ""} className={`nav-btn ${!nextProject ? "disabled" : ""}`}>
                 <span>
                   <span className="link-effect">
                     <span className="effect-1">Next Project</span>

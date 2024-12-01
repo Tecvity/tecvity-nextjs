@@ -54,23 +54,24 @@ export const menuItems = [
   //     { id: 34, label: "Portfolio Full Width", link: "/project-4" },
   //     { id: 35, label: "Portfolio Slider", link: "/project-5" },
   //     { id: 36, label: "Portfolio Interactive", link: "/project-6" },
-  //     { id: 37, label: "Portfolio Details", link: "/project-details/2" },
+  //     { id: 37, label: "Portfolio Details", link: "/our-portfolio/2" },
   //   ],
   // },
   { id: 4, title: "Our Services", link: "/our-services" },
   {
     id: 3,
     title: "Portfolio",
+    link: "/our-portfolio",
     subMenuItems: [
       {
         id: 31,
         label: "Penetration Testing & Vulnerability Assessment",
-        link: "/portfolio-vapt",
+        link: "/our-portfolio/vapt",
       },
       {
         id: 32,
         label: "Product Design",
-        link: "/portfolio-pd",
+        link: "/our-portfolio/pd",
       },
     ],
   },
