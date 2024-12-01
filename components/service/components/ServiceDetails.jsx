@@ -141,7 +141,7 @@ export default function ServiceDetails({ serviceTitle }) {
                 </div>
               ))}
             </div>
-            <p className="sec-text mb-n1 mt-40">
+            <p className="sec-text mb-n1 mt-40 space-bottom">
             {serviceItem?.para7}
             </p>
           </div>

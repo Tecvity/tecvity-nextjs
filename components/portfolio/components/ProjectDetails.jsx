@@ -8,7 +8,7 @@ export default function ProjectDetails({ portfolioTitle }) {
   const portfolioItem =
   allPortfolio.filter((elm) => elm.title.toLowerCase() == decodedProjectTitle.toLowerCase())[0] || allPortfolio[1];
 
-  const currentIndex = allPortfolio.findIndex((project) => project.title === decodedProjectTitle);
+  const currentIndex = allPortfolio.findIndex((project) => project.title.toLowerCase() === decodedProjectTitle.toLowerCase());
   const nextProject = currentIndex >= 0 && currentIndex < allPortfolio.length - 1 ? allPortfolio[currentIndex + 1] : null;
   const prevProject = currentIndex > 0 ? allPortfolio[currentIndex - 1] : null;
   
