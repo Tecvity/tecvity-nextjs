@@ -17,6 +17,7 @@ _Agency Website for TECVITY_
   - [Email Configuration](#email-configuration)
   - [Database](#database)
   - [Disabled Features](#disabled-features)
+  - [Blog Post Contriution Guide](#blog-post-contribution-guide)
   - [License](#license)
 
 ---
@@ -118,9 +119,7 @@ Following feautres/pages exist in the codebase but have been disabled for now (c
 - Search (both global and blog-based)
 - Awards
 
-## Adding a Blog Post to Tecvity
-
-# Blog Post Contribution Guide
+## Blog Post Contribution Guide
 
 Welcome to the **Blog Post Contribution Guide**! This guide provides step-by-step instructions for adding a new blog post to this project.
 
@@ -128,7 +127,7 @@ Welcome to the **Blog Post Contribution Guide**! This guide provides step-by-ste
 
 ## Table of Contents
 
-1. [Project Setup](#project-setup)
+1. [Project Setup](#setup-and-installation)
 2. [Steps for Adding a New Blog Post](#steps-for-adding-a-new-blog-post)
    - [1. Add an `id` for the Blog Post](#1-add-an-id-for-the-blog-post)
    - [2. Add a High-Quality Blog Image](#2-add-a-high-quality-blog-image)
@@ -144,7 +143,7 @@ Welcome to the **Blog Post Contribution Guide**! This guide provides step-by-ste
    - [12. Add the Author's Profile](#12-add-the-authors-profile)
    - [13. Add Blog Content](#13-add-blog-content)
    - [14. Add Blog Sections](#14-add-blog-sections)
-3. [Final Example Object](#final-example-object)
+3. [Final Example BlogPost Object](#final-example-blogpost-object)
 
 ---
 
@@ -233,7 +232,7 @@ Include one or more sections with `heading` and `content` or `list` or `services
 
 ---
 
-## Final Example Object
+## Final Example BlogPost Object
 ` {
   id: 2,
   image: '/assets/img/blog/newBlog2.jpg',
@@ -260,13 +259,6 @@ Include one or more sections with `heading` and `content` or `list` or `services
 
 ---
 
-## Project Setup
-
-1. Clone the repository to your local system.
-2. Set up version control for the project.
-3. Locate the file `/data/blogs.js`, where all blog posts are stored.
-
----
  
 ## License
 
