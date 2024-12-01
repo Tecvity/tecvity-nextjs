@@ -16,26 +16,29 @@ export default function ContactInfo() {
                   <h4 className="feature-card-title">
                     <a href="#">{info.title}</a>
                   </h4>
+                  <span>
                   {info.address && (
-                    <p className="feature-card-text mb-0">{info.address}</p>
+                    <p>{info.address}</p>
                   )}
                   {info.city && (
-                    <p className="feature-card-text">{info.city}</p>
+                    <p>{info.city}</p>
                   )}
                   {info.email && (
-                    <p className="feature-card-text mb-0">{info.email}</p>
+                    <p>{info.email}</p>
                   )}
                   {info.email2 && (
-                    <p className="feature-card-text">{info.email2}</p>
+                    <p>{info.email2}</p>
                   )}
                   {info.phoneNumber1 && (
-                    <p className="feature-card-text mb-0">
+                    <p>
                       {info.phoneNumber1}
                     </p>
                   )}
                   {info.phoneNumber2 && (
-                    <p className="feature-card-text">{info.phoneNumber2}</p>
+                    <p>{info.phoneNumber2}</p>
                   )}
+                  </span>
+                </div>
                   <a href={info.linkUrl} className="link-btn">
                     <span className="link-effect">
                       <span className="effect-1">{info.linkText}</span>
@@ -48,7 +51,6 @@ export default function ContactInfo() {
                       alt="icon"
                     />
                   </a>
-                </div>
               </div>
             </div>
           ))}

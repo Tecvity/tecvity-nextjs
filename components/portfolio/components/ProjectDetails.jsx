@@ -65,16 +65,16 @@ export default function ProjectDetails({ portfolioTitle }) {
                 <i className="fa fa-arrow-left"></i>
                 <span>
                   <span className="link-effect">
-                    <span className="effect-1">Previous Project</span>
-                    <span className="effect-1">Previous Project</span>
+                    <span className="effect-1">Previous</span>
+                    <span className="effect-1">Previous</span>
                   </span>
                 </span>
               </a>
               <a href={nextProject ? `/our-portfolio/${nextProject.title.replace(/\s+/g, '-').toLowerCase()}` : ""} className={`nav-btn ${!nextProject ? "disabled" : ""}`}>
                 <span>
                   <span className="link-effect">
-                    <span className="effect-1">Next Project</span>
-                    <span className="effect-1">Next Project</span>
+                    <span className="effect-1">Next</span>
+                    <span className="effect-1">Next</span>
                   </span>
                 </span>
                 <i className="fa fa-arrow-right"></i>

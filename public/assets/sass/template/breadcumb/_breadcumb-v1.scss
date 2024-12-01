@@ -73,7 +73,7 @@
     position: relative;
     z-index: auto;
     background: $smoke-color;
-    margin-top: 106px;
+    margin-top: 120px;
     text-align: center;
     &:after {
         content: '';
@@ -106,7 +106,7 @@
 }
 @include md {
     .breadcumb-wrapper {
-        margin-top: 90px;
+        margin-top: 150px;
     }
 }
 @include sm {
@@ -123,7 +123,6 @@
     }
     .breadcumb-wrapper {
         padding: 100px 0;
-        margin-top: 86px;
         &.style2 {
             padding: 24px 0px;
         }
