@@ -17,8 +17,7 @@ _Agency Website for TECVITY_
   - [Email Configuration](#email-configuration)
   - [Database](#database)
   - [Disabled Features](#disabled-features)
-  - [Blog Post Contriution Guide](#blog-post-contribution-guide)
-  - [Service Addition Guide](#service-addition-guide)
+  - [Blog Post Contribution Guide](#blog-post-contribution-guide)
   - [License](#license)
 
 ---
@@ -130,7 +129,7 @@ Welcome to the **Blog Post Contribution Guide**! This guide provides step-by-ste
 
 1. [Project Setup](#setup-and-installation)
 2. [Steps for Adding a New Blog Post](#steps-for-adding-a-new-blog-post)
-   - [1. Add an `id` for the Blog Post](#1-add-an-id-for-the-blog-post)
+   - [1. Add an id for the Blog Post](#1-add-an-id-for-the-blog-post)
    - [2. Add a High-Quality Blog Image](#2-add-a-high-quality-blog-image)
    - [3. Add a Small Blog Image](#3-add-a-small-blog-image)
    - [4. Add the Post Date](#4-add-the-post-date)
@@ -150,98 +149,100 @@ Welcome to the **Blog Post Contribution Guide**! This guide provides step-by-ste
 
 ## Steps for Adding a New Blog Post
 
+You need to modify the list `blogPosts` in `data/blogs.js`, add the final object to list `blogPosts` to get your Blog posted.
+
 ### 1. Add an id for the Blog Post
-Assign an id that is one value greater than the previous blog post. If the previous Blog id is `1` use `2` Example:
+The `id` (required) is the unique identifier for a blog post. Adding duplicates can lead to unexpected data in other blog posts. You need to assign an `id` that is one value greater than the previous blog post to maintain order. If the previous Blog id is `1` use `2`, Example:
 ```javascript 
 id: 2,
 ```
 
 ### 2. Add a High-Quality Blog Image
-Upload an image (dimensions: **1080x600**) to the directory `public/assets/img/blog`. Add the image path:
+The `image` (required) is displayed at the top of the blog post. Upload an image (dimensions: 1080x600) to the directory `public/assets/img/blog`. Ensure the image is named `blog_post_<id>_<serial number>.jpg`, where `<id>` needs to be replaced by blog post `id` and `<serial number>` needs to be replaced by serial numbers of your choice. Add the image path as shown:
 ```javscript 
-image: '/assets/img/blog/newBlog2.jpg', 
+image: '/assets/img/blog/blog_post_2_1.jpg', 
 ```
 
 ### 3. Add a Small Blog Image
-Upload a smaller version (dimensions: **180x140**) and add its path:
+The `smallImageUrl` (required) is displayed in the preview card of the blog post. Upload an image (dimensions: **180x140**) to the directory `public/assets/img/blog`. Ensure the image is named `blog_post_mini_<id>.jpg`, where `<id>` needs to be replaced by blog post `id`. Add the image path as shown:
 ```javascript 
-smallImageUrl: '/assets/img/blog/newMiniBlog2.jpg', 
+smallImageUrl: '/assets/img/blog/blog_post_mini_2.jpg', 
 ```
 
 ### 4. Add the Post Date
-Use the format `Month DD, YYYY`. Example:
+The `date` (required) is used to determine the most recent posts and to display the date when the blog was published. Use the format `Month DD, YYYY`, as shown below:
 ```javascript 
 date: 'November 1, 2024', 
 ```
 
 ### 5. Assign a Category
-Choose an existing category from `data/categories-tags.js`. If you want to add one of your own add it to the `categories` list and then use it. Example:
+The `category` (required) is used to filter blogs based on the category they belong to. Select an existing category from the `categories` list in `data/categories-tags.js`. If you want to add a new category, include it in the `categories` list in `data/categories-tags.js` before using it, as shown below:
 ```javascript
- category: 'category', 
+ category: 'category',
 ```
 
 ### 6. Add a Title
-Add a descriptive title. Avoid symbols or random characters. Example:
+The `title` (required) is used to name a blog post and is also included in the route of that specific blog. Use a descriptive title and avoid symbols or random characters, as the title will be used for routing, as shown below:
 ```javascript
- title: 'Your New Blog Post', 
+ title: 'Your New Blog Post',
 ```
 
 ### 7. Add Tags
-Include at least one tag as an array, choose tags form the tags list in `data/categories-tags.js` or add your own tags to the list and then use it. Example:
+The `tags` (required) are used to define the topics of the blog post. Include at least one tag in an array. Choose tags from the tags `list` in `data/categories-tags.js` or add your own tags to the tags `list` in `data/categories-tags.js` before using them, as shown below:
 ```javascript
 tags: ['Tag1', 'Tag2', 'Tag3'],
  ```
 
 ### 8. Add an Icon
-Use the standard icon path, you don't need a new one:
+The `icon` (required) is used as a visual only. Use the standard icon path given below, you don't need a new one:
 ```javascript
 icon: '/assets/img/icon/arrow-left-top.svg',
  ```
 
 ### 9. Add the Author's Name
-Example:
+The `author` (required) is used to display the name of person who wrote the blog post. Just add the author name, as shown below:
 ```javascript
 author: 'Author 1', 
 ```
 
 ### 10. Add the Author's Quote
-Example:
+The `authorQuote` (required) is used to display a bold quote or slogan related to the platform or blog. Example:
 ```javascript
 authorQuote: 'Technology + Creativity = Tecvity!', 
 ```
 
 ### 11. Add the Author's Image
-Upload an image to "public/assets/img/team" or use a URL. Example:
+The `authorImage` (required) is the display image of the author. Upload an image to `public/assets/img/team` or use your own `URL`. Alternatively, if no image is available, you can use the placeholder image `team.png`, which is already saved in `public/assets/img/team` for you, as shown below:
 ```javascript
- authorImage: '/assets/img/team/author1.png', 
+ authorImage: '/assets/img/team/team.png', 
  ```
 
 ### 12. Add the Author's Profile
-For TECVITY members, include your profile path. Otherwise, set it to null. Example:
+The `authorProfile` (optional) is the profile of author if he is also one of the founders, include your profile path. Otherwise, set it to null. Example:
 ```javascript
- authorProfile: '/founders/Najam-Ul-Saqib', ` or ` authorProfile: null, 
+ authorProfile: '/founders/Najam-Ul-Saqib',  or  authorProfile: null, 
 ```
 
 ### 13. Add Blog Content
-Add the introduction and sections:
+The outermost `content` (required) is the actual blog post. Within the content, the `introduction` (required) serves as the introduction to the blog post, and the `sections` (required) describes different sections of the post. The `sections` can also be an empty array `[]` if no sections are added. If you want to add different sections, see [Add Blog Sections](#14-add-blog-sections). Example:
 ```javascript
  content: { 
-    introduction: 'We believe that the key to our success is our team. ...', 
-    sections: [ { heading: 'Heading', content: 'Some content' } ] 
+    introduction: 'We believe that the key to our success is our team...', 
+    sections: [] 
   } 
   ```
 
 ### 14. Add Blog Sections
-Include one or more sections with `heading` and `content` or `list` or `services`:
+The `sections` (required) are used to add different sections in the blog post. Each section must include a `heading` (required) and either `list`, `content`, or `services` (one is required at a time). The `list`/`services` is used to add items in the form of list, while `content` is used to display simple text without any styling. A sample is shown below:
 ```javascript
 content: {
-    introduction: "This is a brief introduction to our sample blog post.",
+    introduction: "...",
     sections: [
       {
         heading: "Key Highlights",
         list: [
-          { title: "sample title", description: "sample" },
-          { title: "sample title", description: "sample" }
+          { title: "Highlight 1", description: "Highlight description" },
+          { title: "Highlight 2", description: "Highlight description" }
         ]
       },
       {
@@ -251,8 +252,8 @@ content: {
       {
         heading: "Services Overview",
         services: [
-          { title: "sample", description: "sample description" },
-          { title: "sample", description: "sample description" }
+          { title: "Service 1", description: "service description" },
+          { title: "Service 2", description: "service description" }
         ]
       }
     ]
@@ -262,28 +263,43 @@ content: {
 ---
 
 ## Final Example BlogPost Object
+Add your final object, similar to the structure given below, to the `blogPosts` list in the `data/blogs.js` file to get your blog posted.
 ```javascript
  {
   id: 2,
-  image: '/assets/img/blog/newBlog2.jpg',
-  smallImageUrl: '/assets/img/blog/newMiniBlog2.jpg',
+  image: '/assets/img/blog/blog_post_2_1.jpg', 
+  smallImageUrl: '/assets/img/blog/blog_post_mini_2.jpg',
   date: 'November 1, 2024',
   category: 'category',
   title: 'Your New Blog Post',
   tags: ['Tag1', 'Tag2', 'Tag3'],
   icon: '/assets/img/icon/arrow-left-top.svg',
-  author: 'Author 1',
+  author: 'Author 1', 
   authorQuote: 'Technology + Creativity = Tecvity!',
-  authorImage: '/assets/img/team/author1.png',
-  authorProfile: '/founders/Najam-Ul-Saqib',
-  content: {
-    introduction: 'We believe that the key to our success is our team. ...',
+  authorImage: '/assets/img/team/team.png',
+  authorProfile: null, 
+  content: { 
+    introduction: 'We believe that the key to our success is our team...', 
     sections: [
       {
-        heading: 'Section Heading',
-        content: 'Detailed content goes here.',
+        heading: "Key Highlights",
+        list: [
+          { title: "Highlight 1", description: "Highlight description" },
+          { title: "Highlight 2", description: "Highlight description" }
+        ]
+      },
+      {
+        heading: "Our Approach",
+        content: "We focus on understanding client needs and delivering tailor-made solutions."
+      },
+      {
+        heading: "Services Overview",
+        services: [
+          { title: "Service 1", description: "service description" },
+          { title: "Service 2", description: "service description" }
+        ]
       }
-    ]
+    ] 
   }
 } 
 ```
