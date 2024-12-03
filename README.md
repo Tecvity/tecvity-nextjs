@@ -19,6 +19,7 @@ _Agency Website for TECVITY_
   - [Disabled Features](#disabled-features)
   - [Blog Post Contribution Guide](#blog-post-contribution-guide)
   - [Service Addition Guide](#service-addition-guide)
+  - [Portfolio Project Contribution Guide](#portfolio-project-contribution-guide)
   - [License](#license)
 
 ---
@@ -428,6 +429,141 @@ cards: [
 }
 ```
 
+# Portfolio Project Contribution Guide
+
+Welcome to the **Portfolio Project Contribution Guide**! This guide provides step-by-step instructions for adding a new portfolio project to this repository.
+
+---
+
+## Table of Contents
+
+1. [Project Setup](#setup-and-installation)
+2. [Steps for Adding a New Portfolio Project](#steps-for-adding-a-new-portfolio-project)
+   - [1. Add an id](#1-add-an-id)
+   - [2. Add the Preview Image](#2-add-a-preview-image)
+   - [3. Add Slider Images](#3-add-slider-images)
+   - [4. Add Category Links](#4-add-category-links)
+   - [5. Add Title](#5-add-title)
+   - [6. Add Category](#6-add-category)
+   - [7. Add Project Type](#7-add-project-type)
+   - [8. Add Client Name](#8-add-client-name)
+   - [9. Add Date](#9-add-date)
+   - [10. Add Brief Description](#10-add-a-brief-description)
+   - [11. Add Client's Challenge](#11-add-the-challenge-client-faced)
+   - [12. Add Final Results](#12-add-final-results)
+3. [Final Example Portfolio Object](#final-example-portfolio-object)
+
+---
+
+## Steps for Adding a New Portfolio Project
+
+You need to modify the `VAPTPortfolio` or `PDPortfolio` list in `data/portfolio.js` and add the final object to the respective list to upload a new portfolio project.
+
+### 1. Add an ID
+The `id` (required) is the unique identifier for a portfolio project. Adding duplicates can lead to unexpected issues in other projects. You need to assign an `id` that is one value greater than the previous project's `id` to maintain order. For example, if the previous project's `id` is `101`, use `102`, as shown below:
+```javascript
+id: 102,
+```
+
+### 2. Add a Preview Image
+The `imageSrc` (required) is used as the display picture for the project. Upload an image (dimensions: 1130x1420) to the respective folder based on the project type:  
+
+- For type `pd` (Product Design): `public/assets/img/portfolio/portfolio-pd`  
+- For type `vapt` (Penetration Testing & Vulnerability Assessment): `public/assets/img/portfolio/portfolio-pavt`  
+
+Ensure the image is named as `portfolio<id>_<serial number>.jpg`, where `<id>` is replaced with the portfolio `id` and `<serial number>` is replaced with a serial number of your choice.  
+
+For type `pd`, update the `imageSrc` property as shown:
+```javascript
+imageSrc: "/assets/img/portfolio/portfolio-pd/portfolio102_1.jpg",
+```
+
+### 3. Add Slider Images
+The `itemsImages` (required, at least one) is a list of images used to showcase the project in a slider view at the top of the project display page. Upload images (dimensions: 1600x830) to the appropriate directory based on the project type:  
+
+- For type `pd` (Product Design): `public/assets/img/portfolio/portfolio-pd`  
+- For type `vapt` (Penetration Testing & Vulnerability Assessment): `public/assets/img/portfolio/portfolio-pavt`  
+
+Ensure each image is named as `portfolio<id>_<serial number>.jpg`, where `<id>` is replaced with the portfolio `id` and `<serial number>` is replaced with serial numbers of your choice.  
+
+Add these image file paths to the `itemsImages` array.
+```javascript
+itemsImages: ["/assets/img/portfolio/portfolio-pd/portfolio102_2.jpg", "/assets/img/portfolio/portfolio-pd/portfolio102_3.jpg"],
+```
+
+### 4. Add Category Links
+The `category` (required, at least one) is an array of categories used to identify the type of project. Feel free to use any relevant categories and add them to the array, as shown below:
+```javascript
+categoryLinks: ["Web Design", "UI/UX Design"],
+```
+
+### 5. Add Title
+The `title` (required) is used as the name of the project on the preview card and the project display page after the slider. Provide a descriptive title for the project, as shown below:
+```javascript
+title: "Sample Landing Page Design",
+```
+
+### 6. Add Category
+The `category` (required) is used to identify the category of the project. At this point, we don't have a specific list of categories, so feel free to use a relevant name, or set the category to either `Grey Box Penetration Test` or `Product Design`, as shown below:
+```javascript
+category: "Product Design",
+```
+
+### 7. Add Project Type
+The **`type`** (required) is important as it will be used for routing purposes. Set the type to either `pd` (Product Design) or `vapt` (Penetration Testing & Vulnerability Assessment). You may check the list of available types in `portfolioType` within `data/categories-tags.js`, and add the type as shown below:
+```javascript
+type: "pd",
+```
+
+### 8. Add Client Name
+The `client` (required) is the name of the client for whom the project was completed. This can be a company name or the name of an individual. Add the client name as shown below:
+```javascript
+client: "Sample Client",
+```
+
+### 9. Add Date
+The `date` (required) is the time when the project started. If the project started in December, use the format `Month, Year` and add it as shown below:
+```javascript
+date: "December, 2024",
+```
+
+### 10. Add a Brief Description
+The `para1` (required) is where you describe the project briefly, and it will be visible directly after the title on the project display page. Provide a short description of the project in plain text and add it as shown below:
+```javascript
+para1: "This is a brief description of the project.",
+```
+
+### 11. Add the Challenge Client Faced
+The `challenge` (required) is where you describe the reason or challenge that led the client to seek your services. Write it in plain text and add it as shown below:
+```javascript
+challenge: "This was the client's challenge.",
+```
+
+### 12. Add Final Results
+The `finalResult` (required) is where you write about the results you delivered to the client. Write it in plain text and add it as shown below:
+```javascript
+finalResult: "These are the final results delivered.",
+```
+
+---
+
+## Final Example Portfolio Object
+```javascript
+{
+  id: 102,
+  imageSrc: "/assets/img/portfolio/portfolio-pd/portfolio102_1.jpg",
+  itemsImages: ["/assets/img/portfolio/portfolio-pd/portfolio102_2.jpg", "/assets/img/portfolio/portfolio-pd/portfolio102_3.jpg"],
+  categoryLinks: ["Web Design", "UI/UX Design"],
+  title: "Sample Landing Page Design",
+  category: "Product Design",
+  type: "pd",
+  client: "Sample Client",
+  date: "December, 2024",
+  para1: "This is a brief description of the project.",
+  challenge: "This was the client's challenge.",
+  finalResult: "These are the final results delivered."
+}
+```
  
 ## License
 
