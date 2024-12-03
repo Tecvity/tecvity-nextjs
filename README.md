@@ -18,6 +18,7 @@ _Agency Website for TECVITY_
   - [Database](#database)
   - [Disabled Features](#disabled-features)
   - [Blog Post Contribution Guide](#blog-post-contribution-guide)
+  - [Service Addition Guide](#service-addition-guide)
   - [License](#license)
 
 ---
@@ -305,6 +306,127 @@ Add your final object, similar to the structure given below, to the `blogPosts` 
 ```
 
 ---
+
+## Service Addition Guide
+
+Welcome to the **Service Addition Guide**! This guide will walk you through the necessary steps for adding a new service to the project.
+
+---
+
+## Table of Contents
+
+1. [Project Setup](#setup-and-installation)
+2. [Steps for Adding a New Service](#steps-for-adding-a-new-service)
+   - [1. Choose an Icon](#1-choose-an-icon)
+   - [2. Upload Service Images](#2-upload-service-images)
+   - [3. Add Service Title](#3-add-service-title)
+   - [4. Assign an id](#4-assign-an-id)
+   - [5. Add Service Description](#5-add-service-description)
+   - [6. Add Service Paragraphs and Headings](#6-add-service-paragraphs-and-headings)
+   - [7. Add Cards for Service](#7-add-cards-for-service)
+3. [Final Example Service Object](#final-example-service-object)
+
+---
+
+## Steps for Adding a New Service
+
+You need to modify the list `ourServices` in `data/features.js`, add the final object to list `ourServices` to add new services.
+
+### 1. Choose an Icon
+The `iconSrc` is used to as a visual only. Select one of the icons from `public/assets/img/icon` to add to the service preview card, as shown below:
+
+```javascript
+iconSrc: "/path/to/feature-icon1-1.svg",
+```
+
+Icons available:
+
+- "feature-icon1-1.svg"
+- "feature-icon1-2.svg"
+- "feature-icon1-3.svg"
+- "feature-icon1-4.svg"
+- "feature-icon1-5.svg"
+- "feature-icon1-6.svg"
+
+### 2. Upload Service Images
+The `imageSrc1` and `imageSrc2` (required) are displayed in the respective service page, one at the top and other at the middle. Upload an image (dimensions: 1080x600) to the directory `public/assets/img/service`. Ensure the image is named `s<id>_<serial number>.jpg`, where `<id>` needs to be replaced by service `id` [how to add service id](#4-assign-an-id) and `<serial number>` needs to be replaced by serial numbers of your choice. Add the image path as shown:
+
+```javascript
+imageSrc1: "/assets/img/service/s20_1.jpg",
+imageSrc2: "/assets/img/service/s20_1.jpg",
+```
+
+### 3. Add Service Title
+The `title` (required) is used to name a service and is also included in the route of that specific service. Use a descriptive title and avoid symbols or random characters, as the title will be used for routing, as shown below:
+```javascript
+title: "Sample Service",
+```
+
+### 4. Assign an id
+The `id` (required) is the unique identifier for a service. Adding duplicates can lead to unexpected data in other services. You need to assign an `id` that is one value greater than the previous service post to maintain order. If the previous service id is `19` use `20`, Example:
+```javascript
+id: 20,
+```
+
+### 5. Add Service Description
+The `text` (required) is used as a brief description in the preview card of the service. Add your own description for the service, as shown below:
+```javascript
+text: "Short description of the service.",
+```
+
+### 6. Add Service Paragraphs and Headings
+The `para1` (required) and `para2` (required) are plain text displayed imediately after the image `imageSrc1` and title of service `title`, next is heading `heading1` (optional) followed by a plain text `para3` (optional), next is displayed the second image `imageSrc2` followed by plain text `para4` (optional), followed by heading `heading2` (optional), followed by plain tests `para5` (optional), `para6` (optional). At last plain text `para7` (optional) is displayed after service cards [Add Cards for Service](#7-add-cards-for-service).
+Include all required paragraphs and headings for your service:
+```javascript
+para1: "Short description of service.",
+para2: "Brief detail of the service.",
+heading1: "Why It Matters",
+para3: "Reason for importance.",
+heading2: "Our Approach",
+para4: "How we deliver it.",
+para5: "Key benefits.",
+para6: "Expected results.",
+para7: "Call to action.",
+```
+
+
+### 7. Add Cards for Service
+The `cards` (optional) are used to display the key features of your service, The `title` (required) and `description` (required) are the details of key feature. At the end of the service, include cards to display additional information:
+
+```javascript
+cards: [
+  { title: "Card Title 1", description: "Description 1" },
+  { title: "Card Title 2", description: "Description 2" }
+],
+```
+
+---
+
+## Final Example Service Object
+
+```javascript
+{
+  iconSrc: "/path/to/feature-icon1-1.svg",
+  imageSrc1: "/assets/img/service/s20_1.jpg",
+  imageSrc2: "/assets/img/service/s20_1.jpg",
+  title: "Sample Service",
+  id: 20,
+  text: "Short description of the service.",
+  para1: "Short description of service.",
+  para2: "Brief detail of the service.",
+  heading1: "Why It Matters",
+  para3: "Reason for importance.",
+  heading2: "Our Approach",
+  para4: "How we deliver it.",
+  para5: "Key benefits.",
+  para6: "Expected results.",
+  para7: "Call to action.",
+  cards: [
+  { title: "Card Title 1", description: "Description 1" },
+  { title: "Card Title 2", description: "Description 2" }
+],
+}
+```
 
  
 ## License
