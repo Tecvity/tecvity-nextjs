@@ -369,7 +369,7 @@ id: 20,
 ```
 
 ### 5. Add Service Description
-The `text` (required) is used as a breif description in the preview card of the service. Add your own description for the service, as shown below:
+The `text` (required) is used as a brief description in the preview card of the service. Add your own description for the service, as shown below:
 ```javascript
 text: "Short description of the service.",
 ```
