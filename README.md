@@ -469,7 +469,7 @@ id: 102,
 The `imageSrc` (required) is used as the display picture for the project. Upload an image (dimensions: 1130x1420) to the respective folder based on the project type:  
 
 - For type `pd` (Product Design): `public/assets/img/portfolio/portfolio-pd`  
-- For type `vapt` (Penetration Testing & Vulnerability Assessment): `public/assets/img/portfolio/portfolio-pavt`  
+- For type `vapt` (Penetration Testing & Vulnerability Assessment): `public/assets/img/portfolio/portfolio-vapt`  
 
 Ensure the image is named as `portfolio<id>_<serial number>.jpg`, where `<id>` is replaced with the portfolio `id` and `<serial number>` is replaced with a serial number of your choice.  
 
@@ -482,7 +482,7 @@ imageSrc: "/assets/img/portfolio/portfolio-pd/portfolio102_1.jpg",
 The `itemsImages` (required, at least one) is a list of images used to showcase the project in a slider view at the top of the project display page. Upload images (dimensions: 1600x830) to the appropriate directory based on the project type:  
 
 - For type `pd` (Product Design): `public/assets/img/portfolio/portfolio-pd`  
-- For type `vapt` (Penetration Testing & Vulnerability Assessment): `public/assets/img/portfolio/portfolio-pavt`  
+- For type `vapt` (Penetration Testing & Vulnerability Assessment): `public/assets/img/portfolio/portfolio-vapt`  
 
 Ensure each image is named as `portfolio<id>_<serial number>.jpg`, where `<id>` is replaced with the portfolio `id` and `<serial number>` is replaced with serial numbers of your choice.  
 
