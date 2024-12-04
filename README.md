@@ -451,6 +451,7 @@ Welcome to the **Portfolio Project Contribution Guide**! This guide provides ste
    - [10. Add Brief Description](#10-add-a-brief-description)
    - [11. Add Client's Challenge](#11-add-the-challenge-client-faced)
    - [12. Add Final Results](#12-add-final-results)
+   - [13. Add a New Type of Portfolio Project](#13-add-a-new-type-of-portfolio-project)
 3. [Final Example Portfolio Object](#final-example-portfolio-object)
 
 ---
@@ -543,6 +544,88 @@ challenge: "This was the client's challenge.",
 The `finalResult` (required) is where you write about the results you delivered to the client. Write it in plain text and add it as shown below:
 ```javascript
 finalResult: "These are the final results delivered.",
+```
+
+
+
+### 13. Add a New Type of Portfolio Project  
+Alternatively, if you want to add a new type of portfolio, follow the steps below:  
+
+1. **Create a New Object:**  
+   - Create a new object with a similar structure. Refer to the [object structure](#final-example-portfolio-object) for guidance.  
+   - Ensure you change the `type` of the project. Refer to [how to add a project type](#7-add-project-type) for details.  
+
+2. **Add a New Array:**  
+   - In `data/portfolio.js`, create a new array.  
+   - The name of the array should follow the format `<Capital_Initials_of_Type>Portfolio` to maintain consistency. For example, for a `new type`, the array name would be `NTPortfolio`.  
+   - Add the object created in the previous step to the `NTPortfolio` array in `data/portfolio.js`.  
+```javascript
+export const NTPortfolio = [
+  // Your final object here
+];
+```
+
+3. **Update the `portfolioData` Array:**  
+   - Add the newly created array (for this example, it is `NTPortfolio`) to the `portfolioData` array within the same file.  
+```javascript
+export const portfolioData = [
+  // Other portfolios
+  ...NTPortfolio, // Add the new portfolio type here
+];
+
+```
+
+4. **Add a Directory for the New Portfolio Type:**  
+   - Navigate to `app/(portfolio)/our-portfolio/(projects)` in your project, copy one of the directories (e.g., `app/(portfolio)/our-portfolio/(projects)/pd`), and rename it according to your project `type` in lowercase (e.g., `nt` for this example).  
+   - Navigate to the directory you just copied (`app/(portfolio)/our-portfolio/(projects)/<type>` or `app/(portfolio)/our-portfolio/(projects)/nt` (for this example) and modify the `app/(portfolio)/our-portfolio/(projects)/<type>/page.jsx` file as shown below:  
+```javascript
+// Rest of the file
+import { <type>Portfolio } from "@/data/portfolio";
+
+export const metadata = {
+  title: "<type> Portfolio",
+};
+
+export default function Projects<type>Page() {
+  return (
+    <>
+      // Rest of the items
+      <PortfolioSub projectsList={<type>Portfolio} />
+      // Rest of the items
+    </>
+  );
+}
+// Make sure to replace <type> with the actual type.
+```
+
+   - Next, modify the `app/(portfolio)/our-portfolio/(projects)/<type>/[title]/page.jsx` file:  
+```javascript
+// Rest of the file
+import { <type>Portfolio } from "@/data/portfolio";
+
+// Rest of the file
+
+export default function ProjectPageDetails({ params }) {
+  return (
+    <>
+      <Header />
+      <DetailBreadcrumb portfolioTitle={params.title} />
+      <ProjectDetails portfolioTitle={params.title} blogList={<type>Portfolio} />
+      <MarqueeComponent />
+      <Footer />
+    </>
+  );
+}
+// Make sure to replace <type> with the actual type.
+```  
+5. **Add new type to category array:**  
+   - Add the newly created `type` to the array `portfolioType` in `data/categories-tags.js`, replace `<type>` with `nt` for this example:
+```javascript
+export const portfolioType = [
+  { id: 1, text: "vapt" },
+  { id: 2, text: "pd" },
+  { id: 3, text: "<type>" },
+];
 ```
 
 ---
