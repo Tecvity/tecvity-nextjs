@@ -24,9 +24,9 @@ export const teamData = [
   },
   {
     id: 3,
-    imageSrc: "/assets/img/team/tyb.png",
+    imageSrc: "/assets/img/team/team.png",
     name: "Tayyub Ahmed",
-    designation: "Senior Graphic Designer",
+    designation: "Graphic Designer",
     email: "tayyub@tecvity.co",
     phone: "+92-335-4454948",
     para1:
