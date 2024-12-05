@@ -1,8 +1,8 @@
 export const VAPTPortfolio = [
   {
     id: 1,
-    imageSrc: "/assets/img/portfolio/portfolio-vapt/vapt_0.png",
-    itemsImages: [ "/assets/img/portfolio/portfolio-vapt/vapt_1.png" ], 
+    imageSrc: "/assets/img/portfolio/portfolio-pavt/pavt_0.png",
+    itemsImages: [ "/assets/img/portfolio/portfolio-pavt/pavt_1.png" ], 
     categoryLinks: ["Cybersecurity","Web Application Security"],
     title: "Penetration Test of Mach7t",
     category: "Grey Box Penetration Test",
