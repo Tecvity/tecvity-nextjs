@@ -27,6 +27,11 @@ export const faqsHome = [
     question: `Web & Mobile App Development`,
     answer: `We develop high-performing, scalable web and mobile apps that deliver a superior user experience, ensuring your business stays ahead in the digital age.`,
   },
+  {
+    id: 6,
+    question: `DevSecOps`,
+    answer: `We integrate security into your development pipelines, ensuring secure software delivery.`,
+  },
 ];
 
 export const faqsPage = [
