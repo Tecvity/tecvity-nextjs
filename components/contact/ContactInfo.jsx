@@ -39,7 +39,7 @@ export default function ContactInfo() {
                   )}
                   </span>
                 </div>
-                  <a href={info.linkUrl} className="link-btn">
+                  <a href={info.linkUrl} className="link-btn" target="_blank">
                     <span className="link-effect">
                       <span className="effect-1">{info.linkText}</span>
                       <span className="effect-1">{info.linkText}</span>

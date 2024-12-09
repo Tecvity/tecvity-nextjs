@@ -39,7 +39,7 @@ export default function TeamDetails({ teamName }) {
                 </h6>
                 <div className="social-btn mt-4">
                   {socialMediaLinks.map((elm, i) => (
-                    <a key={i} href={elm.href}>
+                    <a key={i} href={elm.href} target="_blank">
                       <i className={elm.iconClass}></i>
                     </a>
                   ))}
