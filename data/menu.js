@@ -21,7 +21,7 @@ export const menuItems = [
     title: "Pages",
     subMenuItems: [
       { id: 21, label: "About Us", link: "/about-us" },
-      { id: 22, label: "Blog", link: "/blogs" },
+      // { id: 22, label: "Blog", link: "/blogs" },
       // {
       //   id: 22,
       //   title: "Service Page",
