@@ -13,20 +13,24 @@ export const faqsHome = [
   },
   {
     id: 3,
-    question: `Security Testing
-`,
+    question: `Penetration Testing`,
     answer: `Our thorough vulnerability assessment & penetration testing services identify security weaknesses and help you fortify your system against potential threats, ensuring robust cybersecurity`,
   },
   {
     id: 4,
-    question: `Cloud Security`,
-    answer: `We secure your cloud infrastructure with advanced solutions that protect your data and ensure compliance with industry standards.`,
+    question: `Cloud Security Audits`,
+    answer: `We conduct security audits and provide recommendations on hardening your cloud security.`,
   },
 
   {
     id: 5,
     question: `Web & Mobile App Development`,
     answer: `We develop high-performing, scalable web and mobile apps that deliver a superior user experience, ensuring your business stays ahead in the digital age.`,
+  },
+  {
+    id: 6,
+    question: `DevSecOps`,
+    answer: `We integrate security into your development pipelines, ensuring secure software delivery.`,
   },
 ];
 
