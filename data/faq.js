@@ -13,14 +13,13 @@ export const faqsHome = [
   },
   {
     id: 3,
-    question: `Security Testing
-`,
+    question: `Penetration Testing`,
     answer: `Our thorough vulnerability assessment & penetration testing services identify security weaknesses and help you fortify your system against potential threats, ensuring robust cybersecurity`,
   },
   {
     id: 4,
-    question: `Cloud Security`,
-    answer: `We secure your cloud infrastructure with advanced solutions that protect your data and ensure compliance with industry standards.`,
+    question: `Cloud Security Audits`,
+    answer: `We conduct security audits and provide recommendations on hardening your cloud security.`,
   },
 
   {
