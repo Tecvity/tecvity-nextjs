@@ -39,11 +39,30 @@ export const PDPortfolio = [
     category: "Brand Identity",
     type: "pd",//will be used for specifing route
     client: "Viva Fintech",
-    date: "March, 2024",
+    date: "November, 2024",
     para1: "Viva is an AI-powered fintech company redefining the way people interact with financial services. With a focus on innovation and simplicity, Viva seamlessly combines cutting-edge technology with user-centric design, aiming to empower individuals and businesses to navigate their financial journeys effortlessly.",
     challenge: "Crafting a brand identity for Viva demanded a delicate balance between modernity, sophistication, and approachability. The goal was to create a visual system that conveyed the company’s innovative edge while maintaining a sense of trust and simplicity. Additionally, the identity needed to stand out in a crowded fintech market while remaining versatile across various platforms and mediums.",
     finalResult: "We developed a bold and memorable brand identity system centered around a clean wordmark logo. The logo’s geometric design reflects precision and clarity, embodying Viva’s commitment to simplicity and innovation. A dynamic gradient of orange, contrasted with ample white space, injects energy and modernity into the visual identity, making it both striking and versatile. The result is a brand system that captures the essence of Viva: modern, simple, and distinctly different." },
-]
+   
+   
+    {
+      id: 103,
+      imageSrc: "/assets/img/portfolio/portfolio-pd/thumbnail_vendem.png",
+      itemsImages:[ "/assets/img/portfolio/portfolio-pd/v1.png", "/assets/img/portfolio/portfolio-pd/v2.png", "/assets/img/portfolio/portfolio-pd/v3.png", "/assets/img/portfolio/portfolio-pd/v4.png", "/assets/img/portfolio/portfolio-pd/v5.png", "/assets/img/portfolio/portfolio-pd/v6.png", "/assets/img/portfolio/portfolio-pd/v7.png", "/assets/img/portfolio/portfolio-pd/v8.png" , "/assets/img/portfolio/portfolio-pd/v9.png", "/assets/img/portfolio/portfolio-pd/v10.png", "/assets/img/portfolio/portfolio-pd/v11.png", "/assets/img/portfolio/portfolio-pd/v12.png", "/assets/img/portfolio/portfolio-pd/v13.png" ],
+      categoryLinks: ["Brand Identity Design"],
+      title: "Brand identity design for Vendem",
+      category: "Brand Identity",
+      type: "pd",//will be used for specifing route
+      client: "Viva Fintech",
+      date: "November, 2024",
+      para1: "Vendem is a digital marketing agency focused on tech-based companies, combining innovation with strategic insight to enhance brand presence in a dynamic market. The agency excels in helping technology-driven brands navigate the fast-paced tech world, ensuring their clients stay competitive and relevant.",
+      challenge: "For Vendem’s visual identity, the goal was to create a design that reflected their expertise in technology and innovation. The brand needed to be bold and modern, standing out in a competitive market while showcasing Vendem’s ability to drive growth and adapt to industry changes.",
+      finalResult: "To capture Vendem's innovative spirit and strategic expertise, we crafted a bold and modern brand identity system. At its core is a sharp, edgy \"V\" brand mark, designed to be both simple and highly memorable, embodying the agency's forward-thinking approach. The dynamic blue color palette exudes trust, professionalism, and adaptability, while the clean visual identity system ensures versatility across various digital and print mediums. This cohesive design reflects Vendem's commitment to driving growth and innovation, enabling them to stand out in a competitive market while resonating with their tech-savvy audience." },
+
+
+
+  ]
+
 export const portfolioData = [
   ...VAPTPortfolio,
   ...PDPortfolio,
