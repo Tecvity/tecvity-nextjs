@@ -24,7 +24,7 @@ export const PDPortfolio = [
     category: "Product Design",
     type: "pd",//will be used for specifing route
     client: "Security Consultants",
-    date: "March, 2024",
+    date: "October 2024",
     para1: "Security Consultants is a leading provider of professional security solutions, dedicated to safeguarding clients with innovative strategies and expert services.",
     challenge: "The Security Consultants team was unhappy with their outdated landing page, which failed to effectively represent their brand and engage users. They needed a redesign that would better reflect their professional image and improve user interaction.",
     finalResult: "We re-imagined their landing page from scratch, focusing on a modern design that aligned with their brand. By enhancing visual appeal and streamlining navigation, we created a more engaging and effective page that boosted user experience and showcased their expertise."
@@ -39,7 +39,7 @@ export const PDPortfolio = [
     category: "Brand Identity",
     type: "pd",//will be used for specifing route
     client: "Viva Fintech",
-    date: "November, 2024",
+    date: "November 2024",
     para1: "Viva is an AI-powered fintech company redefining the way people interact with financial services. With a focus on innovation and simplicity, Viva seamlessly combines cutting-edge technology with user-centric design, aiming to empower individuals and businesses to navigate their financial journeys effortlessly.",
     challenge: "Crafting a brand identity for Viva demanded a delicate balance between modernity, sophistication, and approachability. The goal was to create a visual system that conveyed the company’s innovative edge while maintaining a sense of trust and simplicity. Additionally, the identity needed to stand out in a crowded fintech market while remaining versatile across various platforms and mediums.",
     finalResult: "We developed a bold and memorable brand identity system centered around a clean wordmark logo. The logo’s geometric design reflects precision and clarity, embodying Viva’s commitment to simplicity and innovation. A dynamic gradient of orange, contrasted with ample white space, injects energy and modernity into the visual identity, making it both striking and versatile. The result is a brand system that captures the essence of Viva: modern, simple, and distinctly different." },
@@ -53,12 +53,26 @@ export const PDPortfolio = [
       title: "Brand identity design for Vendem",
       category: "Brand Identity",
       type: "pd",//will be used for specifing route
-      client: "Viva Fintech",
-      date: "November, 2024",
+      client: "Vendem",
+      date: "September 2024",
       para1: "Vendem is a digital marketing agency focused on tech-based companies, combining innovation with strategic insight to enhance brand presence in a dynamic market. The agency excels in helping technology-driven brands navigate the fast-paced tech world, ensuring their clients stay competitive and relevant.",
       challenge: "For Vendem’s visual identity, the goal was to create a design that reflected their expertise in technology and innovation. The brand needed to be bold and modern, standing out in a competitive market while showcasing Vendem’s ability to drive growth and adapt to industry changes.",
       finalResult: "To capture Vendem's innovative spirit and strategic expertise, we crafted a bold and modern brand identity system. At its core is a sharp, edgy \"V\" brand mark, designed to be both simple and highly memorable, embodying the agency's forward-thinking approach. The dynamic blue color palette exudes trust, professionalism, and adaptability, while the clean visual identity system ensures versatility across various digital and print mediums. This cohesive design reflects Vendem's commitment to driving growth and innovation, enabling them to stand out in a competitive market while resonating with their tech-savvy audience." },
 
+         
+    {
+      id: 4,
+      imageSrc: "/assets/img/portfolio/portfolio-pd/n0.png",
+      itemsImages:[ "/assets/img/portfolio/portfolio-pd/n1.png", "/assets/img/portfolio/portfolio-pd/n2.png", "/assets/img/portfolio/portfolio-pd/n3.png", "/assets/img/portfolio/portfolio-pd/n4.png", "/assets/img/portfolio/portfolio-pd/n5.png", "/assets/img/portfolio/portfolio-pd/n6.png", "/assets/img/portfolio/portfolio-pd/n7.png", "/assets/img/portfolio/portfolio-pd/n8.png" , "/assets/img/portfolio/portfolio-pd/n9.png", "/assets/img/portfolio/portfolio-pd/n10.png", "/assets/img/portfolio/portfolio-pd/n11.png", "/assets/img/portfolio/portfolio-pd/n12.png", "/assets/img/portfolio/portfolio-pd/n13.png" ],
+      categoryLinks: ["Brand Identity Design"],
+      title: "Brand identity design Nexonic Labs",
+      category: "Brand Identity",
+      type: "pd",//will be used for specifing route
+      client: "Nexonic Labs",
+      date: "August 2024",
+      para1: "Nexonic Labs is at the forefront of innovation, helping companies streamline their operations through the power of AI. By automating repetitive tasks, Nexonic Labs enables businesses to focus on what truly matters—driving growth, innovation, and meaningful impact. With a mission to simplify complexity, Nexonic Labs redefines efficiency in today’s fast-paced world.",
+      challenge: "Creating a brand identity for Nexonic Labs required a design that encapsulated their tech-forward vision while remaining clean and approachable. The challenge was to highlight their advanced technological capabilities while maintaining a human touch that resonated with their diverse audience. The identity needed to reflect cutting-edge innovation, inspire trust, and maintain flexibility across various applications.",
+      finalResult: "We designed a sleek and futuristic brand identity system that embodies Nexonic Labs' essence. At its heart is an \"N\" mark composed of interconnected dots, symbolizing the seamless integration of technology and automation. A dynamic gradient of blue emphasizes the advanced technological foundation of the company while projecting professionalism and trust. The clean, forward-thinking design ensures the identity is both modern and timeless, perfectly aligning with Nexonic Labs’ mission to lead in tech-powered automation." },
 
 
   ]
