@@ -17,11 +17,11 @@ export const VAPTPortfolio = [
 export const PDPortfolio = [
   {
     id: 101,
-    imageSrc: "/assets/img/portfolio/portfolio-pd/pd_0.png",
-    itemsImages:[ "/assets/img/portfolio/portfolio-pd/pd_1.png", "/assets/img/portfolio/portfolio-pd/pd_2.png", "/assets/img/portfolio/portfolio-pd/pd_3.png", "/assets/img/portfolio/portfolio-pd/pd_4.png" ], 
+    imageSrc: "/assets/img/portfolio/portfolio-pd/s0.png",
+    itemsImages:[ "/assets/img/portfolio/portfolio-pd/s1.png", "/assets/img/portfolio/portfolio-pd/s2.png", "/assets/img/portfolio/portfolio-pd/s3.png", "/assets/img/portfolio/portfolio-pd/s4.png" , "/assets/img/portfolio/portfolio-pd/s5.png" , "/assets/img/portfolio/portfolio-pd/s6.png" , "/assets/img/portfolio/portfolio-pd/s7.png" ], 
     categoryLinks: ["Web Design","Landing Page Design"],
     title: "Landing page design for Security Consultants",
-    category: "Product Design",
+    category: "UX/UI Design",
     type: "pd",//will be used for specifing route
     client: "Security Consultants",
     date: "October 2024",
