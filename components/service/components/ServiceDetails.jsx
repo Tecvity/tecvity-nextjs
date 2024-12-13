@@ -143,6 +143,17 @@ export default function ServiceDetails({ serviceTitle }) {
             </div>
             <p className="sec-text mb-n1 mt-40 space-bottom">
             {serviceItem?.para7}
+            <div className="col-auto d-none d-lg-block">
+                  <div className="service-portfolio-button">
+                    <Link scroll={false} href="/our-portfolio/pd" className="btn">
+                      <span className="link-effect">
+                        <span className="effect-1">SHOW PROJECTS</span>
+                        <span className="effect-1">SHOW PROJECTS</span>
+                      </span>
+                    </Link>
+                    {serviceItem?.button}
+                  </div>
+            </div>      
             </p>
           </div>
         </div>

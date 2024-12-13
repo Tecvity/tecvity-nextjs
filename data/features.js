@@ -148,24 +148,27 @@ export const ourServices = [
 
   {
     iconSrc: "/assets/img/icon/feature-icon1-4.svg",
-    imageSrc1: "/assets/img/service/s3_1.jpg",
-    imageSrc2: "/assets/img/service/s3_2.jpg",
+    imageSrc1: "/assets/img/service/Frame 3.jpg",
+    imageSrc2: "/assets/img/service/src.jpg",
     title: "Brand Identity Design",
     id: 16,
     text: "We give your brand a memorable visual identity.",
     para1: "Our expert team creates powerful visual identities that leave lasting impressions. We collaborate with brands to craft logos, typography, and color schemes that represent their unique personality.",
     para2: "We've helped brands stand out in competitive markets with visually striking and cohesive identities that resonate with audiences.",
-    heading1: "Building Memorable Brands",
-    para3: "A strong visual identity is the cornerstone of a successful brand. It builds trust and recognition with your audience.",
-    heading2: "Our Design Process",
-    para4: "We work closely with you to understand your brand’s goals and vision, creating visuals that capture its essence.",
-    para5: "From concept to execution, we ensure your brand identity is both impactful and versatile.",
-    para6: "Whether it’s a new business or a rebranding effort, we deliver designs that stand the test of time.",
-    para7: "Let us help you create a brand identity that stands out and communicates your message effectively.",
+    heading1: "Does This Sound Like You?",
+    para3: "You’ve got the passion, the ideas, and the drive. But when it comes to your brand… something feels off. Maybe your visuals don’t align with the energy you want to project. Or your story gets lost in translation. You see the disconnect—and so does your audience. \n And here’s the hard truth: when your brand doesn’t match your vision, it’s not just frustrating—it’s costing you opportunities. That is exactly what we'll help you to avoid by using our crafted process below.",
+    heading2: "Here’s What You’ll Get",
+    //para4: "We work closely with you to understand your brand’s goals and vision, creating visuals that capture its essence.",
+    para5: "We don’t just create logos or slap some colors together. We dive deep into the heart of your business, understanding its mission, values, and goals. This allows us to craft designs that not only look great but also tell your unique story and resonate with your audience.",
+    para6: "Here's what you can expect.",
+    para7: "Enough of words, why don't you have a look at the results we brought for our recent clients?",
     cards: [
-      { title: "Unique Designs", description: "Customized designs that reflect your brand’s essence." },
-      { title: "Cohesive Branding", description: "Ensure consistency across all brand assets." },
+      { title: "Strategy That Drives Growth", description: "We design with purpose, ensuring your brand strategy is aligned to achieve lasting success and meaningful engagement." },
+      { title: "Aesthetically Awesome", description: "Your brand will not only look great but make a memorable impact, with designs that are visually compelling and on point." },
+      { title: "Seamless Support and Communication", description: "We believe in clear, consistent communication, providing you with the support you need throughout the design process and beyond." },
+      { title: "Ongoing Partnership and Support", description: "Our relationship doesn’t end with the launch—we continue to support and evolve your brand to ensure it thrives over time." },
     ],
+    button: [""]
   },
   
 
