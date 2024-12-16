@@ -6,27 +6,27 @@ export default function MarqueeComponent() {
     {
       id: 1,
       //href: "#",
-      text: "We Give Premium Quality Services",
+      text: "Leading the Way in Digital Solutions",
       icon: "fas fa-star-of-life",
     },
     {
       id: 2,
       //href: "#",
-      text: "We Give 100% Refund If You Don't Get What You Wanted",
+      text: "Dedicated to Client Success",
       icon: "fas fa-star-of-life",
     },
-    {
-      id: 3,
-      //href: "#",
-      text: "We Work on Long-term Basis",
-      icon: "fas fa-star-of-life",
-    },
-    {
-      id: 4,
-      //href: "#",
-      text: "We Believe in Transparency & Integrity",
-      icon: "fas fa-star-of-life",
-    },
+    // {
+    //   id: 3,
+    //   //href: "#",
+    //   text: "We Work on Long-term Basis",
+    //   icon: "fas fa-star-of-life",
+    // },
+    // {
+    //   id: 4,
+    //   //href: "#",
+    //   text: "We Believe in Transparency & Integrity",
+    //   icon: "fas fa-star-of-life",
+    // },
   ];
 
 
