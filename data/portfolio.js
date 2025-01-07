@@ -18,14 +18,15 @@ export const VAPTPortfolio = [
     imageSrc: "/assets/img/portfolio/portfolio-vapt/vapt_3.png",
     itemsImages: [ "/assets/img/portfolio/portfolio-vapt/vapt_4.png" ], 
     categoryLinks: ["Cybersecurity","Web Application Security"],
-    "title": "Penetration Test of Wealthfeed",
+    "title": "Penetration Test of AI Powered Financial Advisory Platform",
     "category": "Grey Box Penetration Test",
-    "client": "Wealthfeed",
+    "client": "Security Consultants",
     "date": "Sept, 2024",
     "type": "vapt",
-    "para1": "Wealthfeed is a leading financial advisory platform in the United States, specializing in AI-powered tools for financial advisors. They approached Tecvity to assess their platform for security vulnerabilities to ensure the safety and integrity of their client data.",
-    "challenge": "Testing the security of Wealthfeed's platform required an in-depth understanding of its AI-driven functionalities, APIs and its unique financial advisory tools. The challenge was to navigate its complex architecture and specialized features, which are tailored to the financial sector.",
-    "finalResult": "Our team collaborated closely with Wealthfeed to gain a comprehensive understanding of their platform. Several critical and high-severity vulnerabilities were found and reported to the Wealthfeed team, who promptly patched them to ensure the platform's security and reliability."
+    "para1": "The AI Powered Financial Advisory Platform is a leading solution in the United States, specializing in AI-powered tools for financial advisors. They approached Tecvity to assess their platform for security vulnerabilities to ensure the safety and integrity of their client data.",
+    "challenge": "Testing the security of the AI Powered Financial Advisory Platform required an in-depth understanding of its AI-driven functionalities and its unique financial advisory tools. The challenge was to navigate its complex architecture and specialized features, which are tailored to the financial sector.",
+    "finalResult": "Our team collaborated closely with the AI Powered Financial Advisory Platform to gain a comprehensive understanding of their platform. Several critical and high-severity vulnerabilities were found and reported to their team, who promptly patched them to ensure the platform's security and reliability."
+  
   },
 ];
 export const PDPortfolio = [
