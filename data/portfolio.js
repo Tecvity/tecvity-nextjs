@@ -13,6 +13,20 @@ export const VAPTPortfolio = [
     challenge: "For testing the security of a product you should know all the in's and out's of it to be able to properly test it. The challenge was that Mach7t's products was not like just another application but it had a lot of healthcare specific features and functionalities that are not known to normal users",
     finalResult: "Our team worked with Mach7t to understand their suite properly and then performed comprehensive security testing resulting in multiple critical and high severity issues detected and reported. Mach7t works with Tecvity for their continuous security engagements on regular basis and we're proud to have them as our permanent client."
   },
+  {
+    id: 2,
+    imageSrc: "/assets/img/portfolio/portfolio-vapt/vapt_3.png",
+    itemsImages: [ "/assets/img/portfolio/portfolio-vapt/vapt_4.png" ], 
+    categoryLinks: ["Cybersecurity","Web Application Security"],
+    "title": "Penetration Test of Wealthfeed",
+    "category": "Grey Box Penetration Test",
+    "client": "Wealthfeed",
+    "date": "Sept, 2024",
+    "type": "vapt",
+    "para1": "Wealthfeed is a leading financial advisory platform in the United States, specializing in AI-powered tools for financial advisors. They approached Tecvity to assess their platform for security vulnerabilities to ensure the safety and integrity of their client data.",
+    "challenge": "Testing the security of Wealthfeed's platform required an in-depth understanding of its AI-driven functionalities, APIs and its unique financial advisory tools. The challenge was to navigate its complex architecture and specialized features, which are tailored to the financial sector.",
+    "finalResult": "Our team collaborated closely with Wealthfeed to gain a comprehensive understanding of their platform. Several critical and high-severity vulnerabilities were found and reported to the Wealthfeed team, who promptly patched them to ensure the platform's security and reliability."
+  },
 ];
 export const PDPortfolio = [
   {
