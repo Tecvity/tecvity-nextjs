@@ -26,7 +26,7 @@ export const VAPTPortfolio = [
     "para1": "The AI Powered Financial Advisory Platform is a leading solution in the United States, specializing in AI-powered tools for financial advisors. They approached Tecvity to assess their platform for security vulnerabilities to ensure the safety and integrity of their client data.",
     "challenge": "Testing the security of the AI Powered Financial Advisory Platform required an in-depth understanding of its AI-driven functionalities and its unique financial advisory tools. The challenge was to navigate its complex architecture and specialized features, which are tailored to the financial sector.",
     "finalResult": "Our team collaborated closely with the AI Powered Financial Advisory Platform to gain a comprehensive understanding of their platform. Several critical and high-severity vulnerabilities were found and reported to their team, who promptly patched them to ensure the platform's security and reliability."
-  
+
   },
   {
     id: 3,
@@ -43,6 +43,21 @@ export const VAPTPortfolio = [
     "finalResult": "The security assessment uncovered several medium and low-severity vulnerabilities, which were promptly reported to the development team. These vulnerabilities were addressed effectively, significantly enhancing the platform's security posture and ensuring compliance with industry standards."
   
   },
+  {
+    "id": 4,
+    "imageSrc": "/assets/img/portfolio/portfolio-vapt/vapt_7.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/vapt_8.png"],
+    "categoryLinks": ["Cybersecurity", "Web Application Security", "Enterprise Security"],
+    "title": "Penetration Test of Agile Planning Platform",
+    "category": "Black Box Penetration Test",
+    "client": "Security Consultants",
+    "date": "Oct, 2024",
+    "type": "vapt",
+    "para1": "The Agile Planning Platform is a cutting-edge solution for enterprises implementing Agile practices at scale. It provides tools for Program Increment (PI) Planning, Dependency Management, and Roadmapping. The platform required a rigorous black box penetration test to identify potential security vulnerabilities and ensure the protection of sensitive enterprise data.",
+    "challenge": "Performing a black-box pentest on Kendis, especially with its integrations like Jira and Azure DevOps, comes with unique challenges. Without access to internal details, it’s tough to identify hidden API endpoints, test complex authentication methods like OAuth2, and ensure data flows securely. Misconfigured permissions, weak input validation, or poor error handling can expose sensitive information or APIs. There’s also the need to check for issues like rate limiting, abuse prevention, and injection vulnerabilities while analyzing how APIs interact and manage dependencies. On top of that, ensuring data stays in sync, integrations are securely configured, and vulnerabilities in third-party tools are patched makes the process even more demanding.",
+    "finalResult": "The assessment uncovered several medium and low severity vulnerabilities, including issues related to Web Application Firewall configurations, vulnerable libraries, and insecure methods. These findings were reported to the development team, who implemented the necessary patches to enhance the platform's security and reliability."
+  },
+
 ];
 export const PDPortfolio = [
   {
