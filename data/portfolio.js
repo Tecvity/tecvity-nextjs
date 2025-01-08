@@ -68,9 +68,9 @@ export const VAPTPortfolio = [
     "date": "Nov, 2024",
     "type": "vapt",
     "type": "vapt",
-    "para1": "Home Health Care is an AI-driven platform that automates medical records for home health care providers, enhancing efficiency and patient care. To ensure the security of sensitive patient data and compliance with healthcare regulations, a comprehensive black box penetration test was conducted.",
-    "challenge": "The primary challenge was assessing the platform's security without prior knowledge of its internal structures. This required simulating real-world attack scenarios to identify potential vulnerabilities, particularly those related to AI functionalities and data handling processes.",
-    "finalResult": "The penetration test identified several medium and low-severity vulnerabilities, including issues related to data encryption and access controls. These findings were reported to Steno Health's development team, who promptly addressed them, thereby strengthening the platform's security and ensuring compliance with industry standards."
+    "para1": "Home Health Care is an AI-driven platform that automates medical records for home health care providers, enhancing efficiency and patient care. To ensure the security of sensitive patient data and compliance with healthcare regulations, a comprehensive Gray box penetration test was conducted.",
+    "challenge": "Our primary challenge was assessing the platform's security without prior knowledge of its internal structures. This required simulating real-world attack scenarios to identify potential vulnerabilities, particularly those related to AI functionalities, data handling processes, and the risk of prompt injection attacks. These attacks could manipulate AI-generated responses by crafting malicious inputs, potentially leading to unintended actions or information disclosure. Prompt injections can occur not only through text inputs but also through audio or other input methods, making them a versatile and critical threat vector.",
+    "finalResult": "The penetration test identified several high and medium-severity vulnerabilities, including issues related to session handling, file restrictions, rate limiting, data encryption, and access controls. These findings were reported to Health Care's development team, who promptly addressed them, thereby strengthening the platform's security and ensuring compliance with industry standards.",
   },
 ];
 export const PDPortfolio = [
