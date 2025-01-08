@@ -3,7 +3,7 @@ export const contactInfo = [
     iconSrc: "/assets/img/icon/phone.svg",
     title: "Contact with Us",
 
-    text: "Good website tells a story that will make users fully immerse themselves operating",
+    text: "Get in touch with us for any inquiries or support.",
     linkText: "+92 308 8438 733",
     linkUrl: "tel:923088438733",
   },
@@ -11,7 +11,7 @@ export const contactInfo = [
     iconSrc: "/assets/img/icon/speech-bubble.svg",
     title: "Send a Message",
 
-    text: "Good website tells a story that will make users fully immerse themselves operating",
+    text: "Have a question? Email us and we'll get back to you soon!",
     linkText: "hello@tecvity.co",
     linkUrl: "mailto:hello@tecvity.co",
   },
