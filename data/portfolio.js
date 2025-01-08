@@ -100,6 +100,20 @@ export const VAPTPortfolio = [
     "challenge": "The primary challenge was conducting a comprehensive Gray Box Penetration Test, where the testing team had limited access to the internal workings of the platform. The test involved assessing the overall security posture using the ASVS checklist provided by OWASP, ensuring that the platform adhered to industry-standard security practices across all layers.",
     "finalResult": "The penetration test uncovered several high and medium-severity vulnerabilities, including issues related to improper error handling, misconfigurations, and exposed API keys. These vulnerabilities were reported to the development team to take immediate action to address and patch the identified security flaws."
   },
+  {
+    "id": 8,
+    "imageSrc": "/assets/img/portfolio/portfolio-vapt/vapt_15.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/vapt_16.png"],
+    "categoryLinks": ["Cybersecurity", "White Box Testing", "Web Application Security"],
+    "title": "Penetration Test of Courier Comparison Platform",
+    "category": "White Box Penetration Test",
+    "client": "Security Consultants",
+    "date": "Oct, 2025",
+    "type": "vapt",
+    "para1": "The Courier Comparison Platform is an online service that allows users to compare courier and freight quotes, providing affordable and efficient delivery solutions. This white box penetration test focused on their web application, APIs, and admin control panel, aiming to identify and address security vulnerabilities.",
+    "challenge": "The primary focus of the penetration test was to discover any potential security issues in the platform, ensuring the protection of user data and the integrity of the application. This included assessing the APIs for improper authentication, the admin control panel for privilege escalation risks, and the web application for potential vulnerabilities in its codebase.",
+    "finalResult": "The penetration test identified several critical and high-severity vulnerabilities related to business logic, file upload validation, cloud infrastructure, improper sanitization, and access control. These issues were promptly reported and addressed to improve the platform’s security posture."
+  },  
 ];
 export const PDPortfolio = [
   {
