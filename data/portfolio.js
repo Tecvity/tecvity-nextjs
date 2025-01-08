@@ -28,6 +28,21 @@ export const VAPTPortfolio = [
     "finalResult": "Our team collaborated closely with the AI Powered Financial Advisory Platform to gain a comprehensive understanding of their platform. Several critical and high-severity vulnerabilities were found and reported to their team, who promptly patched them to ensure the platform's security and reliability."
   
   },
+  {
+    id: 3,
+    imageSrc: "/assets/img/portfolio/portfolio-vapt/vapt_5.png",
+    itemsImages: [ "/assets/img/portfolio/portfolio-vapt/vapt_6.png" ], 
+    categoryLinks: ["Cybersecurity","Web Application Security"],
+    "title": "Penetration test of an AI-Powered Dental App",
+    "category": "Black Box Penetration Test",
+    "client": "Security Consultants",
+    "date": "Nov, 2024",
+    "type": "vapt",
+    "para1": "The AI-Powered Dental App is a platform designed to streamline administrative tasks and enhance patient engagement for dental practices. A comprehensive security assessment was conducted to ensure the safety of sensitive patient and operational data.",
+    "challenge": "The primary challenge was testing the platform's AI-driven functionalities and its integration with dental practice management systems (PMS). The assessment required an in-depth understanding of the platform's architecture and its unique healthcare-related features.",
+    "finalResult": "The security assessment uncovered several medium and low-severity vulnerabilities, which were promptly reported to the development team. These vulnerabilities were addressed effectively, significantly enhancing the platform's security posture and ensuring compliance with industry standards."
+  
+  },
 ];
 export const PDPortfolio = [
   {
