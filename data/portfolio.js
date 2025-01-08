@@ -54,10 +54,24 @@ export const VAPTPortfolio = [
     "date": "Oct, 2024",
     "type": "vapt",
     "para1": "The Agile Planning Platform is a cutting-edge solution for enterprises implementing Agile practices at scale. It provides tools for Program Increment (PI) Planning, Dependency Management, and Roadmapping. The platform required a rigorous black box penetration test to identify potential security vulnerabilities and ensure the protection of sensitive enterprise data.",
-    "challenge": "Performing a black-box pentest on Kendis, especially with its integrations like Jira and Azure DevOps, comes with unique challenges. Without access to internal details, it’s tough to identify hidden API endpoints, test complex authentication methods like OAuth2, and ensure data flows securely. Misconfigured permissions, weak input validation, or poor error handling can expose sensitive information or APIs. There’s also the need to check for issues like rate limiting, abuse prevention, and injection vulnerabilities while analyzing how APIs interact and manage dependencies. On top of that, ensuring data stays in sync, integrations are securely configured, and vulnerabilities in third-party tools are patched makes the process even more demanding.",
+    "challenge": "Performing a black-box pentest on Kendis, especially with its integrations like Jira and Azure DevOps, comes with unique challenges. Without access to internal details, it’s tough to identify hidden API endpoints, test complex authentication methods like OAuth2, and ensure data flows securely. Misconfigured permissions, weak input validation, or poor error handling can expose sensitive information or APIs. There is also the need to check for issues like rate limiting, abuse prevention, and injection vulnerabilities while analyzing how APIs interact and manage dependencies. On top of that, ensuring data stays in sync, integrations are securely configured, and vulnerabilities in third-party tools are patched makes the process even more demanding.",
     "finalResult": "The assessment uncovered several medium and low severity vulnerabilities, including issues related to Web Application Firewall configurations, vulnerable libraries, and insecure methods. These findings were reported to the development team, who implemented the necessary patches to enhance the platform's security and reliability."
   },
-
+  {
+    "id": 5,
+    "imageSrc": "/assets/img/portfolio/portfolio-vapt/vapt_9.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/vapt_10.png"],
+    "categoryLinks": ["Cybersecurity", "Web Application Security", "Healthcare Security"],
+    "title": "Penetration Test of AI-Powered Home Health Care Platform",
+    "category": "Grey Box Penetration Test",
+    "client": "Security Consultants",
+    "date": "Nov, 2024",
+    "type": "vapt",
+    "type": "vapt",
+    "para1": "Home Health Care is an AI-driven platform that automates medical records for home health care providers, enhancing efficiency and patient care. To ensure the security of sensitive patient data and compliance with healthcare regulations, a comprehensive black box penetration test was conducted.",
+    "challenge": "The primary challenge was assessing the platform's security without prior knowledge of its internal structures. This required simulating real-world attack scenarios to identify potential vulnerabilities, particularly those related to AI functionalities and data handling processes.",
+    "finalResult": "The penetration test identified several medium and low-severity vulnerabilities, including issues related to data encryption and access controls. These findings were reported to Steno Health's development team, who promptly addressed them, thereby strengthening the platform's security and ensuring compliance with industry standards."
+  },
 ];
 export const PDPortfolio = [
   {
