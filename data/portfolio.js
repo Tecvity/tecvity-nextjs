@@ -86,6 +86,20 @@ export const VAPTPortfolio = [
     "challenge": "The challenge lies in providing continuous penetration testing and security consultation to Reflik, ensuring their platform remains secure while scaling. Our team is actively working on identifying vulnerabilities across the app and infrastructure to safeguard sensitive data and prevent potential exploits.",
     "finalResult": "During our ongoing commitment, several critical and high-level vulnerabilities have been identified and patched. These vulnerabilities, related to application security, infrastructure, and data handling, were addressed promptly to enhance the overall security posture of Reflik's platform. The engagement is still ongoing as we continue to monitor and improve the security of the platform."
   },
+  {
+    "id": 7,
+    "imageSrc": "/assets/img/portfolio/portfolio-vapt/vapt_13.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/vapt_14.png"],
+    "categoryLinks": ["Cybersecurity", "Web Application Security"],
+    "title": "Penetration Test of Student Loan Refinancing Platform",
+    "category": "Gray Box Penetration Test",
+    "client": "Security Consultants",
+    "date": "Nov, 2024",
+    "type": "vapt",
+    "para1": "The Student Loan Refinancing Platform is designed to help users compare loan options quickly and securely. This penetration test focused on identifying vulnerabilities in both the admin and user web applications, ensuring the platform’s security against potential threats.",
+    "challenge": "The primary challenge was conducting a comprehensive Gray Box Penetration Test, where the testing team had limited access to the internal workings of the platform. The test involved assessing the overall security posture using the ASVS checklist provided by OWASP, ensuring that the platform adhered to industry-standard security practices across all layers.",
+    "finalResult": "The penetration test uncovered several high and medium-severity vulnerabilities, including issues related to improper error handling, misconfigurations, and exposed API keys. These vulnerabilities were reported to the development team to take immediate action to address and patch the identified security flaws."
+  },
 ];
 export const PDPortfolio = [
   {
