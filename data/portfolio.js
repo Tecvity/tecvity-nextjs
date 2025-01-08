@@ -128,6 +128,20 @@ export const VAPTPortfolio = [
     "challenge": "The primary objective of the test was to uncover security issues that could compromise the platform's functionality and data integrity. This included assessing the network for configuration flaws and evaluating the application for vulnerabilities such as improper access control and insecure data handling.",
    "finalResult": "The initial penetration test identified several critical and high-severity security issues in their network and application, including misconfigurations, improper access control, and data exposure risks. A follow-up penetration test conducted in the same month verified the successful implementation of patches and enhancements to address the reported vulnerabilities. This demonstrates the professionalism and instant solution-providing capabilities of the Tecvity team, ensuring the platform's security and reliability for its users."
   },
+  {
+    "id": 10,
+    "imageSrc": "/assets/img/portfolio/portfolio-vapt/vapt_19.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/vapt_20.png"],
+    "categoryLinks": ["Cybersecurity", "Gray Box Testing", "Web Application Security"],
+    "title": "Penetration Test of Family Office Collaboration Platform",
+    "category": "Gray Box Penetration Test",
+    "client": "Security Consultants",
+    "date": "Sept, 2024",
+    "type": "vapt",
+    "para1": "This Family Office Collaboration Platform is a centralized workspace designed to provide families and their advisors with a secure environment for collaboration, document management, and task tracking. It offers features like group workspaces, a family context hub, and a secure document vault, focusing on streamlining workflows and ensuring data security.",
+    "challenge": "The objective of this penetration test was to evaluate the security of the platform’s web application and APIs. One of the challenges was to understand and test the GraphQL API thoroughly, ensuring no vulnerabilities existed in its design or implementation. Additionally, the test aimed to identify vulnerabilities that could compromise sensitive family data or disrupt the platform’s functionality, with a focus on business logic, API security, and configuration settings.",
+    "finalResult": "The penetration test identified several medium and low-severity vulnerabilities related to API security, business logic flaws, and misconfigurations. These issues were promptly reported to the platform's security team, who addressed them to enhance the overall security and reliability of the platform."
+  },
 ];
 export const PDPortfolio = [
   {
