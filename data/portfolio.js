@@ -72,6 +72,20 @@ export const VAPTPortfolio = [
     "challenge": "Our primary challenge was assessing the platform's security without prior knowledge of its internal structures. This required simulating real-world attack scenarios to identify potential vulnerabilities, particularly those related to AI functionalities, data handling processes, and the risk of prompt injection attacks. These attacks could manipulate AI-generated responses by crafting malicious inputs, potentially leading to unintended actions or information disclosure. Prompt injections can occur not only through text inputs but also through audio or other input methods, making them a versatile and critical threat vector.",
     "finalResult": "The penetration test identified several high and medium-severity vulnerabilities, including issues related to session handling, file restrictions, rate limiting, data encryption, and access controls. These findings were reported to Health Care's development team, who promptly addressed them, thereby strengthening the platform's security and ensuring compliance with industry standards.",
   }, 
+  {
+    "id": 6,
+    "imageSrc": "/assets/img/portfolio/portfolio-vapt/vapt_11.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/vapt_12.png"],
+    "categoryLinks": ["Cybersecurity", "VAPT", "Security Consultation"],
+    "title": "VAPT for Reflik Inc",
+    "category": "VAPT & Security Consultation",
+    "client": "Reflik",
+    "date": "Jul, 2024 (Ongoing)",
+    "type": "vapt",
+    "para1": "Reflik is an online talent acquisition and recruiting platform that connects employers with recruiters through a crowdsourcing model. The platform aims to streamline the hiring process by providing quick access to a large pool of qualified candidates. Our engagement with Reflik involves continuous support and consultation to identify and address security vulnerabilities within their application and infrastructure.",
+    "challenge": "The challenge lies in providing continuous penetration testing and security consultation to Reflik, ensuring their platform remains secure while scaling. Our team is actively working on identifying vulnerabilities across the app and infrastructure to safeguard sensitive data and prevent potential exploits.",
+    "finalResult": "During our ongoing commitment, several critical and high-level vulnerabilities have been identified and patched. These vulnerabilities, related to application security, infrastructure, and data handling, were addressed promptly to enhance the overall security posture of Reflik's platform. The engagement is still ongoing as we continue to monitor and improve the security of the platform."
+  },
 ];
 export const PDPortfolio = [
   {
