@@ -113,7 +113,21 @@ export const VAPTPortfolio = [
     "para1": "The Courier Comparison Platform is an online service that allows users to compare courier and freight quotes, providing affordable and efficient delivery solutions. This white box penetration test focused on their web application, APIs, and admin control panel, aiming to identify and address security vulnerabilities.",
     "challenge": "The primary focus of the penetration test was to discover any potential security issues in the platform, ensuring the protection of user data and the integrity of the application. This included assessing the APIs for improper authentication, the admin control panel for privilege escalation risks, and the web application for potential vulnerabilities in its codebase.",
     "finalResult": "The penetration test identified several critical and high-severity vulnerabilities related to business logic, file upload validation, cloud infrastructure, improper sanitization, and access control. These issues were promptly reported and addressed to improve the platform’s security posture."
-  },  
+  },
+  {
+    "id": 9,
+    "imageSrc": "/assets/img/portfolio/portfolio-vapt/vapt_17.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/vapt_18.png"],
+    "categoryLinks": ["Cybersecurity", "Gray Box Testing"],
+    "title": "Penetration Test of Aviation Maintenance Platform",
+    "category": "Gray Box Penetration Test",
+    "client": "Security Consultants",
+    "date": "Sept, 2024",
+    "type": "vapt",
+    "para1": "The Aviation Maintenance Platform is a solution for streamlining aircraft maintenance, repair, and operations (MRO). Designed for aviation professionals, it offers tools for maintenance tracking, parts management, collaboration, and data analytics. Our Gray Box Penetration Test focused on identifying vulnerabilities within their network and application to ensure a secure operational environment.",
+    "challenge": "The primary objective of the test was to uncover security issues that could compromise the platform's functionality and data integrity. This included assessing the network for configuration flaws and evaluating the application for vulnerabilities such as improper access control and insecure data handling.",
+   "finalResult": "The initial penetration test identified several critical and high-severity security issues in their network and application, including misconfigurations, improper access control, and data exposure risks. A follow-up penetration test conducted in the same month verified the successful implementation of patches and enhancements to address the reported vulnerabilities. This demonstrates the professionalism and instant solution-providing capabilities of the Tecvity team, ensuring the platform's security and reliability for its users."
+  },
 ];
 export const PDPortfolio = [
   {
