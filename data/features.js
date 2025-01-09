@@ -178,7 +178,7 @@ export const ourServices = [
     iconSrc: "/assets/img/icon/feature-icon1-1.svg",
     imageSrc1: "/assets/img/service/s1_2.jpg",
     imageSrc2: "/assets/img/service/s1_1.jpg",
-    title: "Penetration Testing",
+    title: "Penetration Testing & Vulnerability Assessment (VAPT)",
     id: 14,
     text: "We can look into the security of your applications and provide a detailed report on vulnerabilities.",
     para1: "Our penetration testing services identify weaknesses in your web and mobile applications, simulating real-world attacks to evaluate your security posture.",
