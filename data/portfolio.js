@@ -250,6 +250,20 @@ export const CLOUDPortfolio = [
     "challenge": "The primary objective was to provide ongoing support for Azure security hardening and configuration. Valorian needed to enhance the security of their cloud infrastructure to ensure data protection, system reliability, and compliance with industry standards. The challenge involved implementing advanced security measures to safeguard sensitive operational data and support the company’s growth and evolving needs.",
     "finalResult": "Tecvity successfully implemented robust Azure security hardening measures, securing Valorian's cloud infrastructure against potential threats. The ongoing support ensures continuous monitoring and configuration optimization, helping Valorian maintain secure, reliable operations and compliance with industry regulations. This solution highlights Tecvity’s expertise in providing tailored security solutions for cloud environments."
   },
+  {
+    "id": 204,
+    "imageSrc": "/assets/img/portfolio/portfolio-cloud/cloud_6.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-cloud/cloud_7.png"],
+    "categoryLinks": ["Cloud Security", "Azure Security Hardening"],
+    "title": "Azure Cloud Hardening of an AI Based Dental App",  // dentina, https://dentina.ai/
+    "category": "Cloud Security Audits",
+    "type": "cloud",
+    "client": "Security Consultants",
+    "date": "January 2025",
+    "para1": "The AI-Powered Dental App is a platform designed to streamline administrative tasks and enhance patient engagement for dental practices. A comprehensive security assessment was conducted to ensure the safety of sensitive patient and operational data.",
+    "challenge": "Our main was to strengthen the security of the app’s Azure cloud environment. This included identifying and mitigating potential vulnerabilities, implementing role-based access control (RBAC), encrypting sensitive data at rest and in transit, and ensuring compliance with healthcare industry standards. The app required a secure, scalable infrastructure to support its AI-driven operations and data management needs.",
+    "finalResult": "Tecvity implemented advanced Azure security hardening measures, including data encryption, network hardening, and robust access controls. The solution ensured a secure and compliant cloud environment, enabling the app to deliver innovative AI solutions for dental practices confidently."
+  },
 ];
 
 export const portfolioData = [
