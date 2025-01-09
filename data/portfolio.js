@@ -235,8 +235,23 @@ export const CLOUDPortfolio = [
     "para1": "A software provider specializing in next-generation business analytics tools aimed at streamlining workflows for M&A professionals, finance departments, and organizations. Their solutions include tools for finance management, FP&A capabilities, M&A processes, and cloud data analytics, helping businesses improve efficiency and decision-making.",
     "challenge": "The primary objective was to configure and secure private DNS zones in Azure. The software provider had previously spent significant resources on DNS zone configuration, relying on IP addresses for authentication. This approach led to operational complexities and heightened security risks. The goal was to simplify authentication processes and enhance security using Azure’s advanced features.",
     "finalResult": "In just 10 minutes, Tecvity addressed the DNS configuration challenges by implementing private DNS zones and enabling Entra ID authentication using DNS names. This solution eliminated the reliance on IP-based authentication, streamlined operations, and strengthen security. The rapid resolution showcased Tecvity’s expertise and professionalism in delivering tailored cloud security solutions."
-  },  
+  },
+  {
+    "id": 203,
+    "imageSrc": "/assets/img/portfolio/portfolio-cloud/cloud_4.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-cloud/cloud_5.png"],
+    "categoryLinks": ["Cloud Security", "Azure Security Hardening"],
+    "title": "Securing Cloud Infrastructure of Valorian",
+    "category": "Cloud Security Audits",
+    "type": "cloud",
+    "client": "Valorian",
+    "date": "Nov, 2024",
+    "para1": "Valorian Solutions is a Houston-based consulting firm founded in 2022, specializing in tailored solutions for the industrial services sector. Their offerings, including Safety, Turnaround Tracker, ESG, and Ops, help clients enhance operational efficiency, safety, and compliance. Valorian serves industries such as mechanical services, industrial cleaning, fabrication, construction, soft crafts, and refractory services.",
+    "challenge": "The primary objective was to provide ongoing support for Azure security hardening and configuration. Valorian needed to enhance the security of their cloud infrastructure to ensure data protection, system reliability, and compliance with industry standards. The challenge involved implementing advanced security measures to safeguard sensitive operational data and support the company’s growth and evolving needs.",
+    "finalResult": "Tecvity successfully implemented robust Azure security hardening measures, securing Valorian's cloud infrastructure against potential threats. The ongoing support ensures continuous monitoring and configuration optimization, helping Valorian maintain secure, reliable operations and compliance with industry regulations. This solution highlights Tecvity’s expertise in providing tailored security solutions for cloud environments."
+  },
 ];
+
 export const portfolioData = [
   ...VAPTPortfolio,
   ...PDPortfolio,
