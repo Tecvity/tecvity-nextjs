@@ -18,7 +18,7 @@ export const VAPTPortfolio = [
     imageSrc: "/assets/img/portfolio/portfolio-vapt/vapt_3.png",
     itemsImages: [ "/assets/img/portfolio/portfolio-vapt/vapt_4.png" ], 
     categoryLinks: ["Cybersecurity","Web Application Security"],
-    "title": "Penetration Test of AI Powered Financial Advisory Platform",
+    "title": "Penetration Test of AI Powered Financial Advisory Platform", //wealthfeed,  https://www.wealthfeed.com/
     "category": "Grey Box Penetration Test",
     "client": "Security Consultants",
     "date": "Sept, 2024",
@@ -33,7 +33,7 @@ export const VAPTPortfolio = [
     imageSrc: "/assets/img/portfolio/portfolio-vapt/vapt_5.png",
     itemsImages: [ "/assets/img/portfolio/portfolio-vapt/vapt_6.png" ], 
     categoryLinks: ["Cybersecurity","Web Application Security"],
-    "title": "Penetration test of an AI-Powered Dental App",
+    "title": "Penetration test of an AI-Powered Dental App", // dentina, https://dentina.ai/
     "category": "Black Box Penetration Test",
     "client": "Security Consultants",
     "date": "Nov, 2024",
@@ -48,7 +48,7 @@ export const VAPTPortfolio = [
     "imageSrc": "/assets/img/portfolio/portfolio-vapt/vapt_7.png",
     "itemsImages": ["/assets/img/portfolio/portfolio-vapt/vapt_8.png"],
     "categoryLinks": ["Cybersecurity", "Web Application Security", "Enterprise Security"],
-    "title": "Penetration Test of Agile Planning Platform",
+    "title": "Penetration Test of Agile Planning Platform", // kendis, https://kendis.io/
     "category": "Black Box Penetration Test",
     "client": "Security Consultants",
     "date": "Oct, 2024",
@@ -62,7 +62,7 @@ export const VAPTPortfolio = [
     "imageSrc": "/assets/img/portfolio/portfolio-vapt/vapt_9.png",
     "itemsImages": ["/assets/img/portfolio/portfolio-vapt/vapt_10.png"],
     "categoryLinks": ["Cybersecurity", "Web Application Security", "Healthcare Security"],
-    "title": "Penetration Test of AI-Powered Home Health Care Platform",
+    "title": "Penetration Test of AI-Powered Home Health Care Platform", // plenus, https://plenus.ai/
     "category": "Grey Box Penetration Test",
     "client": "Security Consultants",
     "date": "Nov, 2024",
@@ -77,7 +77,7 @@ export const VAPTPortfolio = [
     "imageSrc": "/assets/img/portfolio/portfolio-vapt/vapt_11.png",
     "itemsImages": ["/assets/img/portfolio/portfolio-vapt/vapt_12.png"],
     "categoryLinks": ["Cybersecurity", "VAPT", "Security Consultation"],
-    "title": "VAPT for Reflik Inc",
+    "title": "VAPT for Reflik Inc",  // reflik, https://www.reflik.com/
     "category": "VAPT & Security Consultation",
     "client": "Reflik",
     "date": "Jul, 2024 (Ongoing)",
@@ -91,7 +91,7 @@ export const VAPTPortfolio = [
     "imageSrc": "/assets/img/portfolio/portfolio-vapt/vapt_13.png",
     "itemsImages": ["/assets/img/portfolio/portfolio-vapt/vapt_14.png"],
     "categoryLinks": ["Cybersecurity", "Web Application Security"],
-    "title": "Penetration Test of Student Loan Refinancing Platform",
+    "title": "Penetration Test of Student Loan Refinancing Platform", // purefy, https://purefy.com/
     "category": "Gray Box Penetration Test",
     "client": "Security Consultants",
     "date": "Nov, 2024",
@@ -105,7 +105,7 @@ export const VAPTPortfolio = [
     "imageSrc": "/assets/img/portfolio/portfolio-vapt/vapt_15.png",
     "itemsImages": ["/assets/img/portfolio/portfolio-vapt/vapt_16.png"],
     "categoryLinks": ["Cybersecurity", "White Box Testing", "Web Application Security"],
-    "title": "Penetration Test of Courier Comparison Platform",
+    "title": "Penetration Test of Courier Comparison Platform", // fast courier, https://fastcourier.com.au/
     "category": "White Box Penetration Test",
     "client": "Security Consultants",
     "date": "Oct, 2025",
@@ -119,7 +119,7 @@ export const VAPTPortfolio = [
     "imageSrc": "/assets/img/portfolio/portfolio-vapt/vapt_17.png",
     "itemsImages": ["/assets/img/portfolio/portfolio-vapt/vapt_18.png"],
     "categoryLinks": ["Cybersecurity", "Gray Box Testing"],
-    "title": "Penetration Test of Aviation Maintenance Platform",
+    "title": "Penetration Test of Aviation Maintenance Platform", // eplane, https://www.eplane.com/
     "category": "Gray Box Penetration Test",
     "client": "Security Consultants",
     "date": "Sept, 2024",
@@ -133,7 +133,7 @@ export const VAPTPortfolio = [
     "imageSrc": "/assets/img/portfolio/portfolio-vapt/vapt_19.png",
     "itemsImages": ["/assets/img/portfolio/portfolio-vapt/vapt_20.png"],
     "categoryLinks": ["Cybersecurity", "Gray Box Testing", "Web Application Security"],
-    "title": "Penetration Test of Family Office Collaboration Platform",
+    "title": "Penetration Test of Family Office Collaboration Platform",  // onePlace, https://oneplace.family/
     "category": "Gray Box Penetration Test",
     "client": "Security Consultants",
     "date": "Sept, 2024",
@@ -206,9 +206,28 @@ export const PDPortfolio = [
 
   ]
 
+export const CLOUDPortfolio = [
+  {
+    id: 201,
+    imageSrc: "/assets/img/portfolio/portfolio-cloud/cloud_0.png",
+    itemsImages:[ "/assets/img/portfolio/portfolio-cloud/cloud_1.png"], 
+    categoryLinks: ["Cloud Security","Azure Cloud Hardening"],
+    "title": "Azure Cloud Hardening for LeanSuite Corp",
+    "category": "Cloud Security Audits",
+    "type": "cloud",
+    "client": "LeanSuite Corp",
+    "date": "Oct, 2024",
+    "para1": "LeanSuite is a cloud-based lean manufacturing application designed to help manufacturing businesses drive efficiency and productivity on the factory floor. It offers solutions such as a suggestion platform with a simple, intuitive interface that boosts employee engagement and collaboration, ultimately improving business operations.",
+    "challenge": "The primary objective of the project was to enhance the security posture of LeanSuite's Azure cloud environment. This involved implementing private endpoints to restrict access, hardening network configurations to mitigate vulnerabilities, encrypting data both at rest and in transit to ensure its confidentiality and integrity, and configuring robust Security Information and Event Management (SIEM) and Cloud Security Posture Management (CSPM) solutions for proactive threat monitoring and compliance.",
+    "finalResult": "Through a comprehensive approach, the Tecvity team successfully implemented the necessary security measures, enabling LeanSuite to achieve SOC 2 certification. This accomplishment not only demonstrates LeanSuite's commitment to maintaining high security standards but also proves the professionalism and expertise of Tecvity in achieving their clients' objectives, ensuring secure and compliant cloud operations."
+
+  },
+
+];
 export const portfolioData = [
   ...VAPTPortfolio,
   ...PDPortfolio,
+  ...CLOUDPortfolio,
 ];
 export const allPortfolio = [
   ...portfolioData,

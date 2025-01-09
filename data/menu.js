@@ -73,6 +73,11 @@ export const menuItems = [
         label: "Product Design",
         link: "/our-portfolio/pd",
       },
+      {
+        id: 33,
+        label: "Cloud Security Audits",
+        link: "/our-portfolio/cloud",
+      },
     ],
   },
   // {
