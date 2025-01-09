@@ -69,14 +69,14 @@ export const menuItems = [
         link: "/our-portfolio/vapt",
       },
       {
+        id: 33,
+        label: "Cloud Security",
+        link: "/our-portfolio/cloud",
+      },
+      {
         id: 32,
         label: "Product Design",
         link: "/our-portfolio/pd",
-      },
-      {
-        id: 33,
-        label: "Cloud Security Audits",
-        link: "/our-portfolio/cloud",
       },
     ],
   },
