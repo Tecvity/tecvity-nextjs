@@ -11,4 +11,5 @@ export const tags = [
 export const portfolioType = [
   { id: 1, text: "vapt" },
   { id: 2, text: "pd" },
+  { id: 3, text: "cloud" },
 ];
