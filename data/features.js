@@ -181,26 +181,36 @@ export const ourServices = [
     title: "Penetration Testing & Vulnerability Assessment",
     id: 14,
     text: "We can look into the security of your applications and provide a detailed report on vulnerabilities.",
-    para1: "Our penetration testing services identify weaknesses in your web and mobile applications, simulating real-world attacks to evaluate your security posture.",
-    para2: "With our thorough testing, you’ll gain insights into potential risks and remediation strategies to strengthen your defenses against cyber threats.",
+    para1: "Our penetration testing services identify weaknesses in your web and mobile applications, simulating real-world attacks to evaluate your security posture across multiple testing methodologies, including Black-box, Gray-box, and White-box testing.",
+    para2: "With our thorough and tailored testing approach, you’ll gain insights into potential risks and actionable remediation strategies to strengthen your defenses against cyber threats.",
     heading1: "Why Penetration Testing Matters",
-    para3: "Regular testing ensures that your applications are resilient to new and evolving threats, reducing the risk of data breaches and downtime.",
+    para3: "Regular penetration testing ensures that your applications are resilient to emerging and evolving threats, reducing the risk of data breaches, financial losses, and operational downtime.",
     heading2: "Our Approach",
-    para4: "We use industry-leading tools and techniques to uncover vulnerabilities, providing detailed reports and actionable recommendations.",
-    para5: "Our team works closely with you to implement security improvements and ensure your applications remain secure.",
+    para4: "We use industry-leading tools and techniques to uncover vulnerabilities, adhering to globally recognized standards such as the OWASP Application Security Verification Standard (ASVS), which provides a comprehensive framework for testing web applications and is often adapted for mobile apps through the OWASP Mobile Application Security Verification Standard (MASVS). Additionally, we follow the OWASP Top 10 and the Penetration Testing Execution Standard (PTES) to ensure a structured, systematic, and comprehensive approach to security evaluations.",
+    para5: "We believe that every organization has unique security needs. That’s why we begin by understanding your specific requirements, goals, and the type of testing best suited to your environment—whether it’s Black-box, Gray-box, or White-box testing. Our approach is tailored to ensure comprehensive coverage and actionable results.",
     para6: "With the rise in cyberattacks, staying proactive is key to safeguarding your business and its customers.",
-    para7: "Stay ahead of the curve with our expert penetration testing services.",
+    para7: "Stay ahead of the curve and protect your business with our expert penetration testing services. By leveraging globally recognized standards and best practices, we help you safeguard your organization and its customers against evolving cyber threats.",
     cards: [
-      { title: "Thorough Testing", description: "We explore every aspect of your application’s security." },
-      { title: "Detailed Reports", description: "Receive in-depth reports with actionable insights." },
-      { 
-        title: "Manual & Automated Testing", 
-        description: "We combine automated tools with expert manual testing for a thorough assessment of your application." 
-      },
-      { 
-        title: "OWASP Top 10 Coverage", 
-        description: "We ensure your app is protected against the most critical security risks identified by OWASP." 
-      },
+    { title: "Initial Analysis & Requirement Gathering",
+       description: "We start by conducting a detailed analysis of your infrastructure, application architecture, and security objectives."
+    },
+    { title: "Customized Testing Plan", 
+      description: "We create a custom testing plan based on your application's risks, following OWASP ASVS to ensure it meets industry standards." 
+    },
+    { title: "Manual & Automated Testing",
+      description : "Our process integrates state-of-the-art automated tools to quickly identify common vulnerabilities while leveraging expert manual testing.",
+    },
+      { title: "Comprehensive Vulnerability Assessment",
+      description: "We test applications against OWASP Top 10, ASVS, and MASVS standards and assess infrastructure for weak points in configurations, patches, and network security.",
+    },
+    { 
+        title: "Detailed Reporting & Remediation", 
+        description: "At the end of testing, we provide a detailed report with vulnerabilities ranked by severity, impact assessments, and clear remediation steps, along with follow-up support for implementation." 
+    },
+    {
+      title : "Ongoing Support & Retesting",
+      description : "Security is an ongoing process. We work with you to retest and verify the effectiveness of implemented fixes.",
+    },      
     ],
   },
   {
