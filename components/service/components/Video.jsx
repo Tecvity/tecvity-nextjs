@@ -25,15 +25,34 @@ export default function Video() {
                   ref={parallax.ref}
                   style={{
                     backgroundImage: "url(/assets/img/service/s_vbg.png)",
-                  }}
-                ></div>
-                <div
-                  onClick={() => setIsOpen(true)}
-                  className="play-btn circle-btn btn gsap-magnetic popup-video background-image"
-                >
-                  PLAY VIDEO
+                    backgroundSize: "cover",
+                    height: "100vh",
+                    position: "absolute",
+                  }} ></div>
+
+                <div className="video-thumbnail position-relative d-flex justify-content-center align-items-center"
+                  style={{
+                    position: "relative",
+                    zIndex: 5,
+                    height: "100vh"
+                  }}>
+
+                  <img src="https://img.youtube.com/vi/9_vZoq7Idus/default.jpg"               
+                    className="video-thumbnail img-fluid"
+                    style={{
+                      width: "50vw",
+                      height: "auto",
+                      borderRadius: "8px",
+                      opacity: 0.5,
+                      maxWidth: "600px",
+                    }}
+                  />
+                  <div
+                    onClick={() => setIsOpen(true)}
+                    className="play-btn circle-btn btn background-image">
+                      <i class="fas fa-play"></i>  </div>
                 </div>
-              </div>
+                </div>
             </div>
           </div>
         </div>
