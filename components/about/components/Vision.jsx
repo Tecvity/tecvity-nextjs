@@ -1,7 +1,6 @@
 export default function Vision() {
     return (
       <div className="breadcumb-wrapper">
-
         <div className="vision-container w-50 mx-auto">
           <h2 className="title">Our Vision</h2>
           <br></br>
