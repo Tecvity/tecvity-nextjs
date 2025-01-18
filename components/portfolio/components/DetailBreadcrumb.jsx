@@ -3,9 +3,8 @@ import React from "react";
 import { allPortfolio } from "@/data/portfolio";
 
 export default function Breadcumb2({portfolioTitle}) {
-  const decodedProjectTitle = portfolioTitle.replace(/-/g, ' ');
   const portfolioItem =
-  allPortfolio.filter((elm) => elm.title.toLowerCase() == decodedProjectTitle.toLowerCase())[0] || allPortfolio[1];
+  allPortfolio.filter((elm) => elm.title.replace(/\s+/g, '-').toLowerCase() == portfolioTitle.toLowerCase())[0] || allPortfolio[1];
 
 
   return (

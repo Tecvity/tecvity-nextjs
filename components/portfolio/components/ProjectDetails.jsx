@@ -4,11 +4,10 @@ import ImageSlider from "./ImageSlider";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 export default function ProjectDetails({ portfolioTitle, blogList = allPortfolio }) {
-  const decodedProjectTitle = portfolioTitle.replace(/-/g, ' ');
   const portfolioItem =
-  blogList.filter((elm) => elm.title.toLowerCase() == decodedProjectTitle.toLowerCase())[0] || blogList[1];
+  blogList.filter((elm) => elm.title.replace(/\s+/g, '-').toLowerCase() == portfolioTitle.toLowerCase())[0] || blogList[1];
 
-  const currentIndex = blogList.findIndex((project) => project.title.toLowerCase() === decodedProjectTitle.toLowerCase());
+  const currentIndex = blogList.findIndex((project) => project.title.replace(/\s+/g, '-').toLowerCase() === portfolioTitle.toLowerCase());
   const nextProject = currentIndex >= 0 && currentIndex < blogList.length - 1 ? blogList[currentIndex + 1] : null;
   const prevProject = currentIndex > 0 ? blogList[currentIndex - 1] : null;
   
