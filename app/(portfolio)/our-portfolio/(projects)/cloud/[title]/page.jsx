@@ -13,11 +13,12 @@ export const metadata = {
 //USE Static Side Genaration(SSG) if necessary
 
 export default function ProjectPageDetails({ params }) {
+  const decodedProjectTitle = decodeURIComponent(params.title);
   return (
     <>
       <Header />
-      <DetailBreadcrumb portfolioTitle={params.title} />
-      <ProjectDetails portfolioTitle={params.title} blogList={CLOUDPortfolio}/>
+      <DetailBreadcrumb portfolioTitle={decodedProjectTitle} />
+      <ProjectDetails portfolioTitle={decodedProjectTitle} blogList={CLOUDPortfolio}/>
       <MarqueeComponent />
       <Footer />
     </>
