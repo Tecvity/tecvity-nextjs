@@ -144,8 +144,9 @@ export default function ServiceDetails({ serviceTitle }) {
             <p className="sec-text mb-n1 mt-40 space-bottom">
             {serviceItem?.para7}
             <div className="col-auto d-none d-lg-block">
+            {serviceItem?.portfolioLink && serviceItem.portfolioLink !== "" && (
                   <div className="service-portfolio-button">
-                    <Link scroll={false} href="/our-portfolio/pd" className="btn">
+                    <Link scroll={false} href={serviceItem.portfolioLink} className="btn">
                       <span className="link-effect">
                         <span className="effect-1">SHOW PROJECTS</span>
                         <span className="effect-1">SHOW PROJECTS</span>
@@ -153,6 +154,7 @@ export default function ServiceDetails({ serviceTitle }) {
                     </Link>
                     {serviceItem?.button}
                   </div>
+              )}
             </div>      
             </p>
           </div>

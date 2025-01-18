@@ -145,6 +145,7 @@ export const ourServices = [
       { title: "Data-Driven Decisions", description: "We don’t just guess—we analyze. User data and research guide every design decision, ensuring your interface works for the people who matter most: your audience." },
       { title: "A Seamless Process", description: "From kickoff to launch, we ensure every step of the design process is transparent and collaborative. You’ll never feel out of the loop." },
     ],
+    portfolioLink: "",
     button:[""]
   },
   {
@@ -169,6 +170,7 @@ export const ourServices = [
       { title: "Seamless Support and Communication", description: "We believe in clear, consistent communication, providing you with the support you need throughout the design process and beyond." },
       { title: "Ongoing Partnership and Support", description: "Our relationship doesn’t end with the launch—we continue to support and evolve your brand to ensure it thrives over time." },
     ],
+    portfolioLink: "/our-portfolio/pd",
     button: [""]
   },
   
@@ -212,6 +214,7 @@ export const ourServices = [
       description : "Security is an ongoing process. We work with you to retest and verify the effectiveness of implemented fixes.",
     },      
     ],
+    portfolioLink: "/our-portfolio/vapt",
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-2.svg",
@@ -233,6 +236,7 @@ export const ourServices = [
       { title: "Security Best Practices", description: "Ensure your cloud follows industry best practices." },
       { title: "Customized Audits", description: "Tailored recommendations based on your unique cloud setup." },
     ],
+    portfolioLink: "/our-portfolio/cloud",
   },
 
   
@@ -256,6 +260,7 @@ export const ourServices = [
       { title: "Tailored Solutions", description: "Custom-built apps designed for your business." },
       { title: "Scalable & Secure", description: "Applications that grow with your business needs." },
     ],
+    portfolioLink: "",
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-6.svg",
@@ -277,6 +282,7 @@ export const ourServices = [
       { title: "Automated Security", description: "Security integrated into your CI/CD pipeline." },
       { title: "Continuous Monitoring", description: "Real-time insights and vulnerability management." },
     ],
+    portfolioLink: "",
   },
 ];
 
