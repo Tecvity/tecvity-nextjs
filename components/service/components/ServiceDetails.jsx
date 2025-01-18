@@ -145,7 +145,7 @@ export default function ServiceDetails({ serviceTitle }) {
             {serviceItem?.para7}
             <div className="col-auto d-none d-lg-block">
                   <div className="service-portfolio-button">
-                    <Link scroll={false} href="/our-portfolio/pd" className="btn">
+                    <Link scroll={false} href={`${serviceItem?.portfolioLink || "#"}`} className={`btn ${!serviceItem?.portfolioLink ? "disabled" : ""}`}>
                       <span className="link-effect">
                         <span className="effect-1">SHOW PROJECTS</span>
                         <span className="effect-1">SHOW PROJECTS</span>
