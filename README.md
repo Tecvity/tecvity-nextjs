@@ -123,190 +123,224 @@ Following feautres/pages exist in the codebase but have been disabled for now (c
 
 ## Blog Post Contribution Guide
 
-Welcome to the **Blog Post Contribution Guide**! This guide provides step-by-step instructions for adding a new blog post to this project.
+Welcome to the **Blog Post Contribution Guide**! This guide provides step-by-step instructions for adding a new blog post to this project using `.mdx` files.
 
 ---
 
 ## Table of Contents
 
-1. [Project Setup](#setup-and-installation)
-2. [Steps for Adding a New Blog Post](#steps-for-adding-a-new-blog-post)
-   - [1. Add an id for the Blog Post](#1-add-an-id-for-the-blog-post)
-   - [2. Add a High-Quality Blog Image](#2-add-a-high-quality-blog-image)
-   - [3. Add a Small Blog Image](#3-add-a-small-blog-image)
-   - [4. Add the Post Date](#4-add-the-post-date)
-   - [5. Assign a Category](#5-assign-a-category)
-   - [6. Add a Title](#6-add-a-title)
-   - [7. Add Tags](#7-add-tags)
-   - [8. Add an Icon](#8-add-an-icon)
-   - [9. Add the Author's Name](#9-add-the-authors-name)
-   - [10. Add the Author's Quote](#10-add-the-authors-quote)
-   - [11. Add the Author's Image](#11-add-the-authors-image)
-   - [12. Add the Author's Profile](#12-add-the-authors-profile)
-   - [13. Add Blog Content](#13-add-blog-content)
-   - [14. Add Blog Sections](#14-add-blog-sections)
-3. [Final Example BlogPost Object](#final-example-blogpost-object)
+1. [Steps for Adding a New Blog Post](#steps-for-adding-a-new-blog-post)
+   - [1. Create a New MDX File](#1-create-a-new-mdx-file)
+   - [2. Add Blog Metadata](#2-add-blog-metadata)
+     - [Add an ID](#add-an-id)
+     - [Add a Title](#add-a-title)
+     - [Add the Post Date](#add-the-post-date)
+     - [Assign a Category](#assign-a-category)
+     - [Add Tags](#add-tags)
+     - [Add the Author's Name](#add-the-authors-name)
+     - [Add the Author's Quote](#add-the-authors-quote)
+     - [Add a High-Quality Blog Image](#add-a-high-quality-blog-image)
+     - [Add the Author's Image](#add-the-authors-image)
+     - [Add the Author's Profile](#add-the-authors-profile)
+   - [3. Add Blog Content](#3-add-blog-content)
+2. [Metadata Reference](#metadata-reference)
+3. [Example Blog File](#example-blog-file)
 
 ---
 
 ## Steps for Adding a New Blog Post
 
-You need to modify the list `blogPosts` in `data/blogs.js`, add the final object to list `blogPosts` to get your Blog posted.
+### 1. Create a New MDX File
 
-### 1. Add an id for the Blog Post
-The `id` (required) is the unique identifier for a blog post. Adding duplicates can lead to unexpected data in other blog posts. You need to assign an `id` that is one value greater than the previous blog post to maintain order. If the previous Blog id is `1` use `2`, Example:
-```javascript 
-id: 2,
+Navigate to the `blogs-markdown` directory and create a new `.mdx` file. The filename should match the title of your blog post (in kebab-case), for example:
+
+```plaintext
+unveiling-tecvity-the-future-of-tech-innovation.mdx
 ```
 
-### 2. Add a High-Quality Blog Image
-The `image` (required) is displayed at the top of the blog post. Upload an image (dimensions: 1080x600) to the directory `public/assets/img/blog`. Ensure the image is named `blog_post_<id>_<serial number>.jpg`, where `<id>` needs to be replaced by blog post `id` and `<serial number>` needs to be replaced by serial numbers of your choice. Add the image path as shown:
-```javscript 
-image: '/assets/img/blog/blog_post_2_1.jpg', 
-```
-
-### 3. Add a Small Blog Image
-The `smallImageUrl` (required) is displayed in the preview card of the blog post. Upload an image (dimensions: **180x140**) to the directory `public/assets/img/blog`. Ensure the image is named `blog_post_mini_<id>.jpg`, where `<id>` needs to be replaced by blog post `id`. Add the image path as shown:
-```javascript 
-smallImageUrl: '/assets/img/blog/blog_post_mini_2.jpg', 
-```
-
-### 4. Add the Post Date
-The `date` (required) is used to determine the most recent posts and to display the date when the blog was published. Use the format `Month DD, YYYY`, as shown below:
-```javascript 
-date: 'November 1, 2024', 
-```
-
-### 5. Assign a Category
-The `category` (required) is used to filter blogs based on the category they belong to. Select an existing category from the `categories` list in `data/categories-tags.js`. If you want to add a new category, include it in the `categories` list in `data/categories-tags.js` before using it, as shown below:
-```javascript
- category: 'category',
-```
-
-### 6. Add a Title
-The `title` (required) is used to name a blog post and is also included in the route of that specific blog. Use a descriptive title and avoid symbols or random characters, as the title will be used for routing, as shown below:
-```javascript
- title: 'Your New Blog Post',
-```
-
-### 7. Add Tags
-The `tags` (required) are used to define the topics of the blog post. Include at least one tag in an array. Choose tags from the tags `list` in `data/categories-tags.js` or add your own tags to the tags `list` in `data/categories-tags.js` before using them, as shown below:
-```javascript
-tags: ['Tag1', 'Tag2', 'Tag3'],
- ```
-
-### 8. Add an Icon
-The `icon` (required) is used as a visual only. Use the standard icon path given below, you don't need a new one:
-```javascript
-icon: '/assets/img/icon/arrow-left-top.svg',
- ```
-
-### 9. Add the Author's Name
-The `author` (required) is used to display the name of person who wrote the blog post. Just add the author name, as shown below:
-```javascript
-author: 'Author 1', 
-```
-
-### 10. Add the Author's Quote
-The `authorQuote` (required) is used to display a bold quote or slogan related to the platform or blog. Example:
-```javascript
-authorQuote: 'Technology + Creativity = Tecvity!', 
-```
-
-### 11. Add the Author's Image
-The `authorImage` (required) is the display image of the author. Upload an image to `public/assets/img/team` or use your own `URL`. Alternatively, if no image is available, you can use the placeholder image `team.png`, which is already saved in `public/assets/img/team` for you, as shown below:
-```javascript
- authorImage: '/assets/img/team/team.png', 
- ```
-
-### 12. Add the Author's Profile
-The `authorProfile` (optional) is the profile of author if he is also one of the founders, include your profile path. Otherwise, set it to null. Example:
-```javascript
- authorProfile: '/founders/Najam-Ul-Saqib',  or  authorProfile: null, 
-```
-
-### 13. Add Blog Content
-The outermost `content` (required) is the actual blog post. Within the content, the `introduction` (required) serves as the introduction to the blog post, and the `sections` (required) describes different sections of the post. The `sections` can also be an empty array `[]` if no sections are added. If you want to add different sections, see [Add Blog Sections](#14-add-blog-sections). Example:
-```javascript
- content: { 
-    introduction: 'We believe that the key to our success is our team...', 
-    sections: [] 
-  } 
-  ```
-
-### 14. Add Blog Sections
-The `sections` (required) are used to add different sections in the blog post. Each section must include a `heading` (required) and either `list`, `content`, or `services` (one is required at a time). The `list`/`services` is used to add items in the form of list, while `content` is used to display simple text without any styling. A sample is shown below:
-```javascript
-content: {
-    introduction: "...",
-    sections: [
-      {
-        heading: "Key Highlights",
-        list: [
-          { title: "Highlight 1", description: "Highlight description" },
-          { title: "Highlight 2", description: "Highlight description" }
-        ]
-      },
-      {
-        heading: "Our Approach",
-        content: "We focus on understanding client needs and delivering tailor-made solutions."
-      },
-      {
-        heading: "Services Overview",
-        services: [
-          { title: "Service 1", description: "service description" },
-          { title: "Service 2", description: "service description" }
-        ]
-      }
-    ]
-  } 
-  ```
+Ensure the title is unique and descriptive.
 
 ---
 
-## Final Example BlogPost Object
-Add your final object, similar to the structure given below, to the `blogPosts` list in the `data/blogs.js` file to get your blog posted.
-```javascript
- {
-  id: 2,
-  image: '/assets/img/blog/blog_post_2_1.jpg', 
-  smallImageUrl: '/assets/img/blog/blog_post_mini_2.jpg',
-  date: 'November 1, 2024',
-  category: 'category',
-  title: 'Your New Blog Post',
-  tags: ['Tag1', 'Tag2', 'Tag3'],
-  icon: '/assets/img/icon/arrow-left-top.svg',
-  author: 'Author 1', 
-  authorQuote: 'Technology + Creativity = Tecvity!',
-  authorImage: '/assets/img/team/team.png',
-  authorProfile: null, 
-  content: { 
-    introduction: 'We believe that the key to our success is our team...', 
-    sections: [
-      {
-        heading: "Key Highlights",
-        list: [
-          { title: "Highlight 1", description: "Highlight description" },
-          { title: "Highlight 2", description: "Highlight description" }
-        ]
-      },
-      {
-        heading: "Our Approach",
-        content: "We focus on understanding client needs and delivering tailor-made solutions."
-      },
-      {
-        heading: "Services Overview",
-        services: [
-          { title: "Service 1", description: "service description" },
-          { title: "Service 2", description: "service description" }
-        ]
-      }
-    ] 
-  }
-} 
+### 2. Add Blog Metadata
+
+At the top of your `.mdx` file, add metadata as a front matter block using YAML. This metadata is required for dynamic rendering.
+
+#### Add an ID
+The `id` (required) is the unique numeric identifier for a blog post. It should be incremented by one from the last blog post ID. Example:
+
+```yaml
+id: 1
+```
+
+#### Add a Title
+The `title` (required) is the name of the blog post and is also included in the route for that blog. Use a descriptive title. Example:
+
+```yaml
+title: "Unveiling Tecvity: The Future of Tech Innovation"
+```
+
+#### Add the Post Date
+The `date` (required) specifies when the blog was published. Use the format `Month DD, YYYY`. Example:
+
+```yaml
+date: "November 1, 2024"
+```
+
+#### Assign a Category
+The `category` (required) groups blogs into categories for filtering. Select an existing category from the pre-defined list in the project. If you want to create a new category, you must first add it to the categories file (`data/categories-tags.js` or similar location). Use descriptive and concise category names. Example:
+
+```yaml
+category: "Company"
+```
+
+**Adding a New Category**:
+1. Open the `categories` list file (usually `data/categories-tags.js`).
+2. Add a new category to the array.
+3. Use the new category in the blog metadata.
+
+#### Add Tags
+The `tags` (required) highlight the topics covered in the blog. Provide at least one tag. Tags should be descriptive and relevant to the content. Example:
+
+```yaml
+tags: ["Agency", "Technology", "Business"]
+```
+
+**Adding a New Tag**:
+1. Open the `tags` list file (usually `data/categories-tags.js`).
+2. Add the new tag to the array.
+3. Use the new tag in the blog metadata.
+
+Note: Tags help with searchability and categorization, so choose terms that reflect the content of the blog.
+
+#### Add the Author's Name
+The `author` (required) displays the name of the blog writer. The author must be from the founders' team. Example:
+
+```yaml
+author: "Najam Ul Saqib"
+```
+
+#### Add the Author's Quote
+The `authorQuote` (required) is a bold quote or tagline by the author. Example:
+
+```yaml
+authorQuote: "Technology + Creativity = Tecvity!"
+```
+
+#### Add a High-Quality Blog Image
+The `image` (required) is displayed at the top of the blog post. Upload an image (dimensions: 1080x600) to the `public/assets/img/blog` directory. Name it as `blog_post_<id>_<serial number>.jpg`, where `<id>` is the blog ID and `<serial number>` is a unique number. Example:
+
+```yaml
+image: "/assets/img/blog/blog_post_1_1.jpg"
+```
+
+#### Add the Author's Image
+The `authorImage` (required) is the author's display picture. Upload it to `public/assets/img/team` or use an existing placeholder like `team.png`. Example:
+
+```yaml
+authorImage: "/assets/img/team/njm.png"
+```
+
+#### Add the Author's Profile
+The `authorProfile` (required) links to the author's profile if they are a founder. If not applicable, set it to `null`. Example:
+
+```yaml
+authorProfile: "/founders/Najam-Ul-Saqib"
 ```
 
 ---
+
+### 3. Add Blog Content
+
+Write the blog content below the metadata using Markdown. Include headings, paragraphs, and images. Example:
+
+```mdx
+![Unveiling Tecvity](/assets/img/blog/blog_post_1_1.jpg)
+
+### Unveiling Tecvity: The Future of Tech Innovation
+
+We believe that the key to our success is our team. We are a team of passionate and dedicated professionals committed to delivering the highest quality software solutions.
+
+---
+
+### Our Vision
+
+To be a global leader in software development, providing cutting-edge solutions that empower our clients to achieve their goals and stay ahead of the competition.
+```
+
+To add an image in the blog content:
+
+```mdx
+![Image Description](/assets/img/blog/blog_post_1_2.jpg)
+```
+
+---
+
+## Metadata Reference
+
+Each blog must include the following metadata:
+
+- **id**: A unique numeric identifier for the blog.
+- **title**: The title of the blog post (must be unique).
+- **date**: The publication date in `Month DD, YYYY` format.
+- **category**: The category for filtering posts.
+- **tags**: An array of tags for the topics covered.
+- **author**: The name of the author (must be from the founders' team).
+- **image**: Path to the feature image.
+- **authorQuote**: A tagline or quote from the author.
+- **authorImage**: Path to the author's image.
+- **authorProfile**: Link to the author's profile or `null`.
+
+---
+
+## Example Blog File
+
+Here’s a complete `.mdx` file example:
+
+```mdx
+---
+id: 1
+title: "Unveiling Tecvity: The Future of Tech Innovation"
+date: "November 1, 2024"
+category: "Company"
+tags: ["Agency", "Technology", "Business"]
+author: "Najam Ul Saqib"
+image: "/assets/img/blog/blog_post_1_1.jpg"
+authorQuote: "Technology + Creativity = Tecvity!"
+authorImage: "/assets/img/team/njm.png"
+authorProfile: "/founders/Najam-Ul-Saqib"
+---
+
+![Unveiling Tecvity](/assets/img/blog/blog_post_1_1.jpg)
+
+### Unveiling Tecvity: The Future of Tech Innovation
+
+Technology + Creativity = Tecvity!
+
+---
+
+We believe that the key to our success is our team. We are a team of passionate and dedicated professionals who are committed to delivering the highest quality software solutions.
+
+### Our Vision
+
+To be a global leader in software development, providing cutting-edge solutions that empower our clients to achieve their goals and stay ahead of the competition.
+
+### Core Values
+- **Innovation**: Delivering cutting-edge solutions.
+- **Collaboration**: Working together with clients for mutual success.
+- **Ownership**: Taking accountability and initiative.
+
+### Conclusion
+
+Tecvity is your trusted partner for innovative software solutions.
+```
+
+---
+
+Follow this guide to create and publish new blog posts using `.mdx` files.
+
+---
+
 
 ## Service Addition Guide
 
