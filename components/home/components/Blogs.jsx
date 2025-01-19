@@ -1,4 +1,6 @@
-import { allBlogs } from "@/data/blogs";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,7 +9,24 @@ function sortByDateDescending(posts) {
 }
 
 export default function Blogs() {
-  const recentThreePosts = sortByDateDescending(allBlogs).slice(0, 3);
+  // Read all blog markdown files
+  const blogDir = path.join(process.cwd(), "app", "blogs-markdown");
+  const blogFiles = fs.readdirSync(blogDir);
+
+  // Process each Markdown file to extract its metadata
+  const blogs = blogFiles.map((file) => {
+    const filePath = path.join(blogDir, file);
+    const fileContents = fs.readFileSync(filePath, "utf-8");
+    const { data } = matter(fileContents);
+
+    return {
+      ...data,
+      slug: file.replace(/\.mdx?$/, ""), // Use the filename as the slug
+    };
+  });
+
+  // Sort blogs by date and get the three most recent ones
+  const recentThreePosts = sortByDateDescending(blogs).slice(0, 3);
 
   return (
     <section className="blog-area space">
@@ -24,30 +43,28 @@ export default function Blogs() {
             <div key={i} className="col-lg-4 col-md-6">
               <div className="blog-card">
                 <div className="blog-img">
-                  <Link scroll={false} href={`/blogs/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
+                  <Link scroll={false} href={`/blogs/${elm.slug}`}>
                     <Image
                       width={416}
                       height={314}
-                      src={elm.image}
-                      alt="blog image"
+                      src={elm.image || "/default-blog-image.jpg"} // Use a fallback image if none is provided
+                      alt={elm.title || "Blog Image"}
                     />
                   </Link>
                 </div>
                 <div className="blog-content">
                   <div className="post-meta-item blog-meta">
                     <a href="#">{elm.date}</a>
-                    <a href={`/blogs/category/${elm.category.toLowerCase()}`}>{elm.category}</a>
+                    <a href={`/blogs/category/${elm.category.replace(/\s+/g, "-").toLowerCase()}`}>
+                      {elm.category}
+                    </a>
                   </div>
                   <h4 className="blog-title">
-                    <Link scroll={false} href={`/blogs/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
+                    <Link scroll={false} href={`/blogs/${elm.slug}`}>
                       {elm.title}
                     </Link>
                   </h4>
-                  <Link
-                    scroll={false}
-                    href={`/blogs/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}
-                    className="link-btn"
-                  >
+                  <Link scroll={false} href={`/blogs/${elm.slug}`} className="link-btn">
                     <span className="link-effect">
                       <span className="effect-1">READ MORE</span>
                       <span className="effect-1">READ MORE</span>

@@ -1,5 +1,4 @@
 "use client";
-import { allBlogs } from "@/data/blogs";
 import Link from "next/link";
 import React, { useState } from "react";
 import Pagination from "./Pagination";
@@ -10,7 +9,8 @@ import Tags from "./Tags";
 import Image from "next/image";
 
 const blogsPerPage = 6;
-export default function BlogList2({ blogs = allBlogs }) {
+
+export default function BlogList2({ blogs }) {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(blogs.length / blogsPerPage);
   const indexOfLastBlog = currentPage * blogsPerPage;
@@ -18,7 +18,7 @@ export default function BlogList2({ blogs = allBlogs }) {
   const currentBlogs = blogs.slice(indexOfFirstBlog, indexOfLastBlog);
 
   const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber); 
+    setCurrentPage(pageNumber);
   };
 
   return (
@@ -29,43 +29,42 @@ export default function BlogList2({ blogs = allBlogs }) {
             <div className="col-70">
               <div className="blog-post-wrap">
                 <div className="row gy-30 gutter-24">
-                  {/* Use currentBlogs instead of blogs here */}
-                  {currentBlogs.map((elm, i) => (
+                  {currentBlogs.map((blog, i) => (
                     <div key={i} className="col-md-6">
                       <div className="blog-post-item-two">
                         <div className="blog-post-thumb">
-                          <Link
-                            scroll={false}
-                            href={`/blogs/${elm.title.replace(/\s+/g, "-").toLowerCase()}`}
-                          >
+                          <Link scroll={false} href={`/blogs/${blog.slug}`}>
                             <Image
                               width={856}
                               height={600}
-                              src={elm.image}
-                              alt="img"
+                              src={blog.image || "/default-blog-image.jpg"}
+                              alt={blog.title || "Blog Image"}
                             />
                           </Link>
                         </div>
                         <div className="blog-post-content">
                           <div className="blog-post-meta">
                             <ul className="list-wrap">
-                              <li>{elm.date}</li>
+                              <li>{blog.date}</li>
                               <li>
-                                <a href={`/blogs/category/${elm.category.replace(/\s+/g, "-").toLowerCase()}`}>{elm.category}</a>
+                                <a
+                                  href={`/blogs/category/${blog.category
+                                    .replace(/\s+/g, "-")
+                                    .toLowerCase()}`}
+                                >
+                                  {blog.category}
+                                </a>
                               </li>
                             </ul>
                           </div>
                           <h4 className="title">
-                            <Link
-                              scroll={false}
-                              href={`/blogs/${elm.title.replace(/\s+/g, "-").toLowerCase()}`}
-                            >
-                              {elm.title}
+                            <Link scroll={false} href={`/blogs/${blog.slug}`}>
+                              {blog.title}
                             </Link>
                           </h4>
                           <Link
                             scroll={false}
-                            href={`/blogs/${elm.title.replace(/\s+/g, "-").toLowerCase()}`}
+                            href={`/blogs/${blog.slug}`}
                             className="link-btn"
                           >
                             <span className="link-effect">
@@ -94,9 +93,9 @@ export default function BlogList2({ blogs = allBlogs }) {
             <div className="col-30">
               <aside className="blog__sidebar">
                 <BlogSerchbar />
-                <Categories />
-                <RecentPosts />
-                <Tags />
+                <Categories blogs={blogs} />
+                <RecentPosts blogs={blogs} />
+                <Tags blogs={blogs} />
               </aside>
             </div>
           </div>

@@ -1,10 +1,6 @@
 import Link from "next/link";
-import { allBlogs } from "@/data/blogs";
 
-export default function Breadcumb2({blogTitle}) {
-  const decodedBlogTitle = blogTitle.replace(/-/g, ' ').toLowerCase();
-  const blogItem = allBlogs.find((post) => post.title.toLowerCase() === decodedBlogTitle.toLowerCase()) || allBlogs[0];
-
+export default function DetailBreadcrumb({ blogTitle }) {
   return (
     <div className="breadcumb-wrapper style2 bg-smoke">
       <div className="container-fluid">
@@ -20,7 +16,7 @@ export default function Breadcumb2({blogTitle}) {
                 Blog
               </Link>
             </li>
-            <li>{blogItem.title}</li>
+            <li>{blogTitle}</li>
           </ul>
         </div>
       </div>

@@ -1,23 +1,38 @@
-import { allBlogs } from "@/data/blogs";
-import { tags } from "@/data/categories-tags";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 import BlogList from "@/components/blog/components/BlogList";
 import Breadcumb from "@/components/blog/components/BaseBreadcrumb";
 import MarqueeComponent from "@/components/common/Marquee";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 
-// export async function generateMetadata({ params }) {
-//   return {
-//     title: `Tag | ${params.title} | Tecvity`,
-//   };
-// }
+// Fetch blogs based on a tag
+async function getBlogsByTag(tag) {
+  const blogsDirectory = path.join(process.cwd(), "app", "blogs-markdown");
+  const files = fs.readdirSync(blogsDirectory);
 
-export default function TagPage({ params }) {
+  const filteredBlogs = files
+    .map((fileName) => {
+      const filePath = path.join(blogsDirectory, fileName);
+      const fileContents = fs.readFileSync(filePath, "utf-8");
+      const { data } = matter(fileContents); // Extract front matter
+
+      return {
+        ...data,
+        slug: fileName.replace(/\.mdx$/, ""), // Use the file name as the slug
+      };
+    })
+    .filter((blog) =>
+      blog.tags?.some((blogTag) => blogTag.toLowerCase() === tag.toLowerCase())
+    );
+
+  return filteredBlogs;
+}
+
+export default async function TagPage({ params }) {
   const { title } = params;
-  const filteredTitle = tags.filter(
-    (tag) => tag.text.toLowerCase() === title.toLowerCase()
-  );
-  const filteredBlogs = allBlogs.find((blog) => blog.tags?.includes(filteredTitle.text));
+  const filteredBlogs = await getBlogsByTag(title);
 
   return (
     <>
