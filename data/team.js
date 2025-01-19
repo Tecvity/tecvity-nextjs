@@ -10,6 +10,24 @@ export const teamData = [
       "Najam has years of experience in cybersecurity having expertise in application and cloud security. He has worked with various organizations and helped secure their infrastructure",
     para2:
       "He owns various industry-recognized certifications and have been certified by Microsoft as Azure security expert",
+    socialLinks: [
+      {
+        href: "https://www.linkedin.com/",
+        iconClass: "fab fa-linkedin",
+      },
+      {
+        href: "https://instagram.com/",
+        iconClass: "fab fa-instagram",
+      },
+      {
+        href: "https://www.upwork.com/freelancers/~0191785ee40bb1eec0/",
+        iconClass: "fab fa-upwork",
+      },
+      {
+        href: "https://behance.net/",
+        iconClass: "fab fa-behance",
+      },
+  ],
   },
   {
     id: 2,
@@ -20,7 +38,25 @@ export const teamData = [
     phone: "+92-335-189-5414",
     para1:
       "Moeez is known for his expertise in web application development. He has the knack for developing robust applications",
-    para2: "He holds expertise in the Javascript stack."
+    para2: "He holds expertise in the Javascript stack.",
+    socialLinks: [
+      {
+        href: "https://www.linkedin.com/",
+        iconClass: "fab fa-linkedin",
+      },
+      {
+        href: "https://instagram.com/",
+        iconClass: "fab fa-instagram",
+      },
+      {
+        href: "https://www.upwork.com/",
+        iconClass: "fab fa-upwork",
+      },
+      {
+        href: "https://behance.net/",
+        iconClass: "fab fa-behance",
+      },
+    ],
   },
   {
     id: 3,
@@ -32,5 +68,23 @@ export const teamData = [
     para1:
       "Tayyub's creative mindset is not something you see regularly. His designs speak well of his expertise in the world of graphics.",
     para2: "He holds expertise in Visual Identity Design and UI Design",
+    socialLinks: [
+      {
+        href: "https://www.linkedin.com/",
+        iconClass: "fab fa-linkedin",
+      },
+      {
+        href: "https://instagram.com/",
+        iconClass: "fab fa-instagram",
+      },
+      {
+        href: "https://www.upwork.com/",
+        iconClass: "fab fa-upwork",
+      },
+      {
+        href: "https://behance.net/",
+        iconClass: "fab fa-behance",
+      },
+    ],
   }
 ];

@@ -1,4 +1,3 @@
-import { socialMediaLinks } from "@/data/socials";
 import { teamData } from "@/data/team";
 import Image from "next/image";
 
@@ -38,11 +37,11 @@ export default function TeamDetails({ teamName }) {
                   <a href={`tel::${teamItem.phone}`}>{teamItem.phone}</a>
                 </h6>
                 <div className="social-btn mt-4">
-                  {socialMediaLinks.map((elm, i) => (
-                    <a key={i} href={elm.href} target="_blank">
-                      <i className={elm.iconClass}></i>
-                    </a>
-                  ))}
+                {teamItem.socialLinks.map((link, index) => (
+                  <a key={index} href={link.href} target="_blank" rel="noopener noreferrer">
+                    <i className={link.iconClass}></i>
+                  </a>
+                ))}
                 </div>
               </div>
             </div>
