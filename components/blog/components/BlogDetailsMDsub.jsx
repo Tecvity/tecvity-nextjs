@@ -24,7 +24,7 @@ const BlogDetailsMDsub = ({ data }) => {
       <div className="blog__avatar-wrap">
         <div className="blog__avatar-img">
           <a href="#">
-            <Image width={196} height={180} src={data.authorImage} alt="img" />
+            <Image width={196} height={180} src={data.authorImage ? data.authorImage : "/assets/img/team/team.png" } alt="img" />
           </a>
         </div>
         <div className="blog__avatar-info">

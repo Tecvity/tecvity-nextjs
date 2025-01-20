@@ -214,7 +214,7 @@ tags: ["Agency", "Technology", "Business"]
 Note: Tags help with searchability and categorization, so choose terms that reflect the content of the blog.
 
 #### Add the Author's Name
-The `author` (required) displays the name of the blog writer. The author must be from the founders' team. Example:
+The `author` (required) displays the name of the blog writer. The author can be from the founders' team or a someone else. Example:
 
 ```yaml
 author: "Najam Ul Saqib"
@@ -235,14 +235,14 @@ image: "/assets/img/blog/blog_post_1_1.jpg"
 ```
 
 #### Add the Author's Image
-The `authorImage` (required) is the author's display picture. Upload it to `public/assets/img/team` or use an existing placeholder like `team.png`. Example:
+The `authorImage` (optional) is the author's display picture. Upload it to `public/assets/img/team` or a placeholder is set by default `team.png`. Example:  
 
 ```yaml
 authorImage: "/assets/img/team/njm.png"
 ```
 
 #### Add the Author's Profile
-The `authorProfile` (required) links to the author's profile if they are a founder. If not applicable, set it to `null`. Example:
+The `authorProfile` (optional) links to the author's profile if they are a founder. If not applicable, set it to `null` or skip it. Example:
 
 ```yaml
 authorProfile: "/founders/Najam-Ul-Saqib"

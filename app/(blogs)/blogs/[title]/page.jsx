@@ -13,7 +13,7 @@ export const metadata = {
 
 export default async function BlogPageDetails({ params }) {
   const { title } = params;
-  const filePath = path.join(process.cwd(), 'app', 'blogs-markdown', `${title}.mdx`);
+  const filePath = path.join(process.cwd(), 'data', 'blogs', `${title}.mdx`);
   const fileContents = fs.readFileSync(filePath, 'utf-8');
   const { content, data } = matter(fileContents);
 
