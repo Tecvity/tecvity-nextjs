@@ -152,7 +152,7 @@ Welcome to the **Blog Post Contribution Guide**! This guide provides step-by-ste
 
 ### 1. Create a New MDX File
 
-Navigate to the `blogs-markdown` directory and create a new `.mdx` file. The filename should match the title of your blog post (in kebab-case), for example:
+Navigate to the `data/blogs` directory and create a new `.mdx` file. The filename should match the title of your blog post (in kebab-case), for example:
 
 ```plaintext
 unveiling-tecvity-the-future-of-tech-innovation.mdx

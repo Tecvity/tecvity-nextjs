@@ -10,7 +10,7 @@ function sortByDateDescending(posts) {
 
 export default function Blogs() {
   // Read all blog markdown files
-  const blogDir = path.join(process.cwd(), "app", "blogs-markdown");
+  const blogDir = path.join(process.cwd(), "data", "blogs");
   const blogFiles = fs.readdirSync(blogDir);
 
   // Process each Markdown file to extract its metadata
