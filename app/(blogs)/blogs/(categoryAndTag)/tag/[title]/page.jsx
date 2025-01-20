@@ -9,7 +9,7 @@ import Header from "@/components/header/Header";
 
 // Fetch blogs based on a tag
 async function getBlogsByTag(tag) {
-  const blogsDirectory = path.join(process.cwd(), "app", "blogs-markdown");
+  const blogsDirectory = path.join(process.cwd(), "data", "blogs");
   const files = fs.readdirSync(blogsDirectory);
 
   const filteredBlogs = files

@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
 
 // Fetch blogs from Markdown files
 async function getBlogsByCategoryOrTag(categoryOrTag) {
-  const blogsDirectory = path.join(process.cwd(), "app", "blogs-markdown");
+  const blogsDirectory = path.join(process.cwd(), "data", "blogs");
   const files = fs.readdirSync(blogsDirectory);
 
   const filteredBlogs = files

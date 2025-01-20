@@ -13,7 +13,7 @@ export const metadata = {
 
 // Fetch blogs during server-side rendering
 async function getAllBlogs() {
-  const blogsDirectory = path.join(process.cwd(), "app", "blogs-markdown");
+  const blogsDirectory = path.join(process.cwd(), "data", "blogs");
   const files = fs.readdirSync(blogsDirectory);
 
   const blogs = files.map((fileName) => {
