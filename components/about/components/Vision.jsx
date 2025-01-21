@@ -28,7 +28,7 @@ export default function Vision() {
               <strong>Social Responsibility:</strong> Giving back to the community and supporting sustainable growth.
             </li>
   
-             <li style={{ marginBottom: "10px" }}>
+             <li style={{ marginBottom: "10px" }}> 
                <strong>Integrity and Respect:</strong> Ensuring fairness, honesty, and care in every interaction.
              </li>
   
