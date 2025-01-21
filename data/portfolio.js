@@ -33,7 +33,7 @@ export const VAPTPortfolio = [
     imageSrc: "/assets/img/portfolio/portfolio-vapt/vapt_5.png",
     itemsImages: [ "/assets/img/portfolio/portfolio-vapt/vapt_6.png" ], 
     categoryLinks: ["Cybersecurity","Web Application Security"],
-    "title": "Dental App", // dentina, https://dentina.ai/
+    "title": "Penetration test of an AI-Powered Dental App",  // dentina, https://dentina.ai/
     "category": "Black Box Penetration Test",
     "client": "Security Consultants",
     "date": "Nov, 2024",
