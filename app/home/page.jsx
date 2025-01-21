@@ -6,7 +6,7 @@ import Faq from "@/components/home/components/Faq";
 import Portfolio from "@/components/home/components/Portfolio";
 import Team from "@/components/home/components/Team";
 import Testimonials from "@/components/home/components/Testimonials";
-// import Blogs from "@/components/home/components/Blogs";
+import Blogs from "@/components/home/components/Blogs";
 import Footer from "@/components/footer/Footer";
 
 export const metadata = {
@@ -24,7 +24,7 @@ export default function HomePage() {
       <Portfolio />
       <Team />
       <Testimonials />
-      {/* <Blogs /> */}
+      <Blogs />
       <Footer />
     </>
   );

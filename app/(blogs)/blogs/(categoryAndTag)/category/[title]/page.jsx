@@ -1,4 +1,6 @@
-import { allBlogs } from "@/data/blogs";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 import BlogList from "@/components/blog/components/BlogList";
 import Breadcumb from "@/components/blog/components/BaseBreadcrumb";
 import MarqueeComponent from "@/components/common/Marquee";
@@ -10,11 +12,40 @@ export async function generateMetadata({ params }) {
     title: `Blog | ${params.title} | Tecvity`,
   };
 }
-export default function CategoryPage({ params }) {
+
+// Fetch blogs from Markdown files
+async function getBlogsByCategoryOrTag(categoryOrTag) {
+  const blogsDirectory = path.join(process.cwd(), "data", "blogs");
+  const files = fs.readdirSync(blogsDirectory);
+
+  const filteredBlogs = files
+    .map((fileName) => {
+      const filePath = path.join(blogsDirectory, fileName);
+      const fileContents = fs.readFileSync(filePath, "utf-8");
+      const { data } = matter(fileContents); // Extract front matter
+
+      return {
+        ...data,
+        slug: fileName.replace(/\.mdx$/, ""), // Use the file name as the slug
+      };
+    })
+    .filter((blog) => {
+      const normalizedCategory = blog.category.toLowerCase();
+      const normalizedTags = blog.tags.map((tag) => tag.toLowerCase());
+      const normalizedParam = categoryOrTag.toLowerCase();
+
+      return (
+        normalizedCategory === normalizedParam ||
+        normalizedTags.includes(normalizedParam)
+      );
+    });
+
+  return filteredBlogs;
+}
+
+export default async function CategoryPage({ params }) {
   const { title } = params;
-  const filteredBlogs = allBlogs.filter(
-    (blog) => blog.category.toLowerCase() === title.toLowerCase()
-  );
+  const filteredBlogs = await getBlogsByCategoryOrTag(title);
 
   return (
     <>

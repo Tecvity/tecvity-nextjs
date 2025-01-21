@@ -1,10 +1,10 @@
 import { tags } from "@/data/categories-tags";
-import { allBlogs } from "@/data/blogs";
 
-export default function Tags() {
+export default function Tags({ blogs }) {
+  // Calculate the counts of blogs per tag
   const tagCounts = tags.reduce((acc, tag) => {
-    const count = allBlogs.filter((blog) => blog.tags?.includes(tag.text)).length;
-    acc[tag.id] = count;
+    const count = blogs.filter((blog) => blog.tags?.includes(tag.text)).length;
+    acc[tag.id] = count; // Link counts to tag IDs
     return acc;
   }, {});
 
@@ -15,7 +15,10 @@ export default function Tags() {
         <ul className="list-wrap">
           {tags.map((tag) => (
             <li key={tag.id}>
-              <a href={`/blogs/tag/${tag.text.toLowerCase()}`} className={tagCounts[tag.id] > 0 ? "" : "disabled"}>
+              <a
+                href={`/blogs/tag/${tag.text.toLowerCase()}`}
+                className={tagCounts[tag.id] > 0 ? "" : "disabled"}
+              >
                 {tag.text}
               </a>
             </li>

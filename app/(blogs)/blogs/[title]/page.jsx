@@ -1,22 +1,27 @@
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 import Header from "@/components/header/Header";
-import BlogDetails from "@/components/blog/components/BlogDetails";
-import DetailBreadcumb from "@/components/blog/components/DetailBreadcrumb";
+import DetailBreadcrumb from "@/components/blog/components/DetailBreadcrumb";
 import MarqueeComponent from "@/components/common/Marquee";
 import Footer from "@/components/footer/Footer";
-
-//USE Static Side Genaration(SSG) if necessary
+import BlogDetailsMD from '@/components/blog/components/BlogDetailsMD';
 
 export const metadata = {
-  title:
-    "Blog Details || Tecvity - Delivering Creative Technological Solutions",
+  title: "Blog Details || Tecvity - Delivering Creative Technological Solutions",
 };
 
-export default function BlogPageDetails({ params }) {
+export default async function BlogPageDetails({ params }) {
+  const { title } = params;
+  const filePath = path.join(process.cwd(), 'data', 'blogs', `${title}.mdx`);
+  const fileContents = fs.readFileSync(filePath, 'utf-8');
+  const { content, data } = matter(fileContents);
+
   return (
     <>
       <Header />
-      <DetailBreadcumb blogTitle={params.title} />
-      <BlogDetails blogTitle={params.title} />
+      <DetailBreadcrumb blogTitle={data.title} />
+      <BlogDetailsMD data={data} content={content}/>
       <MarqueeComponent />
       <Footer />
     </>
