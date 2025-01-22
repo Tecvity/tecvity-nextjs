@@ -30,23 +30,19 @@ export const teamData = [
     phone: "+92-335-189-5414",
     para1:
       "Moeez is known for his expertise in web application development. He has the knack for developing robust applications",
-    para2: "He holds expertise in the Javascript stack.",
+    // para2: "He holds expertise in the Javascript stack.",
     socialLinks: [
       {
-        href: "https://www.linkedin.com/",
+        href: "https://www.linkedin.com/in/MZ-AD/",
         iconClass: "fab fa-linkedin",
       },
       {
-        href: "https://instagram.com/",
-        iconClass: "fab fa-instagram",
+        href: "https://github.com/MZ-AD",
+        iconClass: "fab fa-github",
       },
       {
-        href: "https://www.upwork.com/",
+        href: "https://www.upwork.com/freelancers/moeezahmed5",
         iconClass: "fab fa-upwork",
-      },
-      {
-        href: "https://behance.net/",
-        iconClass: "fab fa-behance",
       },
     ],
   },
