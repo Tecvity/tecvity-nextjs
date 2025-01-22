@@ -9,23 +9,15 @@ export const teamData = [
     para1:
       "Najam has years of experience in cybersecurity having expertise in application and cloud security. He has worked with various organizations and helped secure their infrastructure",
     para2:
-      "He owns various industry-recognized certifications and have been certified by Microsoft as Azure security expert",
+      "He owns various industry-recognized certifications such as CCSK, CCZT, SC-100, SC-900, AZ-500, etc. Also, he has been an active contributor to famous web-security tool i.e. ZAP",
     socialLinks: [
       {
-        href: "https://www.linkedin.com/",
+        href: "https://www.linkedin.com/in/njmulsqb",
         iconClass: "fab fa-linkedin",
-      },
-      {
-        href: "https://instagram.com/",
-        iconClass: "fab fa-instagram",
       },
       {
         href: "https://www.upwork.com/freelancers/~0191785ee40bb1eec0/",
         iconClass: "fab fa-upwork",
-      },
-      {
-        href: "https://behance.net/",
-        iconClass: "fab fa-behance",
       },
   ],
   },
