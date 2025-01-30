@@ -142,6 +142,20 @@ export const VAPTPortfolio = [
     "challenge": "The objective of this penetration test was to evaluate the security of the platform’s web application and APIs. One of the challenges was to understand and test the GraphQL API thoroughly, ensuring no vulnerabilities existed in its design or implementation. Additionally, the test aimed to identify vulnerabilities that could compromise sensitive family data or disrupt the platform’s functionality, with a focus on business logic, API security, and configuration settings.",
     "finalResult": "The penetration test identified several medium and low-severity vulnerabilities related to API security, business logic flaws, and misconfigurations. These issues were promptly reported to the platform's security team, who addressed them to enhance the overall security and reliability of the platform."
   },
+  {
+    "id": 111,
+    "imageSrc": "/assets/img/portfolio/portfolio-vapt/rembrandt.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/rembrandt-banner.avif"],
+    "categoryLinks": ["Network Security", "Black Box Testing", "Web Application Security"],
+    "title": "Penetration Test of Rembrandt",  
+    "category": "Black Box Penetration Test",
+    "client": "Alvin Rezel",
+    "date": "January, 2025",
+    "type": "vapt",
+    "para1": "Rembrandt is a leading manufacturer of corporate jewelry, catering to global markets with its distinctive and comprehensive awards programs. As a Canadian-owned and operated company, Rembrandt stands as one of the country's premier suppliers of service and recognition awards.",
+    "challenge": "The objective of this penetration test was to evaluate the security of the platform’s web application and network infrastructure. One of the challenges was to understand and test the underlying system thoroughly in a short span of time.",
+    "finalResult": "The penetration test identified several critical and high-severity vulnerabilities related to app security, business logic flaws, and misconfigurations. These issues were promptly reported to the platform's development team and appropriate remediations were suggested."
+  },
 ];
 export const PDPortfolio = [
   {
