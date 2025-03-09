@@ -6,7 +6,7 @@ import Footer from "@/components/footer/Footer";
 import { PDPortfolio } from "@/data/portfolio";
 
 export const metadata = {
-  title: "PD Portfolio",
+  title: "Portfolio",
 };
 export default function ProjectsVAPTPage() {
   return (
