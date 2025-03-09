@@ -32,7 +32,7 @@
     "react-scroll-parallax": "^3.4.5",
     "react-slick": "^0.30.0",
     "react-tooltip": "^5.26.0",
-    "sass": "^1.71.1",
+    "sass": "^1.85.1",
     "slick-carousel": "^1.8.1",
     "uuid": "^11.0.2",
     "wowjs": "^1.1.3"
