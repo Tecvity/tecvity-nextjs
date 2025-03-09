@@ -66,7 +66,7 @@ export default function Portfolio() {
                   data-wow-delay="0.2s"
                 >
                   <Link scroll={false} href={`/our-portfolio/${elm.type}/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
-                    <img src={elm.imageSrc} alt="portfolio" />
+                    <img src={elm.imageSrc} alt="portfolio"  style={{ width: "70%", height: "auto", }} />
                   </Link>
                 </div>
                 <div className="portfolio-details">
