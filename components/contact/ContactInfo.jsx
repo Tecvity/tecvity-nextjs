@@ -7,7 +7,7 @@ export default function ContactInfo() {
       <div className="container">
         <div className="row gy-4 align-items-center justify-content-center">
           {contactPageInfo.map((info, index) => (
-            <div key={index} className="col-xl-4 col-md-6">
+            <div key={index} className="col-3">
               <div className="feature-card">
                 <div className="feature-card-icon">
                   <Image width={36} height={40} src={info.iconSrc} alt="icon" />
