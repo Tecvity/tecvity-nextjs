@@ -43,4 +43,13 @@ export const contactPageInfo = [
     linkUrl: "tel:923088438733",
     linkText: "Call anytime",
   },
+  {
+    iconSrc: "/assets/img/icon/upwork.svg",
+    title: "Upwork",
+    address: "We are a Top-Rated Agency on Upwork",
+    linkUrl: "https://www.upwork.com/agencies/tecvity/",
+    linkText: "Work with us",
+  },
+  
+  
 ];
