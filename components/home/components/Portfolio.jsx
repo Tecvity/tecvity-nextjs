@@ -40,6 +40,16 @@ export default function Portfolio() {
       style={{ backgroundImage: "url(/assets/img/bg/portfolio-1-bg.png)" }}
     >
       <div className="container">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-lg-6">
+            <div className="title-area text-center">
+              <h2 className="sec-title">Our Work</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br></br>
         <div
           className="row  gy-60  justify-content-between masonary-active"
           ref={isotopContainer}
@@ -56,7 +66,7 @@ export default function Portfolio() {
                   data-wow-delay="0.2s"
                 >
                   <Link scroll={false} href={`/our-portfolio/${elm.type}/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
-                    <img src={elm.imageSrc} alt="portfolio" />
+                    <img src={elm.imageSrc} alt="portfolio"  style={{ width: "70%", height: "auto", }} />
                   </Link>
                 </div>
                 <div className="portfolio-details">
