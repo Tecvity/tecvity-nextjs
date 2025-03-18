@@ -26,6 +26,16 @@ export const contactPageInfo = [
     linkUrl: "https://maps.app.goo.gl/zQwmQhQR6AhxWjJaA",
     linkText: "Get direction",
   },
+
+  {
+    iconSrc: "/assets/img/icon/hire.png",
+    title: "Hire Us",
+    address: "You can hire us on Upwork",
+    linkUrl: "https://www.upwork.com/agencies/tecvity/", 
+    linkText: "Visit Upwork Profile",
+}
+,
+
   {
     iconSrc: "/assets/img/icon/speech-bubble.svg",
     title: "Email Address",
