@@ -16,34 +16,6 @@ export const menuItems = [
   //     { id: 18, label: "Personal Portfolio", link: "/home-8" },
   //   ],
   // },
-  {
-    id: 2,
-    title: "Pages",
-    subMenuItems: [
-      { id: 21, label: "About Us", link: "/about-us" },
-      { id: 22, label: "Blog", link: "/blogs" },
-      // {
-      //   id: 22,
-      //   title: "Service Page",
-
-      //   subMenuItems: [
-      //     { id: 221, label: "Service Version 1", link: "/service" },
-      //     { id: 222, label: "Service Version 2", link: "/service-2" },
-      //     { id: 223, label: "Service Version 3", link: "/service-3" },
-      //     {
-      //       id: 224,
-      //       label: "Service Details Page",
-      //       link: "/service-details/2",
-      //     },
-      //   ],
-      // },
-      { id: 23, label: "Our Founders", link: "/founders" },
-      // { id: 24, label: "Team Details", link: "/team-details/2" },
-      // { id: 25, label: "Pricing", link: "/pricing" },
-      // { id: 26, label: "FAQ", link: "/faq" },
-      // { id: 27, label: "Error Page", link: "/error" },
-    ],
-  },
   // {
   //   id: 3,
   //   title: "PORTFOLIO",
@@ -93,5 +65,33 @@ export const menuItems = [
     id: 5,
     title: "Contact",
     link: "/contact",
+  },
+  {
+    id: 2,
+    title: "More",
+    subMenuItems: [
+      { id: 21, label: "About Us", link: "/about-us" },
+      { id: 22, label: "Blog", link: "/blogs" },
+      // {
+      //   id: 22,
+      //   title: "Service Page",
+
+      //   subMenuItems: [
+      //     { id: 221, label: "Service Version 1", link: "/service" },
+      //     { id: 222, label: "Service Version 2", link: "/service-2" },
+      //     { id: 223, label: "Service Version 3", link: "/service-3" },
+      //     {
+      //       id: 224,
+      //       label: "Service Details Page",
+      //       link: "/service-details/2",
+      //     },
+      //   ],
+      // },
+      { id: 23, label: "Our Founders", link: "/founders" },
+      // { id: 24, label: "Team Details", link: "/team-details/2" },
+      // { id: 25, label: "Pricing", link: "/pricing" },
+      // { id: 26, label: "FAQ", link: "/faq" },
+      // { id: 27, label: "Error Page", link: "/error" },
+    ],
   },
 ];

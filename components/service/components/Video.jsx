@@ -24,7 +24,7 @@ export default function Video() {
                   className="jarallax"
                   ref={parallax.ref}
                   style={{
-                    backgroundImage: "url(/assets/img/service/s_vbg.png)",
+                    backgroundImage: "url(/assets/img/service/new.jpg)",
                     backgroundSize: "cover",
                     height: "100vh",
                     position: "absolute",
@@ -37,16 +37,17 @@ export default function Video() {
                     height: "100vh"
                   }}>
 
-                  <img src="https://img.youtube.com/vi/9_vZoq7Idus/default.jpg"               
+                  {/* <img src="url(/assets/img/service/this.png)"               
                     className="video-thumbnail img-fluid"
                     style={{
+                      backgroundImage: "url(/assets/img/service/this.png)",
                       width: "50vw",
                       height: "auto",
                       borderRadius: "8px",
                       opacity: 0.5,
                       maxWidth: "600px",
                     }}
-                  />
+                  /> */}
                   <div
                     onClick={() => setIsOpen(true)}
                     className="play-btn circle-btn btn background-image">

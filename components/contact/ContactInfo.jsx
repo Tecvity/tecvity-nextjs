@@ -5,7 +5,7 @@ export default function ContactInfo() {
   return (
     <div className="feature-area-1 space">
       <div className="container">
-        <div className="row gy-4 align-items-center justify-content-center">
+        <div className="row gy-4 align-items-center justify-content-left">
           {contactPageInfo.map((info, index) => (
             <div key={index} className="col-3">
               <div className="feature-card">
