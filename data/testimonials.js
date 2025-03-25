@@ -22,7 +22,7 @@ export const testimonialData = [
   {
     id: 4,
     text: "I really liked the work with Moeez, and the whole team of Tecvity, they are professional, quick responder, highly skilled, honest in their work, I would work with them in my all coming projects :)",
-    name: "Salmi Kai",  
+    name: "Salmi K.",  
     designation: "CEO KOCYBER",
   }
 
