@@ -15,8 +15,8 @@ export const testimonialData = [
   {
     id: 3,
     text: "I had the pleasure of working with NAJAM recently, and I can't speak highly enough of their incredible skills and communication. From the start, they approached every task with professionalism and efficiency, delivering results that exceeded our expectations. Not only did NAJAM possess a wealth of knowledge, but they were also proactive in offering suggestions that improved our workflow. Their communication was clear, timely, and always on point, ensuring we were on the same page throughout the project.\n\nIf you're looking for someone who can get the job done with expertise and ease, <br/ > I highly recommend NAJAM. Their attention to detail and ability to collaborate make them an invaluable asset. We would absolutely hire them again and encourage anyone else to do the same!",
-    name: "---",  // to be filled by Najam
-    designation: "---",  // to be filled by Najam
+    name: "Jad El Ghazal Mouwad", 
+    designation: "CEO, Big Pay", 
   },
 
   {
