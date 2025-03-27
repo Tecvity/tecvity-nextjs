@@ -58,19 +58,15 @@ export const teamData = [
     para2: "He holds expertise in Visual Identity Design and UI Design",
     socialLinks: [
       {
-        href: "https://www.linkedin.com/",
+        href: "https://www.linkedin.com/in/tayyub-ahmed/",
         iconClass: "fab fa-linkedin",
       },
       {
-        href: "https://instagram.com/",
-        iconClass: "fab fa-instagram",
-      },
-      {
-        href: "https://www.upwork.com/",
+        href: "https://www.upwork.com/freelancers/~010d4147f9fb6fba39?mp_source=share",
         iconClass: "fab fa-upwork",
       },
       {
-        href: "https://behance.net/",
+        href: "https://www.behance.net/tayyubahmed3",
         iconClass: "fab fa-behance",
       },
     ],

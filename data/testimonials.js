@@ -24,6 +24,13 @@ export const testimonialData = [
     text: "I really liked the work with Moeez, and the whole team of Tecvity, they are professional, quick responder, highly skilled, honest in their work, I would work with them in my all coming projects :)",
     name: "Salmi K.",  
     designation: "CEO KOCYBER",
+  },
+
+  {
+    id: 5,
+    text: "Tayyub and the Tecvity team have provided excellent services for our cybersecurity consulting firm as we have built our website. He has captured our ideas and translated them into stunning graphics and visuals. Great communication, and delivery on time. I can recommend Tayyub and Tecvity for marketing and design work, as they are thinking out of the box and bringing real creative ideas to the project.",
+    name: "Attila Horvath",  
+    designation: "CEO, Security Consultants",
   }
 
   

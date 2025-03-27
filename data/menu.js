@@ -47,8 +47,23 @@ export const menuItems = [
       },
       {
         id: 32,
-        label: "Product Design",
+        label: "Brand Identity Design",
         link: "/our-portfolio/pd",
+      },
+      {
+        id: 34,
+        label: "DevSecOps",
+        link: "/our-portfolio/DSO",
+      },
+      {
+        id: 35,
+        label: "Mobile & Web Application Development",
+        link: "/our-portfolio/Dev",
+      },
+      {
+        id: 36,
+        label: "UI/UX Design",
+        link: "/our-portfolio/UIUX",
       },
     ],
   },
