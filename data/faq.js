@@ -4,7 +4,6 @@ export const faqsHome = [
     question: `UI/UX Design
 `,
     answer: `We craft intuitive and visually stunning interfaces that enhance user experience. Our designs ensure your audience enjoys seamless interaction with your product.`,
-    // random: "random",
     link: "/our-services/ui_ux-design",
   },
   {
