@@ -172,15 +172,15 @@ export const VAPTPortfolio = [
   },
   {
     "id": 113,
-    "imageSrc": "/assets/img/portfolio/portfolio-vapt/healthcare_0.png",
-    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/healthcare_1.png"],
+    "imageSrc": "/assets/img/portfolio/portfolio-vapt/onsitehd.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/onsitehd-banner.avif"],
     "categoryLinks": ["Health Security", "Gray Box Testing", "Web Application Security"],
     "title": "Penetration Test of Health Diagnostics Platform", // onsitehd
     "category": "Gray Box Penetration Test",
     "client": "Security Consultants",
     "date": "January, 2025",
     "type": "vapt",
-    "para1": "A U.S based health diagnostics platform specializing in employee health assessments and biometric screenings. The platform offers on-site health services and manages sensitive employee health data, ensuring compliance with HIPAA standards for data protection.",
+    "para1": "The target was a U.S based health diagnostics platform specializing in employee health assessments and biometric screenings. The platform offers on-site health services and manages sensitive employee health data, ensuring compliance with HIPAA standards for data protection.",
     "challenge": "The goal of this penetration test was to identify vulnerabilities in the staging portal of the platform, focusing on both admin and normal user roles. The test specifically targeted potential Insecure Direct Object References (IDOR), session-related issues, and misconfigurations that could expose Personal Identifiable Information (PII). Additionally, the test aimed to ensure that the platform complied with HIPAA standards for securing sensitive health data.",
     "finalResult": "The penetration test revealed several high and medium-severity vulnerabilities, including misconfigurations that could potentially expose sensitive information and issues related to session management. These findings were communicated to the platform's security team, who initiated corrective actions to address the vulnerabilities and enhance the platform's security posture."
   }, 
