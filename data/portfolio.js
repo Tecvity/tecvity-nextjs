@@ -170,6 +170,21 @@ export const VAPTPortfolio = [
     "challenge": "The objective of this penetration test was to assess the security posture of the platform’s web application and underlying infrastructure. The challenge involved conducting a thorough evaluation with limited internal information, simulating an attacker with partial knowledge of the system.",
     "finalResult": "The penetration test uncovered several critical and high-severity vulnerabilities, including issues related to Insecure Direct Object References (IDOR), privilege escalation, and insufficient rate limiting. These findings were promptly communicated to the platform’s security team, who initiated remediation efforts. The platform maintains a proactive stance on security, including regular third-party assessments and vulnerability disclosure practices."
   },
+  {
+    "id": 113,
+    "imageSrc": "/assets/img/portfolio/portfolio-vapt/healthcare_0.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/healthcare_1.png"],
+    "categoryLinks": ["Health Security", "Gray Box Testing", "Web Application Security"],
+    "title": "Penetration Test of Health Diagnostics Platform", // onsitehd
+    "category": "Gray Box Penetration Test",
+    "client": "Security Consultants",
+    "date": "January, 2025",
+    "type": "vapt",
+    "para1": "A U.S based health diagnostics platform specializing in employee health assessments and biometric screenings. The platform offers on-site health services and manages sensitive employee health data, ensuring compliance with HIPAA standards for data protection.",
+    "challenge": "The goal of this penetration test was to identify vulnerabilities in the staging portal of the platform, focusing on both admin and normal user roles. The test specifically targeted potential Insecure Direct Object References (IDOR), session-related issues, and misconfigurations that could expose Personal Identifiable Information (PII). Additionally, the test aimed to ensure that the platform complied with HIPAA standards for securing sensitive health data.",
+    "finalResult": "The penetration test revealed several high and medium-severity vulnerabilities, including misconfigurations that could potentially expose sensitive information and issues related to session management. These findings were communicated to the platform's security team, who initiated corrective actions to address the vulnerabilities and enhance the platform's security posture."
+  }, 
+
 ];
 export const PDPortfolio = [
   {
