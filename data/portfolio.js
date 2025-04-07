@@ -156,6 +156,20 @@ export const VAPTPortfolio = [
     "challenge": "The objective of this penetration test was to evaluate the security of the platform’s web application and network infrastructure. One of the challenges was to understand and test the underlying system thoroughly in a short span of time.",
     "finalResult": "The penetration test identified several critical and high-severity vulnerabilities related to app security, business logic flaws, and misconfigurations. These issues were promptly reported to the platform's development team and appropriate remediations were suggested."
   },
+  {
+    "id": 112,
+    "imageSrc": "/assets/img/portfolio/portfolio-vapt/finops_0.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/finops_1.png"],
+    "categoryLinks": ["Cloud Security", "Gray Box Testing", "Web Application Security"],
+    "title": "Penetration Test of a Cloud-based FinOps Platform", // Octopus Cloud
+    "category": "Gray Box Penetration Test", 
+    "client": "Security Consultants",
+    "date": "April, 2025",
+    "type": "vapt",
+    "para1": "The target of this assessment was a FinOps platform designed to help service providers and their customers gain clarity over hybrid cloud environments. The platform enables users to reduce risk, enhance profitability, and make better operational and financial decisions by integrating finance, operations, and technology data.",
+    "challenge": "The objective of this penetration test was to assess the security posture of the platform’s web application and underlying infrastructure. The challenge involved conducting a thorough evaluation with limited internal information, simulating an attacker with partial knowledge of the system.",
+    "finalResult": "The penetration test uncovered several critical and high-severity vulnerabilities, including issues related to Insecure Direct Object References (IDOR), privilege escalation, and insufficient rate limiting. These findings were promptly communicated to the platform’s security team, who initiated remediation efforts. The platform maintains a proactive stance on security, including regular third-party assessments and vulnerability disclosure practices."
+  },
 ];
 export const PDPortfolio = [
   {
