@@ -172,8 +172,8 @@ export const VAPTPortfolio = [
   },
   {
     "id": 113,
-    "imageSrc": "/assets/img/portfolio/portfolio-vapt/onsitehd.png",
-    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/onsitehd-banner.avif"],
+    "imageSrc": "/assets/img/portfolio/portfolio-vapt/healthcare_0.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/healthcare_1.png"],
     "categoryLinks": ["Health Security", "Gray Box Testing", "Web Application Security"],
     "title": "Penetration Test of Health Diagnostics Platform", // onsitehd
     "category": "Gray Box Penetration Test",
@@ -183,6 +183,20 @@ export const VAPTPortfolio = [
     "para1": "The target was a U.S based health diagnostics platform specializing in employee health assessments and biometric screenings. The platform offers on-site health services and manages sensitive employee health data, ensuring compliance with HIPAA standards for data protection.",
     "challenge": "The goal of this penetration test was to identify vulnerabilities in the staging portal of the platform, focusing on both admin and normal user roles. The test specifically targeted potential Insecure Direct Object References (IDOR), session-related issues, and misconfigurations that could expose Personal Identifiable Information (PII). Additionally, the test aimed to ensure that the platform complied with HIPAA standards for securing sensitive health data.",
     "finalResult": "The penetration test revealed several high and medium-severity vulnerabilities, including misconfigurations that could potentially expose sensitive information and issues related to session management. These findings were communicated to the platform's security team, who initiated corrective actions to address the vulnerabilities and enhance the platform's security posture."
+  }, 
+  {
+    "id": 114,
+    "imageSrc": "/assets/img/portfolio/portfolio-vapt/vif_0.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/vif_1.png"],
+    "categoryLinks": ["Financial Security", "Gray Box Testing", "Web Application Security"],
+    "title": "Penetration Test of Financial Intelligence Platform", //David Gallant – Valid8
+    "category": "Gray Box Penetration Test",
+    "client": "Security Consultants",
+    "date": "May, 2024",
+    "type": "vapt",
+    "para1": "A cloud-based Verified Financial Intelligence (VFI) platform designed to assist forensic accountants in transforming financial documents into courtroom-ready evidence. Leveraging advanced AI, the platform enables rapid tracing of fund flows, enhancing the speed and accuracy of financial analyses.",
+    "challenge": "The objective of this penetration test was to assess the security posture of the platform's web application and underlying infrastructure. The focus was on identifying vulnerabilities related to business logic, particularly concerning the processing and analysis of financial data, as well as any misconfigurations that could compromise data integrity or confidentiality.",
+    "finalResult": "The penetration test uncovered several high and medium-severity vulnerabilities, including business logic flaws that could potentially allow unauthorized manipulation of data. These findings were promptly reported to the platform's security team, who acknowledged the issues and initiated remediation efforts to enhance the platform's security and maintain compliance with industry standards."
   }, 
 
 ];
