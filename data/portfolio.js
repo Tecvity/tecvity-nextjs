@@ -198,7 +198,21 @@ export const VAPTPortfolio = [
     "challenge": "The objective of this penetration test was to assess the security posture of the platform's web application and underlying infrastructure. The focus was on identifying vulnerabilities related to business logic, particularly concerning the processing and analysis of financial data, as well as any misconfigurations that could compromise data integrity or confidentiality.",
     "finalResult": "The penetration test uncovered several high and medium-severity vulnerabilities, including business logic flaws that could potentially allow unauthorized manipulation of data. These findings were promptly reported to the platform's security team, who acknowledged the issues and initiated remediation efforts to enhance the platform's security and maintain compliance with industry standards."
   }, 
-
+  {
+    "id": 115,
+    "imageSrc": "/assets/img/portfolio/portfolio-vapt/npcp_0.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-vapt/npcp_1.png"],
+    "categoryLinks": ["Network Security", "Black Box Testing", "Infrastructure Security"],
+    "title": "Penetration Test of Network Packet Capture Platform", // FMAD.io
+    "category": "Black Box Penetration Test",
+    "client": "Security Consultants",
+    "date": "March, 2025",
+    "type": "vapt",
+    "para1": "The target was a network packet capture platform specializing in high-performance, lossless packet capture solutions ranging from 10Gbps to 100Gbps. The platform offers cost-effective appliances designed to integrate seamlessly into existing network infrastructures, providing precise and reliable packet capture capabilities.",
+    "challenge": "The engagement involved conducting a black box penetration test with only an IP address provided. The primary objective was to enumerate the target's network services and configurations to identify potential vulnerabilities that could be exploited by external attackers.",
+    "finalResult": "The penetration test did not uncover any critical issues within the network. However, several areas were identified where security configurations could be enhanced to further strengthen the platform's defenses. These recommendations were communicated to the platform's security team, who acknowledged the insights and planned for proactive improvements to maintain a robust security posture."
+  }
+  
 ];
 export const PDPortfolio = [
   {
