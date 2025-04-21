@@ -1,18 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function RecentPosts({ blogs }) {
-  const recentThreePosts = blogs
-    .slice()
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 3);
-
+export default function RecentPosts({ recent }) {
   return (
     <div className="sidebar__widget">
       <h4 className="sidebar__widget-title">Recent Posts</h4>
       <div className="sidebar__post-list">
-        {recentThreePosts.map((post) => (
-          <div key={post.slug} className="sidebar__post-item">
+        {recent && recent.map((post, index) => (
+          <div key={index} className="sidebar__post-item">
             <div className="sidebar__post-thumb">
               <Link scroll={false} href={`/blogs/${post.slug}`}>
                 <Image

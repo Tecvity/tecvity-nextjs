@@ -38,7 +38,7 @@ export default async function TagPage({ params }) {
     <>
       <Header />
       <Breadcumb breadcumbTitle={`Tag | ${title}`} />
-      <BlogList blogs={filteredBlogs} blogTag={title} />
+      <BlogList tag={title} />
       <MarqueeComponent />
       <Footer />
     </>

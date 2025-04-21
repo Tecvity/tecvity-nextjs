@@ -1,27 +1,24 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
+"use client"
+import { useEffect } from "react";
 import Header from "@/components/header/Header";
 import DetailBreadcrumb from "@/components/blog/components/DetailBreadcrumb";
 import MarqueeComponent from "@/components/common/Marquee";
 import Footer from "@/components/footer/Footer";
 import BlogDetailsMD from '@/components/blog/components/BlogDetailsMD';
+import { useGetData } from '@/utils/hooks';
 
-export const metadata = {
-  title: "Blog Details || Tecvity - Delivering Creative Technological Solutions",
-};
-
-export default async function BlogPageDetails({ params }) {
+export default function BlogPageDetails({ params }) {
   const { title } = params;
-  const filePath = path.join(process.cwd(), 'data', 'blogs', `${title}.mdx`);
-  const fileContents = fs.readFileSync(filePath, 'utf-8');
-  const { content, data } = matter(fileContents);
+  const { data , isLoading, error, getData } = useGetData();
+  useEffect(() => {
+    getData(`/api/Blog/${title}/Data`)
+  }, [title]);
 
   return (
     <>
       <Header />
-      <DetailBreadcrumb blogTitle={data.title} />
-      <BlogDetailsMD data={data} content={content}/>
+      {data && <DetailBreadcrumb blogTitle={data.blog.title} />}
+      {data && <BlogDetailsMD data={data.blog} content={data.blog.content}/>}
       <MarqueeComponent />
       <Footer />
     </>
