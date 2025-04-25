@@ -1,26 +1,29 @@
+"use client"
 import { ourServices } from "@/data/features";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { usePathname } from "next/navigation"; // ✅ App Router hook
 
-export default function Features() {
+export default function Features({featuresList = ourServices || []}) {
+  const pathname = usePathname();
   return (
     <div className="feature-area-1 space">
       <div className="container">
         <div className="row gy-4 align-items-center justify-content-center">
-          {ourServices.map((elm, i) => (
+          {featuresList.map((elm, i) => (
             <div key={i} className="col-xl-4 col-md-6">
               <div className="feature-card">
                 <div className="feature-card-icon">
                   <Image width={40} height={40} src={elm.iconSrc} alt="icon" />
                 </div>
                 <h4 className="feature-card-title">
-                <a href={`/our-services/${elm.title.replace(/\s+/g, '-').replace(/\//g, '_').toLowerCase()}`}>{elm.title}</a>
+                <a href={`/${pathname}/${elm.title.replace(/\s+/g, '-').replace(/\//g, '_').toLowerCase()}`}>{elm.title}</a>
                 </h4>
                 <p className="feature-card-text">{elm.text}</p>
                 <Link
                   scroll={false}
-                  href={`/our-services/${elm.title.replace(/\s+/g, '-').replace(/\//g, '_').toLowerCase()}`}
+                  href={`${pathname}/${elm.title.replace(/\s+/g, '-').replace(/\//g, '_').toLowerCase()}`}
                   className="link-btn"
                 >
                   <span className="link-effect">

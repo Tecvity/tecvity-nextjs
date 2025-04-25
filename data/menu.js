@@ -33,28 +33,29 @@ export const menuItems = [
     subMenuItems: [
       {
         id: 41,
-        title: "Service 1",
-        link: "/service-1",
+        title: "Web & Mobile Development",
+        link: "/web-&-mobile-development",
         subMenuItems: [
-          { id: 411, label: "Service1-1", link: "/service-1/s1-1" },
-          { id: 412, label: "Service1-2", link: "/service-1/s1-2" },
-          { id: 413, label: "Service1-3", link: "/service-1/s1-3" },
+          { id: 411, label: "Web & Mobile Application Development", link: "/web-&-mobile-development/web-&-mobile-application-development" },
+          { id: 412, label: "DevSecOps", link: "/web-&-mobile-development/devsecops" },
         ],
       },
       {
         id: 42,
-        title: "Service 2",
-        link: "/service-2",
+        title: "Information Security & Compliance",
+        link: "/information-security-&-compliance",
         subMenuItems: [
-          { id: 421, label: "Service2-1", link: "/service-2/s2-1" }
+          { id: 421, label: "Penetration Testing & Vulnerability Assessment", link: "/information-security-&-compliance/penetration-testing-&-vulnerability-assessment" },
+          { id: 422, label: "Cloud Security Audits", link: "/information-security-&-compliance/cloud-security-audits" }
         ],
       },        
       {
         id: 43,
-        title: "Service 3",
-        link: "/service-3",
+        title: "Branding & Logo Design",
+        link: "/branding-&-logo-design",
         subMenuItems: [
-          { id: 431, label: "Service3-1", link: "/service-3/s3-1" },
+          { id: 431, label: "UI/UX Design", link: "/branding-&-logo-design/ui_ux-design" },
+          { id: 432, label: "Brand Identity Design", link: "/branding-&-logo-design/brand-identity-design" },
         ],
       },
     ],

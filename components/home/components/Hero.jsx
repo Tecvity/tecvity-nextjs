@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <div className="hero-wrapper hero-1" id="hero">
       <BookingModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      <div className="hero-slider background-image por" style={{ backgroundImage: "url(/assets/img/service/bg-sample.jpg"}} >
+      <div className="hero-slider background-image por" style={{ backgroundImage: "url(/assets/img/hero/bg-sample.jpg"}} >
       <div className="container">
         <div className="hero-style1">
         <div className="text-center mb-4 light-color fa-1x"><span className="glow-dot me-2"></span>  Top Rated Agency on Upwork</div>
@@ -50,21 +50,21 @@ export default function Hero() {
                 width={60}
                 height={60}
                 className="img1"
-                src="/assets/img/hero/hero-counter1-1.png"
+                src="/assets/img/testimonial/pp3.png"
                 alt="img"
               />
               <Image
                 width={60}
                 height={60}
                 className="img2"
-                src="/assets/img/hero/hero-counter1-2.png"
+                src="/assets/img/testimonial/pp2.png"
                 alt="img"
               />
               <Image
                 width={60}
                 height={60}
                 className="img2"
-                src="/assets/img/hero/hero-counter1-2.png"
+                src="/assets/img/testimonial/pp1.png"
                 alt="img"
               />
               <p>
