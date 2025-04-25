@@ -12,7 +12,7 @@
   margin-top: 80px;
   img {
     border-radius: 50%;
-    border: 3px solid $theme-color;
+    border: 3px solid transparent;
     width: 60px;
   }
   .img2 {
@@ -39,7 +39,7 @@
     font-weight: 600;
     line-height: 24px;
     font-family: $title-font;
-    color: $title-color;
+    color: $white-color;
     text-align: left;
     margin-left: 16px;
     text-transform: uppercase;
@@ -76,7 +76,7 @@
   color: $title-color;
   font-weight: 600;
   letter-spacing: -3px;
-  font-size: 120px;
+  font-size: 80px;
 }
 .hero-text {
   font-size: 18px;

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 // not used
-export default function Nav() {
+export default function Nav({darkMode}) {
   const pathname = usePathname();
 
   const isChildActive = (links) => {
@@ -36,7 +36,7 @@ export default function Nav() {
                   href={elm.link || "#"}
                   className={isActive ? "activeMenu" : ""}
                 >
-                  <span className="link-effect">
+                  <span className={`link-effect ${darkMode ? "light-color": "" }`}>
                     <span className="effect-1">{elm.title}</span>
                     <span className="effect-1">{elm.title}</span>
                   </span>
@@ -107,7 +107,7 @@ export default function Nav() {
                 className={isActive ? "activeMenu" : ""}
                 href={elm.link}
               >
-                <span className="link-effect">
+                <span className={`link-effect ${darkMode && !isActive ? "light-color": "" }`}>
                   <span className="effect-1">{elm.title}</span>
                   <span className="effect-1">{elm.title}</span>
                 </span>

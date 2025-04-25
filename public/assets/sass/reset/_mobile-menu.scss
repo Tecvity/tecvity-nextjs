@@ -47,27 +47,6 @@
     }
   }
 
-  .menu-item-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    >button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      padding: 0 10px;
-      .mean-expand-class{
-        &:before {
-          content: '\f107';
-          font-family: $icon-font;
-          font-weight: 700;
-        }
-      }
-    }
-  }
-
   .mobile-menu-area {
     width: 100%;
     max-width: 310px;
@@ -146,7 +125,11 @@
         letter-spacing: normal;
         text-transform: capitalize;
       }
-
+      &.active {
+        a {
+          font-weight: 600;
+        }
+      }
       &.active-class {
         >a {
           color: $title-color;
@@ -196,11 +179,17 @@
           background-color: transparent;
           color: $title-color;
           border-radius: 50%;
+
+          &:before {
+            content: '\f107';
+            font-family: $icon-font;
+            font-weight: 700;
+          }
         }
       }
 
       &.active-class {
-        >button {
+        >a {
           .mean-expand-class:before {
             content: '\f106';
           }

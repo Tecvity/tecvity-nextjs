@@ -2,23 +2,25 @@
 .testimonial-area-1 {
     margin-top: 100px;
     .testimonial-img-1-1 {
-        width: 44%;
+        width: 38%;
         img {
             height: 100%;
-            object-fit: cover;
+            object-fit:contain;
             width: 100%;
         }
     }
     @include xxl {
         .testimonial-img-1-1 {
-            width: 42%;
+            width: 30%;
         }
     }
     @include md {
         margin-top: 0;
         .testimonial-img-1-1 {
+            max-height: 50% !important;
             width: 100%;
-            top: -80px !important;
+            top: 0px !important;
+            right: 0px !important;
             position: relative;
         }
     }

@@ -55,7 +55,7 @@
     }
   }
   &.style3 {
-    border: 1px solid #4b4d49;
+    border: 1px solid $white-color;
     background: transparent;
     color: $white-color;
     &:after,
@@ -63,11 +63,11 @@
       border-top: 25px solid $white-color;
       border-bottom: 25px solid $white-color;
     }
-    &:focus,
-    &:hover,
-    &.active {
-      color: $title-color;
-    }
+    // &:focus,
+    // &:hover,
+    // &.active {
+    //   color: $title-color;
+    // }
   }
   &.style4 {
     background: $white-color;

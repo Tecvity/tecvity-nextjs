@@ -286,6 +286,28 @@ export const ourServices = [
   },
 ];
 
+export const parentServices = [
+  {
+    iconSrc: "/assets/img/icon/feature-icon1-1.svg",
+    title: "Web & Mobile Development",
+    id: 20,
+    text: "We Develop state of the art web and mobile apps that scale with your business",
+    link: "/our-services/web-and-mobile-development",
+  },
+  {
+    iconSrc: "/assets/img/icon/feature-icon1-2.svg",
+    title: "Information Security & Compliance",
+    id: 21,
+    text: "We can conduct security audits and provide recommendations on hardening your cloud security",
+  },
+  {
+    iconSrc: "/assets/img/icon/feature-icon1-4.svg",
+    title: "Branding & Logo Design",
+    id: 22,
+    text: "We can give your brand an identification that can not be forgotten",
+  },
+];
+
 export const allFeatures = [
   ...featureData,
   ...featureData2,

@@ -55,3 +55,49 @@
   pointer-events: none;
   opacity: 0.5;
 }
+
+.theme-bg {
+  background: $theme-color !important;
+}
+.dark-bg {
+  background: $body-color !important;
+}
+.light-bg {
+  background: $smoke-color !important;
+}
+.grey-bg {
+  background: $gray-color !important;
+}
+.theme-color {
+  color: $theme-color !important;
+}
+.dark-color {
+  color: $body-color !important;
+}
+.light-color {
+  color: $smoke-color !important;
+}
+.font-body {
+  font-family: $body-font !important;
+}
+.theme-shadow {
+  text-shadow: 0px 0px 10px $theme-color !important;
+}
+.glow-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: $theme-color;
+  border-radius: 50%;
+  box-shadow:
+    0 0 5px $theme-color,
+    0 0 10px $theme-color,
+    0 0 20px $theme-color;
+}
+.align-end {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+}
+.p-8{
+  padding: 8rem 2rem;
+}

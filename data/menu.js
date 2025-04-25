@@ -29,7 +29,36 @@ export const menuItems = [
   //     { id: 37, label: "Portfolio Details", link: "/our-portfolio/2" },
   //   ],
   // },
-  { id: 4, title: "Our Services", link: "/our-services" },
+  { id: 4, title: "Our Services", 
+    subMenuItems: [
+      {
+        id: 41,
+        title: "Service 1",
+        link: "/service-1",
+        subMenuItems: [
+          { id: 411, label: "Service1-1", link: "/service-1/s1-1" },
+          { id: 412, label: "Service1-2", link: "/service-1/s1-2" },
+          { id: 413, label: "Service1-3", link: "/service-1/s1-3" },
+        ],
+      },
+      {
+        id: 42,
+        title: "Service 2",
+        link: "/service-2",
+        subMenuItems: [
+          { id: 421, label: "Service2-1", link: "/service-2/s2-1" }
+        ],
+      },        
+      {
+        id: 43,
+        title: "Service 3",
+        link: "/service-3",
+        subMenuItems: [
+          { id: 431, label: "Service3-1", link: "/service-3/s3-1" },
+        ],
+      },
+    ],
+  },
   {
     id: 3,
     title: "Portfolio",
