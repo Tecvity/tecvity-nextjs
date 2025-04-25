@@ -12,7 +12,7 @@ const BlogDetailsMDsub = ({ data }) => {
   useEffect(() => {
     getData(`/api/Blog/${data.id}/Comments`);
     const url = encodeURIComponent(
-      `${window.location.origin}/blogs/${data.title}`
+      `${window.location.origin}/blog/${data.title}`
     );
     setLinkedinShareUrl(
       `https://www.linkedin.com/shareArticle?mini=true&url=${url}&source=LinkedIn`

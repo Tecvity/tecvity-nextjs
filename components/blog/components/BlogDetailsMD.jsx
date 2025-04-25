@@ -45,7 +45,7 @@ export default function BlogDetailsMD({ data, content }) {
                               {data.tags.map((tag, i) => (
                                 <li key={i}>
                                   <a
-                                    href={`/blogs/tag/${tag
+                                    href={`/blog/tag/${tag
                                       .replace(/\s+/g, "-")
                                       .toLowerCase()}`}
                                   >
@@ -88,11 +88,11 @@ export default function BlogDetailsMD({ data, content }) {
                       </div>
                     </div>
                     <div className="inner__page-nav mt-20 mb-n1">
-                    <a href={navigation ? `/blogs/${navigation.previous}` : ""} className={`nav-btn ${navigation && !navigation.previous ? "disabled" : ""}`}>
+                    <a href={navigation ? `/blog/${navigation.previous}` : ""} className={`nav-btn ${navigation && !navigation.previous ? "disabled" : ""}`}>
                       <i className="fa fa-arrow-left"></i>
                       <span>Previous Post</span>
                     </a>
-                    <a href={navigation ? `/blogs/${navigation.next}` : ""} className={`nav-btn ${navigation &&!navigation.next ? "disabled" : ""}`}>
+                    <a href={navigation ? `/blog/${navigation.next}` : ""} className={`nav-btn ${navigation &&!navigation.next ? "disabled" : ""}`}>
                       <span>Next Post</span>
                       <i className="fa fa-arrow-right"></i>
                     </a>

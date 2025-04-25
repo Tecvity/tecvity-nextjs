@@ -43,7 +43,7 @@ export default function Blogs() {
             <div key={i} className="col-lg-4 col-md-6">
               <div className="blog-card">
                 <div className="blog-img">
-                  <Link scroll={false} href={`/blogs/${elm.slug}`}>
+                  <Link scroll={false} href={`/blog/${elm.slug}`}>
                     <Image
                       width={416}
                       height={314}
@@ -55,16 +55,16 @@ export default function Blogs() {
                 <div className="blog-content">
                   <div className="post-meta-item blog-meta">
                     <a href="#">{elm.date}</a>
-                    <a href={`/blogs/category/${elm.category.replace(/\s+/g, "-").toLowerCase()}`}>
+                    <a href={`/blog/category/${elm.category.replace(/\s+/g, "-").toLowerCase()}`}>
                       {elm.category}
                     </a>
                   </div>
                   <h4 className="blog-title">
-                    <Link scroll={false} href={`/blogs/${elm.slug}`}>
+                    <Link scroll={false} href={`/blog/${elm.slug}`}>
                       {elm.title}
                     </Link>
                   </h4>
-                  <Link scroll={false} href={`/blogs/${elm.slug}`} className="link-btn">
+                  <Link scroll={false} href={`/blog/${elm.slug}`} className="link-btn">
                     <span className="link-effect">
                       <span className="effect-1">READ MORE</span>
                       <span className="effect-1">READ MORE</span>

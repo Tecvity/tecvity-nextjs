@@ -37,7 +37,7 @@ export default function BlogList({currrent = 1, limit = blogsPerPage, category =
                     <div key={i} className="col-md-6">
                       <div className="blog-post-item-two">
                         <div className="blog-post-thumb">
-                          <Link scroll={false} href={`/blogs/${blog.slug}`}>
+                          <Link scroll={false} href={`/blog/${blog.slug}`}>
                             <Image
                               width={856}
                               height={600}
@@ -52,7 +52,7 @@ export default function BlogList({currrent = 1, limit = blogsPerPage, category =
                               <li>{blog.date}</li>
                               <li>
                                 <a
-                                  href={`/blogs/category/${blog.category
+                                  href={`/blog/category/${blog.category
                                     .replace(/\s+/g, "-")
                                     .toLowerCase()}`}
                                 >
@@ -62,13 +62,13 @@ export default function BlogList({currrent = 1, limit = blogsPerPage, category =
                             </ul>
                           </div>
                           <h4 className="title">
-                            <Link scroll={false} href={`/blogs/${blog.slug}`}>
+                            <Link scroll={false} href={`/blog/${blog.slug}`}>
                               {blog.title}
                             </Link>
                           </h4>
                           <Link
                             scroll={false}
-                            href={`/blogs/${blog.slug}`}
+                            href={`/blog/${blog.slug}`}
                             className="link-btn"
                           >
                             <span className="link-effect">

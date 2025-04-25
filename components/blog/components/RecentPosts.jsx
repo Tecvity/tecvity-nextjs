@@ -9,7 +9,7 @@ export default function RecentPosts({ recent }) {
         {recent && recent.map((post, index) => (
           <div key={index} className="sidebar__post-item">
             <div className="sidebar__post-thumb">
-              <Link scroll={false} href={`/blogs/${post.slug}`}>
+              <Link scroll={false} href={`/blog/${post.slug}`}>
                 <Image
                   width={80}
                   height={76}
@@ -20,7 +20,7 @@ export default function RecentPosts({ recent }) {
             </div>
             <div className="sidebar__post-content">
               <h5 className="title">
-                <Link scroll={false} href={`/blogs/${post.slug}`}>
+                <Link scroll={false} href={`/blog/${post.slug}`}>
                   {post.title}
                 </Link>
               </h5>

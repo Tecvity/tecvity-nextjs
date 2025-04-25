@@ -12,7 +12,7 @@ export default function DetailBreadcrumb({ blogTitle }) {
               </Link>
             </li>
             <li>
-              <Link scroll={false} href="/blogs">
+              <Link scroll={false} href="/blog">
                 Blog
               </Link>
             </li>

@@ -7,7 +7,7 @@ export default function Tags({ tags }) {
           {tags && tags.map((tag) => (
             <li key={tag.id}>
               <a
-                href={`/blogs/tag/${tag.text.toLowerCase()}`}
+                href={`/blog/tag/${tag.text.toLowerCase()}`}
                 className={tag.count > 0 ? "" : "disabled"}
               >
                 {tag.text}

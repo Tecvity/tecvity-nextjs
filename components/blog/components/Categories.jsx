@@ -8,7 +8,7 @@ export default function Categories({ categoriesData }) {
           {categoriesData && categoriesData.map((category) => (
             <li key={category.id}>
               <a
-                href={`/blogs/category/${category.text
+                href={`/blog/category/${category.text
                   .replace(/\s+/g, "-")
                   .toLowerCase()}`}
                 className={category.count > 0 ? "" : "disabled"}
