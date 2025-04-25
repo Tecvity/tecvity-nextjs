@@ -1,5 +1,5 @@
 "use client"
-import { MDXRemote } from 'next-mdx-remote/rsc';
+import { MDXRemote } from 'next-mdx-remote';
 import Image from 'next/image';
 
 const components = {
@@ -7,8 +7,11 @@ const components = {
   };
 
 const RenderMDX = ({content}) => {
+  if (!content) {
+    return <div>No content available</div>;
+  }
   return (
-    <MDXRemote source={content} components={components} />
+    <MDXRemote {...content} components={components} />
   )
 }
 

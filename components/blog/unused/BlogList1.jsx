@@ -21,7 +21,7 @@ export default function BlogList1() {
                     <div key={i} className="col-md-12">
                       <div className="blog-post-item">
                         <div className="blog-post-thumb">
-                          <Link scroll={false} href={`/blogs/${elm.id}`}>
+                          <Link scroll={false} href={`/blog/${elm.id}`}>
                             <Image
                               width={856}
                               height={600}
@@ -42,14 +42,14 @@ export default function BlogList1() {
                           <h2 className="title">
                             <Link
                               scroll={false}
-                              href={`/blogs/${elm.id}`}
+                              href={`/blog/${elm.id}`}
                             >
                               {elm.title}
                             </Link>
                           </h2>
                           <Link
                             scroll={false}
-                            href={`/blogs/${elm.id}`}
+                            href={`/blog/${elm.id}`}
                             className="link-btn"
                           >
                             <span className="link-effect">

@@ -1,21 +1,25 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import Pagination from "./Pagination";
 import BlogSerchbar from "./BlogSearchbar";
 import Categories from "./Categories";
 import RecentPosts from "./RecentPosts";
 import Tags from "./Tags";
 import Image from "next/image";
+import {useGetData} from "@/utils/hooks";
 
 const blogsPerPage = 6;
 
-export default function BlogList2({ blogs }) {
+export default function BlogList({currrent = 1, limit = blogsPerPage, category = '', tag = ''}) {
+  const { data: pagination, isLoading, error, getData: getPagination } = useGetData();
+  const { data: meta, getData: getMeta } = useGetData();
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(blogs.length / blogsPerPage);
-  const indexOfLastBlog = currentPage * blogsPerPage;
-  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
-  const currentBlogs = blogs.slice(indexOfFirstBlog, indexOfLastBlog);
+
+  useEffect(()=>{
+    getPagination(`/api/Blog?page=${currentPage}&limit=${blogsPerPage}&category=${category}&tag=${tag}`);
+    getMeta(`/api/Blog/Meta`);
+  },[currentPage])
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -29,11 +33,11 @@ export default function BlogList2({ blogs }) {
             <div className="col-70">
               <div className="blog-post-wrap">
                 <div className="row gy-30 gutter-24">
-                  {currentBlogs.map((blog, i) => (
+                  {pagination && pagination.blogs.map((blog, i) => (
                     <div key={i} className="col-md-6">
                       <div className="blog-post-item-two">
                         <div className="blog-post-thumb">
-                          <Link scroll={false} href={`/blogs/${blog.slug}`}>
+                          <Link scroll={false} href={`/blog/${blog.slug}`}>
                             <Image
                               width={856}
                               height={600}
@@ -48,7 +52,7 @@ export default function BlogList2({ blogs }) {
                               <li>{blog.date}</li>
                               <li>
                                 <a
-                                  href={`/blogs/category/${blog.category
+                                  href={`/blog/category/${blog.category
                                     .replace(/\s+/g, "-")
                                     .toLowerCase()}`}
                                 >
@@ -58,13 +62,13 @@ export default function BlogList2({ blogs }) {
                             </ul>
                           </div>
                           <h4 className="title">
-                            <Link scroll={false} href={`/blogs/${blog.slug}`}>
+                            <Link scroll={false} href={`/blog/${blog.slug}`}>
                               {blog.title}
                             </Link>
                           </h4>
                           <Link
                             scroll={false}
-                            href={`/blogs/${blog.slug}`}
+                            href={`/blog/${blog.slug}`}
                             className="link-btn"
                           >
                             <span className="link-effect">
@@ -84,8 +88,8 @@ export default function BlogList2({ blogs }) {
                   ))}
                 </div>
                 <Pagination
-                  currentPage={currentPage}
-                  totalPages={totalPages}
+                  currentPage={pagination && pagination.currentPage}
+                  totalPages={pagination && pagination.totalPages}
                   onPageChange={handlePageChange}
                 />
               </div>
@@ -93,9 +97,9 @@ export default function BlogList2({ blogs }) {
             <div className="col-30">
               <aside className="blog__sidebar">
                 <BlogSerchbar />
-                <Categories blogs={blogs} />
-                <RecentPosts blogs={blogs} />
-                <Tags blogs={blogs} />
+                <Categories categoriesData={meta && meta.categories} />
+                <RecentPosts recent={meta && meta.recent} />
+                <Tags tags={meta && meta.tags} />
               </aside>
             </div>
           </div>

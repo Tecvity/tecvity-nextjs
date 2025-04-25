@@ -7,14 +7,8 @@ import MarqueeComponent from "@/components/common/Marquee";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 
-export async function generateMetadata({ params }) {
-  return {
-    title: `Blog | ${params.title} | Tecvity`,
-  };
-}
-
-// Fetch blogs from Markdown files
-async function getBlogsByCategoryOrTag(categoryOrTag) {
+// Fetch blogs based on a tag
+async function getBlogsByTag(tag) {
   const blogsDirectory = path.join(process.cwd(), "data", "blogs");
   const files = fs.readdirSync(blogsDirectory);
 
@@ -29,29 +23,22 @@ async function getBlogsByCategoryOrTag(categoryOrTag) {
         slug: fileName.replace(/\.mdx$/, ""), // Use the file name as the slug
       };
     })
-    .filter((blog) => {
-      const normalizedCategory = blog.category.toLowerCase();
-      const normalizedTags = blog.tags.map((tag) => tag.toLowerCase());
-      const normalizedParam = categoryOrTag.toLowerCase();
-
-      return (
-        normalizedCategory === normalizedParam ||
-        normalizedTags.includes(normalizedParam)
-      );
-    });
+    .filter((blog) =>
+      blog.tags?.some((blogTag) => blogTag.toLowerCase() === tag.toLowerCase())
+    );
 
   return filteredBlogs;
 }
 
-export default async function CategoryPage({ params }) {
+export default async function TagPage({ params }) {
   const { title } = params;
-  const filteredBlogs = await getBlogsByCategoryOrTag(title);
+  const filteredBlogs = await getBlogsByTag(title);
 
   return (
     <>
       <Header />
-      <Breadcumb breadcumbTitle={`Blog | ${params.title}`} />
-      <BlogList blogs={filteredBlogs} />
+      <Breadcumb breadcumbTitle={`Tag | ${title}`} />
+      <BlogList tag={title} />
       <MarqueeComponent />
       <Footer />
     </>
