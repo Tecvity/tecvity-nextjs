@@ -45,17 +45,19 @@ export default function Faq() {
                     data-bs-parent="#faqAccordion"
                   >
                     <div className="accordion-body">
+                      {/* console.log("FAQ link:", elm.link); */}
+                      {/* <p className = "faq-test">{elm.random}</p> */}
                       <p className="faq-text">{elm.answer}</p>
-                      <br></br>
+                      {/* <br></br> */}
                       <div className="link-btn">
                         <Link
                           scroll={false}
                           href={elm.link || "#"}
-                          className={`btn ${!elm.link ? "disabled" : ""}`}
+                          className={`btn ${!elm.link ? "enabled" : ""}`}
                         >
                           <span className="link-effect">
-                            <span className="effect-1">SHOW DETAILS</span>
-                            <span className="effect-1">SHOW DETAILS</span>
+                            <span className="effect-1">LEARN MORE</span>
+                            <span className="effect-1">LEARN MORE</span>
                           </span>
                         </Link>
                       </div>

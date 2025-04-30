@@ -351,10 +351,63 @@ export const CLOUDPortfolio = [
   },  
 ];
 
+export const DSOPortfolio = [
+  {
+    "id": 205,
+    "imageSrc": "/assets/img/portfolio/portfolio-cloud/cloud_8.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-cloud/cloud_9.png"],
+    "categoryLinks": ["Cloud Security", "Azure Architecture Review"],
+    "title": "Azure Architecture Review for Pathfindr",
+    "category": "Cloud Security Solutions",
+    "type": "cloud",
+    "client": "Pathfindr",
+    "date": "Dec, 2024",
+    "para1": "Pathfindr is an Australian-based AI consulting firm dedicated to making artificial intelligence accessible and valuable for businesses across the country. They provide end-to-end AI solutions tailored to unique client needs, focusing on driving innovation and efficiency. Their services include AI education, AI strategy and consulting, system automation, and delivery of tailored AI solutions to address business challenges.",
+    "challenge": "Our main focus was to review Pathfindr Azure cloud infrastructure and provide recommendations to enhance its security and efficiency. The challenge involved evaluating the existing architecture, identifying vulnerabilities, optimizing configurations, and aligning the setup with best practices for scalability, security, and compliance.",
+    "finalResult": "Tecvity conducted a thorough Azure architecture review for Pathfindr, identifying key areas for improvement and implementing enhancements to strengthen their cloud infrastructure. The review addressed security gaps, optimized resource allocation, and ensured compliance with industry standards. These improvements enabled Pathfindr to maintain a secure, scalable, and efficient cloud environment, supporting their mission to deliver cutting-edge AI solutions to businesses across Australia."
+  }, 
+]
+
+export const DevPortfolio = [
+  {
+    "id": 205,
+    "imageSrc": "/assets/img/portfolio/portfolio-cloud/cloud_8.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-cloud/cloud_9.png"],
+    "categoryLinks": ["Cloud Security", "Azure Architecture Review"],
+    "title": "Azure Architecture Review for Pathfindr",
+    "category": "Cloud Security Solutions",
+    "type": "cloud",
+    "client": "Pathfindr",
+    "date": "Dec, 2024",
+    "para1": "Pathfindr is an Australian-based AI consulting firm dedicated to making artificial intelligence accessible and valuable for businesses across the country. They provide end-to-end AI solutions tailored to unique client needs, focusing on driving innovation and efficiency. Their services include AI education, AI strategy and consulting, system automation, and delivery of tailored AI solutions to address business challenges.",
+    "challenge": "Our main focus was to review Pathfindr Azure cloud infrastructure and provide recommendations to enhance its security and efficiency. The challenge involved evaluating the existing architecture, identifying vulnerabilities, optimizing configurations, and aligning the setup with best practices for scalability, security, and compliance.",
+    "finalResult": "Tecvity conducted a thorough Azure architecture review for Pathfindr, identifying key areas for improvement and implementing enhancements to strengthen their cloud infrastructure. The review addressed security gaps, optimized resource allocation, and ensured compliance with industry standards. These improvements enabled Pathfindr to maintain a secure, scalable, and efficient cloud environment, supporting their mission to deliver cutting-edge AI solutions to businesses across Australia."
+  }, 
+]
+export const UIUXPortfolio = [
+  {
+    "id": 205,
+    "imageSrc": "/assets/img/portfolio/portfolio-cloud/cloud_8.png",
+    "itemsImages": ["/assets/img/portfolio/portfolio-cloud/cloud_9.png"],
+    "categoryLinks": ["Cloud Security", "Azure Architecture Review"],
+    "title": "Azure Architecture Review for Pathfindr",
+    "category": "Cloud Security Solutions",
+    "type": "cloud",
+    "client": "Pathfindr",
+    "date": "Dec, 2024",
+    "para1": "Pathfindr is an Australian-based AI consulting firm dedicated to making artificial intelligence accessible and valuable for businesses across the country. They provide end-to-end AI solutions tailored to unique client needs, focusing on driving innovation and efficiency. Their services include AI education, AI strategy and consulting, system automation, and delivery of tailored AI solutions to address business challenges.",
+    "challenge": "Our main focus was to review Pathfindr Azure cloud infrastructure and provide recommendations to enhance its security and efficiency. The challenge involved evaluating the existing architecture, identifying vulnerabilities, optimizing configurations, and aligning the setup with best practices for scalability, security, and compliance.",
+    "finalResult": "Tecvity conducted a thorough Azure architecture review for Pathfindr, identifying key areas for improvement and implementing enhancements to strengthen their cloud infrastructure. The review addressed security gaps, optimized resource allocation, and ensured compliance with industry standards. These improvements enabled Pathfindr to maintain a secure, scalable, and efficient cloud environment, supporting their mission to deliver cutting-edge AI solutions to businesses across Australia."
+  }, 
+]
+
 export const portfolioData = [
   ...VAPTPortfolio,
   ...PDPortfolio,
   ...CLOUDPortfolio,
+  ...DSOPortfolio,
+  ...DevPortfolio,
+  ...UIUXPortfolio,
 ];
 export const allPortfolio = [
   ...portfolioData,
