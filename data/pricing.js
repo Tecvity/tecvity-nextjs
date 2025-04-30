@@ -49,30 +49,18 @@ export const plansData = {
       price: '$29',
       period: 'per month',
       values: ['Up to 10', '20GB', '3', '-', '-', 'Basic', 'Email'],
-      action: {
-        label: 'Choose Basic',
-        href: '/contact',
-      },
     },
     {
       name: 'Professional',
       price: '$79',
       period: 'per month',
       values: ['Up to 50', '100GB', '15', '•', '•', 'Advanced', 'Priority'],
-      action: {
-        label: 'Choose Pro',
-        href: '/contact',
-      },
     },
     {
       name: 'Enterprise',
       price: 'Custom',
       period: 'contact sales',
       values: ['Unlimited', 'Unlimited', 'Unlimited', '•', '•', 'Custom', 'Dedicated'],
-      action: {
-        label: 'Contact Sales',
-        href: '/contact',
-      },
     },
   ],
 };

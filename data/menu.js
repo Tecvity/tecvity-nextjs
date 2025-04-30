@@ -63,7 +63,7 @@ export const menuItems = [
   {
     id: 3,
     title: "Portfolio",
-    link: "/our-portfolio",
+    // link: "/our-portfolio",
     subMenuItems: [
       {
         id: 31,

@@ -128,7 +128,8 @@ export default function Header({darkMode = false}) {
                       <Image
                         width={170}
                         height={55}
-                        src={darkModeState ? `/assets/img/tecvity-white-logo.png` : `/assets/img/tecvity-logo.png`}
+                        src={`/assets/img/tecvity-logo.png`}
+                        style={{ filter: darkModeState ? 'invert(1)' : 'none' }}
                         alt="logo"
                       />
                     </Link>
@@ -143,12 +144,12 @@ export default function Header({darkMode = false}) {
                   <div className="navbar-right d-inline-flex d-lg-none">
                     <button
                       type="button"
-                      className="menu-toggle sidebar-btn"
+                      className="menu-toggle sidebar-btn border-white"
                       onClick={() => setMobileMenuOpen(true)}
                     >
-                      <span className="line"></span>
-                      <span className="line"></span>
-                      <span className="line"></span>
+                      <span className="line light-bg"></span>
+                      <span className="line light-bg"></span>
+                      <span className="line light-bg"></span>
                     </button>
                   </div>
                 </div>

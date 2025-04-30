@@ -132,7 +132,7 @@ export default function ServiceDetails({ serviceTitle }) {
                       />
                     </div>
                     <h4 className="feature-card-title">
-                      <Link scroll={false} href={card.link || "/our-portfolio"}>
+                      <Link scroll={false} href={card.link || "#"}>
                         {card.title}
                       </Link>
                     </h4>

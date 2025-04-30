@@ -23,23 +23,13 @@ export default function Hero() {
             </div>
             <div>
               <div className="btn-group justify-content-center">
-                <Link
-                  scroll={false}
-                  href="/our-portfolio"
+                <button
+                  onClick={() => setIsModalOpen(true)}
                   className="btn style2 wow img-custom-anim-right animated"
                 >
                   <span className="link-effect">
                     <span className="effect-1">VIEW OUR WORKS</span>
                     <span className="effect-1">VIEW OUR WORKS</span>
-                  </span>
-                </Link>
-                <button
-                  onClick={() => setIsModalOpen(true)}
-                  className="btn style3 wow img-custom-anim-right animated"
-                >
-                  <span className="link-effect">
-                    <span className="effect-1">BOOK A FREE CALL</span>
-                    <span className="effect-1">BOOK A FREE CALL</span>
                   </span>
                 </button>
               </div>

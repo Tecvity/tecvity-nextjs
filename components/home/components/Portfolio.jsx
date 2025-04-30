@@ -107,7 +107,7 @@ export default function Portfolio() {
               <Link
                 scroll={false}
                 className="circle-btn btn gsap-magnetic mx-lg-5"
-                href="/our-portfolio"
+                href="#"
               >
                 <span className="link-effect">
                   <span className="effect-1">VIEW ALL</span>
