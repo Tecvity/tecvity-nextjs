@@ -55,7 +55,7 @@ export default function Blogs() {
                 <div className="blog-content">
                   <div className="post-meta-item blog-meta">
                     <a href="#">{elm.date}</a>
-                    <a href={`/blog/category/${elm.category.replace(/\s+/g, "-").toLowerCase()}`}>
+                    <a href={`#`}>
                       {elm.category}
                     </a>
                   </div>

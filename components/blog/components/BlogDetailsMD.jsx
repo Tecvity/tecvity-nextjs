@@ -1,8 +1,8 @@
 "use client"
 import BlogSearchbar from "./BlogSearchbar";
-import Categories from "./Categories";
+// import Categories from "./Categories";
 import RecentPosts from "./RecentPosts";
-import Tags from "./Tags";
+// import Tags from "./Tags";
 import RenderMDX from "./RenderMDX";
 import BlogDetailsMDsub from "./BlogDetailsMDsub";
 import { socialMediaLinks } from "@/data/socials";
@@ -45,9 +45,7 @@ export default function BlogDetailsMD({ data, content }) {
                               {data.tags.map((tag, i) => (
                                 <li key={i}>
                                   <a
-                                    href={`/blog/tag/${tag
-                                      .replace(/\s+/g, "-")
-                                      .toLowerCase()}`}
+                                    href={`#`}
                                   >
                                     {tag}
                                   </a>
@@ -105,9 +103,9 @@ export default function BlogDetailsMD({ data, content }) {
             <div className="col-30">
               <aside className="blog__sidebar">
                 <BlogSearchbar />
-                <Categories categoriesData={meta && meta.categories} />
+                {/* <Categories categoriesData={meta && meta.categories} /> */}
                 <RecentPosts recent={meta && meta.recent} />
-                <Tags tags={meta && meta.tags} /> 
+                {/* <Tags tags={meta && meta.tags} />  */}
               </aside>
             </div>
           </div>
