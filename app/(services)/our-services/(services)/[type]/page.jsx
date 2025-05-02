@@ -5,14 +5,12 @@ import Features from "@/components/service/components/Features";
 import Portfolio from "@/components/service/components/Portfolio";
 import Clients from "@/components/service/components/Clients";
 import Cta from "@/components/service/components/Cta";
-import Video from "@/components/service/components/Video";
-import MarqueeComponent from "@/components/common/Marquee";
 import Footer from "@/components/footer/Footer"
 import { useEffect, useState } from "react";
 import { useGetData } from "@/utils/hooks";
 import { serviceHero } from "@/data/features";
-import { serialize } from 'next-mdx-remote/serialize';
 import Testimonials from "@/components/service/components/Testimonials";
+import { projects2 } from "@/data/portfolio";
 export default function ProjectsType({ params }) {
   const { type } = params;
   const [ serializedInfo, setSerializedInfo] = useState(null);
@@ -46,13 +44,6 @@ export default function ProjectsType({ params }) {
       console.error("Error fetching serialized info:", error);
     }
   };
-
-    // const getSerializedContent = async (data) => {
-    //   if (!data) return null;
-      
-    //   const serialized = await serialize(data);
-    //   return serialized;
-    // };
   
 
   return (
@@ -60,7 +51,7 @@ export default function ProjectsType({ params }) {
       <Header darkMode={true} />
       <Hero bgImage={serviceHero.bgImage} title={serviceHero.title}/>
       <Features featuresList={subServices} />
-      <Portfolio />
+      <Portfolio projects={projects2[type] || []}/>
       <Testimonials />
       <Clients/>
       <Cta/>

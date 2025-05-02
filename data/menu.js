@@ -34,28 +34,28 @@ export const menuItems = [
       {
         id: 41,
         title: "Web & Mobile Development",
-        link: "/web-&-mobile-development",
+        link: "/our-services/web-mobile-development",
         subMenuItems: [
-          { id: 411, label: "Web & Mobile Application Development", link: "/web-&-mobile-development/web-&-mobile-application-development" },
-          { id: 412, label: "DevSecOps", link: "/web-&-mobile-development/devsecops" },
+          { id: 411, label: "Web & Mobile Application Development", link: "/our-services/web-mobile-development/web-mobile-app-development" },
+          { id: 412, label: "DevSecOps", link: "/our-services/web-mobile-development/devsecops" },
         ],
       },
       {
         id: 42,
         title: "Information Security & Compliance",
-        link: "/information-security-&-compliance",
+        link: "/our-services/information-security-compliance",
         subMenuItems: [
-          { id: 421, label: "Penetration Testing & Vulnerability Assessment", link: "/information-security-&-compliance/penetration-testing-&-vulnerability-assessment" },
-          { id: 422, label: "Cloud Security Audits", link: "/information-security-&-compliance/cloud-security-audits" }
+          { id: 421, label: "Penetration Testing & Vulnerability Assessment", link: "/our-services/information-security-compliance/penetration-testing-vulnerability-assessment" },
+          { id: 422, label: "Cloud Security Audits", link: "/our-services/information-security-compliance/cloud-security-audits" }
         ],
       },        
       {
         id: 43,
         title: "Branding & Logo Design",
-        link: "/branding-&-logo-design",
+        link: "/our-services/branding-logo-design",
         subMenuItems: [
-          { id: 431, label: "UI/UX Design", link: "/branding-&-logo-design/ui_ux-design" },
-          { id: 432, label: "Brand Identity Design", link: "/branding-&-logo-design/brand-identity-design" },
+          { id: 431, label: "UI/UX Design", link: "/our-services/branding-logo-design/ui-ux-design" },
+          { id: 432, label: "Brand Identity Design", link: "/our-services/branding-logo-design/brand-identity-design" },
         ],
       },
     ],

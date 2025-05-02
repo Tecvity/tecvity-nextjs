@@ -1,16 +1,15 @@
-import { projects2 } from "@/data/portfolio";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function Portfolio() {
+export default function Portfolio({ projects = []}) {
   return (
     <div className="project-area-6">
       <div className="container-fluid p-0">
         <div className="row g-0">
           <div className="col-12">
             <div className="portfolio-static-wrap">
-              {projects2.map((elm, i) => (
+              {projects.map((elm, i) => (
                 <div key={i} className="portfolio-static">
                   <div className="portfolio-wrap style5">
                     <div className="portfolio-thumb">
