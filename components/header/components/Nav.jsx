@@ -67,7 +67,7 @@ export default function Nav({ darkMode }) {
                             </Link>
                             <ul className="sub-menu">
                               {elm2.subMenuItems.map((elm3, i3) => (
-                                <li key={i3}>
+                                <li key={i3} className="no-sub-menu">
                                   <Link
                                     scroll={false}
                                     className={

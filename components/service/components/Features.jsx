@@ -18,12 +18,12 @@ export default function Features({featuresList = ourServices || []}) {
                   <Image width={40} height={40} src={elm.iconSrc} alt="icon" />
                 </div>
                 <h4 className="feature-card-title">
-                <a href={`/${pathname}/${elm.title.replace(/\s+/g, '-').replace(/\//g, '_').toLowerCase()}`}>{elm.title}</a>
+                <a href={`/${pathname}/${elm.slug}`}>{elm.title}</a>
                 </h4>
                 <p className="feature-card-text">{elm.text}</p>
                 <Link
                   scroll={false}
-                  href={`${pathname}/${elm.title.replace(/\s+/g, '-').replace(/\//g, '_').toLowerCase()}`}
+                  href={`${pathname}/${elm.slug}`}
                   className="link-btn"
                 >
                   <span className="link-effect">

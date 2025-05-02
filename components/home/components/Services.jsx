@@ -22,12 +22,12 @@ export default function Services() {
                   <Image width="40" height="40" src={elm.iconSrc} alt="icon" />
                 </div>
                 <h4 className="feature-card-title">
-                <a href={`${elm.title.replace(/\s+/g, '-').replace(/\//g, '_').toLowerCase()}`}>{elm.title}</a>
+                <a href={`${elm.link}`}>{elm.title}</a>
                 </h4>
                 <p className="feature-card-text">{elm.text}</p>
                 <Link
                   scroll={false}
-                  href={`${elm.title.replace(/\s+/g, '-').replace(/\//g, '_').toLowerCase()}`}
+                  href={`${elm.link}`}
                   className="link-btn"
                 >
                   <span className="link-effect">

@@ -292,18 +292,21 @@ export const parentServices = [
     title: "Web & Mobile Development",
     id: 20,
     text: "We Develop state of the art web and mobile apps that scale with your business",
+    link: "/our-services/web-mobile-development",
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-2.svg",
     title: "Information Security & Compliance",
     id: 30,
     text: "We can conduct security audits and provide recommendations on hardening your cloud security",
+    link: "/our-services/information-security-compliance",
   },
   {
     iconSrc: "/assets/img/icon/feature-icon1-4.svg",
     title: "Branding & Logo Design",
     id: 40,
     text: "We can give your brand an identification that can not be forgotten",
+    link: "/our-services/branding-logo-design",
   },
 ];
 
