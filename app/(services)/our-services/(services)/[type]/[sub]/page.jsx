@@ -1,24 +1,27 @@
+"use client";
 import Header from "@/components/header/Header";
 import DetailBreadcrumb from "@/components/portfolio/components/DetailBreadcrumb";
 import ProjectDetails from "@/components/portfolio/components/ProjectDetails";
+import ServiceDetails from "@/components/service/components/ServiceDetails";
 import MarqueeComponent from "@/components/common/Marquee";
 import Footer from "@/components/footer/Footer";
-import { VAPTPortfolio } from "@/data/portfolio";
-
-export const metadata = {
-  title:
-    "Project Details | Tecvity",
-};
-
-//USE Static Side Genaration(SSG) if necessary
+import { useEffect } from "react";
+import { useGetData } from "@/utils/hooks";
 
 export default function ProjectPageDetails({ params }) {
-  const decodedProjectTitle = decodeURIComponent(params.title);
+  const { sub, type } = params;
+  const { data, isLoading, error, getData } = useGetData();
+  useEffect(() => {
+    getData(`/api/Services/${type}/${sub}`);
+  }, [sub]);
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
   return (
     <>
       <Header />
-      <DetailBreadcrumb portfolioTitle={decodedProjectTitle} />
-      <ProjectDetails portfolioTitle={decodedProjectTitle} blogList={VAPTPortfolio}/>
+      {data && <ServiceDetails serviceItem={data.services} />}
       <MarqueeComponent />
       <Footer />
     </>

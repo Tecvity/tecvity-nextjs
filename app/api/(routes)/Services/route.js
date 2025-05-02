@@ -7,7 +7,7 @@ export async function GET() {
 
     return NextResponse.json(
       {
-        portfolio: posts,
+        services: ["no computation performed" ],
       },
       { status: 200 }
     );

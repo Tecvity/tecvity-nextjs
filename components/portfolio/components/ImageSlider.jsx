@@ -22,7 +22,7 @@ const ImageSlider = ({ itemImages }) => {
 
   return (
     <Slider className="row global-carousel default" {...sliderOptions}>
-      {itemImages.map((image, index) => (
+      {itemImages.length > 0 && itemImages.map((image, index) => (
         <div key={index} className="col-xl-12">
           <div className="project-inner-thumb mb-80 wow img-custom-anim-top animated">
             <Image
