@@ -35,7 +35,7 @@ export default function Nav({ darkMode }) {
                   href={elm.link || "#"}
                   className={isActive ? "activeMenu" : ""}
                 >
-                  <span className={`link-effect ${darkMode ? "light-color" : ""}`}>
+                  <span className={`link-effect ${darkMode && !isActive ? "light-color" : ""}`}>
                     <span className="effect-1">{elm.title}</span>
                     <span className="effect-1">{elm.title}</span>
                   </span>

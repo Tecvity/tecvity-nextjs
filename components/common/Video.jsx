@@ -4,8 +4,7 @@ import React, { useEffect, useState } from "react";
 
 import ModalVideo from "react-modal-video";
 import { useParallax } from "react-scroll-parallax";
-//needs to delete
-export default function Video() {
+export default function Video({ videoId = "9_vZoq7Idus", thumbnail = "/assets/img/service/new.jpg" }) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -14,7 +13,7 @@ export default function Video() {
 
   return (
     <>
-      {/* <div className="video-area-1 overflow-hidden mb-5">
+      <div className="video-area-1 overflow-hidden mb-5">
         <div className="container-fluid p-0">
           <div className="row">
             <div className="col-lg-12">
@@ -22,7 +21,7 @@ export default function Video() {
                 <div
                   className="jarallax"
                   style={{
-                    backgroundImage: "url(/assets/img/service/new.jpg)",
+                    backgroundImage: `url(${thumbnail})`,
                     backgroundSize: "cover",
                     height: "70vh",
                     position: "absolute",
@@ -48,9 +47,9 @@ export default function Video() {
         channel="youtube"
         youtube={{ mute: 0, autoplay: 1 }}
         isOpen={isOpen}
-        videoId="9_vZoq7Idus"
+        videoId={videoId}
         onClose={() => setIsOpen(false)}
-      /> */}
+      />
     </>
   );
 }

@@ -1,23 +1,24 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import BookingModal from "./BookingModal"
 import { useState } from "react";
+import { clientImages } from "@/data/clients";
 
-export default function Hero() {
+export default function Hero({ bgImage = "/assets/img/hero/bg-sample.jpg", title = "We build fast, secure and scalable software" }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
   return (
     <div className="hero-wrapper hero-1" id="hero">
       <BookingModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      <div className="hero-slider background-image por" style={{ backgroundImage: "url(/assets/img/hero/bg-sample.jpg"}} >
+      <div className="hero-slider background-image por" style={{ backgroundImage: `url(${bgImage})`}} >
       <div className="container">
         <div className="hero-style1">
         <div className="text-center mb-4 light-color fa-1x"><span className="glow-dot me-2"></span>  Top Rated Agency on Upwork</div>
-          <div className="row">
-            <div className="col-lg-12">
+          <div className="row align-items-center justify-content-center">
+            <div className="col-lg-12 text-center w-25rem">
             <div className="text-center justify-content-center">
                 <h1 className="hero-title wow img-custom-anim-top animated text-smoke">
-                  We build fast,<br /> secure and scalable <br /> software
+                  {/* We build fast,<br /> secure and scalable <br /> software */}
+                  {title}
                 </h1>
               </div>
             </div>
@@ -36,27 +37,16 @@ export default function Hero() {
             </div>
           </div>
           <div className="hero-thumb-group img-custom-anim-right wow animated justify-content-center">
-              <Image
-                width={60}
-                height={60}
-                className="img1"
-                src="/assets/img/testimonial/pp3.png"
-                alt="img"
-              />
-              <Image
-                width={60}
-                height={60}
-                className="img2"
-                src="/assets/img/testimonial/pp2.png"
-                alt="img"
-              />
-              <Image
-                width={60}
-                height={60}
-                className="img2"
-                src="/assets/img/testimonial/pp1.png"
-                alt="img"
-              />
+              {clientImages.map((img, index) => (
+                <Image
+                  key={index}
+                  width={60}
+                  height={60}
+                  className={img.className}
+                  src={img.src}
+                  alt={`img-${index + 1}`}
+                />
+              ))}
               <p>
                 More than <span className="counter-number">10</span>k+
                 trusted customers

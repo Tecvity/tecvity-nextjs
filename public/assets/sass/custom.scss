@@ -107,5 +107,20 @@
 .border-white{
   border-color: $smoke-color !important;
 }
-
-
+.cursor-g {
+  cursor: grab !important;
+}
+.cursor-g:active {
+  cursor: grabbing !important;
+}
+.border-in{
+  border: 1px solid transparent !important;
+}
+.heigt-limit-70 {
+  max-height: 70rem !important;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+}
+.w-25rem{
+  max-width: 60rem !important;
+}

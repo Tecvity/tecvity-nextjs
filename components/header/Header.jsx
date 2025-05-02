@@ -16,7 +16,8 @@ export default function Header({darkMode = false}) {
   useEffect(() => {
     if(isScrolled) {
       setDarkModeState(false);
-    }else
+    }
+    else if(!isScrolled)
     {
       setDarkModeState(darkMode);
     }
@@ -144,12 +145,12 @@ export default function Header({darkMode = false}) {
                   <div className="navbar-right d-inline-flex d-lg-none">
                     <button
                       type="button"
-                      className="menu-toggle sidebar-btn border-white"
+                      className={`menu-toggle sidebar-btn ${darkModeState ? 'border-white' : null}`}
                       onClick={() => setMobileMenuOpen(true)}
                     >
-                      <span className="line light-bg"></span>
-                      <span className="line light-bg"></span>
-                      <span className="line light-bg"></span>
+                      <span className={`line ${darkModeState ? 'light-bg' : null}`}></span>
+                      <span className={`line ${darkModeState ? 'light-bg' : null}`}></span>
+                      <span className={`line ${darkModeState ? 'light-bg' : null}`}></span>
                     </button>
                   </div>
                 </div>

@@ -475,6 +475,11 @@ export const secServices = [
   },
 
 ];
+
+export const serviceHero = {
+  bgImage: "/assets/img/hero/bg-sample.jpg",
+  title : "We build fast, secure and scalable software"
+}
 export const allFeatures = [
   ...featureData,
   ...featureData2,

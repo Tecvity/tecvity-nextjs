@@ -12,7 +12,7 @@ export default function Testimonials() {
     videoId: "9_vZoq7Idus",
     thumbnail: "/assets/img/service/new.jpg",
   };
-
+  
   const sliderOptions = {
     slidesToShow: 2,
     arrows: false,
@@ -38,7 +38,7 @@ export default function Testimonials() {
           </div>
         </div>
         
-      <Video videoId={video.videoId} thumbnail={video.thumbnail} />
+      <Video />
         <Slider
           {...sliderOptions}
           className="row global-carousel testi-slider3 dot-style2 border-in"

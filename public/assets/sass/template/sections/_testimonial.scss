@@ -168,11 +168,15 @@
 .testi-box.style3 {
     background: $gray-color;
     padding: 40px;
+    min-height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .quote-icon {
         filter: brightness(99);
     }
     .testi-box_text {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 400;
         line-height: 38px;
         color: $smoke-color;
