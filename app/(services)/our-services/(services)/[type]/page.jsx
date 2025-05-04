@@ -25,7 +25,6 @@ export default function ProjectsType({ params }) {
     }
   }, [data]);
 
-  useEffect(()=>{console.log({data, serializedInfo})},[data, serializedInfo])
   const fetchSerializedInfo = async () => {
     try {
       const posts = data?.posts || [];
@@ -37,7 +36,6 @@ export default function ProjectsType({ params }) {
         slug: post.slug || "",
         type: type || "",
       }));
-      console.log(minimalPosts)
       setSubServices(minimalPosts)
 
     } catch (error) {

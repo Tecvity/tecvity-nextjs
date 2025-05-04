@@ -16,11 +16,10 @@ export default function BlogList({currrent = 1, limit = blogsPerPage, category =
   const { data: meta, getData: getMeta } = useGetData();
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(category);
-  const [selectedTag, setSelectedTag] = useState(tag);
 
   useEffect(()=>{
-     getPagination(`/api/Blog?page=${currentPage}&limit=${blogsPerPage}&category=${selectedCategory}&tag=${selectedTag}`);
-  },[currentPage, selectedCategory, selectedTag])
+     getPagination(`/api/Blog?page=${currentPage}&limit=${blogsPerPage}&category=${selectedCategory}&tag=${tag}`);
+  },[currentPage, selectedCategory])
   useEffect(()=>{
     getMeta(`/api/Blog/Meta`);
   },[])
@@ -29,17 +28,10 @@ export default function BlogList({currrent = 1, limit = blogsPerPage, category =
     setCurrentPage(pageNumber);
   };
   const handleFilterChange = (e) => {
-      const value = e.target.value;
-      if (value.startsWith('Category:')) {
-        setSelectedCategory(value.replace('Category:', '').trim());
-        setSelectedTag('');
-        setCurrentPage(1);
-      } else if (value.startsWith('Tag:')) {
-        setSelectedTag(value.replace('Tag:', '').trim());
-        setSelectedCategory('');
-        setCurrentPage(1);
-      }
-    }
+    const value = e.target.value;
+    setSelectedCategory(value);
+    setCurrentPage(1);
+  };
 
   return (
     <section className="blog__area space">
@@ -63,15 +55,10 @@ export default function BlogList({currrent = 1, limit = blogsPerPage, category =
                       aria-label="orderByCategories"
                       onChange={handleFilterChange}
                     >
-                      <option value="">All</option>
+                      <option value="">Filter by Categories</option>
                       {meta.categories.map((category, index) => (
-                        <option key={`cat-${index}`} value={`Category: ${category.text}`}>
-                          Category: {category.text} ({category.count || 0})
-                        </option>
-                      ))}
-                      {meta.tags.map((tag, index) => (
-                        <option key={`tag-${index}`} value={`Tag: ${tag.text}`}>
-                          Tag: {tag.text} ({tag.count || 0})
+                        <option key={`cat-${index}`} value={`${category.text}`}>
+                          {category.text} ({category.count || 0})
                         </option>
                       ))}
                     </select>

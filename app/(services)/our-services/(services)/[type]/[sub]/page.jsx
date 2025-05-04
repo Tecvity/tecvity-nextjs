@@ -12,9 +12,6 @@ export default function ProjectPageDetails({ params }) {
   useEffect(() => {
     getData(`/api/Services/${type}/${sub}`);
   }, [sub]);
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
 
   return (
     <>

@@ -22,11 +22,6 @@ export default function ServiceDetails({ serviceItem }) {
     }
   }, [serviceItem]);
 
-  useEffect(() => {
-    console.log("Se", serviceItem);
-    console.log("Serialized Content:", serializedContent);
-  }, [serializedContent]);
-
   return (
     <div className="service-details-page mb-5">
       <div className="container">
@@ -34,7 +29,7 @@ export default function ServiceDetails({ serviceItem }) {
           {serializedContent && <RenderMDX content={serializedContent} />}
           <div className="col-xl-8">
              <ServiceCards cards={serviceItem?.cards}/>
-            <div className="col-auto d-none d-lg-block">
+            <div className="col-auto d-lg-block">
               <div className="service-portfolio-button">
                 <Link scroll={false} href={`${serviceItem?.portfolioLink || "#"}`} className={`btn ${!serviceItem?.portfolioLink ? "disabled" : ""}`}>
                   <span className="link-effect">
