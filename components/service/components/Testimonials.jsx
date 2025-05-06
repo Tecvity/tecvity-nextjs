@@ -1,17 +1,12 @@
 "use client";
 
-import { testimonialData } from "@/data/testimonials";
+import { testimonialForServices } from "@/data/testimonials";
 import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
 import Video from "@/components/common/Video";
 
-export default function Testimonials() {
-
-  const video = {
-    videoId: "9_vZoq7Idus",
-    thumbnail: "/assets/img/service/new.jpg",
-  };
+export default function Testimonials({type}) {
   
   const sliderOptions = {
     slidesToShow: 2,
@@ -38,12 +33,12 @@ export default function Testimonials() {
           </div>
         </div>
         
-      <Video />
+      <Video videoUrl={testimonialForServices[type].youtubeUrl}/>
         <Slider
           {...sliderOptions}
           className="row global-carousel testi-slider3 dot-style2 border-in"
         >
-          {testimonialData.map((elm, i) => (
+          {testimonialForServices[type].testimonials.map((elm, i) => (
             <div key={i} className="col-lg-6 sliderItem2">
               <div className="testi-box style3">
                 <div className="quote-icon">

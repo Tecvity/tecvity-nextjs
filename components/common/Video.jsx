@@ -2,10 +2,10 @@
 import addGsap from "@/utils/addGsap";
 import React, { useEffect, useState } from "react";
 
-import ModalVideo from "react-modal-video";
-import { useParallax } from "react-scroll-parallax";
-export default function Video({ videoId = "9_vZoq7Idus", thumbnail = "/assets/img/service/new.jpg" }) {
-  const [isOpen, setIsOpen] = useState(false);
+// import ModalVideo from "react-modal-video";
+// import { useParallax } from "react-scroll-parallax";
+export default function Video({ videoUrl = "https://www.youtube.com/embed/9_vZoq7Idus" }) {
+  // const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     addGsap();
@@ -17,7 +17,7 @@ export default function Video({ videoId = "9_vZoq7Idus", thumbnail = "/assets/im
         <div className="container-fluid p-0">
           <div className="row">
             <div className="col-lg-12">
-              <div className="video-wrap">
+              {/* <div className="video-wrap">
                 <div
                   className="jarallax"
                   style={{
@@ -36,20 +36,23 @@ export default function Video({ videoId = "9_vZoq7Idus", thumbnail = "/assets/im
                   <div
                     onClick={() => setIsOpen(true)}
                     className="play-btn circle-btn btn background-image">
-                      <i class="fas fa-play"></i>  </div>
+                      <i className="fas fa-play"></i>  </div>
                 </div>
-                </div>
+                </div> */}
+                <iframe width="420" height="715"
+                  src={videoUrl}>
+                </iframe>
             </div>
           </div>
         </div>
       </div>
-      <ModalVideo
+      {/* <ModalVideo
         channel="youtube"
         youtube={{ mute: 0, autoplay: 1 }}
         isOpen={isOpen}
         videoId={videoId}
         onClose={() => setIsOpen(false)}
-      />
+      /> */}
     </>
   );
 }

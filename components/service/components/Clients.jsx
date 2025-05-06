@@ -5,7 +5,14 @@ import React from "react";
 export default function Clients() {
   return (
     <div className="client-area-4 overflow-hidden space">
-      <div className="container">
+      <div className="container">        
+        <div className="row justify-content-center">
+          <div className="col-xl-7 col-lg-8">
+            <div className="title-area text-center">
+              <h2 className="sec-title text-dark">Our Clients</h2>
+            </div>
+          </div>
+        </div>
         <div className="row justify-content-center">
           <div className="col-xl-8">
             <ul className="client-list-wrap">

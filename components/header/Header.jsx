@@ -191,7 +191,7 @@ export default function Header({darkMode = false}) {
                 {/* comment the below block to adjust search */}
                 <div className="col-auto d-none d-lg-block">
                   <div className="header-button">
-                    <Link scroll={false} href="/contact" className="btn style2">
+                    <Link scroll={false} href="/contact" className={`btn ${darkModeState ? "style3" : "style1"}`}>
                       <span className="link-effect">
                         <span className="effect-1">WORK WITH US</span>
                         <span className="effect-1">WORK WITH US</span>

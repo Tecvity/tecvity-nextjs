@@ -2,159 +2,124 @@
 import { menuItems } from "@/data/menu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 export default function MobileNav() {
   const [activeMenu, setActiveMenu] = useState([-1, -1]);
   const pathname = usePathname();
+  
+  const isActive = (link) => {
+    if (!link) return false;
+    const trimmedPath = pathname.split("?")[0];
+    return link === trimmedPath || trimmedPath.startsWith(`${link}/`);
+  };
 
   const isChildActive = (links) => {
-    let isActive = false;
-    links.forEach((element) => {
-      if (
-        element.link &&
-        element.link?.split("/")[1] == pathname?.split("/")[1]
-      ) {
-        isActive = true;
-      } else if (element.subMenuItems) {
-        element.subMenuItems.forEach((element2) => {
-          if (
-            element2.link &&
-            element2.link?.split("/")[1] == pathname?.split("/")[1]
-          ) {
-            isActive = true;
-          }
-        });
-      }
-    });
-
-    return isActive;
+    return links.some(link => isActive(link.link));
   };
   return (
     <>
-      {menuItems.map((elm, i) => (
-        <li
-          key={i}
-          className={`${
-            elm.subMenuItems
-              ? "menu-item-has-children submenu-item-has-children"
-              : ""
-          }
-
-          ${activeMenu[0] == i ? "active-class" : ""}
-          `}
-        >
-          {elm.subMenuItems ? (
-            <>
-              <a
-                href="#"
-                onClick={() =>
-                  setActiveMenu((pre) => {
-                    return pre[0] == i ? [-1, false] : [i, false];
-                  })
-                }
-                className={isChildActive(elm.subMenuItems) ? "activeMenu" : ""}
-              >
-                {elm.title}
-                <span className="mean-expand-class"></span>
-              </a>
-
-              <ul
-                className="sub-menu submenu-class menu-open overflow-hidden"
-                style={
-                  activeMenu[0] == i
-                    ? { maxHeight: "500px" }
-                    : { maxHeight: "0px" }
-                }
-              >
-                {elm.subMenuItems.map((elm2, i2) => (
-                  <li
-                    key={i2}
-                    className={`${
-                      elm2.subMenuItems
-                        ? "menu-item-has-children submenu-item-has-children"
-                        : ""
-                    }
-                    ${activeMenu[1] == i2 ? "active-class" : ""}
-                    `}
-                  >
-                    {elm2.subMenuItems ? (
-                      <>
-                        <a
-                          href="#"
-                          onClick={() => {
-                            setActiveMenu((pre) => {
-                              return pre[1] == i2 ? [pre[0], -1] : [pre[0], i2];
-                            });
-                          }}
-                          className={
-                            isChildActive(elm2.subMenuItems)
-                              ? "activeMenu2"
-                              : ""
-                          }
-                        >
-                          {elm2.title}
-                          <span className="mean-expand-class"></span>
-                          <span className="mean-expand-class"></span>
-                        </a>
-                        <ul
-                          className="sub-menu submenu-class overflow-hidden"
-                          style={
-                            activeMenu[1] == i2
-                              ? { maxHeight: "500px" }
-                              : { maxHeight: "0px" }
-                          }
-                        >
-                          {elm2.subMenuItems.map((elm3, i3) => (
-                            <li key={i3}>
-                              <Link
-                                scroll={false}
-                                className={
-                                  elm3.link?.split("/")[1] ==
-                                  pathname?.split("/")[1]
-                                    ? "activeMenu2"
-                                    : ""
-                                }
-                                href={elm3.link}
-                              >
-                                {elm3.label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </>
-                    ) : (
-                      <Link
-                        scroll={false}
-                        className={
-                          elm2.link?.split("/")[1] == pathname?.split("/")[1]
-                            ? "activeMenu2"
-                            : ""
-                        }
-                        href={elm2.link}
+      {menuItems.map((item, i) => {
+        const hasChildren = !!item.subMenuItems;
+        const itemActive = isActive(item.link) || (hasChildren && isChildActive(item.subMenuItems));
+        return (
+          <li
+            key={i}
+            className={`
+              ${hasChildren ? "menu-item-has-children submenu-item-has-children" : ""}
+              ${activeMenu[0] === i ? "active-class" : ""}
+            `}
+          >
+            {hasChildren ? (
+              <>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setActiveMenu((prev) => prev[0] === i ? [-1, -1] : [i, -1]);
+                  }}
+                  className={itemActive ? "activeMenu" : ""}
+                >
+                  {item.title}
+                  <span className="mean-expand-class"></span>
+                </a>
+                <ul
+                  className="sub-menu submenu-class menu-open overflow-hidden"
+                  style={{
+                    maxHeight: activeMenu[0] === i ? "500px" : "0px",
+                    transition: "max-height 0.3s ease-in-out"
+                  }}
+                >
+                  {item.subMenuItems.map((subItem, j) => {
+                    const hasSubChildren = !!subItem.subMenuItems;
+                    const subItemActive = isActive(subItem.link) || (hasSubChildren && isChildActive(subItem.subMenuItems));
+                    return (
+                      <li
+                        key={j}
+                        className={`
+                          ${hasSubChildren ? "menu-item-has-children submenu-item-has-children" : ""}
+                          ${activeMenu[1] === j ? "active-class" : ""}
+                        `}
                       >
-                        {elm2.label}
-                      </Link>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </>
-          ) : (
-            <Link
-              scroll={false}
-              className={
-                elm.link?.split("/")[1] == pathname?.split("/")[1]
-                  ? "activeMenu"
-                  : ""
-              }
-              href={elm.link}
-            >
-              {elm.title}
-            </Link>
-          )}
-        </li>
-      ))}
+                        {hasSubChildren ? (
+                          <>
+                            <a
+                              href="#"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                setActiveMenu((prev) => [prev[0], prev[1] === j ? -1 : j]);
+                              }}
+                              className={subItemActive ? "activeMenu2" : ""}
+                            >
+                              {subItem.title}
+                              <span className="mean-expand-class"></span>
+                            </a>
+                            <ul
+                              className="sub-menu submenu-class overflow-hidden"
+                              style={{
+                                maxHeight: activeMenu[1] === j ? "500px" : "0px",
+                                transition: "max-height 0.3s ease-in-out"
+                              }}
+                            >
+                              {subItem.subMenuItems.map((thirdItem, k) => (
+                                <li key={k}>
+                                  <Link
+                                    scroll={false}
+                                    className={isActive(thirdItem.link) ? "activeMenu2" : ""}
+                                    href={thirdItem.link}
+                                  >
+                                    {thirdItem.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        ) : (
+                          <Link
+                            scroll={false}
+                            className={subItemActive ? "activeMenu2" : ""}
+                            href={subItem.link}
+                          >
+                            {subItem.label}
+                          </Link>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </>
+            ) : (
+              <Link
+                scroll={false}
+                className={itemActive ? "activeMenu" : ""}
+                href={item.link}
+              >
+                {item.title}
+              </Link>
+            )}
+          </li>
+        );
+      })}
     </>
   );
 }

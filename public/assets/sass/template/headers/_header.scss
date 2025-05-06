@@ -89,6 +89,9 @@
                     transform: scaleY(1);
                     z-index: 9;
                 }
+                > ul.limitLeft {
+                    transform: translateX(-30%);
+                }
             }
         }
     }
@@ -136,6 +139,9 @@
             }
         }
     }
+    ul.limitLeft{
+        min-width: 450px;
+    }
 
     ul.sub-menu {
         padding: 18px 20px 19px 18px;
@@ -179,6 +185,7 @@
                 top: 0;
                 margin: 0 0;
                 margin-left: 15px;
+                min-width: 350px;
 
                 li {
                     ul {

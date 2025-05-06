@@ -29,6 +29,62 @@ export const testimonialData = [
   
   
 ];
+export const testimonialForServices = {
+  "web-mobile-development": {
+    youtubeUrl: "https://www.youtube.com/embed/9_vZoq7Idus",
+    testimonials: [
+      {
+        id: 1,
+        text: "Najam from the Tecvity team has provided excellent service to secure our Azure environment and application...",
+        name: "Attila Horvath",
+        designation: "CEO, Security Consultants",
+      },
+      {
+        id: 2,
+        text: "Najam and Tecvity have been fantastic to work with...",
+        name: "Brent Glover",
+        designation: "Product Manager, Mach7t",
+      },
+    ],
+  },
+
+  "information-security-compliance": {
+    youtubeUrl: "https://www.youtube.com/embed/9_vZoq7Idus",
+    testimonials: [
+      {
+        id: 2,
+        text: "Najam and Tecvity have been fantastic to work with...",
+        name: "Brent Glover",
+        designation: "Product Manager, Mach7t",
+      },
+      {
+        id: 1,
+        text: "Najam from the Tecvity team has provided excellent service...",
+        name: "Attila Horvath",
+        designation: "CEO, Security Consultants",
+      },
+    ],
+  },
+
+  "branding-logo-design": {
+    youtubeUrl: "https://www.youtube.com/embed/9_vZoq7Idus",
+    testimonials: [
+      {
+        id: 3,
+        text: "I had the pleasure of working with NAJAM recently...",
+        name: "Jad El Ghazal Mouwad",
+        designation: "CEO, Big Pay",
+      },
+      {
+        id: 1,
+        text: "Najam from the Tecvity team has provided excellent service...",
+        name: "Attila Horvath",
+        designation: "CEO, Security Consultants",
+      },
+    ],
+  },
+};
+
 export const testimonialData2 = [
   {
     id: 1,

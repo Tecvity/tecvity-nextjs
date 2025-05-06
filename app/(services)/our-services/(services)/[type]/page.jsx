@@ -50,7 +50,7 @@ export default function ProjectsType({ params }) {
       <Hero bgImage={serviceHero.bgImage} title={serviceHero.title}/>
       <Features featuresList={subServices} />
       <Portfolio projects={projects2[type] || []}/>
-      <Testimonials />
+      <Testimonials type={type}/>
       <Clients/>
       <Cta/>
       <Footer />
