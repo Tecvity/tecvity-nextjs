@@ -7,10 +7,21 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Header() {
+export default function Header({darkMode = false}) {
+  const [darkModeState, setDarkModeState] = useState(darkMode);
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if(isScrolled) {
+      setDarkModeState(false);
+    }
+    else if(!isScrolled)
+    {
+      setDarkModeState(darkMode);
+    }
+  }, [darkMode, isScrolled]);
 
   useEffect(() => {
     const handleDocumentClick = (event) => {
@@ -118,7 +129,8 @@ export default function Header() {
                       <Image
                         width={170}
                         height={55}
-                        src="/assets/img/tecvity-logo.png"
+                        src={`/assets/img/tecvity-logo.png`}
+                        style={{ filter: darkModeState ? 'invert(1)' : 'none' }}
                         alt="logo"
                       />
                     </Link>
@@ -127,18 +139,18 @@ export default function Header() {
                 <div className="col-auto ms-auto">
                   <nav className="main-menu d-none d-lg-inline-block">
                     <ul>
-                      <Nav />
+                      <Nav darkMode={darkModeState}/>
                     </ul>
                   </nav>
                   <div className="navbar-right d-inline-flex d-lg-none">
                     <button
                       type="button"
-                      className="menu-toggle sidebar-btn"
+                      className={`menu-toggle sidebar-btn ${darkModeState ? 'border-white' : null}`}
                       onClick={() => setMobileMenuOpen(true)}
                     >
-                      <span className="line"></span>
-                      <span className="line"></span>
-                      <span className="line"></span>
+                      <span className={`line ${darkModeState ? 'light-bg' : null}`}></span>
+                      <span className={`line ${darkModeState ? 'light-bg' : null}`}></span>
+                      <span className={`line ${darkModeState ? 'light-bg' : null}`}></span>
                     </button>
                   </div>
                 </div>
@@ -179,7 +191,7 @@ export default function Header() {
                 {/* comment the below block to adjust search */}
                 <div className="col-auto d-none d-lg-block">
                   <div className="header-button">
-                    <Link scroll={false} href="/contact" className="btn">
+                    <Link scroll={false} href="/contact" className={`btn ${darkModeState ? "style3" : "style1"}`}>
                       <span className="link-effect">
                         <span className="effect-1">WORK WITH US</span>
                         <span className="effect-1">WORK WITH US</span>

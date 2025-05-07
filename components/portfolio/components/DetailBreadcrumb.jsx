@@ -1,11 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import { allPortfolio } from "@/data/portfolio";
 
 export default function Breadcumb2({portfolioTitle}) {
-  const portfolioItem =
-  allPortfolio.filter((elm) => elm.title.replace(/\s+/g, '-').toLowerCase() == portfolioTitle.toLowerCase())[0] || allPortfolio[1];
-
 
   return (
     <div className="breadcumb-wrapper style2 bg-smoke">
@@ -22,7 +18,7 @@ export default function Breadcumb2({portfolioTitle}) {
                 Porfolio
               </Link>
             </li>
-            <li>{portfolioItem.title}</li>
+            <li>{portfolioTitle}</li>
           </ul>
         </div>
       </div>

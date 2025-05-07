@@ -3,84 +3,67 @@ import { menuItems } from "@/data/menu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-// not used
-export default function Nav() {
+export default function Nav({ darkMode }) {
   const pathname = usePathname();
-
-  const isChildActive = (links) => {
-    return links.some((link) => {
-      const trimmedPath = pathname.split("?")[0];
-      return (
-        link.link === trimmedPath || trimmedPath.startsWith(link.link + "/") // Matches any nested route
-      );
-    });
+  
+  const isActive = (link) => {
+    if (!link) return false;
+    const trimmedPath = pathname.split("?")[0];
+    return link === trimmedPath || trimmedPath.startsWith(`${link}/`);
   };
 
+  const isChildActive = (links) => {
+    return links.some(link => isActive(link.link));
+  };
+  
   return (
     <>
-      {menuItems.map((elm, i) => {
-        const trimmedPath = pathname.split("?")[0];
-        const isActive =
-          elm.link === trimmedPath ||
-          trimmedPath.startsWith(elm.link + "/") ||
-          (elm.subMenuItems && isChildActive(elm.subMenuItems));
-
+      {menuItems.map((item, i) => {
+        const hasChildren = !!item.subMenuItems;
+        const itemActive = isActive(item.link) || (hasChildren && isChildActive(item.subMenuItems));
+        
         return (
           <li
-            key={i}// Assign a unique key for each submenu item.
-            className={elm.subMenuItems ? "menu-item-has-children" : ""}
+            key={i}
+            className={hasChildren ? "menu-item-has-children" : ""}
           >
-            {elm.subMenuItems ? (
+            {hasChildren ? (
               <>
-                <a
-                  href={elm.link || "#"}
-                  className={isActive ? "activeMenu" : ""}
+                <Link
+                  href={item.link || "#"}
+                  className={itemActive ? "activeMenu" : ""}
                 >
-                  <span className="link-effect">
-                    <span className="effect-1">{elm.title}</span>
-                    <span className="effect-1">{elm.title}</span>
+                  <span className={`link-effect ${darkMode && !itemActive ? "light-color" : ""}`}>
+                    <span className="effect-1">{item.title}</span>
+                    <span className="effect-1">{item.title}</span>
                   </span>
-                </a>
-
-                <ul className="sub-menu">
-                  {elm.subMenuItems.map((elm2, i2) => {
-                    const isSubActive =
-                      elm2.link === trimmedPath ||
-                      trimmedPath.startsWith(elm2.link + "/");
-
+                </Link>
+                <ul className={`sub-menu ${item.linkType ? item.linkType : ""}`}>
+                  {item.subMenuItems.map((subItem, j) => {
+                    const hasSubChildren = !!subItem.subMenuItems;
+                    const subItemActive = isActive(subItem.link) || (hasSubChildren && isChildActive(subItem.subMenuItems));
                     return (
                       <li
-                        key={i2}
-                        className={
-                          elm2.subMenuItems ? "menu-item-has-children" : ""
-                        }
+                        key={j}
+                        className={hasSubChildren ? "menu-item-has-children" : ""}
                       >
-                        {elm2.subMenuItems ? (
+                        {hasSubChildren ? (
                           <>
-                            <a
-                              href="#"
-                              className={
-                                isChildActive(elm2.subMenuItems)
-                                  ? "activeMenu"
-                                  : ""
-                              }
+                            <Link
+                              href={subItem.link || "#"}
+                              className={subItemActive ? "activeMenu" : ""}
                             >
-                              {elm2.title}
-                            </a>
-                            <ul className="sub-menu">
-                              {elm2.subMenuItems.map((elm3, i3) => (
-                                <li key={i3}>
+                              {subItem.title}
+                            </Link>
+                            <ul className={`sub-menu ${item.linkType ? item.linkType : ""}`}>
+                              {subItem.subMenuItems.map((thirdItem, k) => (
+                                <li key={k} className="no-sub-menu">
                                   <Link
-                                    // scroll={false}
-                                    className={
-                                      elm3.link === trimmedPath ||
-                                      trimmedPath.startsWith(elm3.link + "/")
-                                        ? "activeMenu"
-                                        : ""
-                                    }
-                                    href={elm3.link}
+                                    scroll={false}
+                                    className={isActive(thirdItem.link) ? "activeMenu" : ""}
+                                    href={thirdItem.link}
                                   >
-                                    {elm3.label}
+                                    {thirdItem.label}
                                   </Link>
                                 </li>
                               ))}
@@ -88,12 +71,11 @@ export default function Nav() {
                           </>
                         ) : (
                           <Link
-                          // For menu items without submenus.
                             scroll={false}
-                            className={isSubActive ? "activeMenu" : ""}
-                            href={elm2.link}
+                            className={subItemActive ? "activeMenu" : ""}
+                            href={subItem.link}
                           >
-                            {elm2.label}
+                            {subItem.label}
                           </Link>
                         )}
                       </li>
@@ -104,12 +86,12 @@ export default function Nav() {
             ) : (
               <Link
                 scroll={false}
-                className={isActive ? "activeMenu" : ""}
-                href={elm.link}
+                className={itemActive ? "activeMenu" : ""}
+                href={item.link}
               >
-                <span className="link-effect">
-                  <span className="effect-1">{elm.title}</span>
-                  <span className="effect-1">{elm.title}</span>
+                <span className={`link-effect ${darkMode && !itemActive ? "light-color" : ""}`}>
+                  <span className="effect-1">{item.title}</span>
+                  <span className="effect-1">{item.title}</span>
                 </span>
               </Link>
             )}

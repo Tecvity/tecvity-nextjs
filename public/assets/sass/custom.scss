@@ -55,3 +55,111 @@
   pointer-events: none;
   opacity: 0.5;
 }
+
+.theme-bg {
+  background: $theme-color !important;
+}
+.dark-bg {
+  background: $body-color !important;
+}
+.light-bg {
+  background: $smoke-color !important;
+}
+.grey-bg {
+  background: $gray-color !important;
+}
+.theme-color {
+  color: $theme-color !important;
+}
+.dark-color {
+  color: $body-color !important;
+}
+.light-color {
+  color: $smoke-color !important;
+}
+.font-body {
+  font-family: $body-font !important;
+}
+.theme-shadow {
+  text-shadow: 0px 0px 10px $theme-color !important;
+}
+.glow-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: $theme-color;
+  border-radius: 50%;
+  box-shadow:
+    0 0 5px $theme-color,
+    0 0 10px $theme-color,
+    0 0 20px $theme-color;
+}
+.align-end {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+}
+.p-8{
+  padding: 8rem 2rem;
+}
+.p-0{
+  padding: 0rem !important;
+}
+.border-white{
+  border-color: $smoke-color !important;
+}
+.cursor-g {
+  cursor: grab !important;
+}
+.cursor-g:active {
+  cursor: grabbing !important;
+}
+.border-in{
+  border: 1px solid transparent !important;
+}
+.heigt-limit-70 {
+  max-height: 70rem !important;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+}
+.w-25rem{
+  max-width: 60rem !important;
+}
+
+//loader
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.spinner-container {
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  width: 60px;
+  height: 60px;
+  border: 8px solid rgba(255, 255, 255, 0.041);
+  border-top: 8px solid $theme-color;
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+}
+//loader

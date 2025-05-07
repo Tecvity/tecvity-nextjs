@@ -17,7 +17,6 @@ export async function GET(req, { params }) {
 
     return NextResponse.json(
       {
-        content: blog.content,
         blog: blog,
         next,
         prev,

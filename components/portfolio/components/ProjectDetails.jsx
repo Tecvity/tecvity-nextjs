@@ -1,26 +1,53 @@
 "use client";
-import { allPortfolio } from "@/data/portfolio";
 import ImageSlider from "./ImageSlider";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-export default function ProjectDetails({ portfolioTitle, blogList = allPortfolio }) {
-  const portfolioItem =
-  blogList.filter((elm) => elm.title.replace(/\s+/g, '-').toLowerCase() == portfolioTitle.toLowerCase())[0] || blogList[1];
-
-  const currentIndex = blogList.findIndex((project) => project.title.replace(/\s+/g, '-').toLowerCase() === portfolioTitle.toLowerCase());
-  const nextProject = currentIndex >= 0 && currentIndex < blogList.length - 1 ? blogList[currentIndex + 1] : null;
-  const prevProject = currentIndex > 0 ? blogList[currentIndex - 1] : null;
+import React, { useEffect, useState } from "react";
+import RenderMDX from "./RenderMDX";
+import { serialize } from 'next-mdx-remote/serialize';
+export default function ProjectDetails({ project }) {
+  const [serializedContent, setSerializedContent] = useState(null);
+  const [serializedInfo, setSerializedInfo] = useState(null);
   
-  const itemsImages = portfolioItem.itemsImages;
+  const [ itemImages, setItemImages ] = useState([])
+  useEffect(() => {
+    if (project && project.portfolio) {
+      setItemImages(project.portfolio.itemsImages);
+      fetchSerializedContent();
+      fetchSerializedInfo();
+    }
+  }, [project]);
+
+  const fetchSerializedContent = async () => {
+    const serialized = await getSerializedContent(project?.portfolio?.content);
+    setSerializedContent(serialized);
+  };
+
+  const getSerializedContent = async (data) => {
+    if (!data) return null;
+    
+    const serialized = await serialize(data);
+    return serialized;
+  };
+
+  const fetchSerializedInfo = async () => {
+    const { category, client, date } = project?.portfolio || {};
+    const infoMarkdown = `
+    - <span>Category:</span> ${category || "-"}
+    - <span>Client:</span> ${client || "-"}
+    - <span>Date:</span> ${date || "-"}
+    `;
+    const serialized = await getSerializedContent(infoMarkdown);
+    setSerializedInfo(serialized);
+  };
 
   return (
     <div className="project-details-page-area space">
       <div className="container">
-      <ImageSlider itemImages={itemsImages} />
+      <ImageSlider itemImages={itemImages} />
         <div className="row justify-content-between flex-row-reverse">
-          <div className="col-xl-3 col-lg-4">
+          
+           <div className="col-xl-3 col-lg-4">
             <div className="project-details-info mb-lg-0 mb-40">
-              <ul className="list-wrap">
+              {/* <ul className="list-wrap">
                 <li>
                   <span>Category:</span>{portfolioItem.category}
                 </li>
@@ -36,31 +63,18 @@ export default function ProjectDetails({ portfolioTitle, blogList = allPortfolio
                 {portfolioItem.date && <li>
                   <span>Date:</span>{portfolioItem.date}
                 </li>}
-              </ul>
+              </ul> */}
+              {serializedInfo && <RenderMDX content={serializedInfo} />}
             </div>
           </div>
           <div className="col-lg-8">
-            <div className="title-area mb-35">
-              <h2 className="sec-title">{portfolioItem.title}</h2>
-              <p className="sec-text mt-30">
-                {portfolioItem?.para1}
-              </p>
-              <p className="sec-text mt-30">
-                {portfolioItem?.para2}
-              </p>
+          <div className="title-area mb-35">
+            <RenderMDX content={serializedContent} />
             </div>
-            <h3>Challenge</h3>
-            <p className="sec-text mb-n1">
-              {portfolioItem?.challenge}
-            </p>
-            <h3 className="mt-35">Final Result</h3>
-            <p className="sec-text mb-n1">
-             {portfolioItem?.finalResult}
-            </p>
           </div>
           <div className="col-lg-12">
             <div className="inner__page-nav space-top mt-n1 mb-n1">
-              <a href={prevProject ? `/our-portfolio/${prevProject.type}/${prevProject.title.replace(/\s+/g, '-').toLowerCase()}` : ""} className={`nav-btn ${!prevProject ? "disabled" : ""}`}>
+              <a href={project && project.prev ? `/our-portfolio/${project.portfolio.type}/${project.prev}` : ""} className={`nav-btn ${!project?.prev ? "disabled" : ""}`}>
                 <i className="fa fa-arrow-left"></i>
                 <span>
                   <span className="link-effect">
@@ -69,7 +83,7 @@ export default function ProjectDetails({ portfolioTitle, blogList = allPortfolio
                   </span>
                 </span>
               </a>
-              <a href={nextProject ? `/our-portfolio/${nextProject.type}/${nextProject.title.replace(/\s+/g, '-').toLowerCase()}` : ""} className={`nav-btn ${!nextProject ? "disabled" : ""}`}>
+              <a href={project && project.next ? `/our-portfolio/${project.portfolio.type}/${project.next}` : ""} className={`nav-btn ${!project?.next ? "disabled" : ""}`}>
                 <span>
                   <span className="link-effect">
                     <span className="effect-1">Next</span>

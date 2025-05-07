@@ -40,3 +40,27 @@ export const plans = [
   },
   // Add more plans as needed
 ];
+
+export const plansData = {
+  headers: [ 'Team Members', 'Storage Space', 'Projects', 'API Access', 'Custom Domain', 'Analytics', 'Support'],
+  plans: [
+    {
+      name: 'Basic',
+      price: '$29',
+      period: 'per month',
+      values: ['Up to 10', '20GB', '3', '-', '-', 'Basic', 'Email'],
+    },
+    {
+      name: 'Professional',
+      price: '$79',
+      period: 'per month',
+      values: ['Up to 50', '100GB', '15', '•', '•', 'Advanced', 'Priority'],
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      period: 'contact sales',
+      values: ['Unlimited', 'Unlimited', 'Unlimited', '•', '•', 'Custom', 'Dedicated'],
+    },
+  ],
+};

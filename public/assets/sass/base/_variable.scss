@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Unbounded:wght@400;500;600;700&display=swap");
 
 :root {
-  --theme-color: #e3ff04;
+  --theme-color: #C5FA64;
   --title-color: #0a0c00;
   --body-color: #0a0c00;
   --smoke-color: #f6f5f3;
@@ -14,7 +14,7 @@
   --white-color: #ffffff;
   --light-color: #9fa2ad;
   --yellow-color: #ffb539;
-  --success-color: #28a745;
+  --success-color: #C5FA64;
   --error-color: #dc3545;
   --border-color: #e3e3e3;
   --title-font: "Unbounded", sans-serif;
@@ -55,6 +55,7 @@ $body-font-size: 16px;
 $body-line-Height: 26px;
 $body-font-weight: 400;
 $p-line-Height: 1.75;
+$text-small: 10px;
 
 // Device Variation
 $hd: 1921px; // Large Device Than 1920

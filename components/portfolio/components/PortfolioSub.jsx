@@ -1,27 +1,48 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect, use } from "react";
+import { useGetData } from "@/utils/hooks";
+import Loader from "@/components/common/Loader";
 
-const projectVisibilityFactor = 4;
-export default function Portfolio({projectsList}) {
-  const [visibleProjects, setVisibleProjects] = useState(projectVisibilityFactor*2);
+const projectVisibilityFactor = 8;
+export default function Portfolio({sub}) {
+  const { data , isLoading: pLoading, error: pError, getData: getPortfolio } = useGetData();
+  const [ projects, setProjects ] = useState([]);
+  const [ page, setPage ] = useState(1);
+  
+  useEffect(() => {
+    if(!sub) return;
+    if(sub){
+      getPortfolio(`/api/Portfolio/${sub}?limit=${projectVisibilityFactor}&page=${page}`);
+    }
+  }, [page]);
+
+  useEffect(() => {
+    if(page > 1) {
+      setProjects((prev) => [...prev, ...data?.portfolio]);
+    } else {
+      setProjects(data?.portfolio);
+    }
+  }, [data]);
 
   const loadMoreProjects = () => {
-    setVisibleProjects((prev) => prev + projectVisibilityFactor);
+    setPage((prev) => prev + 1);
   };
 
-  const hasMoreProjects = visibleProjects < projectsList.length;
-
+  const hasMoreProjects = page < data?.totalPages;
+  if(pLoading) {
+    return <Loader />;
+  }
   return (
     <div className="portfolio-area-1 space overflow-hidden">
       <div className="container">
         <div className="row gy-40 gx-60 justify-content-center">
-          {projectsList.slice(0, visibleProjects).map((elm, i) => (
+          {projects && projects.map((elm, i) => (
             <div key={i} className="col-xl-6 col-lg-6">
               <div className="portfolio-wrap">
                 <div className="portfolio-thumb">
-                  <Link scroll={false} href={`/our-portfolio/${elm.type}/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
+                  <Link scroll={false} href={`/our-portfolio/${elm.type}/${elm.slug}`}>
                     <Image
                       width={618}
                       height={470}
@@ -32,7 +53,7 @@ export default function Portfolio({projectsList}) {
                 </div>
                 <div className="portfolio-details">
                   <h3 className="portfolio-title mb-3">
-                    <Link scroll={false} href={`/our-portfolio/${elm.type}/${elm.title.replace(/\s+/g, '-').toLowerCase()}`}>
+                    <Link scroll={false} href={`/our-portfolio/${elm.type}/${elm.slug}`}>
                       {elm.title}
                     </Link>
                   </h3>

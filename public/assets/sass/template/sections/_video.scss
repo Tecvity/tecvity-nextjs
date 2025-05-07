@@ -46,7 +46,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        background: $white-color;
+        background: transparent;
         color: $title-color;
         margin: -90px 0 0 -90px;
         @include xs {

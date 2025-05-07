@@ -350,6 +350,38 @@ export const CLOUDPortfolio = [
     "finalResult": "Tecvity conducted a thorough Azure architecture review for Pathfindr, identifying key areas for improvement and implementing enhancements to strengthen their cloud infrastructure. The review addressed security gaps, optimized resource allocation, and ensured compliance with industry standards. These improvements enabled Pathfindr to maintain a secure, scalable, and efficient cloud environment, supporting their mission to deliver cutting-edge AI solutions to businesses across Australia."
   },  
 ];
+export const projects2 = {
+  "web-mobile-development": [
+    {
+      id: 28,
+      title: "Decentralized Platform",
+      imageSrc: "/assets/img/portfolio/portfolio5_1.jpg",
+      categories: ["Branding", "Development", "Marketing"],
+    },
+  ],
+  "information-security-compliance": [
+    {
+      id: 29,
+      title: "App for Business",
+      imageSrc: "/assets/img/portfolio/portfolio5_2.jpg",
+      categories: ["Development", "Marketing"],
+    },
+  ],
+  "branding-logo-design": [
+    {
+      id: 30,
+      title: "Educational Platform",
+      imageSrc: "/assets/img/portfolio/portfolio5_3.jpg",
+      categories: ["Marketing", "Branding"],
+    },
+    {
+      id: 31,
+      title: "Nova Scotia Winery",
+      imageSrc: "/assets/img/portfolio/portfolio5_4.jpg",
+      categories: ["Branding", "Development", "Marketing"],
+    },
+  ],
+};
 
 export const portfolioData = [
   ...VAPTPortfolio,

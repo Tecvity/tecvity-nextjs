@@ -29,26 +29,72 @@ export const menuItems = [
   //     { id: 37, label: "Portfolio Details", link: "/our-portfolio/2" },
   //   ],
   // },
-  { id: 4, title: "Our Services", link: "/our-services" },
+  { id: 4, title: "Our Services", 
+    subMenuItems: [
+      {
+        id: 41,
+        title: "Web & Mobile Development",
+        link: "/our-services/web-mobile-development",
+        subMenuItems: [
+          { id: 411, label: "Web & Mobile Application Development", link: "/our-services/web-mobile-development/web-mobile-app-development" },
+          { id: 412, label: "DevSecOps", link: "/our-services/web-mobile-development/devsecops" },
+        ],
+      },
+      {
+        id: 42,
+        title: "Information Security & Compliance",
+        link: "/our-services/information-security-compliance",
+        subMenuItems: [
+          { id: 421, label: "Penetration Testing & Vulnerability Assessment", link: "/our-services/information-security-compliance/penetration-testing-vulnerability-assessment" },
+          { id: 422, label: "Cloud Security Audits", link: "/our-services/information-security-compliance/cloud-security-audits" }
+        ],
+      },        
+      {
+        id: 43,
+        title: "Branding & Logo Design",
+        link: "/our-services/branding-logo-design",
+        subMenuItems: [
+          { id: 431, label: "UI/UX Design", link: "/our-services/branding-logo-design/ui-ux-design" },
+          { id: 432, label: "Brand Identity Design", link: "/our-services/branding-logo-design/brand-identity-design" },
+        ],
+      },
+    ],
+  },
   {
     id: 3,
     title: "Portfolio",
     link: "/our-portfolio",
+    linkType: "limitLeft",//use 'shiftLeft' to avoid overflow
     subMenuItems: [
       {
         id: 31,
-        label: "Penetration Testing & Vulnerability Assessment",
-        link: "/our-portfolio/vapt",
-      },
-      {
-        id: 33,
-        label: "Cloud Security",
-        link: "/our-portfolio/cloud",
+        title: "Cybersecurity",
+        link: "#",
+        subMenuItems: [
+          { id: 311, label: "Penetration Testing", link: "/our-portfolio/penetrationTest" },
+          { id: 312, label: "Cloud Security", link: "/our-portfolio/cloudSecurity" },
+          { id: 313, label: "Blue Teaming", link: "/our-portfolio/blueTeaming" },
+        ],
       },
       {
         id: 32,
-        label: "Product Design",
-        link: "/our-portfolio/pd",
+        title: "Graphic Design",
+        // link: "/our-portfolio/gd",
+        link: "#",
+        subMenuItems: [
+          { id: 321, label: "Logo Design", link: "/our-portfolio/logoDesign" },
+          { id: 322, label: "Brand Identity", link: "/our-portfolio/brandIdentity" },
+        ],
+      },
+      {
+        id: 33,
+        title: "Developement",
+        // link: "/our-portfolio/dev",
+        link: "#",
+        subMenuItems: [
+          { id: 331, label: "Web Dev", link: "/our-portfolio/webDev" },
+          { id: 332, label: "Mobile Dev", link: "/our-portfolio/mobileDev" },
+        ],
       },
     ],
   },
