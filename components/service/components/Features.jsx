@@ -9,7 +9,14 @@ export default function Features({featuresList = ourServices || []}) {
   const pathname = usePathname();
   return (
     <div className="feature-area-1 space">
-      <div className="container">
+      <div className="container">        
+        <div className="row justify-content-center">
+          <div className="col-xl-6 col-lg-8">
+            <div className="title-area text-center">
+              <h2 className="sec-title">Sub services</h2>
+            </div>
+          </div>
+        </div>
         <div className="row gy-4 align-items-center justify-content-center">
           {featuresList.map((elm, i) => (
             <div key={i} className="col-xl-4 col-md-6">

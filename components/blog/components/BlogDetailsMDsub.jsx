@@ -4,6 +4,7 @@ import Image from "next/image";
 import Comments from "@/components/blog/components/Comments";
 import CommentReply from "@/components/blog/components/CommentReply";
 import { useGetData } from "@/utils/hooks";
+import Loader from "@/components/common/Loader";
 
 const BlogDetailsMDsub = ({ data }) => {
   const { data: comments = [], isLoading, error, getData } = useGetData();
@@ -18,7 +19,9 @@ const BlogDetailsMDsub = ({ data }) => {
       `https://www.linkedin.com/shareArticle?mini=true&url=${url}&source=LinkedIn`
     );
   }, []);
-  
+  if(isLoading) {
+    return <Loader />;
+  }
   return (
     <>
       <div className="blog__avatar-wrap">

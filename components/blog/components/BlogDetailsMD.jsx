@@ -9,6 +9,7 @@ import { socialMediaLinks } from "@/data/socials";
 import { serialize } from 'next-mdx-remote/serialize';
 import { useGetData } from "@/utils/hooks";
 import { useEffect, useState } from "react";
+import Loader from "@/components/common/Loader";
 
 export default function BlogDetailsMD({ data, content }) {
     const [serializedContent, setSerializedContent] = useState(null);
@@ -26,7 +27,9 @@ export default function BlogDetailsMD({ data, content }) {
       };
       serializeContent();
     }, []);
-
+    if(isLoading) {
+      return <Loader />;
+    }
   return (
     <section className="blog__details-area space">
       <div className="container">

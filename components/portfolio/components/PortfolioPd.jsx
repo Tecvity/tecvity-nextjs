@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import Image from "next/image";
 import Link from "next/link";
 import { useGetData } from "@/utils/hooks";
+import Loader from "@/components/common/Loader";
 
 const projectVisibilityFactor = 6;
 
@@ -70,7 +71,9 @@ export default function Portfolio({ sub }) {
   };
 
   const hasMoreProjects = page < (data?.totalPages || 1);
-
+  if(isLoading) {
+    return <Loader />;
+  }
   return (
     <div className="project-area-12 overflow-hidden">
       <div className="container-fluid p-0">

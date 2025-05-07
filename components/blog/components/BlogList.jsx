@@ -8,6 +8,7 @@ import RecentPosts from "./RecentPosts";
 // import Tags from "./Tags";
 import Image from "next/image";
 import {useGetData} from "@/utils/hooks";
+import Loader from "@/components/common/Loader";
 
 const blogsPerPage = 6;
 
@@ -32,7 +33,9 @@ export default function BlogList({currrent = 1, limit = blogsPerPage, category =
     setSelectedCategory(value);
     setCurrentPage(1);
   };
-
+  if(isLoading) {
+    return <Loader />;
+  }
   return (
     <section className="blog__area space">
       <div className="container">

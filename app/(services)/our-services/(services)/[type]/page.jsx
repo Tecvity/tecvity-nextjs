@@ -11,6 +11,7 @@ import { useGetData } from "@/utils/hooks";
 import { serviceHero } from "@/data/features";
 import Testimonials from "@/components/service/components/Testimonials";
 import { projects2 } from "@/data/portfolio";
+import Loader from "@/components/common/Loader";
 export default function ProjectsType({ params }) {
   const { type } = params;
   const [ serializedInfo, setSerializedInfo] = useState(null);
@@ -42,7 +43,9 @@ export default function ProjectsType({ params }) {
       console.error("Error fetching serialized info:", error);
     }
   };
-  
+  if(isLoading) {
+    return <Loader />;
+  }
 
   return (
     <>

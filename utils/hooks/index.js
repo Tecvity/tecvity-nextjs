@@ -32,7 +32,7 @@ const usePostData = () => {
 };
 
 const useGetData = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
 

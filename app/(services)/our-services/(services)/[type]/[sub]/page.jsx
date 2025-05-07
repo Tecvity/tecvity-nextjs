@@ -5,6 +5,7 @@ import MarqueeComponent from "@/components/common/Marquee";
 import Footer from "@/components/footer/Footer";
 import { useEffect } from "react";
 import { useGetData } from "@/utils/hooks";
+import Loader from "@/components/common/Loader";
 
 export default function ProjectPageDetails({ params }) {
   const { sub, type } = params;
@@ -12,7 +13,9 @@ export default function ProjectPageDetails({ params }) {
   useEffect(() => {
     getData(`/api/Services/${type}/${sub}`);
   }, [sub]);
-
+  if(isLoading) {
+    return <Loader />;
+  }
   return (
     <>
       <Header />

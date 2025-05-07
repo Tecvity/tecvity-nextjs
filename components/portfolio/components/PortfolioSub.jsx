@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect, use } from "react";
 import { useGetData } from "@/utils/hooks";
+import Loader from "@/components/common/Loader";
 
 const projectVisibilityFactor = 8;
 export default function Portfolio({sub}) {
@@ -30,7 +31,9 @@ export default function Portfolio({sub}) {
   };
 
   const hasMoreProjects = page < data?.totalPages;
-
+  if(pLoading) {
+    return <Loader />;
+  }
   return (
     <div className="portfolio-area-1 space overflow-hidden">
       <div className="container">
